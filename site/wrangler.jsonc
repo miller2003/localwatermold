@@ -3,6 +3,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "localwatermold",
   "compatibility_date": "2026-10-01",
+  "routes": [
+    { "pattern": "localwatermold.com", "custom_domain": true },
+    { "pattern": "www.localwatermold.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./dist/site",
     "not_found_handling": "404-page",
