@@ -1,7 +1,11 @@
 import type { APIRoute } from "astro";
 import { SITE } from "../../src/config";
+import { NATIONAL_GUIDES, REFERENCE_PAGES, guidePath } from "../../src/lib/guides";
 
-const PATHS = ["/", "/how-it-works/", "/editorial-policy/", "/data-sources/"];
+const PATHS = [
+  "/", ...REFERENCE_PAGES.map((r) => r.path), ...NATIONAL_GUIDES.map((g) => guidePath(g.slug)),
+  "/how-it-works/", "/editorial-policy/", "/data-sources/",
+];
 
 export const GET: APIRoute = ({ site }) => {
   const urls = PATHS.map((p) => `  <url><loc>${new URL(p, site).href}</loc><lastmod>${SITE.lastReviewed}</lastmod></url>`).join("\n");

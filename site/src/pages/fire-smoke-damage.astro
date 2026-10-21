@@ -4,7 +4,7 @@ import Service from "../layouts/Service.astro";
 ---
 <Service
   title={`Fire and smoke damage restoration in ${S.name}`}
-  seoTitle={`Fire and Smoke Damage Restoration in ${S.name} | Soot, Odor and Water Cleanup`}
+  seoTitle={`Fire and Smoke Damage Restoration in ${S.name} | First Steps`}
   description={`After a house fire in ${S.name}: what to do first, how fire and smoke restoration works, and how to get connected with a local restoration company.`}
   eyebrow="Fire and smoke"
   lede="After the fire department leaves, the damage keeps working. Soot is acidic, smoke odor spreads through the house, and water from the hoses needs drying. Here's what happens next."
@@ -21,6 +21,12 @@ import Service from "../layouts/Service.astro";
     { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: "Working with your insurer", note: `${S.name} claim deadlines apply to fire too` },
     { href: "/guides/water-damage-restoration-cost/", label: "What fire restoration costs", note: "National 2026 ranges" },
     { href: "/tools/emergency-checklist/", label: "Printable checklist", note: "For the first day after" },
+  ]}
+  faq={[
+    { q: "What should I do first after a house fire?", a: "Don't go back in until the fire department says it's safe, and ask for the incident report number. Call your insurer about board-up and additional living expenses, arrange a safe place to stay, don't run the furnace or air conditioning, and photograph everything before cleanup." },
+    { q: "Can smoke damage be cleaned, or does everything have to be replaced?", a: "Many hard surfaces and contents can be cleaned if work starts within days, because soot is acidic and etches surfaces over time. Porous items that absorbed heavy smoke, like insulation, some upholstery and mattresses, are often replaced." },
+    { q: "How much does fire and smoke restoration cost?", a: "Published 2026 national cost guides put fire and smoke restoration at about $2,900 to $38,000, averaging near $20,000. The cost depends on how far smoke traveled and how much water firefighting left behind." },
+    { q: "Why does my house still smell like smoke after cleaning?", a: "Smoke odor settles into porous materials, wall cavities and ductwork. Professional odor removal cleans or seals those surfaces and treats the air, and the HVAC system usually needs cleaning too." },
   ]}
 >
   <h2>The first 24 hours after a fire</h2>

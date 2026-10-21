@@ -13,13 +13,26 @@ const peakMonth = (v: number[]) => M[v.indexOf(Math.max(...v))];
 ---
 <Article
   title="Basement flooding and sump pump failure: causes, cleanup and coverage"
-  seoTitle={`Flooded Basement in ${S.name}? Sump Pump Failure, Cleanup Steps and Insurance`}
-  description={`Why ${S.name} basements take on water, how to check a failed sump pump, what to do first, and why a flooded basement may or may not be covered by homeowners insurance.`}
+  seoTitle={`Flooded Basement in ${S.name}? Sump Pumps, Cleanup, Insurance`}
+  description={`Why ${S.name} basements take on water, how to check a failed sump pump, what to do first, and when a flooded basement is covered by insurance.`}
   eyebrow="Guide · Basements"
   dek="A flooded basement can come from five different places, and each one is handled differently, by the crew and by your insurer. Start by figuring out which one it is."
   path="/guides/basement-flooding-sump-pump/"
   crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Basement flooding", href: "/guides/basement-flooding-sump-pump/" }]}
+  about={["Basement flooding", "Sump pumps", "Water backup insurance"]}
+  summary={[
+    "Basement water comes from five sources: sump pump failure, sewer or floor drain backup, groundwater seepage, surface flooding, and plumbing or appliance failure. Each is handled and insured differently.",
+    "If water could reach outlets or the electrical panel, stay out and have the utility disconnect power. If it's sewage, treat it as Category 3 and keep everyone out.",
+    "Check a failed sump pump's plug, breaker or GFCI outlet, float switch and outdoor discharge line. A battery backup protects against the power outages that come with big storms.",
+    "Sump and sewer backups need a water backup endorsement, outside flooding needs a flood policy, and seepage is usually excluded. Plumbing failures are usually covered.",
+  ]}
+  faq={[
+    { q: "Why did my basement flood when it rained?", a: "Usually because the sump pump failed or couldn't keep up, the sewer or storm drains backed up, downspouts dumped water against the foundation, or saturated soil pushed groundwater through cracks and the wall-floor joint." },
+    { q: "How often should a sump pump be replaced?", a: "Many sump pumps last around 7 to 10 years, depending on how often they run. Test yours each spring by pouring water into the pit, and replace it if it struggles, cycles constantly or is near the end of its life." },
+    { q: "Is a flooded basement covered by insurance?", a: "If a pipe, water heater or appliance failed, usually yes. Sump pump and sewer backups are covered only with a water backup endorsement. Floodwater from outside needs a flood policy, and groundwater seepage is usually excluded." },
+  ]}
   related={[
+    { href: "/basement-waterproofing/", label: "Basement waterproofing" },
     { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: `What ${S.name} policies cover` },
     { href: "/guides/water-damage-categories/", label: "Is it clean or contaminated water?" },
     { href: "/guides/mold-after-water-damage/", label: "Preventing basement mold" },

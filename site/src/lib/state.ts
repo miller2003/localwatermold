@@ -192,6 +192,8 @@ if (!NATIONAL && !STATES[STATE_KEY]) throw new Error(`Unknown SITE_STATE "${STAT
 // The active state. Undefined in the national build, so root pages must check NATIONAL first.
 export const S = STATES[STATE_KEY];
 export const ALL_STATES = Object.values(STATES);
+/** "a" or "an" before a state name: "an Ohio home", "a Texas home". */
+export const an = (word: string) => (/^[aeiou]/i.test(word) ? "an" : "a");
 
 // Generic, nationwide-accurate fallbacks for states without verified detail.
 export const FTC_COOLING_OFF: Link = { label: "FTC: The Cooling-Off Rule", href: "https://consumer.ftc.gov/articles/buyers-remorse-ftcs-cooling-rule-may-help" };

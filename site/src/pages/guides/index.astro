@@ -3,7 +3,10 @@ import { S } from "../../lib/state";
 import Base from "../../layouts/Base.astro";
 import Icon from "../../components/Icon.astro";
 import { p } from "../../lib/paths";
+import { NATIONAL_GUIDES, guidePath, type GuideGroup } from "../../lib/guides";
 
+// State-specific guides first, then the national guides that apply everywhere (from lib/guides.ts).
+const nat = (group: GuideGroup) => NATIONAL_GUIDES.filter((g) => g.group === group).map((g) => ({ href: guidePath(g.slug), title: g.title, note: g.note }));
 const groups = [
   {
     name: "In an emergency",
@@ -12,39 +15,48 @@ const groups = [
       { href: "/fire-smoke-damage/", title: "The first 24 hours after a house fire", note: "Soot, odor, insurance and where to stay." },
       { href: "/tools/emergency-checklist/", title: "Printable emergency checklist", note: "One page to keep by the water heater." },
       { href: `/guides/sewer-backup-${S.slug}/`, title: "Sewer backup in your basement", note: "Safe cleanup, whose pipe failed, and coverage." },
-      { href: "/guides/water-heater-leaking/", title: "Water heater leaking", note: "Shut it down, find the leak, repair or replace." },
+      ...nat("emergency"),
     ],
   },
   {
     name: "Understanding the damage",
     items: [
-      { href: "/guides/water-damage-categories/", title: "Clean, gray or black water", note: "The three categories and four classes of water damage." },
       { href: "/guides/mold-after-water-damage/", title: "Mold after water damage", note: "The 24 to 48 hour window and when to call a pro." },
       { href: "/guides/basement-flooding-sump-pump/", title: "Basement flooding and sump pumps", note: "Five sources of basement water and how each is handled." },
+      { href: "/basement-waterproofing/", title: `Basement waterproofing in ${S.name}`, note: "Drainage, sump pumps and sealing, and what each fixes." },
       { href: `/guides/frozen-pipes-${S.slug}/`, title: `Frozen pipes in ${S.name}`, note: "Freeze risk by county, prevention and thawing." },
       { href: "/guides/ice-dams/", title: "Ice dams and ceiling leaks", note: "Why they form, safe removal, and the attic fix." },
+      ...nat("damage"),
     ],
   },
   {
     name: "Money and insurance",
     items: [
       { href: `/guides/${S.slug}-water-damage-insurance-claim/`, title: `Filing a water damage claim in ${S.name}`, note: "Coverage, your duties, and your insurer's deadlines." },
-      { href: "/guides/water-damage-restoration-cost/", title: "What restoration costs", note: "2026 national ranges and what moves them." },
-      { href: "/tools/cost-estimator/", title: "Cost estimator", note: "A quick range for your square footage and water type." },
       { href: "/guides/choosing-restoration-company/", title: "Choosing a restoration company", note: `Questions, paperwork, red flags and your ${S.name} cancellation rights.` },
+      { href: "/tools/cost-estimator/", title: "Cost estimator", note: "A quick range for your square footage and water type." },
+      ...nat("money"),
     ],
   },
 ];
+const origin = Astro.site!.origin;
+const schema = [{
+  "@type": "ItemList",
+  name: `Water, mold and fire damage guides for ${S.name} homeowners`,
+  itemListElement: groups.flatMap((g) => g.items).map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.title, url: new URL(p(it.href), origin).href })),
+}];
 ---
 <Base
   title={`Water, Mold and Fire Damage Guides for ${S.name} Homeowners`}
   description={`Plain-language guides for ${S.name} homeowners: what to do after a leak, frozen pipes, basement flooding, mold, insurance claims and costs.`}
   crumbs={[{ name: "Guides", href: "/guides/" }]}
+  schema={schema}
+  pageType="CollectionPage"
 >
   <section class="wrap head">
     <p class="eyebrow">Guides</p>
     <h1>Guides for {S.name} homeowners</h1>
-    <p class="lede">Practical steps, written for the moment you need them, and checked against the EPA, the IICRC standard and {S.name}'s insurance rules.</p>
+    <p class="lede">Practical steps, written for the moment you need them, and checked against the EPA, the IICRC standard and {S.name}'s insurance rules. Guides that apply in every state are shared with our <a href="/guides/">national guide library</a>.</p>
   </section>
   {groups.map((g) => (
     <section class="wrap group">

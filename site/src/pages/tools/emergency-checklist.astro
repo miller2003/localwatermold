@@ -1,4 +1,5 @@
 ---
+import { S } from "../../lib/state";
 import Base from "../../layouts/Base.astro";
 import Icon from "../../components/Icon.astro";
 import { SITE, PHONES, formatPhone } from "../../config";
@@ -12,8 +13,8 @@ const sections = [
 ];
 ---
 <Base
-  title="Water Damage Emergency Checklist (Printable)"
-  description="A one-page printable checklist for a burst pipe, flooded basement or sewage backup: safety, shutoff, documentation, who to call and how to start drying."
+  title={`Water Damage Emergency Checklist for ${S.name} (Printable)`}
+  description={`A printable one-page checklist for ${S.name} homes: burst pipe, flooded basement or sewage backup. Safety, shutoff, photos, who to call, drying.`}
   crumbs={[{ name: "Emergency checklist", href: "/tools/emergency-checklist/" }]}
 >
   <section class="wrap sheet">

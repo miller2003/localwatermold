@@ -14,6 +14,13 @@ Only counties named "... County" are included (independent cities are skipped).
   "water mold"); tagline "Water damage, mold, fire and flooded basement help from local restoration pros".
 - All 25 state sections build: 2,285 county pages plus guides, tools and a risk index per state.
 - 2026-10-21: switched to live (indexable). Call line still not live (no numbers yet). 2,789 URLs submitted to IndexNow; sitemap index at /sitemap.xml.
+- 2026-10-21: content and SEO/GEO pass. Generic guides (categories, water heater, cost) moved to one
+  national copy at /guides/ with 301s from the old state URLs; 7 new national guides, a glossary and a
+  state statistics page with CSV; basement waterproofing page in every state; answer-first summaries,
+  FAQs and FAQPage schema on guides and service pages; richer JSON-LD (WebPage, Article citations,
+  Dataset, DefinedTermSet); robots.txt explicitly allows AI crawlers; llms.txt rewritten and
+  llms-full.txt generated; build now fails on SEO errors (scripts/check-seo.mjs). Fixed: every state's
+  first-hour guide linked to Ohio's insurance regulator; "an Pennsylvania"-style grammar.
 
 ## Pre-launch checklist
 - [ ] Verify the insurance regulator name and URL in `site/src/lib/state.ts` (states with `verified: false`).
@@ -21,6 +28,10 @@ Only counties named "... County" are included (independent cities are skipped).
 - [ ] Set up email for hello@localwatermold.com (Cloudflare Email Routing can forward it).
 - [ ] Add phone numbers per state to `LINES` and set `MODE = "live"` in `site/src/config.ts`.
 - [ ] Have privacy and terms reviewed.
-- [ ] Generic guides (water damage categories, water heater leaks, etc.) repeat in every state section;
-      before indexing, consider one national copy with state pages linking to it.
-- [ ] Add basement waterproofing and foundation pages (same buyers, reuses county data).
+- [x] Generic guides moved to one national copy (see 2026-10-21).
+- [x] Basement waterproofing page per state. Foundation repair pages still to do.
+- [ ] Cloudflare: add a Redirect Rule from www.localwatermold.com to the apex (canonical tags already
+      point at the apex), and check AI Crawl Control / bot settings so AI crawlers aren't blocked at launch.
+- [ ] Submit sitemap.xml in Google Search Console and Bing Webmaster Tools at launch (Bing feeds Copilot
+      and ChatGPT search).
+- [ ] Decide a license for /water-damage-statistics.csv (e.g. CC BY 4.0) and add it to the Dataset schema.

@@ -1,7 +1,8 @@
 // Usage: node scripts/build.mjs <state|all> [--deploy]
 // Builds the root section (home, about, legal) and one state section, or every state that has
 // site data, then merges them into dist/site: root pages at /, each state under /<state-slug>/.
-// Runs the similarity check per state and the link check on the merged site. --deploy pushes the Worker.
+// Runs the similarity check per state, then the link and SEO checks on the merged site, and writes
+// llms-full.txt. --deploy pushes the Worker.
 import { spawnSync } from "node:child_process";
 import { cpSync, existsSync, readdirSync, rmSync } from "node:fs";
 import { stateSlug } from "../astro.config.mjs";
@@ -42,5 +43,7 @@ for (const state of states) {
 
 console.log(`\nBuilt ${states.length - failed.length} of ${states.length} states.${failed.length ? ` Failed: ${failed.join(", ")}` : ""}`);
 const linksOk = run("node", ["scripts/check-links.mjs", "dist/site"]);
-if (failed.length || !linksOk) process.exit(1);
+const seoOk = run("node", ["scripts/check-seo.mjs", "dist/site"]);
+run("node", ["scripts/llms-full.mjs", "dist/site"]);
+if (failed.length || !linksOk || !seoOk) process.exit(1);
 if (process.argv.includes("--deploy") && !run("npx", ["wrangler", "deploy"])) process.exit(1);

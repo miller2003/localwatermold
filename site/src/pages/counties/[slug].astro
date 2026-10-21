@@ -1,5 +1,5 @@
 ---
-import { S } from "../../lib/state";
+import { S, an } from "../../lib/state";
 import Base from "../../layouts/Base.astro";
 import CallButton from "../../components/CallButton.astro";
 import Triage from "../../components/Triage.astro";
@@ -20,6 +20,17 @@ export function getStaticPaths() {
 const { c } = Astro.props as { c: County };
 const w = c.weather!;
 const risks = topRisks(c);
+// The guide that answers each risk, so every county links to what matters most where it is.
+const RISK_GUIDE: Record<string, { href: string; label: string }> = {
+  freeze: { href: `/guides/frozen-pipes-${S.slug}/`, label: "Preventing frozen pipes" },
+  mobile: { href: `/guides/frozen-pipes-${S.slug}/`, label: "Keeping lines from freezing" },
+  age: { href: "/guides/signs-of-hidden-water-damage/", label: "Spotting hidden leaks" },
+  rain: { href: "/basement-waterproofing/", label: "Basement waterproofing" },
+  humid: { href: "/guides/mold-after-water-damage/", label: "Mold after water damage" },
+  vacant: { href: "/guides/appliance-leaks/", label: "Shutoffs and leak sensors" },
+  heat: { href: "/fire-smoke-damage/", label: "Fire and smoke damage" },
+  thaw: { href: "/guides/ice-dams/", label: "Ice dams and ceiling leaks" },
+};
 const faq = faqs(c);
 const cal = seasonCalendar(c);
 const neighbors = c.adjacent.map((s) => countyBySlug(s)!).filter(Boolean);
@@ -28,7 +39,10 @@ const risk = riskFor(c.slug);
 const origin = Astro.site!.origin;
 const url = `${origin}${p(`/counties/${c.slug}/`)}`;
 
-const title = `Water Damage Restoration in ${c.short} County, ${S.abbr} | ${c.seat}${c.places[1] && c.places[0].name === c.seat ? ", " + c.places[1].name : ""}`;
+// Keyword first, then the county seat and the next-largest town while it fits in about 62 characters.
+const titleBase = `Water Damage Restoration in ${c.short} County, ${S.abbr}`;
+const towns = [c.seat, ...c.places.map((x) => x.name).filter((n) => n !== c.seat)].slice(0, 2);
+const title = [`${titleBase} | ${towns.join(", ")}`, `${titleBase} | ${towns[0]}`, titleBase].find((t) => t.length <= 62) ?? titleBase;
 const schema = [
   {
     "@type": "Service",
@@ -105,6 +119,7 @@ const schema = [
             <span class="risk-n">{i + 1}</span>
             <h3>{r.title}</h3>
             <p class="muted">{r.detail}</p>
+            {RISK_GUIDE[r.key] && <a class="risk-go small" data-boilerplate href={p(RISK_GUIDE[r.key].href)}>{RISK_GUIDE[r.key].label} →</a>}
           </div>
         ))}
       </div>
@@ -188,7 +203,7 @@ const schema = [
           ))}
         </ul>
         <div class="grid" style="margin-top:24px">
-          <a class="card link-card" data-boilerplate href={p(`/guides/${S.slug}-water-damage-insurance-claim/`)}><Icon name="file" /><span><strong>Filing an {S.name} insurance claim</strong><span class="muted small">What insurers must do, and by when</span></span></a>
+          <a class="card link-card" data-boilerplate href={p(`/guides/${S.slug}-water-damage-insurance-claim/`)}><Icon name="file" /><span><strong>Filing {an(S.name)} {S.name} insurance claim</strong><span class="muted small">What insurers must do, and by when</span></span></a>
           <a class="card link-card" data-boilerplate href={p("/tools/cost-estimator/")}><Icon name="dollar" /><span><strong>Estimate the cost</strong><span class="muted small">Typical ranges by water category</span></span></a>
         </div>
       </div>
@@ -249,6 +264,7 @@ const schema = [
   .risk-n { position: absolute; left: 20px; top: 20px; width: 30px; height: 30px; border-radius: 50%; background: var(--signal-soft); color: var(--signal-ink); display: grid; place-items: center; font-weight: 600; }
   .risk h3 { font-size: 1.1rem; margin-bottom: 4px; }
   .risk p { margin: 0; font-size: 0.95rem; }
+  .risk-go { display: inline-block; margin-top: 8px; }
   .climate { margin-top: 36px; align-items: start; }
   .charts { display: grid; gap: 16px; }
   .charts .card { padding: 18px 18px 14px; }

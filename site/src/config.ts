@@ -33,6 +33,8 @@ export const SITE = {
   stateAbbr: S?.abbr,
   launchMode: MODE,
   contactEmail: CONTACT_EMAIL,
+  // First publication date of the guides, and the date they were last checked against sources.
+  published: "2026-10-21",
   lastReviewed: "2026-10-21",
   // Set once a real, consenting reviewer is on board. Never invent one.
   reviewer: null as null | { name: string; credential: string; bio: string },

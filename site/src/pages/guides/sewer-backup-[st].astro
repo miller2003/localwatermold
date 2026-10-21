@@ -7,14 +7,22 @@ import Article from "../../layouts/Article.astro";
 ---
 <Article
   title={`Sewer backup in your basement: cleanup, responsibility and coverage in ${S.name}`}
-  seoTitle={`Sewer Backup in ${S.name}: Safe Cleanup, Who's Responsible, and Insurance`}
-  description={`What to do when sewage comes up through a floor drain or toilet, how to tell a city sewer problem from your own line, and how sewer backup coverage works for ${S.name} homeowners.`}
+  seoTitle={`Sewer Backup in ${S.name}: Cleanup, Responsibility, Insurance`}
+  description={`Sewage coming up through a floor drain or toilet? Safe cleanup, how to tell a city sewer problem from your own line, and ${S.name} backup coverage.`}
   eyebrow="Guide · Sewage"
   dek="A sewer backup is a contamination problem first and a water problem second. Here's how to stay safe, figure out whose pipe failed, and what insurance usually does and doesn't pay."
   path={`/guides/sewer-backup-${S.slug}/`}
   crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Sewer backup", href: `/guides/sewer-backup-${S.slug}/` }]}
+  about={["Sewer backup", "Sewage cleanup", "Water backup insurance"]}
+  summary={[
+    "Stop using all water in the house, keep people and pets away, and stay out if water could reach outlets or the electrical panel. Sewage is Category 3 water and carries bacteria and viruses.",
+    "Carpet, padding, upholstered furniture, and drywall and insulation that sewage reached are generally removed and discarded; hard surfaces are cleaned and disinfected.",
+    `Standard homeowners policies usually exclude sewer backups. Coverage comes from a water backup endorsement with its own limit. In many ${S.name} communities, the homeowner is responsible for the sewer lateral to the main.`,
+    "A backwater valve and a camera inspection of your sewer line are the main ways to prevent the next backup.",
+  ]}
   related={[
     { href: "/guides/water-damage-categories/", label: "Why sewage is Category 3" },
+    { href: "/basement-waterproofing/", label: "Basement waterproofing" },
     { href: "/guides/basement-flooding-sump-pump/", label: "Other causes of basement water" },
     { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: `${S.name} insurance claims` },
   ]}

@@ -1,0 +1,166 @@
+---
+import Base from "../../src/layouts/Base.astro";
+import { SITE } from "../../src/config";
+import { STATE_STATS, TOTALS, DATA_META as META } from "../../src/lib/national";
+
+const origin = Astro.site!.origin;
+const url = `${origin}/water-damage-statistics/`;
+const int = (n: number) => Math.round(n).toLocaleString("en-US");
+const pct = (n: number) => `${Math.round(n)}%`;
+const one = (n: number) => (Math.round(n * 10) / 10).toFixed(1);
+const by = <K extends keyof (typeof STATE_STATS)[number]>(k: K, dir = -1) =>
+  [...STATE_STATS].sort((a, b) => dir * ((a[k] as number) - (b[k] as number)));
+const oldest = by("pre1980"), newest = by("pre1980", 1), coldest = by("pipeRiskNights"), wettest = by("heavyRainDays"), muggiest = by("muggyNights");
+const period = META.weatherPeriod.replace(/[^\d]+/g, "–");
+
+const three = (xs: typeof STATE_STATS, f: (s: (typeof STATE_STATS)[number]) => string) =>
+  `${xs[0].name} (${f(xs[0])}), ${xs[1].name} (${f(xs[1])}) and ${xs[2].name} (${f(xs[2])})`;
+const findings = [
+  `<strong>Oldest housing:</strong> ${three(oldest, (s) => pct(s.pre1980))} have the largest shares of homes built before 1980. The newest housing is in ${three(newest, (s) => pct(s.pre1980))}.`,
+  `<strong>Most pipe-freeze nights</strong> (lows of 20°F or colder) for the typical resident: ${three(coldest, (s) => `${Math.round(s.pipeRiskNights)} a year`)}.`,
+  `<strong>Most heavy-rain days</strong> (1 inch or more): ${three(wettest, (s) => `${one(s.heavyRainDays)} a year`)}.`,
+  `<strong>Most muggy nights</strong> (lows of 65°F or warmer, the humid air that feeds mold): ${three(muggiest, (s) => `${Math.round(s.muggyNights)} a year`)}.`,
+];
+const faq = [
+  { q: "Which state has the oldest homes for water damage risk?", a: `Among the ${TOTALS.states} states we cover, ${oldest[0].name} has the largest share of homes built before 1980, at ${pct(oldest[0].pre1980)}, followed by ${oldest[1].name} (${pct(oldest[1].pre1980)}) and ${oldest[2].name} (${pct(oldest[2].pre1980)}). Older homes are more likely to have galvanized steel or cast iron pipes, older water heaters and less insulation around plumbing.` },
+  { q: "Which states have the most frozen pipe risk?", a: `By pipe-freeze nights, nights at or below 20°F, the typical resident of ${coldest[0].name} sees about ${Math.round(coldest[0].pipeRiskNights)} a year, ${coldest[1].name} about ${Math.round(coldest[1].pipeRiskNights)}, and ${coldest[2].name} about ${Math.round(coldest[2].pipeRiskNights)}, based on NOAA daily county data for ${period}.` },
+  { q: "Which states get the most heavy rain?", a: `${wettest[0].name} averages about ${one(wettest[0].heavyRainDays)} days a year with an inch or more of rain for the typical resident, followed by ${wettest[1].name} (${one(wettest[1].heavyRainDays)}) and ${wettest[2].name} (${one(wettest[2].heavyRainDays)}). Heavy-rain days are when basements flood, sump pumps fail and sewers back up.` },
+];
+const schema = [
+  {
+    "@type": "Dataset",
+    "@id": `${url}#dataset`,
+    name: "Water damage risk factors by state: housing age and daily weather",
+    description: `Statewide housing age (share of homes built before 1960 and 1980, and after 2000) and population-weighted annual counts of pipe-freeze nights, freezing nights, freeze-thaw days, heavy-rain days and muggy nights for ${TOTALS.states} U.S. states, built from county-level U.S. Census ACS and NOAA nClimGrid-Daily data.`,
+    url,
+    creator: { "@id": `${origin}/#org` },
+    publisher: { "@id": `${origin}/#org` },
+    isAccessibleForFree: true,
+    inLanguage: "en-US",
+    dateModified: META.generated,
+    temporalCoverage: META.weatherPeriod.replace(/[^\d]+/g, "/"),
+    spatialCoverage: { "@type": "Place", name: STATE_STATS.map((s) => s.name).join(", ") },
+    variableMeasured: ["Share of homes built before 1980", "Share of homes built before 1960", "Share of homes built 2000 or later", "Pipe-freeze nights per year (low ≤ 20°F)", "Freezing nights per year (low ≤ 32°F)", "Freeze-thaw days per year", "Heavy-rain days per year (≥ 1 inch)", "Muggy nights per year (low ≥ 65°F)", "Annual precipitation (inches)"],
+    isBasedOn: [
+      { "@type": "Dataset", name: `U.S. Census Bureau American Community Survey, ${META.acsRelease} (${META.acsYears})`, url: "https://www.census.gov/programs-surveys/acs" },
+      { "@type": "Dataset", name: "NOAA NCEI nClimGrid-Daily", url: "https://www.ncei.noaa.gov/products/land-based-station/nclimgrid-daily" },
+    ],
+    distribution: [{ "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: `${origin}/water-damage-statistics.csv` }],
+  },
+  { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
+];
+---
+<Base
+  title="Water Damage Risk by State: Housing, Freeze and Rain Data"
+  description={`Which states have the oldest homes, most pipe-freeze nights and most heavy rain? Census and NOAA data for ${TOTALS.states} states, with a free CSV.`}
+  crumbs={[{ name: "Risk by state", href: "/water-damage-statistics/" }]}
+  schema={schema}
+>
+  <section class="wrap head">
+    <p class="eyebrow">Data</p>
+    <h1>Water damage risk by state</h1>
+    <p class="lede">Old plumbing, hard freezes, heavy rain and humid summers are what turn into water damage and mold claims. Here's how the {TOTALS.states} states we cover compare, built from {int(TOTALS.countyPages)} counties of Census housing data and ten years of NOAA daily weather.</p>
+    <aside class="tldr" aria-label="Key findings">
+      <p class="tldr-h">Key findings</p>
+      <ul>{findings.map((f) => <li set:html={f} />)}</ul>
+    </aside>
+  </section>
+
+  <section class="wrap">
+    <div class="table-wrap card tbl">
+      <table data-sortable>
+        <caption class="sr-only">Water damage risk factors by state. Select a column heading to sort.</caption>
+        <thead>
+          <tr>
+            <th scope="col"><button type="button" data-sort="text">State</button></th>
+            <th scope="col" class="n"><button type="button" data-sort="num">Homes</button></th>
+            <th scope="col" class="n"><button type="button" data-sort="num">Built before 1980</button></th>
+            <th scope="col" class="n"><button type="button" data-sort="num">Built before 1960</button></th>
+            <th scope="col" class="n"><button type="button" data-sort="num">Pipe-freeze nights / yr</button></th>
+            <th scope="col" class="n"><button type="button" data-sort="num">Freeze-thaw days / yr</button></th>
+            <th scope="col" class="n"><button type="button" data-sort="num">Heavy-rain days / yr</button></th>
+            <th scope="col" class="n"><button type="button" data-sort="num">Muggy nights / yr</button></th>
+            <th scope="col">Coldest county</th>
+          </tr>
+        </thead>
+        <tbody>
+          {STATE_STATS.map((s) => (
+            <tr>
+              <th scope="row" data-v={s.name}><a href={`/${s.slug}/${s.slug}-water-damage-risk/`}>{s.name}</a></th>
+              <td class="n" data-v={s.housingUnits}>{int(s.housingUnits)}</td>
+              <td class="n" data-v={s.pre1980}>{pct(s.pre1980)}</td>
+              <td class="n" data-v={s.pre1960}>{pct(s.pre1960)}</td>
+              <td class="n" data-v={s.pipeRiskNights}>{Math.round(s.pipeRiskNights)}</td>
+              <td class="n" data-v={s.freezeThawDays}>{Math.round(s.freezeThawDays)}</td>
+              <td class="n" data-v={s.heavyRainDays}>{one(s.heavyRainDays)}</td>
+              <td class="n" data-v={s.muggyNights}>{Math.round(s.muggyNights)}</td>
+              <td><a href={`/${s.slug}/counties/${s.coldest.slug}/`}>{s.coldest.name}</a> <span class="faint">({Math.round(s.coldest.value)})</span></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="small faint note">Covers counties named "… County" in each state; independent cities and New York City's boroughs aren't included. Housing shares are weighted by housing units. Weather counts are county averages weighted by population, so they describe the typical resident's county. <a href="/water-damage-statistics.csv" download>Download the data (CSV)</a></p>
+  </section>
+
+  <section class="wrap read prose body">
+    <h2 id="why-these-numbers">Why these numbers predict water damage</h2>
+    <ul>
+      <li><strong>Homes built before 1980</strong> are more likely to have galvanized steel supply pipes, cast iron drains and original water heater connections that corrode and fail, and less insulation around pipes in exterior walls and crawl spaces.</li>
+      <li><strong>Pipe-freeze nights</strong>, lows of 20°F or colder, are when pipes in unheated spaces, exterior walls and crawl spaces are at serious risk of freezing and splitting.</li>
+      <li><strong>Freeze-thaw days</strong> drive ice dams on roofs and cracking in foundations and driveways.</li>
+      <li><strong>Heavy-rain days</strong>, an inch or more in 24 hours, are when basements flood, sump pumps run hardest and sewers back up.</li>
+      <li><strong>Muggy nights</strong> signal the humid summer air that keeps basements and crawl spaces damp enough for mold.</li>
+    </ul>
+    <h2 id="county-detail">County-level detail</h2>
+    <p>Every state links to its own Water Damage Risk Index, which ranks each county on the same factors, and every county page breaks down its own housing and weather. Use the state names in the table above, or <a href="/#states">choose your state</a>.</p>
+    <h2 id="method">Method and sources</h2>
+    <p>Housing data comes from the U.S. Census Bureau's American Community Survey, {META.acsRelease} estimates ({META.acsYears}). Weather counts come from NOAA's nClimGrid-Daily county averages for {period}. Full definitions are on our <a href="/data-sources/">data sources and methodology</a> page. You're welcome to cite these figures; please link to this page.</p>
+    <h2 id="faq">Frequently asked questions</h2>
+    {faq.map((f) => <details class="faq"><summary>{f.q}</summary><div>{f.a}</div></details>)}
+  </section>
+</Base>
+
+<style>
+  .head { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 8px; }
+  .tldr { background: var(--water-soft); color: var(--water-ink); border-radius: var(--r-lg); padding: 18px 22px 6px; margin: 24px 0 28px; max-width: var(--read); }
+  .tldr-h { font: 600 0.8rem/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 10px; }
+  .tldr ul { margin: 0 0 12px; padding-left: 1.1em; }
+  .tldr li { margin: 0 0 8px; }
+  .tbl { padding: 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  thead th { background: var(--sunk); position: sticky; top: 0; }
+  tbody th { font-weight: 600; }
+  .n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  thead button { all: unset; cursor: pointer; font-weight: 600; font-size: 0.85rem; }
+  thead button:focus-visible { box-shadow: var(--focus); border-radius: 4px; }
+  thead button::after { content: " ↕"; color: var(--ink-3); }
+  thead th[aria-sort="ascending"] button::after { content: " ↑"; color: var(--water); }
+  thead th[aria-sort="descending"] button::after { content: " ↓"; color: var(--water); }
+  .note { margin-top: 12px; max-width: 90ch; }
+  .body { padding-top: 24px; padding-bottom: 72px; }
+</style>
+
+<script>
+  // Progressive enhancement: the table is complete without JavaScript; this only adds sorting.
+  document.querySelectorAll<HTMLTableElement>("table[data-sortable]").forEach((table) => {
+    const body = table.tBodies[0];
+    table.querySelectorAll<HTMLButtonElement>("thead button").forEach((btn) => {
+      const th = btn.closest("th")!;
+      const col = Array.from(th.parentElement!.children).indexOf(th);
+      btn.addEventListener("click", () => {
+        const asc = th.getAttribute("aria-sort") !== "ascending";
+        table.querySelectorAll("thead th").forEach((h) => h.removeAttribute("aria-sort"));
+        th.setAttribute("aria-sort", asc ? "ascending" : "descending");
+        const num = btn.dataset.sort === "num";
+        const rows = Array.from(body.rows).sort((a, b) => {
+          const x = (a.cells[col] as HTMLElement).dataset.v ?? "", y = (b.cells[col] as HTMLElement).dataset.v ?? "";
+          const d = num ? Number(x) - Number(y) : x.localeCompare(y);
+          return asc ? d : -d;
+        });
+        rows.forEach((r) => body.appendChild(r));
+      });
+    });
+  });
+</script>

@@ -1,24 +1,37 @@
 ---
-import { S } from "../../lib/state";
+import { S, an } from "../../lib/state";
 import Article from "../../layouts/Article.astro";
 ---
 <Article
   title="Water damage: what to do in the first hour"
-  seoTitle={`Water Damage: What to Do in the First Hour (${S.name} Homeowner Checklist)`}
-  description="A step-by-step checklist for the first 60 minutes after a pipe bursts, a basement floods or a toilet backs up: safety, stopping the water, protecting your claim and starting to dry."
+  seoTitle={`Water Damage: What to Do in the First Hour (${S.name})`}
+  description={`A minute-by-minute checklist for the first hour after a burst pipe, flooded basement or toilet backup in ${S.name}: safety, shutoff, photos, drying.`}
   eyebrow="Guide · Emergency"
   dek="What you do in the first hour decides how much has to be torn out later. Here's the order that limits damage and keeps your insurance claim clean."
   path="/guides/water-damage-first-hour/"
   crumbs={[{ name: "Guides", href: "/guides/" }, { name: "The first hour", href: "/guides/water-damage-first-hour/" }]}
+  about={["Water damage", "Emergency response", "Homeowners insurance claims"]}
+  summary={[
+    "<strong>Minutes 0 to 5:</strong> make it safe. Stay out of water that could touch outlets, cords or the electrical panel, leave if you smell gas, and keep people out from under a sagging ceiling.",
+    "<strong>Minutes 5 to 15:</strong> stop the water. Close the fixture's own valve, or the main shutoff, usually where the water line enters the house near the meter. Turn it clockwise.",
+    "<strong>Minutes 15 to 30:</strong> document everything with video and photos before cleanup, and keep the failed part.",
+    "<strong>Minutes 30 to 60:</strong> move belongings to a dry area, call your insurer to open a claim, and call a restoration company. The EPA advises drying wet materials within 24 to 48 hours to prevent mold.",
+  ]}
+  faq={[
+    { q: "Should I turn off the electricity if my house is flooding?", a: "Only if you can reach the breaker panel without standing in or touching water. If water is near outlets or the panel, stay out and call your electric utility to disconnect power at the meter." },
+    { q: "Who do I call first after water damage, the insurer or a restoration company?", a: "Do whatever stops the damage fastest. Stop the water and document it, then call both. Ask your insurer whether it requires approval of a mitigation company, but don't delay drying waiting for an adjuster." },
+    { q: "Is it safe to stay in a house with water damage?", a: "Usually, if the water was clean, the electricity is safe and the area is drying. Stay elsewhere if there's sewage, a sagging ceiling, no safe power or heat, or if anyone in the house has a weakened immune system." },
+  ]}
   related={[
     { href: "/guides/water-damage-categories/", label: "Clean, gray or black water?" },
-    { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: `Filing an ${S.name} insurance claim` },
+    { href: "/guides/does-homeowners-insurance-cover-water-damage/", label: "Is it covered by insurance?" },
+    { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: `Filing ${an(S.name)} ${S.name} insurance claim` },
     { href: "/tools/emergency-checklist/", label: "Printable emergency checklist" },
   ]}
   sources={[
     { label: "U.S. EPA: A Brief Guide to Mold, Moisture and Your Home", href: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
     { label: "American Red Cross: Flood safety", href: "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/flood.html" },
-    { label: `${S.name} Department of Insurance: Consumer services`, href: "https://insurance.ohio.gov/" },
+    { label: `${S.regulator.name}: consumer help`, href: S.regulator.url },
   ]}
 >
   <h2>Minutes 0 to 5: make it safe</h2>

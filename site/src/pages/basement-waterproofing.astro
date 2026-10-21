@@ -1,0 +1,70 @@
+---
+import { S, contractorsText, cancellationText } from "../lib/state";
+import Service from "../layouts/Service.astro";
+import { STATE, META, pilotCounties } from "../lib/data";
+import { p } from "../lib/paths";
+
+const rainy = [...pilotCounties()].sort((a, b) => b.weather!.heavyRainDays - a.weather!.heavyRainDays).slice(0, 5);
+---
+<Service
+  title={`Basement waterproofing in ${S.name}`}
+  seoTitle={`Basement Waterproofing in ${S.name} | Drains and Sump Pumps`}
+  description={`Wet basement in ${S.name}? Tell surface water from groundwater, see what drains, sump pumps and crack repair fix, and what to ask a contractor.`}
+  eyebrow="Basement waterproofing"
+  lede="Waterproofing keeps the next storm out. It's a different job from drying out a flooded basement, and the right fix depends on where the water gets in. Start outside, where the cheapest fixes are."
+  path="/basement-waterproofing/"
+  name="Basement waterproofing"
+  metric="rain"
+  process={[
+    ["Find the entry point", "Watch where water appears and when: at the wall-floor joint, through cracks, up through the slab, or down the walls from above grade. Timing after storms points to surface water or groundwater."],
+    ["Fix the outside first", "Clean gutters, extend downspouts well away from the foundation, and regrade soil so it slopes away from the house. Many wet basements stop here."],
+    ["Relieve water pressure", "Where groundwater pushes in, an interior perimeter drain or exterior drain tile carries it to a sump pump before it reaches the floor."],
+    ["Seal and protect", "Inject foundation cracks, apply exterior membranes when excavating, add a battery backup to the sump pump, and dehumidify."],
+  ]}
+  guides={[
+    { href: "/guides/basement-flooding-sump-pump/", label: "Basement flooding and sump pumps", note: "What to do when it's wet right now" },
+    { href: `/guides/sewer-backup-${S.slug}/`, label: "Sewer backups", note: "Backwater valves and coverage" },
+    { href: "/guides/crawl-space-moisture/", label: "Crawl space water and mold", note: "Vapor barriers vs. encapsulation" },
+  ]}
+  faq={[
+    { q: "What's the difference between basement waterproofing and water damage restoration?", a: "Restoration dries and repairs a basement after water gets in. Waterproofing stops water from getting in next time, with drainage, sump pumps, grading and sealing. If the basement is wet now, dry it first; then fix the cause." },
+    { q: "Do waterproof paints and sealers work?", a: "Masonry sealers can reduce dampness from minor moisture moving through concrete or block. They don't hold back water under pressure from saturated soil, and they can peel off when they try. Treat them as a finishing step, not the fix for active leaks." },
+    { q: "Interior drain or exterior waterproofing: which is better?", a: "Exterior waterproofing (excavating to apply a membrane and drain tile) stops water before it reaches the wall but is disruptive and expensive. An interior perimeter drain with a sump pump manages water that gets through and is usually less costly. The right choice depends on the soil, the foundation and what's inside the basement." },
+    { q: "Does homeowners insurance pay for basement waterproofing?", a: "No. Waterproofing is maintenance and improvement. Insurance may cover sudden water damage, and sump pump or sewer backup damage only with a water backup endorsement, but not the cost of preventing future seepage." },
+    { q: "How do I know if water is from the surface or groundwater?", a: "Surface water shows up during or soon after rain, often near downspouts or low corners, and on the upper part of walls. Groundwater shows up at the wall-floor joint or through the slab, often hours or days after storms or in wet seasons, and can persist." },
+  ]}
+>
+  <h2>Why {S.name} basements leak</h2>
+  <p>In {S.name}, the typical county gets {STATE.weather.heavyRainDays} days a year with an inch or more of rain (NOAA, {META.weatherPeriod}). Those are the storms that saturate soil around a foundation, push groundwater against basement walls and overwhelm gutters and storm drains. These counties average the most heavy-rain days:</p>
+  <ul>
+    {rainy.map((c) => <li><a href={p(`/counties/${c.slug}/`)}>{c.name}</a>: {c.weather!.heavyRainDays} heavy-rain days a year, wettest single day {c.weather!.wettestDay}"</li>)}
+  </ul>
+
+  <h2>Match the fix to the water</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>What you see</th><th>Likely cause</th><th>Usual fix</th></tr></thead>
+      <tbody>
+        <tr><td>Water near a downspout or one corner during rain</td><td>Roof runoff and grading</td><td>Downspout extensions, gutter repair, regrading</td></tr>
+        <tr><td>Water at the joint where wall meets floor</td><td>Groundwater pressure</td><td>Interior perimeter drain and sump pump</td></tr>
+        <tr><td>Water through a wall crack</td><td>Crack in poured concrete</td><td>Crack injection; exterior repair if it keeps leaking</td></tr>
+        <tr><td>Water up through floor cracks or a floor drain</td><td>High water table or sewer backup</td><td>Sump system; backwater valve if it's sewage</td></tr>
+        <tr><td>Damp walls, white crust, musty smell, no puddles</td><td>Moisture moving through masonry, or condensation</td><td>Exterior drainage fixes, dehumidifier, sealer as a finish</td></tr>
+        <tr><td>Walls bowing, stair-step cracks in block</td><td>Soil pressure on the foundation</td><td>Structural evaluation first; waterproofing alone won't fix it</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Questions to ask a waterproofing contractor</h2>
+  <ul>
+    <li>Where exactly is the water coming in, and how did you determine that?</li>
+    <li>What will you do outside (gutters, downspouts, grading) before anything inside?</li>
+    <li>What sump pump, discharge line and battery backup are included, and where will it discharge?</li>
+    <li>What does the warranty cover, is it transferable, and does it cover the result (a dry basement) or only the parts?</li>
+    <li>Do you need a permit, and who pulls it?</li>
+  </ul>
+
+  <h2>{S.name} contractor and contract rules</h2>
+  <p>{contractorsText()}</p>
+  <p>{cancellationText()}</p>
+</Service>

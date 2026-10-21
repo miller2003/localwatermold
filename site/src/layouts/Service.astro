@@ -16,19 +16,33 @@ interface Props {
   lede: string;
   path: string;
   name: string;
-  metric: "freeze" | "age" | "humid" | "heat";
+  metric: "freeze" | "age" | "humid" | "heat" | "rain";
   process: [string, string][];
   guides: { href: string; label: string; note: string }[];
+  faq?: { q: string; a: string }[];
 }
 const props = Astro.props;
 const origin = Astro.site!.origin;
-const schema = [{
+const url = `${origin}${p(props.path)}`;
+const faq = props.faq ?? [];
+const schema: Record<string, unknown>[] = [{
   "@type": "Service",
+  "@id": `${url}#service`,
   name: `${props.name} referrals in ${S.name}`,
   serviceType: `${props.name} referral`,
+  description: props.description,
+  url,
   provider: { "@id": `${origin}/#org` },
-  areaServed: { "@type": "State", name: SITE.state },
+  areaServed: { "@type": "State", name: SITE.state, containedInPlace: { "@type": "Country", name: "United States" } },
+  audience: { "@type": "Audience", audienceType: "Homeowners and renters" },
 }];
+if (faq.length) {
+  schema.push({
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  });
+}
 ---
 <Base title={props.seoTitle} description={props.description} crumbs={[{ name: props.name, href: props.path }]} schema={schema}>
   <section class="hero">
@@ -63,6 +77,16 @@ const schema = [{
       <div class="prose read"><slot /></div>
     </div>
   </section>
+
+  {faq.length > 0 && (
+    <section class="section">
+      <div class="wrap read">
+        <p class="eyebrow">Questions</p>
+        <h2 id="faq">{props.name} FAQ</h2>
+        {faq.map((f) => <details class="faq"><summary>{f.q}</summary><div>{f.a}</div></details>)}
+      </div>
+    </section>
+  )}
 
   <section class="section">
     <div class="wrap">

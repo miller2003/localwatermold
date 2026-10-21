@@ -1,5 +1,5 @@
 ---
-import { S } from "../lib/state";
+import { S, an } from "../lib/state";
 import Base from "../layouts/Base.astro";
 import CallButton from "../components/CallButton.astro";
 import StateMap from "../components/StateMap.astro";
@@ -16,7 +16,7 @@ const fallback = (slug: string) => countyBySlug(slug)!.adjacent.map((s) => count
 ---
 <Base
   title={`Water Damage & Mold Restoration in ${S.name} | ${SITE.brand}`}
-  description={`Water damage, mold, fire or a flooded basement in an ${S.name} home? Get connected with a local restoration company, and get county-by-county guidance on what to do first.`}
+  description={`Water damage, mold, fire or a flooded basement in ${an(S.name)} ${S.name} home? Get a local restoration company and county-by-county first steps.`}
 >
   <section class="hero">
     <div class="wrap hero-grid">
@@ -52,11 +52,12 @@ const fallback = (slug: string) => countyBySlug(slug)!.adjacent.map((s) => count
   <section class="section">
     <div class="wrap">
       <p class="eyebrow">What we help with</p>
-      <h2>Three kinds of damage, one call</h2>
-      <div class="grid grid-3">
+      <h2>Water, mold, fire and basements: one call</h2>
+      <div class="grid grid-4">
         <a class="card svc" href={p("/water-damage/")}><Icon name="droplet" size={26} /><h3>Water damage</h3><p class="muted">Burst and frozen pipes, flooded basements, water heaters, appliance leaks and sewage backups.</p><span class="more">Water damage help <Icon name="arrow" size={16} /></span></a>
         <a class="card svc" href={p("/mold-remediation/")}><Icon name="mold" size={26} /><h3>Mold</h3><p class="muted">Growth after a leak, damp basements, and musty smells from hidden mold inside walls or floors.</p><span class="more">Mold remediation <Icon name="arrow" size={16} /></span></a>
         <a class="card svc" href={p("/fire-smoke-damage/")}><Icon name="flame" size={26} /><h3>Fire and smoke</h3><p class="muted">Soot, smoke odor, and the water left behind by firefighting, from a kitchen fire to a whole house.</p><span class="more">Fire and smoke cleanup <Icon name="arrow" size={16} /></span></a>
+        <a class="card svc" href={p("/basement-waterproofing/")}><Icon name="basement" size={26} /><h3>Basements</h3><p class="muted">Flooded basements, failed sump pumps, seepage after heavy rain, and waterproofing so it doesn't happen again.</p><span class="more">Basement waterproofing <Icon name="arrow" size={16} /></span></a>
       </div>
     </div>
   </section>
@@ -100,7 +101,11 @@ const fallback = (slug: string) => countyBySlug(slug)!.adjacent.map((s) => count
         <a class="card guide" href={p("/guides/basement-flooding-sump-pump/")}><strong>Basement flooding</strong><span class="muted small">Sump pumps, backups and seepage</span></a>
         <a class="card guide" href={p("/guides/mold-after-water-damage/")}><strong>Mold after water damage</strong><span class="muted small">When DIY is fine and when it isn't</span></a>
         <a class="card guide" href={p("/guides/water-damage-restoration-cost/")}><strong>What restoration costs</strong><span class="muted small">2026 ranges and what drives them</span></a>
+        <a class="card guide" href="/guides/does-homeowners-insurance-cover-water-damage/"><strong>Is water damage covered?</strong><span class="muted small">Sudden vs. gradual, flood, backups and mold</span></a>
+        <a class="card guide" href="/guides/signs-of-hidden-water-damage/"><strong>Signs of hidden water damage</strong><span class="muted small">Stains, smells and the water meter test</span></a>
+        <a class="card guide" href="/guides/roof-leak/"><strong>Roof leaking into the house</strong><span class="muted small">What to do while it's still raining</span></a>
       </div>
+      <p class="small" style="margin-top:16px"><a href={p("/guides/")}>All {S.name} guides</a> · <a href="/glossary/">Restoration glossary</a> · <a href="/water-damage-statistics/">How {S.name} compares with other states</a></p>
     </div>
   </section>
 

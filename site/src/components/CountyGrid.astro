@@ -2,13 +2,14 @@
 import { pilotCounties, pct } from "../lib/data";
 import { p } from "../lib/paths";
 
-interface Props { metric?: "freeze" | "age" | "humid" | "heat" }
+interface Props { metric?: "freeze" | "age" | "humid" | "heat" | "rain" }
 const { metric = "age" } = Astro.props;
 const list = [...pilotCounties()].sort((a, b) => a.name.localeCompare(b.name));
 const stat = (c: (typeof list)[number]) => {
   const w = c.weather!;
   if (metric === "freeze") return `${w.pipeRiskNights} freeze nights/yr`;
   if (metric === "humid") return `${w.muggyNights} muggy nights/yr`;
+  if (metric === "rain") return `${w.heavyRainDays} heavy-rain days/yr`;
   if (metric === "heat") return `${pct(c.heatWoodPct + c.heatPropanePct)} wood or propane heat`;
   return `${pct(c.builtPre1980Pct)} built pre-1980`;
 };

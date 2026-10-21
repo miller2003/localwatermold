@@ -6,7 +6,11 @@ static-assets Worker (`localwatermold`).
 
 ## Site structure
 - `/`: national home, plus site-wide pages (`/how-it-works/`, `/editorial-policy/`, `/data-sources/`,
-  `/privacy/`, `/terms/`), `robots.txt`, `llms.txt` and the sitemap index.
+  `/privacy/`, `/terms/`), `robots.txt`, `llms.txt`, `llms-full.txt` and the sitemap index.
+- `/guides/<slug>/`: national guides that read the same in every state (roof and appliance leaks, water
+  categories, drying times, black mold, crawl spaces, insurance coverage, cost). They're listed in
+  `site/src/lib/guides.ts`; state pages link to them with `p()`, which leaves those paths at the root.
+- `/glossary/` and `/water-damage-statistics/` (state comparison table, plus `/water-damage-statistics.csv`).
 - `/<state-slug>/`: one section per state, e.g. `/ohio/`, `/ohio/counties/wayne-county/`,
   `/ohio/guides/frozen-pipes-ohio/`, `/ohio/ohio-water-damage-risk/`, `/ohio/sitemap.xml`.
 
@@ -35,7 +39,11 @@ OH, PA and MI have verified state-specific law; the other 22 use nationwide-accu
   - `src/lib/state.ts`: per-state regulator, claim rules, cancellation law, licensing, local programs
   - `src/lib/narrative.ts`: county copy generator (every sentence tied to a county value)
   - `src/lib/risk.ts`: state Water Damage Risk Index
-  - `scripts/build.mjs`: build and merge sections, then run the similarity and link checks
+  - `src/lib/guides.ts`: the national guide list (feeds indexes, sitemaps, llms.txt and `p()`)
+  - `src/layouts/Article.astro`: guides. Pass `summary` (answer-first bullets) and `faq`; h2s get
+    anchor ids and a table of contents automatically, and sources become schema.org citations.
+  - `scripts/build.mjs`: build and merge sections, then run the similarity, link and SEO checks
+    (`check-seo.mjs`) and write `llms-full.txt` (`llms-full.mjs`)
 
 Counties named "... County" with 2,000+ residents get a page; New York City's boroughs are excluded.
 

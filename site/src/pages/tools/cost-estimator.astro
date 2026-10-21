@@ -1,11 +1,12 @@
 ---
+import { S, an } from "../../lib/state";
 import Base from "../../layouts/Base.astro";
 import CallButton from "../../components/CallButton.astro";
 import { p } from "../../lib/paths";
 ---
 <Base
-  title="Water Damage Restoration Cost Estimator (2026 Ranges)"
-  description="Estimate a water damage mitigation cost range from the affected square footage and water category, based on published 2026 per-square-foot ranges."
+  title={`Water Damage Cost Estimator for ${S.name} Homes (2026 Ranges)`}
+  description={`Estimate a water damage mitigation cost range for ${an(S.name)} ${S.name} home from the wet square footage and water category, using 2026 ranges.`}
   crumbs={[{ name: "Cost estimator", href: "/tools/cost-estimator/" }]}
 >
   <section class="wrap head">

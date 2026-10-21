@@ -10,3 +10,17 @@
 
 /favicon.svg
   Cache-Control: public, max-age=604800
+
+/og-*.png
+  Cache-Control: public, max-age=604800
+
+/llms.txt
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+
+/llms-full.txt
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+
+/water-damage-statistics.csv
+  Cache-Control: public, max-age=86400

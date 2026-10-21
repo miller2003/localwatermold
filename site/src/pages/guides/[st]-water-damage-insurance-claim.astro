@@ -7,13 +7,28 @@ import Article from "../../layouts/Article.astro";
 ---
 <Article
   title={`Filing a water damage insurance claim in ${S.name}`}
-  seoTitle={`${S.name} Water Damage Insurance Claims: Coverage, Deadlines and Your Rights`}
-  description={`What ${S.name} homeowners policies usually cover for water damage, what they don't, the deadlines ${S.name}'s claim rules put on insurers, and how to document a claim so it holds up.`}
+  seoTitle={`${S.name} Water Damage Insurance Claims: Deadlines and Rights`}
+  description={`What ${S.name} homeowners policies cover for water damage, what they exclude, the deadlines ${S.name} puts on insurers, and how to document a claim.`}
   eyebrow="Guide · Insurance"
   dek={`Most water damage claims are decided by two things: what caused the water, and how well you documented it. Here's how coverage usually works and what ${S.name}'s rules require of your insurer.`}
   path={`/guides/${S.slug}-water-damage-insurance-claim/`}
   crumbs={[{ name: "Guides", href: "/guides/" }, { name: `${S.name} insurance claims`, href: `/guides/${S.slug}-water-damage-insurance-claim/` }]}
+  about={["Homeowners insurance", "Water damage claims", `${S.name} insurance regulation`]}
+  summary={[
+    `Standard ${S.name} homeowners policies usually cover water damage that is sudden and accidental, such as a burst pipe or failed water heater, and usually exclude slow leaks, flooding from outside and sewer backups without an endorsement.`,
+    "Your policy requires prompt notice and reasonable steps to prevent further damage, so stop the water and start drying right away, and keep every receipt.",
+    S.claims
+      ? `${S.claims.citation} sets deadlines for how ${S.name} insurers handle claims. ${S.claims.bullets[0][0]} ${S.claims.bullets[0][1]}`
+      : `${S.name}, like most states, has unfair claims settlement rules that require insurers to acknowledge, investigate and decide claims promptly. Ask your insurer for its timeline in writing.`,
+    `If your insurer doesn't follow the rules, you can file a complaint with the ${S.regulator.name}${S.regulator.phone ? ` (${S.regulator.phone})` : ""}.`,
+  ]}
+  faq={[
+    { q: `How long does an insurance company have to pay a claim in ${S.name}?`, a: S.claims ? `${S.claims.citation} sets the timelines. ${S.claims.bullets.map(([h, b]) => `${h} ${b}`).join(" ")}` : `${S.name}'s unfair claims settlement practices rules require insurers to act promptly, and your policy may set specific deadlines. Ask your insurer for its timeline in writing, and contact the ${S.regulator.name} if it doesn't respond.` },
+    { q: "Can I choose my own restoration company?", a: "Usually yes. Insurers may suggest preferred vendors, which can speed approvals, but you generally aren't required to use them unless your policy says so. Read whether you're signing a work authorization or an assignment of benefits." },
+    { q: `Where do I complain about an insurer in ${S.name}?`, a: `Contact the ${S.regulator.name}${S.regulator.phone ? ` at ${S.regulator.phone}` : ""} or file online through ${S.regulator.urlLabel}. Have your policy number, claim number and a timeline of your contacts with the insurer ready.` },
+  ]}
   related={[
+    { href: "/guides/does-homeowners-insurance-cover-water-damage/", label: "What insurance covers, cause by cause" },
     { href: "/guides/water-damage-first-hour/", label: "What to do in the first hour" },
     { href: "/guides/basement-flooding-sump-pump/", label: "Basement flooding and sump pumps" },
     { href: "/tools/cost-estimator/", label: "Estimate the cost" },

@@ -330,10 +330,13 @@ export function topRisks(c: County): Risk[] {
 
 export function metaDescription(c: County) {
   const w = c.weather!;
-  return pick(c, "meta", [
-    `Water, mold or fire damage in ${c.short} County, ${S.name}? Get connected with a restoration company serving ${placeList(c, 3)}. Local data: ${pct(c.builtPre1980Pct)} of homes built before 1980, ${w.pipeRiskNights} pipe-freeze ${w.pipeRiskNights === 1 ? "night" : "nights"} a year.`,
-    `${c.short} County, ${S.abbr} water damage help for ${placeList(c, 3)}: call a local restoration company, plus county data on old pipes (${pct(c.builtPre1980Pct)} pre-1980 homes) and ${w.heavyRainDays} heavy-rain days a year.`,
+  const freeze = `${w.pipeRiskNights} pipe-freeze ${w.pipeRiskNights === 1 ? "night" : "nights"} a year`;
+  // Fit in about 160 characters, the length search results show, by naming fewer towns if needed.
+  const make = (n: number) => pick(c, "meta", [
+    `Water, mold or fire damage in ${c.short} County, ${S.abbr}? Get a restoration company serving ${placeList(c, n)}. ${pct(c.builtPre1980Pct)} of homes here predate 1980; ${freeze}.`,
+    `${c.short} County, ${S.abbr} water damage help for ${placeList(c, n)}: a local restoration company, plus data on ${pct(c.builtPre1980Pct)} pre-1980 homes and ${w.heavyRainDays} heavy-rain days a year.`,
   ]);
+  return [3, 2, 1].map(make).find((d) => d.length <= 160) ?? make(1);
 }
 
 export function faqs(c: County) {

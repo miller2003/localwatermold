@@ -4,12 +4,13 @@ import { SITE } from "../config";
 import { pilotCounties } from "../lib/data";
 import { p } from "../lib/paths";
 
+// State pages only. National guides (lib/guides.ts) are listed once, in the root sitemap.
 const STATIC = [
   "/", "/counties/", "/water-damage/", "/mold-remediation/", "/fire-smoke-damage/",
   "/guides/", "/guides/water-damage-first-hour/", `/guides/${S.slug}-water-damage-insurance-claim/`,
-  "/guides/water-damage-categories/", `/guides/frozen-pipes-${S.slug}/`, "/guides/basement-flooding-sump-pump/",
-  "/guides/water-damage-restoration-cost/", "/guides/mold-after-water-damage/",
-  `/guides/sewer-backup-${S.slug}/`, "/guides/ice-dams/", "/guides/water-heater-leaking/", "/guides/choosing-restoration-company/",
+  `/guides/frozen-pipes-${S.slug}/`, "/guides/basement-flooding-sump-pump/", "/guides/mold-after-water-damage/",
+  `/guides/sewer-backup-${S.slug}/`, "/guides/ice-dams/", "/guides/choosing-restoration-company/",
+  "/basement-waterproofing/",
   `/${S.slug}-water-damage-risk/`,
   "/tools/cost-estimator/", "/tools/emergency-checklist/",
 ];

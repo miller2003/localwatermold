@@ -15,12 +15,24 @@ const low = ranked.at(-1)!;
 ---
 <Article
   title={`Frozen pipes in ${S.name}: when they freeze, how to prevent it, what to do`}
-  seoTitle={`Frozen Pipes in ${S.name}: Freeze Risk by County, Prevention and Thawing`}
+  seoTitle={`Frozen Pipes in ${S.name}: Risk by County, Prevention, Thawing`}
   description={`How cold it has to get for pipes to freeze, which ${S.name} counties see the most pipe-freeze nights, how to winterize a house, and how to safely thaw a frozen pipe.`}
   eyebrow="Guide · Winter"
   dek="Pipes don't burst while they're frozen. They burst from the pressure that ice builds up, and the water usually shows up when it thaws. Here's how to stay ahead of it."
   path={`/guides/frozen-pipes-${S.slug}/`}
   crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Frozen pipes", href: `/guides/frozen-pipes-${S.slug}/` }]}
+  about={["Frozen pipes", "Burst pipes", "Winter home maintenance"]}
+  summary={[
+    "Pipes are at serious risk of freezing when outdoor temperatures fall to about 20°F or lower, especially pipes in exterior walls, crawl spaces, attics, garages and under mobile homes.",
+    `In ${S.name}, ${top[0].name} averages the most pipe-freeze nights of the counties we cover: ${top[0].weather!.pipeRiskNights} nights a year at 20°F or colder (NOAA, ${top[0].weather!.period}).`,
+    "To prevent freezing, keep the thermostat steady and at least 55°F if you're away, open cabinet doors on exterior walls, let a cold faucet drip on the coldest nights, and insulate exposed pipes.",
+    "To thaw a frozen pipe, open the faucet and warm the pipe gently with a hair dryer or heating pad, starting nearest the faucet. Never use an open flame.",
+  ]}
+  faq={[
+    { q: "At what temperature do pipes freeze?", a: "Water freezes at 32°F, but pipes inside a house usually need a longer or deeper cold. Outdoor temperatures around 20°F or lower are the commonly cited danger zone for pipes in unheated or exterior spaces, and wind makes it worse." },
+    { q: "Should I let my faucets drip in freezing weather?", a: "On the coldest nights, letting a cold faucet on an exterior wall drip slowly helps. Moving water is slower to freeze, and an open faucet relieves the pressure that actually bursts pipes." },
+    { q: "How do I know if a pipe is frozen?", a: "A faucet that produces only a trickle or nothing in freezing weather, frost on an exposed pipe, or a bulge in the pipe are the usual signs. If a pipe has visibly split, shut off the main before it thaws." },
+  ]}
   related={[
     { href: "/guides/water-damage-first-hour/", label: "A pipe burst. What now?" },
     { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: "Is a frozen pipe covered?" },

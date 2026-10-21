@@ -1,0 +1,91 @@
+---
+import Base from "../../../src/layouts/Base.astro";
+import Icon from "../../../src/components/Icon.astro";
+import { SITE } from "../../../src/config";
+import { NATIONAL_GUIDES, guidePath, type GuideGroup } from "../../../src/lib/guides";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+
+const GROUPS: { key: GuideGroup; name: string }[] = [
+  { key: "emergency", name: "In an emergency" },
+  { key: "damage", name: "Understanding the damage" },
+  { key: "money", name: "Money and insurance" },
+];
+const origin = Astro.site!.origin;
+const schema = [{
+  "@type": "ItemList",
+  name: `${SITE.brand} guides`,
+  itemListElement: NATIONAL_GUIDES.map((g, i) => ({ "@type": "ListItem", position: i + 1, name: g.title, url: `${origin}${guidePath(g.slug)}` })),
+}];
+// Guides with state-specific law or county data live in each state section.
+const LOCAL = [
+  { path: "guides/water-damage-first-hour/", title: "Water damage: the first hour" },
+  { path: (s: string) => `guides/${s}-water-damage-insurance-claim/`, title: "Filing an insurance claim" },
+  { path: (s: string) => `guides/frozen-pipes-${s}/`, title: "Frozen pipes by county" },
+  { path: "guides/basement-flooding-sump-pump/", title: "Basement flooding and sump pumps" },
+  { path: (s: string) => `guides/sewer-backup-${s}/`, title: "Sewer backups" },
+  { path: "guides/mold-after-water-damage/", title: "Mold after water damage" },
+  { path: "guides/ice-dams/", title: "Ice dams" },
+  { path: "guides/choosing-restoration-company/", title: "Choosing a restoration company" },
+];
+---
+<Base
+  title="Water Damage, Mold and Fire Guides for Homeowners"
+  description="Plain-language guides on roof and appliance leaks, hidden water damage, drying times, black mold, crawl spaces, insurance coverage and costs."
+  crumbs={[{ name: "Guides", href: "/guides/" }]}
+  schema={schema}
+  pageType="CollectionPage"
+>
+  <section class="wrap head">
+    <p class="eyebrow">Guides</p>
+    <h1>Water, mold and fire damage guides</h1>
+    <p class="lede">Practical steps written for the moment you need them, checked against the EPA, the CDC, FEMA and the IICRC restoration standards. Each one starts with the short answer.</p>
+  </section>
+  {GROUPS.map((grp) => (
+    <section class="wrap group">
+      <h2>{grp.name}</h2>
+      <div class="grid grid-3">
+        {NATIONAL_GUIDES.filter((g) => g.group === grp.key).map((g) => (
+          <a class="card g" href={guidePath(g.slug)}><strong>{g.title}</strong><span class="muted small">{g.note}</span><span class="go"><Icon name="arrow" size={16} /></span></a>
+        ))}
+      </div>
+    </section>
+  ))}
+  <section class="wrap group">
+    <h2>Reference</h2>
+    <div class="grid grid-3">
+      <a class="card g" href="/glossary/"><strong>Restoration and insurance glossary</strong><span class="muted small">Category, class, mitigation, dry standard, ACV, AOB and more.</span><span class="go"><Icon name="arrow" size={16} /></span></a>
+      <a class="card g" href="/water-damage-statistics/"><strong>Water damage risk by state</strong><span class="muted small">Housing age, freeze nights and heavy rain for {STATE_SUMMARIES.length} states.</span><span class="go"><Icon name="arrow" size={16} /></span></a>
+      <a class="card g" href="/data-sources/"><strong>Our data and methods</strong><span class="muted small">Census housing and NOAA daily weather, and how we use them.</span><span class="go"><Icon name="arrow" size={16} /></span></a>
+    </div>
+  </section>
+  <section class="wrap group local">
+    <h2>Guides for your state</h2>
+    <p class="muted read">Insurance deadlines, cancellation rights and weather risk differ by state, so these guides live in each state's section. Pick your state:</p>
+    <details class="pick">
+      <summary>Show state guides</summary>
+      <div class="states">
+        {STATE_SUMMARIES.map((s) => (
+          <div>
+            <h3><a href={`/${s.slug}/guides/`}>{s.name}</a></h3>
+            <ul>{LOCAL.map((l) => <li><a href={`/${s.slug}/${typeof l.path === "string" ? l.path : l.path(s.slug)}`}>{l.title}</a></li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </details>
+  </section>
+</Base>
+
+<style>
+  .head { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 12px; }
+  .group { padding-top: 32px; padding-bottom: 16px; }
+  .local { padding-bottom: 72px; }
+  .group h2 { font-size: 1.3rem; }
+  .g { display: grid; gap: 6px; text-decoration: none; color: var(--ink); position: relative; padding-right: 44px; }
+  .g:hover { border-color: var(--water); }
+  .go { position: absolute; right: 18px; top: 22px; color: var(--water); }
+  .pick summary { cursor: pointer; font-weight: 600; color: var(--water); padding: 8px 0; }
+  .states { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 20px 28px; margin-top: 16px; }
+  .states h3 { font-size: 1rem; margin: 0 0 6px; }
+  .states ul { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
+  .states li { margin: 0 0 4px; }
+</style>

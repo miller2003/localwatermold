@@ -1,0 +1,142 @@
+---
+import Base from "../../src/layouts/Base.astro";
+import { SITE } from "../../src/config";
+
+// Each term gets its own anchor, so other pages, search results and answer engines can link to a
+// single definition. Definitions are written to stand alone.
+interface Term { term: string; def: string; see?: { href: string; label: string } }
+const SECTIONS: { name: string; terms: Term[] }[] = [
+  {
+    name: "Types of water damage",
+    terms: [
+      { term: "Category 1 water", def: "Clean water from a sanitary source, such as a broken supply line, an overflowing sink with no contaminants, or a water heater. It's mainly a drying job if handled quickly.", see: { href: "/guides/water-damage-categories/", label: "Water categories explained" } },
+      { term: "Category 2 water", def: "Gray water with significant contamination that could cause illness if ingested or touched, such as washing machine or dishwasher discharge or a toilet overflow with urine.", see: { href: "/guides/water-damage-categories/", label: "Water categories explained" } },
+      { term: "Category 3 water", def: "Black water that is grossly contaminated, such as sewage, toilet overflow with feces, or floodwater from rivers and streams. Porous materials it touches are generally removed.", see: { href: "/guides/water-damage-categories/", label: "Water categories explained" } },
+      { term: "Class of water damage", def: "A rating from 1 to 4 under the IICRC S500 standard for how much material is wet and how hard it will be to dry. Class 4 means water is held in dense materials like hardwood, plaster or concrete." },
+      { term: "Sudden and accidental", def: "The insurance test for most covered water damage: a discharge that happened abruptly and unexpectedly, such as a burst pipe, as opposed to gradual damage from a slow leak or lack of maintenance.", see: { href: "/guides/does-homeowners-insurance-cover-water-damage/", label: "What insurance covers" } },
+      { term: "Gradual damage", def: "Damage that built up over weeks or months, such as rot from a slow drip or a failed shower pan. Usually excluded from homeowners insurance." },
+      { term: "Wicking", def: "Water moving up or along porous materials such as drywall, wood and carpet by capillary action. It's why water damage spreads higher and farther the longer it sits." },
+      { term: "Efflorescence", def: "A white, chalky crust on concrete or masonry walls left when water seeps through and evaporates, leaving minerals behind. A sign of moisture moving through a basement or crawl space wall." },
+    ],
+  },
+  {
+    name: "The restoration job",
+    terms: [
+      { term: "Mitigation", def: "The emergency phase of a water damage job: stopping the source, extracting water, removing materials that can't be saved, and drying the structure so damage doesn't spread." },
+      { term: "Restoration (reconstruction)", def: "Putting the home back after mitigation: replacing drywall, insulation, flooring, cabinets, paint and trim. Often billed separately and sometimes done by a different contractor." },
+      { term: "Extraction", def: "Removing standing water and water held in carpet and pad with pumps and truck-mounted or portable extractors. It's much faster than evaporating the same water." },
+      { term: "Air mover", def: "A high-velocity fan that pushes air across wet surfaces to speed evaporation during structural drying." },
+      { term: "Dehumidifier (LGR)", def: "A machine that removes moisture from the air. Low-grain refrigerant (LGR) dehumidifiers used in restoration can keep pulling water out of air that's already fairly dry." },
+      { term: "Moisture mapping", def: "Using moisture meters and thermal imaging to find and record how far water traveled into walls, floors and ceilings, so drying and removal can be targeted." },
+      { term: "Dry standard", def: "The moisture reading of a material in an unaffected part of the same building. Drying is complete when wet materials reach that reading, not after a fixed number of days.", see: { href: "/guides/how-long-does-water-damage-take-to-dry/", label: "How long drying takes" } },
+      { term: "Drying log", def: "A daily record of moisture readings, temperature and humidity during drying. It documents that drying was done properly and is often requested by insurers." },
+      { term: "Antimicrobial", def: "A product applied to clean surfaces after gray or black water, or during mold remediation, to limit microbial growth. It doesn't replace removing contaminated materials and drying." },
+      { term: "Containment", def: "Plastic sheeting and sealed openings that isolate a mold or sewage work area so spores and debris don't spread to the rest of the house." },
+      { term: "Negative air", def: "Running an air scrubber that exhausts air out of a contained work area, keeping it at lower pressure than the rest of the house so contaminated air doesn't escape." },
+      { term: "HEPA", def: "High-efficiency particulate air filtration, used in vacuums and air scrubbers during mold and fire cleanup to capture fine particles and spores." },
+      { term: "IICRC", def: "The Institute of Inspection, Cleaning and Restoration Certification, a nonprofit that certifies technicians and develops industry standards for water, mold and fire restoration." },
+      { term: "IICRC S500", def: "The ANSI/IICRC standard for professional water damage restoration. It defines water categories and classes and the procedures for drying." },
+      { term: "IICRC S520", def: "The ANSI/IICRC standard for professional mold remediation, covering assessment, containment, removal, cleaning and verification.", see: { href: "/guides/black-mold/", label: "Black mold guide" } },
+      { term: "Xactimate", def: "Estimating software widely used by insurers, adjusters and restoration companies to price repairs line by line. Many contractors bill insurers through it." },
+    ],
+  },
+  {
+    name: "Insurance terms",
+    terms: [
+      { term: "Deductible", def: "The amount you pay toward a covered claim before insurance pays. Some policies have a separate, higher deductible for wind, hail or water damage." },
+      { term: "Actual cash value (ACV)", def: "Payment based on what damaged property was worth at the time of loss: replacement cost minus depreciation for age and wear." },
+      { term: "Replacement cost value (RCV)", def: "Payment based on the cost to repair or replace damaged property with new material of like kind and quality, without deducting depreciation." },
+      { term: "Recoverable depreciation", def: "On a replacement cost policy, the depreciation an insurer may hold back at first and pay once repairs are completed and documented." },
+      { term: "Proof of loss", def: "A formal, often sworn, statement of the amount you're claiming and how the loss happened. Policies set a deadline after the insurer requests it, and state rules set how quickly insurers must respond.", see: { href: "/guides/does-homeowners-insurance-cover-water-damage/", label: "Protecting your claim" } },
+      { term: "Additional living expenses (ALE)", def: "Coverage for the extra cost of living elsewhere, such as a hotel and meals, while a covered loss makes your home unlivable. Also called loss of use or Coverage D." },
+      { term: "Water backup endorsement", def: "An add-on to a homeowners policy that covers damage from water backing up through sewers or drains, or overflowing from a sump pump. Standard policies exclude it." },
+      { term: "National Flood Insurance Program (NFIP)", def: "The federal flood insurance program run by FEMA. Homeowners policies exclude flood, so flood coverage comes from the NFIP or a private flood insurer, usually with a 30-day waiting period." },
+      { term: "Adjuster", def: "The person who investigates a claim and estimates the loss for the insurer. Staff and independent adjusters work for the insurance company." },
+      { term: "Public adjuster", def: "A licensed adjuster you hire to prepare and negotiate your claim, usually for a percentage of the settlement. Licensing and fee limits vary by state." },
+      { term: "Appraisal clause", def: "A policy provision for resolving disputes over the amount of a loss: each side picks an appraiser, and an umpire decides where they disagree." },
+      { term: "Assignment of benefits (AOB)", def: "A document that transfers your right to insurance payments to a contractor, who then bills and negotiates with your insurer. Read it carefully before signing; it can limit your control over the claim." },
+      { term: "Work authorization", def: "A contract that lets a restoration company start work and usually sets how it will be paid. Different from an assignment of benefits, but still worth reading before signing." },
+    ],
+  },
+  {
+    name: "House and weather terms",
+    terms: [
+      { term: "Main water shutoff", def: "The valve that stops all water into the house, usually where the water line enters through the foundation, near the meter. In cold climates it's often in the basement; in warm climates it may be outside or in a garage." },
+      { term: "Sump pump", def: "A pump in a pit at the lowest point of a basement or crawl space that removes groundwater collected by drains around the foundation." },
+      { term: "Backwater valve", def: "A valve on a sewer line that lets wastewater flow out but closes if sewage starts flowing back toward the house." },
+      { term: "Vapor barrier", def: "Plastic sheeting laid over a crawl space floor, or installed in walls, to slow moisture moving through. In crawl spaces it's the first step toward controlling ground moisture.", see: { href: "/guides/crawl-space-moisture/", label: "Crawl space guide" } },
+      { term: "Crawl space encapsulation", def: "Sealing a crawl space's floor, walls and vents with a heavy liner and drying it with a dehumidifier or conditioned air.", see: { href: "/guides/crawl-space-moisture/", label: "Crawl space guide" } },
+      { term: "Ice dam", def: "A ridge of ice at the edge of a roof that traps melting snow behind it, forcing water under shingles and into ceilings and walls." },
+      { term: "Pipe-freeze night", def: "On this site, a night with a low at or below 20°F, the temperature at which uninsulated pipes in unheated spaces are at serious risk of freezing. Counted from NOAA daily data.", see: { href: "/data-sources/", label: "Our methodology" } },
+      { term: "Freeze-thaw day", def: "On this site, a day with a low at or below 32°F and a high above it. Frequent freeze-thaw cycles drive ice dams and foundation cracking." },
+      { term: "Heavy-rain day", def: "On this site, a day with 1 inch or more of precipitation, when sump pumps run hardest and storm sewers are most likely to back up." },
+      { term: "Muggy night", def: "On this site, a night with a low of 65°F or warmer, a simple sign of humid summer air that feeds basement and crawl space mold." },
+    ],
+  },
+];
+const slug = (t: string) => t.toLowerCase().replace(/[()]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const origin = Astro.site!.origin;
+const url = `${origin}/glossary/`;
+const all = SECTIONS.flatMap((s) => s.terms);
+const schema = [{
+  "@type": "DefinedTermSet",
+  "@id": `${url}#terms`,
+  name: `${SITE.brand} water damage, mold and insurance glossary`,
+  url,
+  hasDefinedTerm: all.map((t) => ({
+    "@type": "DefinedTerm",
+    "@id": `${url}#${slug(t.term)}`,
+    name: t.term,
+    description: t.def,
+    url: `${url}#${slug(t.term)}`,
+    inDefinedTermSet: { "@id": `${url}#terms` },
+  })),
+}];
+---
+<Base
+  title={`Water Damage and Insurance Glossary: ${all.length} Terms Explained`}
+  description="Plain-English definitions of restoration and insurance terms: water categories and classes, mitigation, dry standard, ACV vs. RCV, AOB and NFIP."
+  crumbs={[{ name: "Glossary", href: "/glossary/" }]}
+  schema={schema}
+>
+  <section class="wrap head">
+    <p class="eyebrow">Reference</p>
+    <h1>Restoration and insurance glossary</h1>
+    <p class="lede">The words you'll hear from restoration crews and adjusters after water, mold or fire damage, defined in plain English. {all.length} terms.</p>
+    <nav class="jump" aria-label="Glossary sections">
+      {SECTIONS.map((s) => <a href={`#${slug(s.name)}`}>{s.name}</a>)}
+    </nav>
+  </section>
+  <div class="wrap read body">
+    {SECTIONS.map((s) => (
+      <section>
+        <h2 id={slug(s.name)}>{s.name}</h2>
+        <dl>
+          {s.terms.map((t) => (
+            <div class="term" id={slug(t.term)}>
+              <dt><a href={`#${slug(t.term)}`}>{t.term}</a></dt>
+              <dd>{t.def}{t.see && <> <a class="see" href={t.see.href}>{t.see.label} →</a></>}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .head { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 8px; }
+  .jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .jump a { padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 0.9rem; text-decoration: none; color: var(--ink-2); }
+  .jump a:hover { border-color: var(--water); color: var(--water); }
+  .body { padding-bottom: 72px; }
+  .body h2 { margin-top: 40px; scroll-margin-top: 84px; }
+  dl { margin: 0; }
+  .term { padding: 14px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 84px; }
+  .term:target { background: var(--water-soft); margin: 0 -12px; padding: 14px 12px; border-radius: var(--r); }
+  dt { font-weight: 600; }
+  dt a { color: var(--ink); text-decoration: none; }
+  dt a:hover { text-decoration: underline; }
+  dd { margin: 4px 0 0; color: var(--ink-2); }
+  .see { white-space: nowrap; font-size: 0.92rem; }
+</style>

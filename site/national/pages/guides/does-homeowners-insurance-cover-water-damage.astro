@@ -1,0 +1,109 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="Does homeowners insurance cover water damage?"
+  seoTitle="Does Homeowners Insurance Cover Water Damage? What's Covered"
+  description="What a standard homeowners policy covers for burst pipes, leaks, roof leaks, sewer backups, floods and mold, what it excludes, and how to protect your claim."
+  eyebrow="Guide · Insurance"
+  dek="Usually yes, if the water was sudden and accidental and came from inside the house. Usually no, if it built up slowly, rose from outside, or backed up from a sewer without the right endorsement."
+  path="/guides/does-homeowners-insurance-cover-water-damage/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Is water damage covered?", href: "/guides/does-homeowners-insurance-cover-water-damage/" }]}
+  about={["Homeowners insurance", "Water damage", "Flood insurance", "National Flood Insurance Program"]}
+  summary={[
+    "A standard homeowners policy (the common HO-3 form) generally covers water damage that is <strong>sudden and accidental</strong>, such as a burst pipe, a split washing machine hose or a water heater that fails.",
+    "It generally <strong>excludes</strong> damage from a slow leak or lack of maintenance, flooding or surface water from outside, and groundwater seeping through the foundation.",
+    "<strong>Sewer and drain backups</strong> are excluded unless you've added a water backup endorsement. <strong>Flood</strong> needs a separate flood policy, from the National Flood Insurance Program or a private insurer, and NFIP policies usually take 30 days to start.",
+    "Policies usually pay to repair the damage the water caused, not to fix the part that failed, such as the pipe, the water heater or a worn-out roof.",
+    "Your policy wording decides. Read the declarations page and the water, mold and exclusions sections, and ask your insurer to confirm coverage in writing.",
+  ]}
+  faq={[
+    { q: "Does homeowners insurance cover a burst pipe?", a: "Usually yes, for the water damage it causes, if the pipe burst suddenly. Many policies exclude freeze damage if the house was vacant or unheated and you didn't maintain heat or shut off and drain the water. The cost of repairing the pipe itself is often not covered, although the cost of opening and closing the wall to reach it may be." },
+    { q: "Does homeowners insurance cover a slow leak?", a: "Usually not. Damage from a leak that continued over weeks or months, or that happened because of wear, rot or lack of maintenance, is a common exclusion. Some policies cover hidden leaks you couldn't reasonably have known about, so check the wording." },
+    { q: "Is a flooded basement covered by homeowners insurance?", a: "It depends on where the water came from. A burst pipe or failed water heater in the basement is usually covered. Water from a sewer or drain backup, or from a failed sump pump, is covered only if you have a water backup endorsement. Groundwater seepage and floodwater from outside are excluded and need flood insurance, and even NFIP flood policies cover only limited items in basements." },
+    { q: "Does homeowners insurance cover mold?", a: "Mold that results from a covered sudden water loss is often covered, sometimes up to a capped sublimit. Mold from long-term humidity, condensation or a slow leak usually isn't. Some policies exclude mold entirely." },
+    { q: "Does homeowners insurance cover a roof leak?", a: "If wind, hail or a falling tree suddenly damaged the roof, the roof repair and the water damage inside are usually covered. If the roof leaked because it was old or worn out, the roof repair usually isn't, and interior damage may be disputed." },
+    { q: "Should I file a claim for small water damage?", a: "Compare the likely cost with your deductible. If the damage is close to or below the deductible, a claim pays little and may still appear in your claims history. If you're unsure how far water spread, get a moisture inspection first; hidden water inside walls and floors often makes the job bigger than it looks." },
+    { q: "Will my insurance pay for a hotel if I can't live at home?", a: "If the damage comes from a covered loss and makes your home unlivable, most homeowners policies include loss of use coverage (often called additional living expenses or Coverage D) for the extra cost of living elsewhere. Keep every receipt." },
+  ]}
+  related={[
+    { href: "/guides/water-damage-restoration-cost/", label: "What restoration costs" },
+    { href: "/guides/water-damage-categories/", label: "Clean, gray or black water" },
+    { href: "/guides/signs-of-hidden-water-damage/", label: "Signs of hidden water damage" },
+    { href: "/glossary/", label: "Insurance and restoration glossary" },
+  ]}
+  sources={[
+    { label: "Insurance Information Institute: Am I covered?", href: "https://www.iii.org/article/am-i-covered" },
+    { label: "FEMA FloodSmart: What a flood insurance policy covers for homeowners", href: "https://agents.floodsmart.gov/articles/what-covered-flood-insurance-policy-homeowners" },
+    { label: "FEMA FloodSmart: Basement flooding and NFIP coverage", href: "https://agents.floodsmart.gov/articles/owning-real-estate-and-basement-flooding" },
+  ]}
+>
+  <h2>Covered vs. usually not covered</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Cause</th><th>Standard homeowners policy</th><th>What else might cover it</th></tr></thead>
+      <tbody>
+        <tr><td>Burst or frozen pipe</td><td>Usually covered, if sudden and heat was maintained</td><td class="faint">—</td></tr>
+        <tr><td>Washing machine, dishwasher or ice maker line failure</td><td>Usually covered</td><td class="faint">—</td></tr>
+        <tr><td>Water heater tank failure</td><td>Water damage usually covered; the heater itself usually not</td><td>Home warranty, for the appliance</td></tr>
+        <tr><td>Toilet overflow</td><td>Usually covered if sudden</td><td class="faint">—</td></tr>
+        <tr><td>Roof leak after wind, hail or a fallen tree</td><td>Usually covered</td><td class="faint">—</td></tr>
+        <tr><td>Roof leak from age or wear</td><td>Roof repair usually not covered</td><td class="faint">—</td></tr>
+        <tr><td>Ice dam leak</td><td>Interior water damage often covered</td><td class="faint">—</td></tr>
+        <tr><td>Slow leak over weeks or months</td><td>Usually not covered</td><td class="faint">—</td></tr>
+        <tr><td>Sewer or drain backup</td><td>Not covered without an endorsement</td><td>Water backup endorsement; some city programs</td></tr>
+        <tr><td>Sump pump failure or overflow</td><td>Not covered without an endorsement</td><td>Water backup and sump discharge endorsement</td></tr>
+        <tr><td>Flood, storm surge or surface water from outside</td><td>Not covered</td><td>NFIP or private flood policy</td></tr>
+        <tr><td>Groundwater seeping through the foundation</td><td>Not covered</td><td>Usually nothing; it's treated as maintenance</td></tr>
+        <tr><td>Mold</td><td>Sometimes covered when it follows a covered loss, often capped</td><td>Mold endorsement on some policies</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small faint">General patterns for the common HO-3 form. Policies, endorsements and state rules differ. Your policy language controls.</p>
+
+  <h2>The test insurers apply: sudden and accidental</h2>
+  <p>Homeowners policies are written to cover sudden events, not maintenance. When an adjuster looks at water damage, the questions are usually where the water came from, when it started, and whether the homeowner could have known about it and stopped it. A pipe that split during a cold snap is sudden. A shower pan that seeped into the subfloor for a year, leaving rot and staining, is gradual.</p>
+  <p>That's why documentation matters. Photos and video of the source, the failed part itself, and a note of when you found the water all help show that the damage was sudden.</p>
+
+  <h2>What the policy pays for, and what it doesn't</h2>
+  <ul>
+    <li><strong>Usually paid:</strong> water extraction and drying, removal and replacement of damaged drywall, flooring, cabinets and trim, and damaged belongings under your personal property coverage.</li>
+    <li><strong>Often paid:</strong> the cost of tearing out and replacing part of a wall or floor to reach the broken pipe.</li>
+    <li><strong>Usually not paid:</strong> the failed item itself, such as the corroded pipe, the worn-out water heater or the old roof.</li>
+    <li><strong>Loss of use:</strong> if a covered loss makes the home unlivable, additional living expenses for a hotel or rental and extra meal costs.</li>
+  </ul>
+
+  <h2>Flood insurance is separate</h2>
+  <p>Homeowners policies exclude flood: water that rises from outside and covers normally dry land, from rivers, heavy rain, storm surge or overwhelmed storm drains. Flood coverage comes from the National Flood Insurance Program, run by FEMA and sold through insurance agents, or from private flood insurers.</p>
+  <ul>
+    <li>NFIP policies generally have a 30-day waiting period before coverage starts, so you can't buy one when a storm is already on the way.</li>
+    <li>NFIP building coverage goes up to $250,000 and contents up to $100,000 for a home.</li>
+    <li>In basements, NFIP coverage is limited to items such as furnaces, water heaters, electrical panels, sump pumps and cleanup. Finished walls, floors and most belongings stored in a basement aren't covered.</li>
+  </ul>
+
+  <h2>Sewer backup coverage is an add-on</h2>
+  <p>Water that backs up through floor drains, toilets or tubs from a sewer line or a failed sump pump is excluded from most standard policies. A water backup endorsement adds it, usually with its own limit. It's often inexpensive compared with the cost of a sewage cleanup, and worth asking your agent about if you have a basement. Some cities also run backup assistance programs; check before you pay for cleanup.</p>
+
+  <h2>How to protect your claim</h2>
+  <ol class="steps">
+    <li><strong>Stop the water and make the home safe.</strong> Policies require you to protect the property from further damage, and the cost of reasonable emergency steps is usually part of the claim.</li>
+    <li><strong>Document before cleanup.</strong> Take video and photos of every affected room and the source, and keep the failed part.</li>
+    <li><strong>Notify your insurer promptly.</strong> Ask for the claim number, your adjuster's contact details, and whether they need to approve a mitigation company before work starts.</li>
+    <li><strong>Start drying.</strong> Waiting for an adjuster before drying can turn a drying job into a mold job. Most insurers expect mitigation to begin right away.</li>
+    <li><strong>Keep every receipt and an inventory</strong> of damaged belongings, with photos, ages and approximate values.</li>
+    <li><strong>Get decisions in writing.</strong> If the insurer denies part of the claim, ask for the specific policy provision it relies on.</li>
+  </ol>
+
+  <h2>Your state's rules</h2>
+  <p>Each state sets its own deadlines for how fast insurers must acknowledge, investigate and pay claims, and runs a consumer help line for complaints. Our state guides cover those rules and your state insurance regulator:</p>
+  <ul class="state-links">
+    {STATE_SUMMARIES.map((s) => <li><a href={`/${s.slug}/guides/${s.slug}-water-damage-insurance-claim/`}>{s.name} water damage claims</a></li>)}
+  </ul>
+</Article>
+
+<style>
+  .state-links { columns: 2; column-gap: 28px; }
+  .state-links li { break-inside: avoid; }
+  @media (max-width: 520px) { .state-links { columns: 1; } }
+</style>

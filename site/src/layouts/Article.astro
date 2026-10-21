@@ -1,7 +1,8 @@
 ---
-import { S } from "../lib/state";
+import { S, NATIONAL } from "../lib/state";
 import Base from "./Base.astro";
 import CallButton from "../components/CallButton.astro";
+import Icon from "../components/Icon.astro";
 import { SITE } from "../config";
 import { p } from "../lib/paths";
 
@@ -16,21 +17,65 @@ interface Props {
   crumbs: { name: string; href: string }[];
   sources?: Source[];
   related?: { href: string; label: string }[];
+  // Answer-first takeaways shown above the body. Answer engines quote these, so each one should
+  // stand on its own as a complete, specific sentence.
+  summary?: string[];
+  faq?: { q: string; a: string }[];
+  // Topics for schema.org "about", e.g. ["Water damage", "Homeowners insurance"].
+  about?: string[];
 }
-const { title, seoTitle, description, eyebrow, dek, path, crumbs, sources = [], related = [] } = Astro.props;
+const { title, seoTitle, description, eyebrow, dek, path, crumbs, sources = [], related = [], summary = [], faq = [], about = [] } = Astro.props;
 const origin = Astro.site!.origin;
-const schema = [{
+const url = `${origin}${p(path)}`;
+
+// Give every h2 an id and collect them for the table of contents, so sections can be linked to
+// directly (search results and answer engines deep-link to #anchors).
+const slugify = (t: string) => t.toLowerCase().replace(/&[a-z]+;/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const toc: { id: string; text: string }[] = [];
+let body = await Astro.slots.render("default");
+body = body.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/g, (m, attrs: string, inner: string) => {
+  if (/\bid=/.test(attrs)) return m;
+  const text = inner.replace(/<[^>]+>/g, "").replace(/&#39;/g, "'").replace(/&amp;/g, "&").trim();
+  let id = slugify(text) || `section-${toc.length + 1}`;
+  while (toc.some((t) => t.id === id)) id += "-2";
+  toc.push({ id, text });
+  return `<h2${attrs} id="${id}">${inner}</h2>`;
+});
+const wordCount = (body.replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").match(/\b[\w'’-]+\b/g) ?? []).length
+  + summary.join(" ").split(/\s+/).length + faq.reduce((n, f) => n + (f.q + " " + f.a).split(/\s+/).length, 0);
+
+const schema: Record<string, unknown>[] = [{
   "@type": "Article",
+  "@id": `${url}#article`,
   headline: title,
   description,
-  mainEntityOfPage: `${origin}${p(path)}`,
+  url,
+  mainEntityOfPage: { "@id": `${url}#webpage` },
+  isPartOf: { "@id": `${origin}/#site` },
+  inLanguage: "en-US",
+  datePublished: SITE.published,
   dateModified: SITE.lastReviewed,
+  wordCount,
+  image: { "@type": "ImageObject", url: new URL(`/og-${NATIONAL ? "us" : S.key}.png`, origin).href, width: 1200, height: 630 },
   publisher: { "@id": `${origin}/#org` },
   author: { "@id": `${origin}/#org` },
   ...(SITE.reviewer ? { reviewedBy: { "@type": "Person", name: SITE.reviewer.name, description: SITE.reviewer.credential } } : {}),
+  ...(about.length ? { about: about.map((name) => ({ "@type": "Thing", name })) } : {}),
+  ...(!NATIONAL ? { spatialCoverage: { "@type": "State", name: S.name } } : { spatialCoverage: { "@type": "Country", name: "United States" } }),
+  ...(summary.length ? { abstract: summary.join(" ") } : {}),
+  ...(sources.length ? { citation: sources.map((s) => ({ "@type": "CreativeWork", name: s.label, url: s.href })) } : {}),
+  ...(toc.length ? { hasPart: toc.map((t) => ({ "@type": "WebPageElement", name: t.text, url: `${url}#${t.id}` })) } : {}),
 }];
+if (faq.length) {
+  schema.push({
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  });
+}
+const reviewed = new Date(SITE.lastReviewed + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 ---
-<Base title={seoTitle ?? `${title} | ${SITE.brand}`} description={description} crumbs={crumbs} schema={schema}>
+<Base title={seoTitle ?? `${title} | ${SITE.brand}`} description={description} crumbs={crumbs} schema={schema} ogType="article">
   <article>
     <header class="wrap art-head">
       <p class="eyebrow">{eyebrow}</p>
@@ -38,15 +83,27 @@ const schema = [{
       <p class="lede">{dek}</p>
       <p class="small faint byline">
         {SITE.reviewer ? <>Reviewed by {SITE.reviewer.name}, {SITE.reviewer.credential}. </> : null}
-        Last reviewed {new Date(SITE.lastReviewed + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}. <a href="/editorial-policy/">How we write and check these guides</a>
+        Last reviewed <time datetime={SITE.lastReviewed}>{reviewed}</time>. <a href="/editorial-policy/">How we write and check these guides</a>
       </p>
     </header>
     <div class="wrap art-grid">
       <div class="prose read">
-        <slot />
+        {summary.length > 0 && (
+          <aside class="tldr" aria-label="The short answer">
+            <p class="tldr-h">The short answer</p>
+            <ul>{summary.map((s) => <li set:html={s} />)}</ul>
+          </aside>
+        )}
+        <Fragment set:html={body} />
+        {faq.length > 0 && (
+          <section class="faqs">
+            <h2 id="faq">Frequently asked questions</h2>
+            {faq.map((f) => <details class="faq"><summary>{f.q}</summary><div>{f.a}</div></details>)}
+          </section>
+        )}
         {sources.length > 0 && (
           <section class="sources">
-            <h2>Sources</h2>
+            <h2 id="sources">Sources</h2>
             <ol class="small">
               {sources.map((s) => <li><a href={s.href} rel="noopener">{s.label}</a></li>)}
             </ol>
@@ -54,11 +111,29 @@ const schema = [{
         )}
       </div>
       <aside class="side no-print">
+        {toc.length >= 3 && (
+          <nav class="card toc" aria-label="On this page">
+            <p class="eyebrow">On this page</p>
+            <ol>
+              {toc.map((t) => <li><a href={`#${t.id}`}>{t.text}</a></li>)}
+              {faq.length > 0 && <li><a href="#faq">Questions</a></li>}
+            </ol>
+          </nav>
+        )}
         <div class="card help">
           <p class="eyebrow">Need help now?</p>
-          <p class="muted small">Get connected with a restoration company that serves your {S.name} county.</p>
-          <CallButton placement="article-side" block />
-          <a class="small" href={p("/counties/")}>Find your county</a>
+          {NATIONAL ? (
+            <>
+              <p class="muted small">Choose your state to find county guidance and a call line to a restoration company near you.</p>
+              <a class="btn btn-call" style="width:100%" href="/#states"><Icon name="map" /><span>Find your state</span></a>
+            </>
+          ) : (
+            <>
+              <p class="muted small">Get connected with a restoration company that serves your {S.name} county.</p>
+              <CallButton placement="article-side" block />
+              <a class="small" href={p("/counties/")}>Find your county</a>
+            </>
+          )}
         </div>
         {related.length > 0 && (
           <nav class="card related" aria-label="Related guides">
@@ -78,9 +153,18 @@ const schema = [{
   .side { display: grid; gap: 16px; align-content: start; position: sticky; top: 88px; }
   .help { display: grid; gap: 12px; }
   .help p { margin: 0; }
-  .related ul { list-style: none; padding: 0; margin: 0; }
-  .related li { padding: 8px 0; border-top: 1px solid var(--line); margin: 0; }
+  .related ul, .toc ol { list-style: none; padding: 0; margin: 0; }
+  .related li, .toc li { padding: 8px 0; border-top: 1px solid var(--line); margin: 0; }
+  .toc li { padding: 6px 0; font-size: 0.92rem; }
+  .toc a { color: var(--ink-2); text-decoration: none; }
+  .toc a:hover { color: var(--water); text-decoration: underline; }
+  .tldr { background: var(--water-soft); color: var(--water-ink); border-radius: var(--r-lg); padding: 18px 22px 6px; margin: 0 0 32px; }
+  .tldr-h { font: 600 0.8rem/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 10px; }
+  .tldr ul { margin: 0 0 12px; padding-left: 1.1em; }
+  .tldr li { margin: 0 0 8px; }
+  .faqs { margin-top: 40px; }
   .sources { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); }
   .sources h2 { font-size: 1.1rem; margin-top: 0; }
-  @media (max-width: 960px) { .art-grid { grid-template-columns: 1fr; gap: 32px; } .side { position: static; } .art-head { margin-left: auto; } }
+  :global(.prose h2[id]) { scroll-margin-top: 84px; }
+  @media (max-width: 960px) { .art-grid { grid-template-columns: 1fr; gap: 32px; } .side { position: static; } .art-head { margin-left: auto; } .toc { display: none; } }
 </style>

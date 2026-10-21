@@ -14,16 +14,22 @@ interface Props {
   crumbs?: Crumb[];
   schema?: Record<string, unknown>[];
   noindex?: boolean;
+  // "article" for guides: adds article meta tags. pageType sets the WebPage subtype in JSON-LD.
+  ogType?: "website" | "article";
+  pageType?: "WebPage" | "CollectionPage" | "FAQPage" | "AboutPage" | "ItemPage";
+  modified?: string;
 }
-const { title, description, county, crumbs: pageCrumbs = [], schema = [], noindex } = Astro.props;
+const { title, description, county, crumbs: pageCrumbs = [], schema = [], noindex, ogType = "website", pageType = "WebPage", modified = SITE.lastReviewed } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const robots = SITE.launchMode !== "live" || noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large";
+const robots = SITE.launchMode !== "live" || noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 const origin = Astro.site!.origin;
 
 // Page crumbs are state-relative; state pages get the state as the first crumb after Home.
 const crumbs: Crumb[] = NATIONAL
   ? pageCrumbs
   : [{ name: S.name, href: p("/") }, ...pageCrumbs.map((c) => ({ name: c.name, href: p(c.href) }))];
+const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
+const ogAlt = NATIONAL ? `${SITE.brand}: ${SITE.tagline}` : `${SITE.brand} in ${S.name}: water damage, mold and fire help by county`;
 const graph = [
   {
     "@type": "Organization",
@@ -31,13 +37,44 @@ const graph = [
     name: SITE.brand,
     url: `${origin}/`,
     slogan: SITE.tagline,
-    description: "An independent referral service that connects homeowners with local water damage, mold and fire restoration companies. It does not perform restoration work.",
+    description: "An independent referral service that connects homeowners with local water damage, mold and fire restoration companies, and publishes county-level guidance built from Census and NOAA data. It does not perform restoration work.",
+    logo: { "@type": "ImageObject", "@id": `${origin}/#logo`, url: `${origin}/apple-touch-icon.png`, width: 180, height: 180 },
+    image: { "@id": `${origin}/#logo` },
+    email: SITE.contactEmail,
+    contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: SITE.contactEmail, availableLanguage: "English" },
     areaServed: { "@type": "Country", name: "United States" },
+    knowsAbout: ["Water damage restoration", "Mold remediation", "Fire and smoke damage restoration", "Basement flooding", "Frozen pipes", "Homeowners insurance claims", "IICRC S500", "IICRC S520"],
+    publishingPrinciples: `${origin}/editorial-policy/`,
   },
-  { "@type": "WebSite", "@id": `${origin}/#site`, name: SITE.brand, url: `${origin}/`, publisher: { "@id": `${origin}/#org` } },
+  {
+    "@type": "WebSite",
+    "@id": `${origin}/#site`,
+    name: SITE.brand,
+    alternateName: SITE.domain,
+    url: `${origin}/`,
+    description: SITE.tagline,
+    inLanguage: "en-US",
+    publisher: { "@id": `${origin}/#org` },
+  },
+  {
+    "@type": pageType,
+    "@id": `${canonical}#webpage`,
+    url: canonical,
+    name: title,
+    description,
+    inLanguage: "en-US",
+    isPartOf: { "@id": `${origin}/#site` },
+    about: { "@id": `${origin}/#org` },
+    dateModified: modified,
+    primaryImageOfPage: { "@type": "ImageObject", url: ogImage, width: 1200, height: 630 },
+    // The answer-first blocks that voice assistants and answer engines should read aloud or quote.
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".tldr", ".lede"] },
+    ...(crumbs.length ? { breadcrumb: { "@id": `${canonical}#breadcrumb` } } : {}),
+  },
   ...(crumbs.length
     ? [{
         "@type": "BreadcrumbList",
+        "@id": `${canonical}#breadcrumb`,
         itemListElement: [{ name: "Home", href: "/" }, ...crumbs].map((c, i) => ({
           "@type": "ListItem", position: i + 1, name: c.name, item: new URL(c.href, origin).href,
         })),
@@ -48,6 +85,8 @@ const graph = [
 const nav = NATIONAL
   ? [
       { href: "/#states", label: "Find your state" },
+      { href: "/guides/", label: "Guides" },
+      { href: "/water-damage-statistics/", label: "Risk by state" },
       { href: "/how-it-works/", label: "How it works" },
       { href: "/data-sources/", label: "Our data" },
     ]
@@ -59,7 +98,6 @@ const nav = NATIONAL
       { href: p("/guides/"), label: "Guides" },
     ];
 const path = Astro.url.pathname;
-const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
 ---
 <!doctype html>
 <html lang="en-US">
@@ -73,7 +111,8 @@ const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0e151c" media="(prefers-color-scheme: dark)" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content={SITE.brand} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -81,7 +120,17 @@ const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={ogAlt} />
+  {ogType === "article" && <meta property="article:modified_time" content={modified} />}
+  {ogType === "article" && <meta property="article:publisher" content={`${origin}/`} />}
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image:alt" content={ogAlt} />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="alternate" type="text/plain" href="/llms.txt" title={`${SITE.brand} summary for AI assistants`} />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@graph": graph })} />
   <style>
@@ -167,6 +216,7 @@ const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
                 <li><a href={p("/mold-remediation/")}>Mold remediation</a></li>
                 <li><a href={p("/fire-smoke-damage/")}>Fire and smoke</a></li>
                 <li><a href={p("/guides/basement-flooding-sump-pump/")}>Basement flooding</a></li>
+                <li><a href={p("/basement-waterproofing/")}>Basement waterproofing</a></li>
                 <li><a href={p("/counties/")}>All {S.name} counties</a></li>
                 <li><a href="/#states">Other states</a></li>
               </ul>
@@ -176,6 +226,7 @@ const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
               <ul>
                 <li><a href={p("/guides/water-damage-first-hour/")}>The first hour</a></li>
                 <li><a href={p(`/guides/${S.slug}-water-damage-insurance-claim/`)}>{S.name} insurance claims</a></li>
+                <li><a href="/guides/does-homeowners-insurance-cover-water-damage/">Is it covered?</a></li>
                 <li><a href={p("/tools/cost-estimator/")}>Cost estimator</a></li>
                 <li><a href={p("/tools/emergency-checklist/")}>Printable checklist</a></li>
                 <li><a href={p(`/${S.slug}-water-damage-risk/`)}>{S.name} risk index</a></li>
@@ -184,7 +235,13 @@ const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
           </>
         )}
         <div>
-          <h2>About</h2>
+          <h2>Reference</h2>
+          <ul>
+            <li><a href="/guides/">All guides</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/water-damage-statistics/">Risk by state</a></li>
+          </ul>
+          <h2 style="margin-top:24px">About</h2>
           <ul>
             <li><a href="/how-it-works/">How it works</a></li>
             <li><a href="/editorial-policy/">Editorial policy</a></li>

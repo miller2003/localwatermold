@@ -11,7 +11,7 @@ const others = all.filter((c) => !c.pilot);
 const nearest = (slug: string) => countyBySlug(slug)!.adjacent.map((s) => countyBySlug(s)!).find((n) => n.pilot);
 ---
 <Base
-  title={`${S.name} Counties: Local Water Damage Risk and Restoration Help`}
+  title={`${S.name} Counties: Water Damage Risk and Restoration Help`}
   description={`Local water, mold and fire damage guides for ${pilots.length} ${S.name} counties, with housing age, freeze nights and heavy-rain data for each.`}
   crumbs={[{ name: "Counties", href: "/counties/" }]}
 >

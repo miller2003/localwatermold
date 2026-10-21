@@ -5,7 +5,7 @@ import Triage from "../components/Triage.astro";
 ---
 <Service
   title={`Water damage restoration in ${S.name}`}
-  seoTitle={`Water Damage Restoration in ${S.name} | 24/7 Help for Burst Pipes, Basements and Leaks`}
+  seoTitle={`Water Damage Restoration in ${S.name} | Burst Pipes, Basements`}
   description={`Burst pipe, flooded basement or sewage backup in ${S.name}? Get connected with a local water damage restoration company, plus step-by-step guidance while you wait.`}
   eyebrow="Water damage"
   lede="Burst pipes, flooded basements, leaking water heaters and sewage backups. Get connected with a restoration company that serves your county, and use the steps below to limit the damage now."
@@ -22,6 +22,12 @@ import Triage from "../components/Triage.astro";
     { href: "/guides/water-damage-first-hour/", label: "The first hour", note: "Safety, shutoff, photos and drying" },
     { href: "/guides/water-damage-categories/", label: "Clean, gray or black water", note: "Why the category changes the job" },
     { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: `${S.name} insurance claims`, note: "Coverage and your insurer's deadlines" },
+  ]}
+  faq={[
+    { q: "What should I do first after water damage?", a: "Make it safe (stay out of water near electricity, and leave if you smell gas), stop the water at the fixture valve or the main shutoff, photograph everything before cleanup, then call your insurer and a restoration company. Drying should start within 24 to 48 hours to prevent mold." },
+    { q: "How long does water damage restoration take?", a: "Drying a typical clean-water job takes about three to five days with professional equipment. Hardwood, plaster and concrete take longer. Repairs such as new drywall, paint and flooring come after drying and can add days to weeks." },
+    { q: `Does homeowners insurance cover water damage in ${S.name}?`, a: "Usually, if the water was sudden and accidental, such as a burst pipe or a failed supply line. Standard policies usually exclude slow leaks, flooding from outside, and sewer backups without an endorsement. Your policy language decides." },
+    { q: "Can I dry water damage myself?", a: "A small, clean spill on a hard floor caught right away usually can be. Once water has soaked carpet pad, gone under baseboards or wicked up drywall, professional extraction, air movers, dehumidifiers and moisture readings are the reliable way to dry inside walls and floors." },
   ]}
 >
   <section class="section" slot="before">
