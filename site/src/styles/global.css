@@ -15,6 +15,10 @@
   --on-signal: #ffffff;
   --signal-soft: #fbe9df;
   --signal-ink: #7c2a08;
+  /* Logo colours: sign-painter red, navy lettering and its drop shade (see pipeline/make_brand.py). */
+  --brand-red: #c0392b;
+  --brand-ink: #1b2a3a;
+  --brand-shade: #1b2a3a;
   --sage: #2f6b4f;
   --sage-soft: #e3f0e8;
   --amber-soft: #fbf1d9;
@@ -56,6 +60,9 @@
     --signal-hover: #d9541e;
     --signal-soft: #3a1d10;
     --signal-ink: #f6b894;
+    --brand-red: #e5574a;
+    --brand-ink: #f3ecdc;
+    --brand-shade: #000000;
     --sage: #8cc9a9;
     --sage-soft: #15291f;
     --amber-soft: #2f2610;
@@ -86,6 +93,9 @@
   --signal-hover: #d9541e;
   --signal-soft: #3a1d10;
   --signal-ink: #f6b894;
+  --brand-red: #e5574a;
+  --brand-ink: #f3ecdc;
+  --brand-shade: #000000;
   --sage: #8cc9a9;
   --sage-soft: #15291f;
   --amber-soft: #2f2610;

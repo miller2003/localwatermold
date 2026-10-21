@@ -1,0 +1,13 @@
+---
+// The sign-painter wordmark, drawn from outlines made by pipeline/make_brand.py.
+// "horizontal" is for the header; "stacked" is the primary logo used in the footer.
+import brand from "../data/brand.json";
+interface Props { variant?: "horizontal" | "stacked"; height: number; class?: string }
+const { variant = "horizontal", height, class: cls } = Astro.props;
+const lk = brand[variant];
+const width = Math.round((height * lk.w) / lk.h);
+const fill: Record<string, string> = { red: "var(--brand-red)", ink: "var(--brand-ink)", shade: "var(--brand-shade)" };
+---
+<svg class={cls} viewBox={`0 0 ${lk.w} ${lk.h}`} width={width} height={height} aria-hidden="true" focusable="false">
+  {lk.layers.map((l) => <path fill={fill[l.role]} d={l.d} />)}
+</svg>

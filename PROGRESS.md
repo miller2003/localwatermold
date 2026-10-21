@@ -21,6 +21,9 @@ Only counties named "... County" are included (independent cities are skipped).
   Dataset, DefinedTermSet); robots.txt explicitly allows AI crawlers; llms.txt rewritten and
   llms-full.txt generated; build now fails on SEO errors (scripts/check-seo.mjs). Fixed: every state's
   first-hour guide linked to Ohio's insurance regulator; "an Pennsylvania"-style grammar.
+- 2026-10-21: new logo, the sign-painter "truck door" wordmark (option 02 of 8). Outlined vector logo in the
+  header and footer, red "L" favicon (.ico, .svg, 96px PNG) and app icons, web manifest, 600x600 Organization
+  logo, WebSite alternateName for Google's site name, and all 26 share images redrawn in the same style.
 
 ## Pre-launch checklist
 - [ ] Verify the insurance regulator name and URL in `site/src/lib/state.ts` (states with `verified: false`).

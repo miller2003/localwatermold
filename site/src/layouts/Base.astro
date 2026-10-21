@@ -2,7 +2,7 @@
 import { S, NATIONAL, ALL_STATES } from "../lib/state";
 import "../styles/global.css";
 import CallButton from "../components/CallButton.astro";
-import Icon from "../components/Icon.astro";
+import Logo from "../components/Logo.astro";
 import { SITE } from "../config";
 import { p } from "../lib/paths";
 
@@ -38,7 +38,7 @@ const graph = [
     url: `${origin}/`,
     slogan: SITE.tagline,
     description: "An independent referral service that connects homeowners with local water damage, mold and fire restoration companies, and publishes county-level guidance built from Census and NOAA data. It does not perform restoration work.",
-    logo: { "@type": "ImageObject", "@id": `${origin}/#logo`, url: `${origin}/apple-touch-icon.png`, width: 180, height: 180 },
+    logo: { "@type": "ImageObject", "@id": `${origin}/#logo`, url: `${origin}/logo.png`, contentUrl: `${origin}/logo.png`, width: 600, height: 600, caption: SITE.brand },
     image: { "@id": `${origin}/#logo` },
     email: SITE.contactEmail,
     contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: SITE.contactEmail, availableLanguage: "English" },
@@ -50,7 +50,8 @@ const graph = [
     "@type": "WebSite",
     "@id": `${origin}/#site`,
     name: SITE.brand,
-    alternateName: SITE.domain,
+    // Google picks the site name shown above each result from here.
+    alternateName: ["LocalWaterMold", SITE.domain],
     url: `${origin}/`,
     description: SITE.tagline,
     inLanguage: "en-US",
@@ -108,7 +109,10 @@ const path = Astro.url.pathname;
   <meta name="description" content={description} />
   <meta name="robots" content={robots} />
   <link rel="canonical" href={canonical} />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0e151c" media="(prefers-color-scheme: dark)" />
   <meta property="og:type" content={ogType} />
@@ -136,10 +140,10 @@ const path = Astro.url.pathname;
   <style>
     header.site { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 0; z-index: 20; }
     .bar { display: flex; align-items: center; gap: 20px; min-height: 64px; }
-    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 600 1.08rem/1 var(--serif); }
-    .logo-text { display: grid; gap: 3px; }
-    .logo-sub { font: 500 0.72rem/1 var(--sans); color: var(--ink-3); letter-spacing: 0.02em; white-space: nowrap; }
-    .logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--water); color: var(--paper); display: grid; place-items: center; }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); flex: none; }
+    .logo svg { display: block; height: 44px; width: auto; }
+    .logo-state { font: 600 0.74rem/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); padding-left: 12px; border-left: 1px solid var(--line-2); white-space: nowrap; }
+    .foot-logo svg { height: 72px; }
     nav.main { display: flex; gap: 4px; margin-left: auto; }
     nav.main a { white-space: nowrap; color: var(--ink-2); text-decoration: none; font-size: 0.95rem; padding: 8px 10px; border-radius: 8px; }
     nav.main a:hover, nav.main a[aria-current="page"] { color: var(--ink); background: var(--sunk); }
@@ -162,6 +166,7 @@ const path = Astro.url.pathname;
     @media (max-width: 1100px) { nav.main { display: none; } .bar :global(.btn) { margin-left: auto; } }
     @media (max-width: 960px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 760px) { .bar :global(.btn) { display: none; } }
+    @media (max-width: 420px) { .bar .logo svg { height: 34px; } }
     @media (min-width: 761px) { .callbar { display: none; } }
   </style>
 </head>
@@ -171,8 +176,8 @@ const path = Astro.url.pathname;
   <header class="site">
     <div class="wrap bar">
       <a class="logo" href="/" aria-label={`${SITE.brand} home`}>
-        <span class="logo-mark"><Icon name="droplet" size={18} /></span>
-        <span class="logo-text"><span>{SITE.brand}</span><span class="logo-sub">{NATIONAL ? SITE.taglineShort : `${S.name} · ${SITE.taglineShort}`}</span></span>
+        <Logo height={44} />
+        {!NATIONAL && <span class="logo-state">{S.name}</span>}
       </a>
       <nav class="main" aria-label="Main">
         {nav.map((n) => <a href={n.href} aria-current={path.startsWith(n.href) ? "page" : undefined}>{n.label}</a>)}
@@ -197,7 +202,7 @@ const path = Astro.url.pathname;
     <div class="wrap">
       <div class="foot-grid">
         <div>
-          <a class="logo" href="/"><span class="logo-mark"><Icon name="droplet" size={18} /></span><span>{SITE.brand}</span></a>
+          <a class="logo foot-logo" href="/" aria-label={`${SITE.brand} home`}><Logo variant="stacked" height={72} /></a>
           <p style="margin-top:14px;max-width:44ch"><strong>{SITE.tagline}.</strong> {SITE.brand} is an independent referral service. When you call, you're connected with a participating restoration company that serves your area. We don't do restoration work, and we're not affiliated with any insurer or government agency.</p>
         </div>
         {NATIONAL ? (

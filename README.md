@@ -31,7 +31,10 @@ OH, PA and MI have verified state-specific law; the other 22 use nationwide-accu
   3. `build_counties.py`: one record per county, plus weather fetch order
   4. `fetch_nclimgrid.py`: NOAA nClimGrid-Daily county averages 2015–2024 (public domain, AWS Open Data)
   5. `derive.py`: writes `site/src/data/<state>/counties.json` and `map.json`
-  6. `make_og.py`: writes `site/public/og-<state>.png` (`--national` for `og-us.png`)
+  6. `make_og.py`: writes `site/public/og-<state>.png` (`--national` for `og-us.png`). Run `make_brand.py` first.
+- `pipeline/make_brand.py`: the logo set. Converts the sign-painter wordmark (Mr Dafoe script over Alfa Slab One,
+  OFL fonts in `pipeline/fonts/`) to outlines and writes `site/src/data/brand.json` (used by `Logo.astro` in the
+  header and footer), `logo.svg`/`logo.png` (the Organization logo in JSON-LD), the favicons and app icons.
 - `site/`: Astro 5 site
   - `national/pages/`: root pages (home, about, legal, sitemap index, robots, llms.txt)
   - `src/pages/`: state pages
