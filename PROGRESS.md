@@ -13,7 +13,7 @@ Only counties named "... County" are included (independent cities are skipped).
   "Local Water & Mold" (written with "&" so it reads as water damage and mold, not the oomycete
   "water mold"); tagline "Water damage, mold, fire and flooded basement help from local restoration pros".
 - All 25 state sections build: 2,285 county pages plus guides, tools and a risk index per state.
-- Site is in preview mode (noindex, robots.txt blocks crawlers, call line not live).
+- 2026-10-21: switched to live (indexable). Call line still not live (no numbers yet). 2,789 URLs submitted to IndexNow; sitemap index at /sitemap.xml.
 
 ## Pre-launch checklist
 - [ ] Verify the insurance regulator name and URL in `site/src/lib/state.ts` (states with `verified: false`).

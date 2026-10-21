@@ -12,7 +12,7 @@ interface Line {
 
 // Site-wide switch. "preview": noindex everywhere, robots.txt blocks crawlers, phone shows as not live.
 // "live": indexable, real numbers shown for states that have a line below.
-const MODE: Mode = "preview";
+const MODE: Mode = "live";
 const CONTACT_EMAIL = "hello@localwatermold.com";
 
 // Call lines per state. States not listed here show the call line as not live yet.
