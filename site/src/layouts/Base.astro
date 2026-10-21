@@ -89,10 +89,10 @@ const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
     .bar { display: flex; align-items: center; gap: 20px; min-height: 64px; }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 600 1.08rem/1 var(--serif); }
     .logo-text { display: grid; gap: 3px; }
-    .logo-sub { font: 500 0.72rem/1 var(--sans); color: var(--ink-3); letter-spacing: 0.02em; }
+    .logo-sub { font: 500 0.72rem/1 var(--sans); color: var(--ink-3); letter-spacing: 0.02em; white-space: nowrap; }
     .logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--water); color: var(--paper); display: grid; place-items: center; }
     nav.main { display: flex; gap: 4px; margin-left: auto; }
-    nav.main a { color: var(--ink-2); text-decoration: none; font-size: 0.95rem; padding: 8px 10px; border-radius: 8px; }
+    nav.main a { white-space: nowrap; color: var(--ink-2); text-decoration: none; font-size: 0.95rem; padding: 8px 10px; border-radius: 8px; }
     nav.main a:hover, nav.main a[aria-current="page"] { color: var(--ink); background: var(--sunk); }
     .bar :global(.btn) { min-height: 42px; padding: 0 16px; font-size: 0.95rem; }
     .crumbs { font-size: 0.85rem; color: var(--ink-3); padding-top: 14px; }
@@ -110,7 +110,8 @@ const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
     .callbar :global(.btn) { flex: 1; min-height: 50px; }
     .callbar :global(.btn-ghost) { flex: 0 0 auto; }
     .preview-ribbon { background: var(--amber-soft); color: var(--amber-ink); font-size: 0.82rem; text-align: center; padding: 6px 12px; }
-    @media (max-width: 960px) { nav.main { display: none; } .bar :global(.btn) { margin-left: auto; } .foot-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 1100px) { nav.main { display: none; } .bar :global(.btn) { margin-left: auto; } }
+    @media (max-width: 960px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 760px) { .bar :global(.btn) { display: none; } }
     @media (min-width: 761px) { .callbar { display: none; } }
   </style>
