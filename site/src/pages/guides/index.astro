@@ -1,0 +1,69 @@
+---
+import { S } from "../../lib/state";
+import Base from "../../layouts/Base.astro";
+import Icon from "../../components/Icon.astro";
+import { p } from "../../lib/paths";
+
+const groups = [
+  {
+    name: "In an emergency",
+    items: [
+      { href: "/guides/water-damage-first-hour/", title: "Water damage: what to do in the first hour", note: "Safety, shutoff, documentation and drying, in order." },
+      { href: "/fire-smoke-damage/", title: "The first 24 hours after a house fire", note: "Soot, odor, insurance and where to stay." },
+      { href: "/tools/emergency-checklist/", title: "Printable emergency checklist", note: "One page to keep by the water heater." },
+      { href: `/guides/sewer-backup-${S.slug}/`, title: "Sewer backup in your basement", note: "Safe cleanup, whose pipe failed, and coverage." },
+      { href: "/guides/water-heater-leaking/", title: "Water heater leaking", note: "Shut it down, find the leak, repair or replace." },
+    ],
+  },
+  {
+    name: "Understanding the damage",
+    items: [
+      { href: "/guides/water-damage-categories/", title: "Clean, gray or black water", note: "The three categories and four classes of water damage." },
+      { href: "/guides/mold-after-water-damage/", title: "Mold after water damage", note: "The 24 to 48 hour window and when to call a pro." },
+      { href: "/guides/basement-flooding-sump-pump/", title: "Basement flooding and sump pumps", note: "Five sources of basement water and how each is handled." },
+      { href: `/guides/frozen-pipes-${S.slug}/`, title: `Frozen pipes in ${S.name}`, note: "Freeze risk by county, prevention and thawing." },
+      { href: "/guides/ice-dams/", title: "Ice dams and ceiling leaks", note: "Why they form, safe removal, and the attic fix." },
+    ],
+  },
+  {
+    name: "Money and insurance",
+    items: [
+      { href: `/guides/${S.slug}-water-damage-insurance-claim/`, title: `Filing a water damage claim in ${S.name}`, note: "Coverage, your duties, and your insurer's deadlines." },
+      { href: "/guides/water-damage-restoration-cost/", title: "What restoration costs", note: "2026 national ranges and what moves them." },
+      { href: "/tools/cost-estimator/", title: "Cost estimator", note: "A quick range for your square footage and water type." },
+      { href: "/guides/choosing-restoration-company/", title: "Choosing a restoration company", note: `Questions, paperwork, red flags and your ${S.name} cancellation rights.` },
+    ],
+  },
+];
+---
+<Base
+  title={`Water, Mold and Fire Damage Guides for ${S.name} Homeowners`}
+  description={`Plain-language guides for ${S.name} homeowners: what to do after a leak, frozen pipes, basement flooding, mold, insurance claims and costs.`}
+  crumbs={[{ name: "Guides", href: "/guides/" }]}
+>
+  <section class="wrap head">
+    <p class="eyebrow">Guides</p>
+    <h1>Guides for {S.name} homeowners</h1>
+    <p class="lede">Practical steps, written for the moment you need them, and checked against the EPA, the IICRC standard and {S.name}'s insurance rules.</p>
+  </section>
+  {groups.map((g) => (
+    <section class="wrap group">
+      <h2>{g.name}</h2>
+      <div class="grid grid-3">
+        {g.items.map((i) => (
+          <a class="card g" href={p(i.href)}><strong>{i.title}</strong><span class="muted small">{i.note}</span><span class="go"><Icon name="arrow" size={16} /></span></a>
+        ))}
+      </div>
+    </section>
+  ))}
+</Base>
+
+<style>
+  .head { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 12px; }
+  .group { padding-top: 32px; padding-bottom: 16px; }
+  .group:last-of-type { padding-bottom: 72px; }
+  .group h2 { font-size: 1.3rem; }
+  .g { display: grid; gap: 6px; text-decoration: none; color: var(--ink); position: relative; padding-right: 44px; }
+  .g:hover { border-color: var(--water); }
+  .go { position: absolute; right: 18px; top: 22px; color: var(--water); }
+</style>

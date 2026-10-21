@@ -1,0 +1,102 @@
+---
+import { S } from "../lib/state";
+import Base from "./Base.astro";
+import CallButton from "../components/CallButton.astro";
+import CountyGrid from "../components/CountyGrid.astro";
+import StateMap from "../components/StateMap.astro";
+import Icon from "../components/Icon.astro";
+import { SITE } from "../config";
+import { p } from "../lib/paths";
+
+interface Props {
+  title: string;
+  seoTitle: string;
+  description: string;
+  eyebrow: string;
+  lede: string;
+  path: string;
+  name: string;
+  metric: "freeze" | "age" | "humid" | "heat";
+  process: [string, string][];
+  guides: { href: string; label: string; note: string }[];
+}
+const props = Astro.props;
+const origin = Astro.site!.origin;
+const schema = [{
+  "@type": "Service",
+  name: `${props.name} referrals in ${S.name}`,
+  serviceType: `${props.name} referral`,
+  provider: { "@id": `${origin}/#org` },
+  areaServed: { "@type": "State", name: SITE.state },
+}];
+---
+<Base title={props.seoTitle} description={props.description} crumbs={[{ name: props.name, href: props.path }]} schema={schema}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">{props.eyebrow}</p>
+      <h1>{props.title}</h1>
+      <p class="lede">{props.lede}</p>
+      <div class="cta-row">
+        <CallButton placement="service-hero" label="Call" />
+        <a class="btn btn-ghost" href="#counties"><Icon name="map" />Find your county</a>
+      </div>
+      <p class="small faint">{SITE.brand} is a referral service. A participating local company answers the call and does the work.</p>
+    </div>
+  </section>
+
+  <slot name="before" />
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">How the work goes</p>
+      <h2>What a professional {props.name.toLowerCase()} job involves</h2>
+      <ol class="process">
+        {props.process.map(([h, b], i) => (
+          <li><span class="num">{String(i + 1).padStart(2, "0")}</span><h3>{h}</h3><p class="muted">{b}</p></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="prose read"><slot /></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Read next</p>
+      <div class="grid grid-3">
+        {props.guides.map((g) => <a class="card guide" href={p(g.href)}><strong>{g.label}</strong><span class="muted small">{g.note}</span></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="counties">
+    <div class="wrap county-wrap">
+      <div>
+        <p class="eyebrow">Local help</p>
+        <h2>Pick your county</h2>
+        <p class="muted">Each county page has local risk data and the call line for that area.</p>
+        <StateMap title={`${S.name} counties with local guides`} />
+      </div>
+      <CountyGrid metric={props.metric} />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: clamp(32px, 6vw, 72px) 0 clamp(32px, 5vw, 56px); }
+  .hero .lede { margin-bottom: 0; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 12px; }
+  .process { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 16px; }
+  .process li { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px; }
+  .num { font: 600 0.85rem/1 var(--mono); color: var(--water); }
+  .process h3 { margin: 10px 0 6px; font-size: 1.1rem; }
+  .process p { margin: 0; font-size: 0.95rem; }
+  .guide { display: grid; gap: 6px; text-decoration: none; color: var(--ink); }
+  .guide:hover { border-color: var(--water); }
+  .county-wrap { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 40px; align-items: start; }
+  @media (max-width: 900px) { .county-wrap { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,18 @@
+---
+import Base from "./Base.astro";
+
+interface Props { title: string; seoTitle?: string; description: string; eyebrow: string; path: string; noindex?: boolean }
+const { title, seoTitle, description, eyebrow, path, noindex } = Astro.props;
+---
+<Base title={seoTitle ?? title} description={description} crumbs={[{ name: title, href: path }]} noindex={noindex}>
+  <section class="wrap page">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <div class="prose read"><slot /></div>
+  </section>
+</Base>
+
+<style>
+  .page { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 72px; }
+  h1 { max-width: 22ch; }
+</style>

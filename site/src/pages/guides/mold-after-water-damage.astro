@@ -1,0 +1,73 @@
+---
+import { S } from "../../lib/state";
+import Article from "../../layouts/Article.astro";
+import { pilotCounties } from "../../lib/data";
+import { p } from "../../lib/paths";
+
+const humid = pilotCounties()
+  .filter((c) => c.weather)
+  .sort((a, b) => b.weather!.muggyNights - a.weather!.muggyNights)
+  .slice(0, 8);
+---
+<Article
+  title="Mold after water damage: how fast it grows and when to call a pro"
+  seoTitle="Mold After Water Damage: 24-48 Hour Window, DIY vs. Professional Remediation"
+  description={`How quickly mold follows a leak, which cleanups homeowners can handle under EPA guidance, when to bring in a remediation company, and how ${S.name}'s summer humidity plays in.`}
+  eyebrow="Guide · Mold"
+  dek="Mold needs three things: moisture, something to eat, and time. After a leak you control two of them. Here's how to keep it from taking hold."
+  path="/guides/mold-after-water-damage/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Mold after water damage", href: "/guides/mold-after-water-damage/" }]}
+  related={[
+    { href: "/mold-remediation/", label: "Mold remediation services" },
+    { href: "/guides/water-damage-first-hour/", label: "The first hour after a leak" },
+    { href: "/guides/basement-flooding-sump-pump/", label: "Basement water" },
+  ]}
+  sources={[
+    { label: "U.S. EPA: A Brief Guide to Mold, Moisture and Your Home", href: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
+    { label: "U.S. EPA: Mold cleanup in your home", href: "https://www.epa.gov/mold/mold-cleanup-your-home" },
+    { label: "CDC: Mold", href: "https://www.cdc.gov/mold-health/" },
+  ]}
+>
+  <h2>The 24 to 48 hour window</h2>
+  <p>The EPA's guidance is to dry water-damaged areas and items within 24 to 48 hours to prevent mold growth. Drywall paper, carpet backing, ceiling tiles and wood framing are all food for mold, and a wall cavity can stay wet long after the surface feels dry. That's why restoration crews measure moisture inside materials rather than going by touch.</p>
+
+  <h2>Can you clean it yourself?</h2>
+  <p>The EPA's rule of thumb: if the moldy area is less than about 10 square feet, roughly a 3 by 3 foot patch, you can usually handle it yourself on hard surfaces.</p>
+  <ul>
+    <li>Fix the water problem first, or it will come back.</li>
+    <li>Wear an N-95 respirator, gloves and goggles.</li>
+    <li>Scrub hard surfaces with detergent and water, then dry them completely.</li>
+    <li>Porous materials like ceiling tiles, carpet and drywall that stay moldy may need to be thrown away.</li>
+    <li>Don't paint or caulk over mold.</li>
+  </ul>
+
+  <h2>When to call a professional</h2>
+  <ul>
+    <li>The affected area is larger than about 10 square feet.</li>
+    <li>The water was contaminated, such as sewage or floodwater.</li>
+    <li>You suspect mold inside walls, under floors or in the HVAC system.</li>
+    <li>Anyone in the home has asthma, allergies, a respiratory condition or a weakened immune system.</li>
+    <li>The smell keeps coming back after cleanup.</li>
+  </ul>
+  <p>Professional remediation typically sets up containment with plastic sheeting and negative air pressure, removes and bags contaminated materials, HEPA-vacuums and cleans surfaces, and dries the structure. Look for technicians certified by the IICRC in applied microbial remediation.</p>
+
+  <h2>Do you need a mold test?</h2>
+  <p>Usually not, if you can see or smell it. The EPA notes that sampling generally isn't needed to decide on cleanup, since there are no federal limits for mold to compare results to. Testing can help when you suspect hidden growth or need to confirm the job is done.</p>
+
+  <h2>Humidity in {S.name}</h2>
+  <p>Summers here are humid, and basements run cooler and damper than the rest of the house. The EPA recommends keeping indoor humidity below 60%, ideally between 30% and 50%. Nights that stay at 65°F or warmer are a good sign of muggy air. These counties average the most:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>County</th><th>Nights at 65°F or warmer per year</th><th>Wettest month</th></tr></thead>
+      <tbody>
+        {humid.map((c) => {
+          const M = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          const r = c.weather!.monthlyRain;
+          return <tr><td><a href={p(`/counties/${c.slug}/`)}>{c.name}</a></td><td>{c.weather!.muggyNights}</td><td>{M[r.indexOf(Math.max(...r))]}</td></tr>;
+        })}
+      </tbody>
+    </table>
+  </div>
+  <p class="small faint">NOAA nClimGrid-Daily county averages, {humid[0].weather!.period}.</p>
+  <p>A dehumidifier with a hose to a drain or sump does more to prevent basement mold than most cleaning products.</p>
+</Article>

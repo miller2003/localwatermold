@@ -1,0 +1,27 @@
+---
+// Stacked bar of housing units by decade built, with the state median for reference.
+interface Bucket { label: string; pct: number }
+interface Props { buckets: Bucket[]; name: string }
+const { buckets, name } = Astro.props;
+const shades = ["var(--water-ink)", "var(--water)", "#5b8fb5", "var(--map-near)", "var(--map-base)"];
+---
+<figure class="built">
+  <div class="stack" role="img" aria-label={`${name} homes by year built: ${buckets.map((b) => `${b.label} ${b.pct}%`).join(", ")}`}>
+    {buckets.map((b, i) => <span style={`width:${b.pct}%;background:${shades[i]}`} title={`${b.label}: ${b.pct}%`}></span>)}
+  </div>
+  <ul class="legend">
+    {buckets.map((b, i) => (
+      <li><span class="sw" style={`background:${shades[i]}`}></span>{b.label}<strong>{Math.round(b.pct)}%</strong></li>
+    ))}
+  </ul>
+</figure>
+
+<style>
+  .built { margin: 0; }
+  .stack { display: flex; height: 22px; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+  .stack span { display: block; height: 100%; }
+  .legend { list-style: none; padding: 0; margin: 14px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 6px 16px; font-size: 0.88rem; color: var(--ink-2); }
+  .legend li { display: flex; align-items: center; gap: 8px; margin: 0; }
+  .legend strong { margin-left: auto; color: var(--ink); font-weight: 600; }
+  .sw { width: 12px; height: 12px; border-radius: 3px; border: 1px solid var(--line); flex: none; }
+</style>

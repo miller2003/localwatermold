@@ -1,0 +1,76 @@
+---
+import { S } from "../../lib/state";
+import Article from "../../layouts/Article.astro";
+import { allCounties } from "../../lib/data";
+import { p } from "../../lib/paths";
+
+const snowy = allCounties()
+  .filter((c) => c.weather)
+  .sort((a, b) => b.weather!.freezeThawDays - a.weather!.freezeThawDays)
+  .slice(0, 8);
+---
+<Article
+  title="Ice dams: why they cause ceiling leaks and how to stop them"
+  seoTitle={`Ice Dams in ${S.name}: Ceiling Leaks, Safe Removal and Prevention`}
+  description={`How ice dams form on ${S.name} roofs, how to handle the water coming through your ceiling, safe ways to remove an ice dam, and the attic fixes that prevent them.`}
+  eyebrow="Guide · Winter"
+  dek="A ridge of ice at the roof edge traps meltwater, which backs up under the shingles and comes through your ceiling. The real cause is usually in the attic."
+  path="/guides/ice-dams/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Ice dams", href: "/guides/ice-dams/" }]}
+  related={[
+    { href: `/guides/frozen-pipes-${S.slug}/`, label: `Frozen pipes in ${S.name}` },
+    { href: "/guides/mold-after-water-damage/", label: "Mold in attics and walls" },
+    { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: "Is ice dam damage covered?" },
+  ]}
+  sources={[
+    { label: "U.S. Department of Energy: Air sealing your home", href: "https://www.energy.gov/energysaver/air-sealing-your-home" },
+    { label: "NOAA NCEI: nClimGrid-Daily county averages", href: "https://www.ncei.noaa.gov/products/land-based-station/nclimgrid-daily" },
+  ]}
+>
+  <h2>How an ice dam forms</h2>
+  <p>Heat escaping from the house warms the roof deck and melts the snow on top. The meltwater runs down to the eaves, which hang out past the warm walls and stay below freezing, and it refreezes there. Over days the ridge of ice grows, and new meltwater pools behind it. Shingles shed water running downhill, not water standing still, so the pool works its way under them and into the attic, walls and ceilings.</p>
+  <p>Ice dams need three things: snow on the roof, a warm roof deck, and cold eaves. They're most common after a heavy snowfall followed by days of temperatures in the 20s.</p>
+
+  <h2>If water is coming through the ceiling</h2>
+  <ol class="steps">
+    <li><strong>Catch it and protect what's below.</strong> Buckets, towels, plastic over furniture.</li>
+    <li><strong>Watch for sagging drywall.</strong> Keep people out from under a bulging ceiling.</li>
+    <li><strong>Cut power to light fixtures</strong> where water is coming through, at the breaker, from a dry spot.</li>
+    <li><strong>Photograph the ceiling, the roof edge and the icicles</strong> from the ground.</li>
+    <li><strong>Get the attic and wall cavities dried.</strong> Wet insulation loses its value and can hold water against wood for weeks.</li>
+  </ol>
+
+  <h2>Removing an ice dam safely</h2>
+  <ul>
+    <li>Use a roof rake from the ground to pull snow off the bottom three or four feet of roof. Less snow means less meltwater.</li>
+    <li>Don't climb onto an icy roof, and don't chip at the ice with a hammer or shovel. You'll damage the shingles.</li>
+    <li>A calcium chloride ice melter, packed into a tube of old hosiery and laid across the dam, can cut a drainage channel. Avoid rock salt, which damages roofing, gutters and plants.</li>
+    <li>For large dams, roofing and restoration companies use low-pressure steam, which melts the ice without harming shingles.</li>
+  </ul>
+
+  <h2>Prevention happens in the attic</h2>
+  <ul>
+    <li><strong>Air seal first.</strong> Gaps around light fixtures, bath fans, plumbing stacks and the attic hatch let warm, moist air into the attic. Sealing them is the most effective fix.</li>
+    <li><strong>Add insulation</strong> so the attic floor holds heat in the house.</li>
+    <li><strong>Ventilate</strong> with soffit and ridge vents so outside air keeps the roof deck cold.</li>
+    <li><strong>Move heat sources</strong> like ducts and exhaust fans so they don't dump warm air into the attic.</li>
+    <li>When the roof is replaced, ask about an ice and water shield membrane along the eaves.</li>
+  </ul>
+
+  <h2>Where in {S.name} ice dams are most likely</h2>
+  <p>Ice dams form when snow on a roof melts by day and refreezes at the eaves at night. These counties average the most freeze-thaw days, below 32°F overnight and above it by afternoon:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>County</th><th>Freeze-thaw days per year</th><th>Days that never get above freezing</th></tr></thead>
+      <tbody>
+        {snowy.map((c) => (
+          <tr><td>{c.pilot ? <a href={p(`/counties/${c.slug}/`)}>{c.name}</a> : c.name}</td><td>{c.weather!.freezeThawDays}</td><td>{c.weather!.iceDays}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="small faint">NOAA nClimGrid-Daily county averages, {snowy[0].weather!.period}. Lake-effect snow belts get far more snow than inland areas with similar temperatures.</p>
+
+  <h2>Insurance</h2>
+  <p>Many homeowners policies cover the interior water damage an ice dam causes, while excluding the cost of removing the ice itself or fixing the conditions that caused it. Check your policy and photograph everything before repairs.</p>
+</Article>

@@ -1,0 +1,6878 @@
+{
+ "meta": {
+  "acsRelease": "ACS 2024 5-year",
+  "acsYears": "2020-2024",
+  "countyCount": 75,
+  "state": "Arkansas",
+  "stateAbbr": "AR"
+ },
+ "counties": [
+  {
+   "geoid": "05000US05001",
+   "fips": "05001",
+   "name": "Arkansas County",
+   "short": "Arkansas",
+   "slug": "arkansas",
+   "seat": "DeWitt",
+   "founded": 1813,
+   "areaSqMi": 992,
+   "lat": 34.2462,
+   "lon": -91.3941,
+   "population": 16515,
+   "medianAge": 41.4,
+   "housingUnits": 8696,
+   "vacancyPct": 22.9,
+   "ownerPct": 64.6,
+   "singleFamilyPct": 74.4,
+   "mobileHomePct": 13.3,
+   "medianYearBuilt": 1978,
+   "builtPre1960Pct": 22.0,
+   "builtPre1980Pct": 53.9,
+   "built2000PlusPct": 17.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 31.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.9
+    }
+   ],
+   "heatGasPct": 32.9,
+   "heatElectricPct": 58.2,
+   "heatPropanePct": 7.8,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 138100,
+   "medianIncome": 53164,
+   "adjacent": [
+    "desha",
+    "jefferson",
+    "lincoln",
+    "lonoke",
+    "monroe",
+    "phillips",
+    "prairie"
+   ],
+   "places": [
+    {
+     "name": "Stuttgart",
+     "population": 7903
+    },
+    {
+     "name": "DeWitt",
+     "population": 2933
+    },
+    {
+     "name": "Gillett",
+     "population": 378
+    },
+    {
+     "name": "St. Charles",
+     "population": 250
+    },
+    {
+     "name": "Humphrey",
+     "population": 220
+    },
+    {
+     "name": "Almyra",
+     "population": 146
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05003",
+   "fips": "05003",
+   "name": "Ashley County",
+   "short": "Ashley",
+   "slug": "ashley",
+   "seat": "Hamburg",
+   "founded": 1848,
+   "areaSqMi": 925,
+   "lat": 33.2028,
+   "lon": -91.7955,
+   "population": 18429,
+   "medianAge": 42.8,
+   "housingUnits": 9392,
+   "vacancyPct": 21.7,
+   "ownerPct": 70.8,
+   "singleFamilyPct": 69.5,
+   "mobileHomePct": 20.7,
+   "medianYearBuilt": 1977,
+   "builtPre1960Pct": 21.4,
+   "builtPre1980Pct": 56.1,
+   "built2000PlusPct": 17.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 17.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 34.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 26.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.8
+    }
+   ],
+   "heatGasPct": 36.0,
+   "heatElectricPct": 54.5,
+   "heatPropanePct": 6.3,
+   "heatWoodPct": 1.2,
+   "medianHomeValue": 91900,
+   "medianIncome": 44266,
+   "adjacent": [
+    "bradley",
+    "chicot",
+    "drew",
+    "union"
+   ],
+   "places": [
+    {
+     "name": "Crossett",
+     "population": 4639
+    },
+    {
+     "name": "Hamburg",
+     "population": 2886
+    },
+    {
+     "name": "North Crossett",
+     "population": 2556
+    },
+    {
+     "name": "West Crossett",
+     "population": 1413
+    },
+    {
+     "name": "Portland",
+     "population": 444
+    },
+    {
+     "name": "Wilmot",
+     "population": 408
+    },
+    {
+     "name": "Montrose",
+     "population": 170
+    },
+    {
+     "name": "Fountain Hill",
+     "population": 81
+    },
+    {
+     "name": "Parkdale",
+     "population": 67
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05005",
+   "fips": "05005",
+   "name": "Baxter County",
+   "short": "Baxter",
+   "slug": "baxter",
+   "seat": "Mountain Home",
+   "founded": 1873,
+   "areaSqMi": 554,
+   "lat": 36.2349,
+   "lon": -92.317,
+   "population": 42407,
+   "medianAge": 51.4,
+   "housingUnits": 22883,
+   "vacancyPct": 15.4,
+   "ownerPct": 75.2,
+   "singleFamilyPct": 76.6,
+   "mobileHomePct": 12.2,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 10.2,
+   "builtPre1980Pct": 42.5,
+   "built2000PlusPct": 22.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 6.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.0
+    }
+   ],
+   "heatGasPct": 29.8,
+   "heatElectricPct": 53.0,
+   "heatPropanePct": 11.8,
+   "heatWoodPct": 3.8,
+   "medianHomeValue": 174600,
+   "medianIncome": 48452,
+   "adjacent": [
+    "fulton",
+    "izard",
+    "marion",
+    "searcy",
+    "stone"
+   ],
+   "places": [
+    {
+     "name": "Mountain Home",
+     "population": 13108
+    },
+    {
+     "name": "Gassville",
+     "population": 1850
+    },
+    {
+     "name": "Midway",
+     "population": 1279
+    },
+    {
+     "name": "Cotter",
+     "population": 1063
+    },
+    {
+     "name": "Lakeview",
+     "population": 851
+    },
+    {
+     "name": "Norfork",
+     "population": 690
+    },
+    {
+     "name": "Salesville",
+     "population": 515
+    },
+    {
+     "name": "Henderson",
+     "population": 415
+    },
+    {
+     "name": "Briarcliff",
+     "population": 257
+    },
+    {
+     "name": "Big Flat",
+     "population": 71
+    },
+    {
+     "name": "Gamaliel",
+     "population": 15
+    },
+    {
+     "name": "Buffalo City",
+     "population": 0
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05007",
+   "fips": "05007",
+   "name": "Benton County",
+   "short": "Benton",
+   "slug": "benton",
+   "seat": "Bentonville",
+   "founded": 1836,
+   "areaSqMi": 848,
+   "lat": 36.2862,
+   "lon": -94.2265,
+   "population": 303632,
+   "medianAge": 35.9,
+   "housingUnits": 122703,
+   "vacancyPct": 8.8,
+   "ownerPct": 67.0,
+   "singleFamilyPct": 79.5,
+   "mobileHomePct": 3.6,
+   "medianYearBuilt": 2001,
+   "builtPre1960Pct": 5.0,
+   "builtPre1980Pct": 17.9,
+   "built2000PlusPct": 52.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 2.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 12.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 52.0
+    }
+   ],
+   "heatGasPct": 45.9,
+   "heatElectricPct": 45.2,
+   "heatPropanePct": 6.1,
+   "heatWoodPct": 1.9,
+   "medianHomeValue": 323500,
+   "medianIncome": 93506,
+   "adjacent": [
+    "carroll",
+    "madison",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Rogers",
+     "population": 72981
+    },
+    {
+     "name": "Bentonville",
+     "population": 58249
+    },
+    {
+     "name": "Bella Vista",
+     "population": 31697
+    },
+    {
+     "name": "Centerton",
+     "population": 21920
+    },
+    {
+     "name": "Siloam Springs",
+     "population": 18699
+    },
+    {
+     "name": "Lowell",
+     "population": 10849
+    },
+    {
+     "name": "Pea Ridge",
+     "population": 8108
+    },
+    {
+     "name": "Cave Springs",
+     "population": 6008
+    },
+    {
+     "name": "Gentry",
+     "population": 4240
+    },
+    {
+     "name": "Gravette",
+     "population": 3714
+    },
+    {
+     "name": "Little Flock",
+     "population": 3056
+    },
+    {
+     "name": "Prairie Creek",
+     "population": 2493
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05009",
+   "fips": "05009",
+   "name": "Boone County",
+   "short": "Boone",
+   "slug": "boone",
+   "seat": "Harrison",
+   "founded": 1869,
+   "areaSqMi": 590,
+   "lat": 36.2702,
+   "lon": -93.0939,
+   "population": 38138,
+   "medianAge": 41.4,
+   "housingUnits": 17459,
+   "vacancyPct": 12.0,
+   "ownerPct": 70.8,
+   "singleFamilyPct": 79.8,
+   "mobileHomePct": 8.4,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 13.4,
+   "builtPre1980Pct": 42.0,
+   "built2000PlusPct": 22.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.7
+    }
+   ],
+   "heatGasPct": 31.9,
+   "heatElectricPct": 47.3,
+   "heatPropanePct": 13.4,
+   "heatWoodPct": 6.9,
+   "medianHomeValue": 188900,
+   "medianIncome": 55143,
+   "adjacent": [
+    "carroll",
+    "marion",
+    "newton",
+    "searcy"
+   ],
+   "places": [
+    {
+     "name": "Harrison",
+     "population": 13350
+    },
+    {
+     "name": "Diamond City",
+     "population": 672
+    },
+    {
+     "name": "Bergman",
+     "population": 542
+    },
+    {
+     "name": "Bellefonte",
+     "population": 428
+    },
+    {
+     "name": "Lead Hill",
+     "population": 320
+    },
+    {
+     "name": "Batavia",
+     "population": 307
+    },
+    {
+     "name": "Omaha",
+     "population": 174
+    },
+    {
+     "name": "Valley Springs",
+     "population": 121
+    },
+    {
+     "name": "Everton",
+     "population": 79
+    },
+    {
+     "name": "South Lead Hill",
+     "population": 69
+    },
+    {
+     "name": "Zinc",
+     "population": 45
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05011",
+   "fips": "05011",
+   "name": "Bradley County",
+   "short": "Bradley",
+   "slug": "bradley",
+   "seat": "Warren",
+   "founded": 1840,
+   "areaSqMi": 649,
+   "lat": 33.4333,
+   "lon": -92.1668,
+   "population": 10208,
+   "medianAge": 39.0,
+   "housingUnits": 5060,
+   "vacancyPct": 25.8,
+   "ownerPct": 66.0,
+   "singleFamilyPct": 68.7,
+   "mobileHomePct": 18.5,
+   "medianYearBuilt": 1977,
+   "builtPre1960Pct": 18.3,
+   "builtPre1980Pct": 57.0,
+   "built2000PlusPct": 16.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 38.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 26.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 16.2
+    }
+   ],
+   "heatGasPct": 31.9,
+   "heatElectricPct": 52.6,
+   "heatPropanePct": 9.0,
+   "heatWoodPct": 3.9,
+   "medianHomeValue": 94800,
+   "medianIncome": 41476,
+   "adjacent": [
+    "ashley",
+    "calhoun",
+    "cleveland",
+    "drew",
+    "union"
+   ],
+   "places": [
+    {
+     "name": "Warren",
+     "population": 5353
+    },
+    {
+     "name": "Hermitage",
+     "population": 327
+    },
+    {
+     "name": "Banks",
+     "population": 126
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05013",
+   "fips": "05013",
+   "name": "Calhoun County",
+   "short": "Calhoun",
+   "slug": "calhoun",
+   "seat": "Hampton",
+   "founded": 1850,
+   "areaSqMi": 629,
+   "lat": 33.5348,
+   "lon": -92.5467,
+   "population": 4704,
+   "medianAge": 44.1,
+   "housingUnits": 2466,
+   "vacancyPct": 31.5,
+   "ownerPct": 87.8,
+   "singleFamilyPct": 69.3,
+   "mobileHomePct": 28.7,
+   "medianYearBuilt": 1982,
+   "builtPre1960Pct": 13.9,
+   "builtPre1980Pct": 46.0,
+   "built2000PlusPct": 25.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 25.8
+    }
+   ],
+   "heatGasPct": 27.6,
+   "heatElectricPct": 56.9,
+   "heatPropanePct": 8.5,
+   "heatWoodPct": 5.6,
+   "medianHomeValue": 110700,
+   "medianIncome": 66809,
+   "adjacent": [
+    "bradley",
+    "cleveland",
+    "dallas",
+    "ouachita",
+    "union"
+   ],
+   "places": [
+    {
+     "name": "Hampton",
+     "population": 1037
+    },
+    {
+     "name": "Harrell",
+     "population": 323
+    },
+    {
+     "name": "Thornton",
+     "population": 292
+    },
+    {
+     "name": "Tinsman",
+     "population": 18
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05015",
+   "fips": "05015",
+   "name": "Carroll County",
+   "short": "Carroll",
+   "slug": "carroll",
+   "seat": "Berryville",
+   "founded": 1833,
+   "areaSqMi": 630,
+   "lat": 36.3106,
+   "lon": -93.5563,
+   "population": 28626,
+   "medianAge": 44.5,
+   "housingUnits": 13957,
+   "vacancyPct": 18.7,
+   "ownerPct": 77.5,
+   "singleFamilyPct": 78.1,
+   "mobileHomePct": 12.9,
+   "medianYearBuilt": 1989,
+   "builtPre1960Pct": 14.8,
+   "builtPre1980Pct": 34.5,
+   "built2000PlusPct": 26.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 9.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 5.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 38.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.7
+    }
+   ],
+   "heatGasPct": 23.2,
+   "heatElectricPct": 50.8,
+   "heatPropanePct": 17.2,
+   "heatWoodPct": 7.9,
+   "medianHomeValue": 210400,
+   "medianIncome": 54230,
+   "adjacent": [
+    "benton",
+    "boone",
+    "madison",
+    "newton"
+   ],
+   "places": [
+    {
+     "name": "Berryville",
+     "population": 5707
+    },
+    {
+     "name": "Green Forest",
+     "population": 3112
+    },
+    {
+     "name": "Holiday Island",
+     "population": 2480
+    },
+    {
+     "name": "Eureka Springs",
+     "population": 2433
+    },
+    {
+     "name": "Alpena",
+     "population": 510
+    },
+    {
+     "name": "Oak Grove",
+     "population": 285
+    },
+    {
+     "name": "Beaver",
+     "population": 121
+    },
+    {
+     "name": "Blue Eye",
+     "population": 33
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05017",
+   "fips": "05017",
+   "name": "Chicot County",
+   "short": "Chicot",
+   "slug": "chicot",
+   "seat": "Lake Village",
+   "founded": 1823,
+   "areaSqMi": 637,
+   "lat": 33.285,
+   "lon": -91.2946,
+   "population": 9765,
+   "medianAge": 43.2,
+   "housingUnits": 5108,
+   "vacancyPct": 22.4,
+   "ownerPct": 69.2,
+   "singleFamilyPct": 73.7,
+   "mobileHomePct": 17.9,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 11.5,
+   "builtPre1980Pct": 51.4,
+   "built2000PlusPct": 18.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 40.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 18.9
+    }
+   ],
+   "heatGasPct": 38.6,
+   "heatElectricPct": 51.5,
+   "heatPropanePct": 8.0,
+   "heatWoodPct": 0.3,
+   "medianHomeValue": 89100,
+   "medianIncome": 39045,
+   "adjacent": [
+    "ashley",
+    "desha",
+    "drew"
+   ],
+   "places": [
+    {
+     "name": "Dermott",
+     "population": 2330
+    },
+    {
+     "name": "Lake Village",
+     "population": 2144
+    },
+    {
+     "name": "Eudora",
+     "population": 1868
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05019",
+   "fips": "05019",
+   "name": "Clark County",
+   "short": "Clark",
+   "slug": "clark",
+   "seat": "Arkadelphia",
+   "founded": 1818,
+   "areaSqMi": 866,
+   "lat": 34.0546,
+   "lon": -93.1619,
+   "population": 21125,
+   "medianAge": 32.0,
+   "housingUnits": 10029,
+   "vacancyPct": 19.0,
+   "ownerPct": 65.0,
+   "singleFamilyPct": 65.7,
+   "mobileHomePct": 14.8,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 16.1,
+   "builtPre1980Pct": 40.6,
+   "built2000PlusPct": 26.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 24.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 33.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.2
+    }
+   ],
+   "heatGasPct": 28.6,
+   "heatElectricPct": 60.3,
+   "heatPropanePct": 6.1,
+   "heatWoodPct": 4.5,
+   "medianHomeValue": 155000,
+   "medianIncome": 52034,
+   "adjacent": [
+    "dallas",
+    "hot-spring",
+    "montgomery",
+    "nevada",
+    "ouachita",
+    "pike"
+   ],
+   "places": [
+    {
+     "name": "Arkadelphia",
+     "population": 10099
+    },
+    {
+     "name": "Gurdon",
+     "population": 1625
+    },
+    {
+     "name": "Caddo Valley",
+     "population": 775
+    },
+    {
+     "name": "Amity",
+     "population": 740
+    },
+    {
+     "name": "Okolona",
+     "population": 287
+    },
+    {
+     "name": "Gum Springs",
+     "population": 55
+    },
+    {
+     "name": "Whelen Springs",
+     "population": 52
+    },
+    {
+     "name": "Alpine",
+     "population": 0
+    },
+    {
+     "name": "Beirne",
+     "population": 0
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05021",
+   "fips": "05021",
+   "name": "Clay County",
+   "short": "Clay",
+   "slug": "clay",
+   "seat": "Corning",
+   "founded": 1873,
+   "areaSqMi": 639,
+   "lat": 36.3496,
+   "lon": -90.4136,
+   "population": 14280,
+   "medianAge": 42.7,
+   "housingUnits": 7492,
+   "vacancyPct": 19.6,
+   "ownerPct": 74.7,
+   "singleFamilyPct": 81.9,
+   "mobileHomePct": 12.0,
+   "medianYearBuilt": 1973,
+   "builtPre1960Pct": 25.1,
+   "builtPre1980Pct": 65.6,
+   "built2000PlusPct": 11.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 8.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 40.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 11.4
+    }
+   ],
+   "heatGasPct": 42.8,
+   "heatElectricPct": 31.9,
+   "heatPropanePct": 21.1,
+   "heatWoodPct": 3.6,
+   "medianHomeValue": 94600,
+   "medianIncome": 51481,
+   "adjacent": [
+    "greene",
+    "randolph"
+   ],
+   "places": [
+    {
+     "name": "Piggott",
+     "population": 3555
+    },
+    {
+     "name": "Corning",
+     "population": 3134
+    },
+    {
+     "name": "Rector",
+     "population": 1750
+    },
+    {
+     "name": "Greenway",
+     "population": 261
+    },
+    {
+     "name": "St. Francis",
+     "population": 177
+    },
+    {
+     "name": "Knobel",
+     "population": 158
+    },
+    {
+     "name": "Pollard",
+     "population": 143
+    },
+    {
+     "name": "McDougal",
+     "population": 116
+    },
+    {
+     "name": "Success",
+     "population": 92
+    },
+    {
+     "name": "Peach Orchard",
+     "population": 86
+    },
+    {
+     "name": "Datto",
+     "population": 67
+    },
+    {
+     "name": "Nimmons",
+     "population": 22
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05023",
+   "fips": "05023",
+   "name": "Cleburne County",
+   "short": "Cleburne",
+   "slug": "cleburne",
+   "seat": "Heber Springs",
+   "founded": 1883,
+   "areaSqMi": 554,
+   "lat": 35.5312,
+   "lon": -92.0214,
+   "population": 25226,
+   "medianAge": 49.5,
+   "housingUnits": 15667,
+   "vacancyPct": 32.8,
+   "ownerPct": 80.6,
+   "singleFamilyPct": 75.4,
+   "mobileHomePct": 20.0,
+   "medianYearBuilt": 1989,
+   "builtPre1960Pct": 7.5,
+   "builtPre1980Pct": 36.8,
+   "built2000PlusPct": 28.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 5.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 28.5
+    }
+   ],
+   "heatGasPct": 20.2,
+   "heatElectricPct": 59.3,
+   "heatPropanePct": 16.4,
+   "heatWoodPct": 3.3,
+   "medianHomeValue": 179800,
+   "medianIncome": 55798,
+   "adjacent": [
+    "faulkner",
+    "independence",
+    "stone",
+    "van-buren",
+    "white"
+   ],
+   "places": [
+    {
+     "name": "Heber Springs",
+     "population": 7161
+    },
+    {
+     "name": "Quitman",
+     "population": 805
+    },
+    {
+     "name": "Greers Ferry",
+     "population": 778
+    },
+    {
+     "name": "Tumbling Shoals",
+     "population": 689
+    },
+    {
+     "name": "Drasco",
+     "population": 314
+    },
+    {
+     "name": "Higden",
+     "population": 182
+    },
+    {
+     "name": "Wilburn",
+     "population": 173
+    },
+    {
+     "name": "Concord",
+     "population": 130
+    },
+    {
+     "name": "Edgemont",
+     "population": 24
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05025",
+   "fips": "05025",
+   "name": "Cleveland County",
+   "short": "Cleveland",
+   "slug": "cleveland",
+   "seat": "Rison",
+   "founded": 1873,
+   "areaSqMi": 598,
+   "lat": 33.8846,
+   "lon": -92.1848,
+   "population": 7453,
+   "medianAge": 44.1,
+   "housingUnits": 3587,
+   "vacancyPct": 18.3,
+   "ownerPct": 82.6,
+   "singleFamilyPct": 67.5,
+   "mobileHomePct": 29.1,
+   "medianYearBuilt": 1987,
+   "builtPre1960Pct": 9.2,
+   "builtPre1980Pct": 41.9,
+   "built2000PlusPct": 26.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 1.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 31.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.8
+    }
+   ],
+   "heatGasPct": 10.8,
+   "heatElectricPct": 63.9,
+   "heatPropanePct": 21.3,
+   "heatWoodPct": 0.7,
+   "medianHomeValue": 137600,
+   "medianIncome": 54794,
+   "adjacent": [
+    "bradley",
+    "calhoun",
+    "dallas",
+    "drew",
+    "grant",
+    "jefferson",
+    "lincoln"
+   ],
+   "places": [
+    {
+     "name": "Rison",
+     "population": 1019
+    },
+    {
+     "name": "Kingsland",
+     "population": 406
+    },
+    {
+     "name": "Rye",
+     "population": 223
+    },
+    {
+     "name": "Woodlawn",
+     "population": 197
+    },
+    {
+     "name": "New Edinburg",
+     "population": 182
+    },
+    {
+     "name": "Staves",
+     "population": 155
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05027",
+   "fips": "05027",
+   "name": "Columbia County",
+   "short": "Columbia",
+   "slug": "columbia",
+   "seat": "Magnolia",
+   "founded": 1852,
+   "areaSqMi": 766,
+   "lat": 33.1385,
+   "lon": -93.2358,
+   "population": 22349,
+   "medianAge": 34.2,
+   "housingUnits": 11030,
+   "vacancyPct": 23.8,
+   "ownerPct": 70.7,
+   "singleFamilyPct": 70.6,
+   "mobileHomePct": 16.8,
+   "medianYearBuilt": 1981,
+   "builtPre1960Pct": 22.7,
+   "builtPre1980Pct": 49.1,
+   "built2000PlusPct": 21.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 17.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.3
+    }
+   ],
+   "heatGasPct": 37.5,
+   "heatElectricPct": 55.0,
+   "heatPropanePct": 5.2,
+   "heatWoodPct": 1.0,
+   "medianHomeValue": 152100,
+   "medianIncome": 55334,
+   "adjacent": [
+    "lafayette",
+    "nevada",
+    "ouachita",
+    "union"
+   ],
+   "places": [
+    {
+     "name": "Magnolia",
+     "population": 10894
+    },
+    {
+     "name": "Waldo",
+     "population": 1144
+    },
+    {
+     "name": "Taylor",
+     "population": 593
+    },
+    {
+     "name": "McNeil",
+     "population": 419
+    },
+    {
+     "name": "Emerson",
+     "population": 239
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05029",
+   "fips": "05029",
+   "name": "Conway County",
+   "short": "Conway",
+   "slug": "conway",
+   "seat": "Morrilton",
+   "founded": 1825,
+   "areaSqMi": 552,
+   "lat": 35.2702,
+   "lon": -92.6752,
+   "population": 21054,
+   "medianAge": 42.2,
+   "housingUnits": 9703,
+   "vacancyPct": 14.7,
+   "ownerPct": 74.1,
+   "singleFamilyPct": 72.7,
+   "mobileHomePct": 19.4,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 17.3,
+   "builtPre1980Pct": 46.3,
+   "built2000PlusPct": 26.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.5
+    }
+   ],
+   "heatGasPct": 21.7,
+   "heatElectricPct": 63.8,
+   "heatPropanePct": 6.4,
+   "heatWoodPct": 6.3,
+   "medianHomeValue": 154100,
+   "medianIncome": 54187,
+   "adjacent": [
+    "faulkner",
+    "perry",
+    "pope",
+    "van-buren",
+    "yell"
+   ],
+   "places": [
+    {
+     "name": "Morrilton",
+     "population": 7080
+    },
+    {
+     "name": "Plumerville",
+     "population": 1128
+    },
+    {
+     "name": "Oppelo",
+     "population": 1118
+    },
+    {
+     "name": "Springfield",
+     "population": 438
+    },
+    {
+     "name": "Menifee",
+     "population": 409
+    },
+    {
+     "name": "Center Ridge",
+     "population": 211
+    },
+    {
+     "name": "Jerusalem",
+     "population": 57
+    },
+    {
+     "name": "Hattieville",
+     "population": 41
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05031",
+   "fips": "05031",
+   "name": "Craighead County",
+   "short": "Craighead",
+   "slug": "craighead",
+   "seat": "Jonesboro",
+   "founded": 1859,
+   "areaSqMi": 707,
+   "lat": 35.8629,
+   "lon": -90.6601,
+   "population": 113249,
+   "medianAge": 34.5,
+   "housingUnits": 48885,
+   "vacancyPct": 9.1,
+   "ownerPct": 60.1,
+   "singleFamilyPct": 70.9,
+   "mobileHomePct": 4.5,
+   "medianYearBuilt": 1992,
+   "builtPre1960Pct": 7.8,
+   "builtPre1980Pct": 33.8,
+   "built2000PlusPct": 37.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 5.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 37.9
+    }
+   ],
+   "heatGasPct": 36.3,
+   "heatElectricPct": 57.9,
+   "heatPropanePct": 4.4,
+   "heatWoodPct": 0.4,
+   "medianHomeValue": 210400,
+   "medianIncome": 59548,
+   "adjacent": [
+    "greene",
+    "jackson",
+    "lawrence",
+    "mississippi",
+    "poinsett"
+   ],
+   "places": [
+    {
+     "name": "Jonesboro",
+     "population": 80137
+    },
+    {
+     "name": "Brookland",
+     "population": 4377
+    },
+    {
+     "name": "Bono",
+     "population": 2657
+    },
+    {
+     "name": "Lake City",
+     "population": 2531
+    },
+    {
+     "name": "Bay",
+     "population": 2333
+    },
+    {
+     "name": "Monette",
+     "population": 1251
+    },
+    {
+     "name": "Caraway",
+     "population": 1087
+    },
+    {
+     "name": "Cash",
+     "population": 278
+    },
+    {
+     "name": "Black Oak",
+     "population": 179
+    },
+    {
+     "name": "Egypt",
+     "population": 57
+    },
+    {
+     "name": "Bowman",
+     "population": 30
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05033",
+   "fips": "05033",
+   "name": "Crawford County",
+   "short": "Crawford",
+   "slug": "crawford",
+   "seat": "Van Buren",
+   "founded": 1820,
+   "areaSqMi": 595,
+   "lat": 35.5545,
+   "lon": -94.2439,
+   "population": 61139,
+   "medianAge": 39.2,
+   "housingUnits": 25621,
+   "vacancyPct": 8.8,
+   "ownerPct": 75.5,
+   "singleFamilyPct": 77.7,
+   "mobileHomePct": 9.9,
+   "medianYearBuilt": 1991,
+   "builtPre1960Pct": 10.9,
+   "builtPre1980Pct": 35.1,
+   "built2000PlusPct": 30.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 6.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 24.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 30.4
+    }
+   ],
+   "heatGasPct": 36.5,
+   "heatElectricPct": 54.7,
+   "heatPropanePct": 3.7,
+   "heatWoodPct": 4.0,
+   "medianHomeValue": 182800,
+   "medianIncome": 64132,
+   "adjacent": [
+    "franklin",
+    "madison",
+    "sebastian",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Van Buren",
+     "population": 23763
+    },
+    {
+     "name": "Alma",
+     "population": 5906
+    },
+    {
+     "name": "Cedarville",
+     "population": 1760
+    },
+    {
+     "name": "Mulberry",
+     "population": 1646
+    },
+    {
+     "name": "Kibler",
+     "population": 1085
+    },
+    {
+     "name": "Dyer",
+     "population": 1049
+    },
+    {
+     "name": "Mountainburg",
+     "population": 566
+    },
+    {
+     "name": "Rudy",
+     "population": 178
+    },
+    {
+     "name": "Uniontown",
+     "population": 168
+    },
+    {
+     "name": "Chester",
+     "population": 76
+    },
+    {
+     "name": "Dora",
+     "population": 74
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05035",
+   "fips": "05035",
+   "name": "Crittenden County",
+   "short": "Crittenden",
+   "slug": "crittenden",
+   "seat": "Marion",
+   "founded": 1825,
+   "areaSqMi": 612,
+   "lat": 35.1348,
+   "lon": -90.2352,
+   "population": 47266,
+   "medianAge": 36.2,
+   "housingUnits": 21388,
+   "vacancyPct": 14.9,
+   "ownerPct": 57.4,
+   "singleFamilyPct": 71.3,
+   "mobileHomePct": 6.7,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 12.3,
+   "builtPre1980Pct": 45.9,
+   "built2000PlusPct": 24.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 33.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 24.1
+    }
+   ],
+   "heatGasPct": 46.4,
+   "heatElectricPct": 48.1,
+   "heatPropanePct": 4.1,
+   "heatWoodPct": 0.3,
+   "medianHomeValue": 160200,
+   "medianIncome": 55358,
+   "adjacent": [
+    "cross",
+    "lee",
+    "mississippi",
+    "poinsett",
+    "st-francis"
+   ],
+   "places": [
+    {
+     "name": "West Memphis",
+     "population": 23929
+    },
+    {
+     "name": "Marion",
+     "population": 13623
+    },
+    {
+     "name": "Earle",
+     "population": 1520
+    },
+    {
+     "name": "Turrell",
+     "population": 496
+    },
+    {
+     "name": "Clarkedale",
+     "population": 468
+    },
+    {
+     "name": "Crawfordsville",
+     "population": 424
+    },
+    {
+     "name": "Horseshoe Lake",
+     "population": 414
+    },
+    {
+     "name": "Edmondson",
+     "population": 308
+    },
+    {
+     "name": "Gilmore",
+     "population": 293
+    },
+    {
+     "name": "Sunset",
+     "population": 153
+    },
+    {
+     "name": "Jericho",
+     "population": 119
+    },
+    {
+     "name": "Jennette",
+     "population": 86
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05037",
+   "fips": "05037",
+   "name": "Cross County",
+   "short": "Cross",
+   "slug": "cross",
+   "seat": "Wynne",
+   "founded": 1862,
+   "areaSqMi": 616,
+   "lat": 35.3528,
+   "lon": -90.7718,
+   "population": 16543,
+   "medianAge": 40.9,
+   "housingUnits": 7586,
+   "vacancyPct": 14.5,
+   "ownerPct": 67.5,
+   "singleFamilyPct": 70.2,
+   "mobileHomePct": 17.1,
+   "medianYearBuilt": 1981,
+   "builtPre1960Pct": 13.5,
+   "builtPre1980Pct": 48.2,
+   "built2000PlusPct": 21.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 34.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.0
+    }
+   ],
+   "heatGasPct": 28.0,
+   "heatElectricPct": 58.9,
+   "heatPropanePct": 11.0,
+   "heatWoodPct": 1.1,
+   "medianHomeValue": 117500,
+   "medianIncome": 50863,
+   "adjacent": [
+    "crittenden",
+    "jackson",
+    "poinsett",
+    "st-francis",
+    "woodruff"
+   ],
+   "places": [
+    {
+     "name": "Wynne",
+     "population": 8120
+    },
+    {
+     "name": "Parkin",
+     "population": 694
+    },
+    {
+     "name": "Cherry Valley",
+     "population": 543
+    },
+    {
+     "name": "Vanndale",
+     "population": 356
+    },
+    {
+     "name": "Hickory Ridge",
+     "population": 259
+    },
+    {
+     "name": "Fair Oaks",
+     "population": 23
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05039",
+   "fips": "05039",
+   "name": "Dallas County",
+   "short": "Dallas",
+   "slug": "dallas",
+   "seat": "Fordyce",
+   "founded": 1845,
+   "areaSqMi": 667,
+   "lat": 33.9754,
+   "lon": -92.7175,
+   "population": 6242,
+   "medianAge": 45.4,
+   "housingUnits": 3470,
+   "vacancyPct": 26.3,
+   "ownerPct": 72.6,
+   "singleFamilyPct": 75.2,
+   "mobileHomePct": 17.0,
+   "medianYearBuilt": 1978,
+   "builtPre1960Pct": 18.0,
+   "builtPre1980Pct": 56.1,
+   "built2000PlusPct": 18.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 8.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 38.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 18.0
+    }
+   ],
+   "heatGasPct": 31.5,
+   "heatElectricPct": 53.7,
+   "heatPropanePct": 8.9,
+   "heatWoodPct": 5.3,
+   "medianHomeValue": 97300,
+   "medianIncome": 42500,
+   "adjacent": [
+    "calhoun",
+    "clark",
+    "cleveland",
+    "grant",
+    "hot-spring",
+    "ouachita"
+   ],
+   "places": [
+    {
+     "name": "Fordyce",
+     "population": 3268
+    },
+    {
+     "name": "Sparkman",
+     "population": 430
+    },
+    {
+     "name": "Carthage",
+     "population": 185
+    },
+    {
+     "name": "Ivan",
+     "population": 50
+    },
+    {
+     "name": "Princeton",
+     "population": 3
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05041",
+   "fips": "05041",
+   "name": "Desha County",
+   "short": "Desha",
+   "slug": "desha",
+   "seat": "Arkansas City",
+   "founded": 1838,
+   "areaSqMi": 741,
+   "lat": 33.8294,
+   "lon": -91.3079,
+   "population": 10786,
+   "medianAge": 41.6,
+   "housingUnits": 5799,
+   "vacancyPct": 20.5,
+   "ownerPct": 56.8,
+   "singleFamilyPct": 70.8,
+   "mobileHomePct": 12.4,
+   "medianYearBuilt": 1977,
+   "builtPre1960Pct": 20.1,
+   "builtPre1980Pct": 57.1,
+   "built2000PlusPct": 17.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 37.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.5
+    }
+   ],
+   "heatGasPct": 33.8,
+   "heatElectricPct": 60.6,
+   "heatPropanePct": 4.6,
+   "heatWoodPct": 0.0,
+   "medianHomeValue": 90900,
+   "medianIncome": 37662,
+   "adjacent": [
+    "arkansas",
+    "chicot",
+    "drew",
+    "lincoln",
+    "phillips"
+   ],
+   "places": [
+    {
+     "name": "Dumas",
+     "population": 3768
+    },
+    {
+     "name": "McGehee",
+     "population": 3666
+    },
+    {
+     "name": "Arkansas City",
+     "population": 456
+    },
+    {
+     "name": "Mitchellville",
+     "population": 320
+    },
+    {
+     "name": "Watson",
+     "population": 214
+    },
+    {
+     "name": "Reed",
+     "population": 156
+    },
+    {
+     "name": "Tillar",
+     "population": 119
+    },
+    {
+     "name": "Halley",
+     "population": 10
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05043",
+   "fips": "05043",
+   "name": "Drew County",
+   "short": "Drew",
+   "slug": "drew",
+   "seat": "Monticello",
+   "founded": 1846,
+   "areaSqMi": 829,
+   "lat": 33.6333,
+   "lon": -91.7144,
+   "population": 17046,
+   "medianAge": 37.7,
+   "housingUnits": 8289,
+   "vacancyPct": 13.2,
+   "ownerPct": 63.7,
+   "singleFamilyPct": 57.4,
+   "mobileHomePct": 23.1,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 16.3,
+   "builtPre1980Pct": 42.2,
+   "built2000PlusPct": 26.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 31.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.3
+    }
+   ],
+   "heatGasPct": 25.2,
+   "heatElectricPct": 61.3,
+   "heatPropanePct": 11.0,
+   "heatWoodPct": 1.5,
+   "medianHomeValue": 140800,
+   "medianIncome": 42824,
+   "adjacent": [
+    "ashley",
+    "bradley",
+    "chicot",
+    "cleveland",
+    "desha",
+    "lincoln"
+   ],
+   "places": [
+    {
+     "name": "Monticello",
+     "population": 8257
+    },
+    {
+     "name": "Lacey",
+     "population": 746
+    },
+    {
+     "name": "Wilmar",
+     "population": 523
+    },
+    {
+     "name": "Winchester",
+     "population": 122
+    },
+    {
+     "name": "Collins",
+     "population": 60
+    },
+    {
+     "name": "Jerome",
+     "population": 50
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05045",
+   "fips": "05045",
+   "name": "Faulkner County",
+   "short": "Faulkner",
+   "slug": "faulkner",
+   "seat": "Conway",
+   "founded": 1873,
+   "areaSqMi": 647,
+   "lat": 35.098,
+   "lon": -92.3319,
+   "population": 127717,
+   "medianAge": 34.1,
+   "housingUnits": 53650,
+   "vacancyPct": 8.1,
+   "ownerPct": 62.3,
+   "singleFamilyPct": 67.5,
+   "mobileHomePct": 10.0,
+   "medianYearBuilt": 1998,
+   "builtPre1960Pct": 5.1,
+   "builtPre1980Pct": 18.4,
+   "built2000PlusPct": 46.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 1.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 3.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 13.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 46.9
+    }
+   ],
+   "heatGasPct": 29.7,
+   "heatElectricPct": 65.8,
+   "heatPropanePct": 2.4,
+   "heatWoodPct": 1.4,
+   "medianHomeValue": 232700,
+   "medianIncome": 67289,
+   "adjacent": [
+    "cleburne",
+    "conway",
+    "lonoke",
+    "perry",
+    "pulaski",
+    "van-buren",
+    "white"
+   ],
+   "places": [
+    {
+     "name": "Conway",
+     "population": 67642
+    },
+    {
+     "name": "Greenbrier",
+     "population": 6018
+    },
+    {
+     "name": "Vilonia",
+     "population": 4498
+    },
+    {
+     "name": "Mayflower",
+     "population": 2861
+    },
+    {
+     "name": "Wooster",
+     "population": 1023
+    },
+    {
+     "name": "Guy",
+     "population": 720
+    },
+    {
+     "name": "Holland",
+     "population": 623
+    },
+    {
+     "name": "Enola",
+     "population": 432
+    },
+    {
+     "name": "Damascus",
+     "population": 348
+    },
+    {
+     "name": "Twin Groves",
+     "population": 258
+    },
+    {
+     "name": "Mount Vernon",
+     "population": 182
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05047",
+   "fips": "05047",
+   "name": "Franklin County",
+   "short": "Franklin",
+   "slug": "franklin",
+   "seat": "Charleston",
+   "founded": 1837,
+   "areaSqMi": 609,
+   "lat": 35.4869,
+   "lon": -93.8742,
+   "population": 17326,
+   "medianAge": 42.3,
+   "housingUnits": 7757,
+   "vacancyPct": 9.1,
+   "ownerPct": 78.0,
+   "singleFamilyPct": 76.8,
+   "mobileHomePct": 13.4,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 12.7,
+   "builtPre1980Pct": 42.1,
+   "built2000PlusPct": 25.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 25.4
+    }
+   ],
+   "heatGasPct": 28.5,
+   "heatElectricPct": 62.9,
+   "heatPropanePct": 2.4,
+   "heatWoodPct": 4.3,
+   "medianHomeValue": 130800,
+   "medianIncome": 55886,
+   "adjacent": [
+    "crawford",
+    "johnson",
+    "logan",
+    "madison",
+    "sebastian"
+   ],
+   "places": [
+    {
+     "name": "Ozark",
+     "population": 3551
+    },
+    {
+     "name": "Charleston",
+     "population": 2646
+    },
+    {
+     "name": "Altus",
+     "population": 827
+    },
+    {
+     "name": "Branch",
+     "population": 317
+    },
+    {
+     "name": "Denning",
+     "population": 245
+    },
+    {
+     "name": "Alix",
+     "population": 20
+    },
+    {
+     "name": "Wiederkehr Village",
+     "population": 18
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05049",
+   "fips": "05049",
+   "name": "Fulton County",
+   "short": "Fulton",
+   "slug": "fulton",
+   "seat": "Salem",
+   "founded": 1842,
+   "areaSqMi": 618,
+   "lat": 36.3866,
+   "lon": -91.8033,
+   "population": 12302,
+   "medianAge": 47.6,
+   "housingUnits": 6225,
+   "vacancyPct": 23.6,
+   "ownerPct": 84.7,
+   "singleFamilyPct": 72.8,
+   "mobileHomePct": 23.6,
+   "medianYearBuilt": 1986,
+   "builtPre1960Pct": 9.0,
+   "builtPre1980Pct": 41.5,
+   "built2000PlusPct": 23.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 3.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 23.0
+    }
+   ],
+   "heatGasPct": 2.2,
+   "heatElectricPct": 58.6,
+   "heatPropanePct": 26.8,
+   "heatWoodPct": 10.7,
+   "medianHomeValue": 113800,
+   "medianIncome": 42241,
+   "adjacent": [
+    "baxter",
+    "izard",
+    "sharp"
+   ],
+   "places": [
+    {
+     "name": "Salem",
+     "population": 1620
+    },
+    {
+     "name": "Mammoth Spring",
+     "population": 1226
+    },
+    {
+     "name": "Viola",
+     "population": 384
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05051",
+   "fips": "05051",
+   "name": "Garland County",
+   "short": "Garland",
+   "slug": "garland",
+   "seat": "Hot Springs",
+   "founded": 1873,
+   "areaSqMi": 678,
+   "lat": 34.5763,
+   "lon": -93.1063,
+   "population": 100035,
+   "medianAge": 45.5,
+   "housingUnits": 52760,
+   "vacancyPct": 17.2,
+   "ownerPct": 69.4,
+   "singleFamilyPct": 67.1,
+   "mobileHomePct": 14.3,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 16.4,
+   "builtPre1980Pct": 43.8,
+   "built2000PlusPct": 26.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 27.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.5
+    }
+   ],
+   "heatGasPct": 29.4,
+   "heatElectricPct": 65.8,
+   "heatPropanePct": 3.2,
+   "heatWoodPct": 1.0,
+   "medianHomeValue": 194300,
+   "medianIncome": 57181,
+   "adjacent": [
+    "hot-spring",
+    "montgomery",
+    "perry",
+    "saline",
+    "yell"
+   ],
+   "places": [
+    {
+     "name": "Hot Springs",
+     "population": 37920
+    },
+    {
+     "name": "Piney",
+     "population": 4458
+    },
+    {
+     "name": "Rockwell",
+     "population": 3986
+    },
+    {
+     "name": "Lake Hamilton",
+     "population": 2127
+    },
+    {
+     "name": "Mountain Pine",
+     "population": 555
+    },
+    {
+     "name": "Fountain Lake",
+     "population": 548
+    },
+    {
+     "name": "Pearcy",
+     "population": 363
+    },
+    {
+     "name": "Lonsdale",
+     "population": 211
+    },
+    {
+     "name": "Crystal Springs",
+     "population": 85
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05053",
+   "fips": "05053",
+   "name": "Grant County",
+   "short": "Grant",
+   "slug": "grant",
+   "seat": "Sheridan",
+   "founded": 1869,
+   "areaSqMi": 632,
+   "lat": 34.3248,
+   "lon": -92.441,
+   "population": 18242,
+   "medianAge": 40.5,
+   "housingUnits": 7957,
+   "vacancyPct": 12.3,
+   "ownerPct": 80.7,
+   "singleFamilyPct": 71.3,
+   "mobileHomePct": 22.4,
+   "medianYearBuilt": 1991,
+   "builtPre1960Pct": 6.0,
+   "builtPre1980Pct": 30.5,
+   "built2000PlusPct": 33.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 3.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 24.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 33.8
+    }
+   ],
+   "heatGasPct": 38.4,
+   "heatElectricPct": 50.9,
+   "heatPropanePct": 7.1,
+   "heatWoodPct": 3.0,
+   "medianHomeValue": 161700,
+   "medianIncome": 71549,
+   "adjacent": [
+    "cleveland",
+    "dallas",
+    "hot-spring",
+    "jefferson",
+    "pulaski",
+    "saline"
+   ],
+   "places": [
+    {
+     "name": "Sheridan",
+     "population": 5165
+    },
+    {
+     "name": "Tull",
+     "population": 596
+    },
+    {
+     "name": "Poyen",
+     "population": 441
+    },
+    {
+     "name": "Prattsville",
+     "population": 428
+    },
+    {
+     "name": "Leola",
+     "population": 414
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05055",
+   "fips": "05055",
+   "name": "Greene County",
+   "short": "Greene",
+   "slug": "greene",
+   "seat": "Paragould",
+   "founded": 1833,
+   "areaSqMi": 577,
+   "lat": 36.1156,
+   "lon": -90.5293,
+   "population": 46432,
+   "medianAge": 38.0,
+   "housingUnits": 19603,
+   "vacancyPct": 8.2,
+   "ownerPct": 66.2,
+   "singleFamilyPct": 72.0,
+   "mobileHomePct": 12.7,
+   "medianYearBuilt": 1991,
+   "builtPre1960Pct": 11.4,
+   "builtPre1980Pct": 37.4,
+   "built2000PlusPct": 33.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 25.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 33.2
+    }
+   ],
+   "heatGasPct": 12.1,
+   "heatElectricPct": 74.7,
+   "heatPropanePct": 9.9,
+   "heatWoodPct": 1.8,
+   "medianHomeValue": 169300,
+   "medianIncome": 57839,
+   "adjacent": [
+    "clay",
+    "craighead",
+    "lawrence",
+    "randolph"
+   ],
+   "places": [
+    {
+     "name": "Paragould",
+     "population": 30215
+    },
+    {
+     "name": "Marmaduke",
+     "population": 1240
+    },
+    {
+     "name": "Oak Grove Heights",
+     "population": 1164
+    },
+    {
+     "name": "Lafe",
+     "population": 478
+    },
+    {
+     "name": "Walcott",
+     "population": 315
+    },
+    {
+     "name": "Delaplaine",
+     "population": 85
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05057",
+   "fips": "05057",
+   "name": "Hempstead County",
+   "short": "Hempstead",
+   "slug": "hempstead",
+   "seat": "Hope",
+   "founded": 1818,
+   "areaSqMi": 727,
+   "lat": 33.7453,
+   "lon": -93.7144,
+   "population": 19508,
+   "medianAge": 41.2,
+   "housingUnits": 9642,
+   "vacancyPct": 22.4,
+   "ownerPct": 71.7,
+   "singleFamilyPct": 73.2,
+   "mobileHomePct": 18.6,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 20.3,
+   "builtPre1980Pct": 53.1,
+   "built2000PlusPct": 18.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 18.2
+    }
+   ],
+   "heatGasPct": 46.0,
+   "heatElectricPct": 45.0,
+   "heatPropanePct": 5.5,
+   "heatWoodPct": 2.2,
+   "medianHomeValue": 105700,
+   "medianIncome": 46787,
+   "adjacent": [
+    "howard",
+    "lafayette",
+    "little-river",
+    "miller",
+    "nevada",
+    "pike"
+   ],
+   "places": [
+    {
+     "name": "Hope",
+     "population": 8671
+    },
+    {
+     "name": "Perrytown",
+     "population": 251
+    },
+    {
+     "name": "Fulton",
+     "population": 189
+    },
+    {
+     "name": "Blevins",
+     "population": 167
+    },
+    {
+     "name": "Washington",
+     "population": 93
+    },
+    {
+     "name": "McNab",
+     "population": 73
+    },
+    {
+     "name": "McCaskill",
+     "population": 46
+    },
+    {
+     "name": "Ozan",
+     "population": 43
+    },
+    {
+     "name": "Patmos",
+     "population": 38
+    },
+    {
+     "name": "Oakhaven",
+     "population": 34
+    },
+    {
+     "name": "Saratoga",
+     "population": 18
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05059",
+   "fips": "05059",
+   "name": "Hot Spring County",
+   "short": "Hot Spring",
+   "slug": "hot-spring",
+   "seat": "Malvern",
+   "founded": 1829,
+   "areaSqMi": 615,
+   "lat": 34.3095,
+   "lon": -93.0139,
+   "population": 33180,
+   "medianAge": 43.1,
+   "housingUnits": 14302,
+   "vacancyPct": 13.9,
+   "ownerPct": 76.5,
+   "singleFamilyPct": 69.8,
+   "mobileHomePct": 22.9,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 19.4,
+   "builtPre1980Pct": 51.7,
+   "built2000PlusPct": 24.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 24.5
+    }
+   ],
+   "heatGasPct": 30.8,
+   "heatElectricPct": 58.2,
+   "heatPropanePct": 5.0,
+   "heatWoodPct": 4.8,
+   "medianHomeValue": 151100,
+   "medianIncome": 55405,
+   "adjacent": [
+    "clark",
+    "dallas",
+    "garland",
+    "grant",
+    "montgomery",
+    "saline"
+   ],
+   "places": [
+    {
+     "name": "Malvern",
+     "population": 10953
+    },
+    {
+     "name": "Magnet Cove",
+     "population": 889
+    },
+    {
+     "name": "Rockport",
+     "population": 800
+    },
+    {
+     "name": "Midway",
+     "population": 728
+    },
+    {
+     "name": "Donaldson",
+     "population": 377
+    },
+    {
+     "name": "Jones Mills",
+     "population": 230
+    },
+    {
+     "name": "Friendship",
+     "population": 168
+    },
+    {
+     "name": "Perla",
+     "population": 141
+    },
+    {
+     "name": "Bismarck",
+     "population": 41
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05061",
+   "fips": "05061",
+   "name": "Howard County",
+   "short": "Howard",
+   "slug": "howard",
+   "seat": "Nashville",
+   "founded": 1873,
+   "areaSqMi": 587,
+   "lat": 34.0505,
+   "lon": -93.9535,
+   "population": 12583,
+   "medianAge": 38.8,
+   "housingUnits": 6173,
+   "vacancyPct": 17.4,
+   "ownerPct": 72.5,
+   "singleFamilyPct": 74.6,
+   "mobileHomePct": 18.2,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 18.2,
+   "builtPre1980Pct": 52.6,
+   "built2000PlusPct": 22.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 7.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 34.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.0
+    }
+   ],
+   "heatGasPct": 29.0,
+   "heatElectricPct": 63.2,
+   "heatPropanePct": 1.6,
+   "heatWoodPct": 4.8,
+   "medianHomeValue": 153900,
+   "medianIncome": 45603,
+   "adjacent": [
+    "hempstead",
+    "pike",
+    "polk",
+    "sevier"
+   ],
+   "places": [
+    {
+     "name": "Nashville",
+     "population": 4063
+    },
+    {
+     "name": "Mineral Springs",
+     "population": 1358
+    },
+    {
+     "name": "Dierks",
+     "population": 728
+    },
+    {
+     "name": "Tollette",
+     "population": 204
+    },
+    {
+     "name": "Center Point",
+     "population": 96
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05063",
+   "fips": "05063",
+   "name": "Independence County",
+   "short": "Independence",
+   "slug": "independence",
+   "seat": "Batesville",
+   "founded": 1820,
+   "areaSqMi": 764,
+   "lat": 35.7333,
+   "lon": -91.5823,
+   "population": 38175,
+   "medianAge": 38.7,
+   "housingUnits": 16786,
+   "vacancyPct": 12.8,
+   "ownerPct": 69.2,
+   "singleFamilyPct": 69.5,
+   "mobileHomePct": 22.1,
+   "medianYearBuilt": 1988,
+   "builtPre1960Pct": 11.8,
+   "builtPre1980Pct": 38.1,
+   "built2000PlusPct": 27.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 27.9
+    }
+   ],
+   "heatGasPct": 26.2,
+   "heatElectricPct": 55.8,
+   "heatPropanePct": 13.1,
+   "heatWoodPct": 3.6,
+   "medianHomeValue": 142600,
+   "medianIncome": 56609,
+   "adjacent": [
+    "cleburne",
+    "izard",
+    "jackson",
+    "lawrence",
+    "sharp",
+    "stone",
+    "white"
+   ],
+   "places": [
+    {
+     "name": "Batesville",
+     "population": 11445
+    },
+    {
+     "name": "Southside",
+     "population": 4246
+    },
+    {
+     "name": "Newark",
+     "population": 1637
+    },
+    {
+     "name": "Sulphur Rock",
+     "population": 1014
+    },
+    {
+     "name": "Desha",
+     "population": 679
+    },
+    {
+     "name": "Salado",
+     "population": 507
+    },
+    {
+     "name": "Cushman",
+     "population": 488
+    },
+    {
+     "name": "Pleasant Plains",
+     "population": 376
+    },
+    {
+     "name": "Oil Trough",
+     "population": 259
+    },
+    {
+     "name": "Magness",
+     "population": 238
+    },
+    {
+     "name": "Floral",
+     "population": 194
+    },
+    {
+     "name": "Moorefield",
+     "population": 120
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05065",
+   "fips": "05065",
+   "name": "Izard County",
+   "short": "Izard",
+   "slug": "izard",
+   "seat": "Melbourne",
+   "founded": 1825,
+   "areaSqMi": 580,
+   "lat": 36.0632,
+   "lon": -91.8961,
+   "population": 14009,
+   "medianAge": 46.3,
+   "housingUnits": 6739,
+   "vacancyPct": 22.4,
+   "ownerPct": 75.4,
+   "singleFamilyPct": 80.6,
+   "mobileHomePct": 13.4,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 10.7,
+   "builtPre1980Pct": 43.6,
+   "built2000PlusPct": 23.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 5.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 23.8
+    }
+   ],
+   "heatGasPct": 6.5,
+   "heatElectricPct": 56.1,
+   "heatPropanePct": 25.0,
+   "heatWoodPct": 11.7,
+   "medianHomeValue": 129100,
+   "medianIncome": 49405,
+   "adjacent": [
+    "baxter",
+    "fulton",
+    "independence",
+    "sharp",
+    "stone"
+   ],
+   "places": [
+    {
+     "name": "Horseshoe Bend",
+     "population": 2555
+    },
+    {
+     "name": "Melbourne",
+     "population": 2263
+    },
+    {
+     "name": "Calico Rock",
+     "population": 1771
+    },
+    {
+     "name": "Oxford",
+     "population": 820
+    },
+    {
+     "name": "Mount Pleasant",
+     "population": 345
+    },
+    {
+     "name": "Pineville",
+     "population": 306
+    },
+    {
+     "name": "Franklin",
+     "population": 283
+    },
+    {
+     "name": "Guion",
+     "population": 61
+    },
+    {
+     "name": "Mount Olive",
+     "population": 0
+    },
+    {
+     "name": "Violet Hill",
+     "population": 0
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05067",
+   "fips": "05067",
+   "name": "Jackson County",
+   "short": "Jackson",
+   "slug": "jackson",
+   "seat": "Newport",
+   "founded": 1829,
+   "areaSqMi": 634,
+   "lat": 35.5833,
+   "lon": -91.2039,
+   "population": 16712,
+   "medianAge": 40.2,
+   "housingUnits": 7095,
+   "vacancyPct": 14.4,
+   "ownerPct": 65.5,
+   "singleFamilyPct": 81.3,
+   "mobileHomePct": 8.0,
+   "medianYearBuilt": 1974,
+   "builtPre1960Pct": 21.8,
+   "builtPre1980Pct": 65.9,
+   "built2000PlusPct": 10.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 44.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 10.3
+    }
+   ],
+   "heatGasPct": 43.3,
+   "heatElectricPct": 48.3,
+   "heatPropanePct": 6.8,
+   "heatWoodPct": 1.4,
+   "medianHomeValue": 98300,
+   "medianIncome": 44218,
+   "adjacent": [
+    "craighead",
+    "cross",
+    "independence",
+    "lawrence",
+    "poinsett",
+    "white",
+    "woodruff"
+   ],
+   "places": [
+    {
+     "name": "Newport",
+     "population": 8024
+    },
+    {
+     "name": "Tuckerman",
+     "population": 1442
+    },
+    {
+     "name": "Diaz",
+     "population": 1337
+    },
+    {
+     "name": "Swifton",
+     "population": 1101
+    },
+    {
+     "name": "Grubbs",
+     "population": 431
+    },
+    {
+     "name": "Campbell Station",
+     "population": 311
+    },
+    {
+     "name": "Weldon",
+     "population": 136
+    },
+    {
+     "name": "Jacksonport",
+     "population": 115
+    },
+    {
+     "name": "Tupelo",
+     "population": 86
+    },
+    {
+     "name": "Beedeville",
+     "population": 44
+    },
+    {
+     "name": "Amagon",
+     "population": 31
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05069",
+   "fips": "05069",
+   "name": "Jefferson County",
+   "short": "Jefferson",
+   "slug": "jefferson",
+   "seat": "Pine Bluff",
+   "founded": 1829,
+   "areaSqMi": 872,
+   "lat": 34.3583,
+   "lon": -91.9595,
+   "population": 64802,
+   "medianAge": 39.7,
+   "housingUnits": 30679,
+   "vacancyPct": 21.7,
+   "ownerPct": 61.8,
+   "singleFamilyPct": 72.1,
+   "mobileHomePct": 12.5,
+   "medianYearBuilt": 1978,
+   "builtPre1960Pct": 20.0,
+   "builtPre1980Pct": 54.8,
+   "built2000PlusPct": 15.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 34.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.8
+    }
+   ],
+   "heatGasPct": 41.7,
+   "heatElectricPct": 52.9,
+   "heatPropanePct": 3.8,
+   "heatWoodPct": 0.7,
+   "medianHomeValue": 113400,
+   "medianIncome": 51096,
+   "adjacent": [
+    "arkansas",
+    "cleveland",
+    "grant",
+    "lincoln",
+    "lonoke",
+    "pulaski"
+   ],
+   "places": [
+    {
+     "name": "Pine Bluff",
+     "population": 39743
+    },
+    {
+     "name": "White Hall",
+     "population": 5512
+    },
+    {
+     "name": "Redfield",
+     "population": 1734
+    },
+    {
+     "name": "Sulphur Springs",
+     "population": 564
+    },
+    {
+     "name": "Altheimer",
+     "population": 517
+    },
+    {
+     "name": "Wabbaseka",
+     "population": 360
+    },
+    {
+     "name": "Tucker",
+     "population": 73
+    },
+    {
+     "name": "Sherrill",
+     "population": 41
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05071",
+   "fips": "05071",
+   "name": "Johnson County",
+   "short": "Johnson",
+   "slug": "johnson",
+   "seat": "Clarksville",
+   "founded": 1833,
+   "areaSqMi": 661,
+   "lat": 35.5337,
+   "lon": -93.4634,
+   "population": 26003,
+   "medianAge": 39.1,
+   "housingUnits": 11555,
+   "vacancyPct": 10.7,
+   "ownerPct": 74.1,
+   "singleFamilyPct": 76.9,
+   "mobileHomePct": 10.1,
+   "medianYearBuilt": 1986,
+   "builtPre1960Pct": 15.2,
+   "builtPre1980Pct": 38.4,
+   "built2000PlusPct": 21.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 40.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.1
+    }
+   ],
+   "heatGasPct": 25.9,
+   "heatElectricPct": 59.1,
+   "heatPropanePct": 6.7,
+   "heatWoodPct": 4.3,
+   "medianHomeValue": 135300,
+   "medianIncome": 45995,
+   "adjacent": [
+    "franklin",
+    "logan",
+    "madison",
+    "newton",
+    "pope"
+   ],
+   "places": [
+    {
+     "name": "Clarksville",
+     "population": 9526
+    },
+    {
+     "name": "Lamar",
+     "population": 1783
+    },
+    {
+     "name": "Coal Hill",
+     "population": 892
+    },
+    {
+     "name": "Hartman",
+     "population": 678
+    },
+    {
+     "name": "Knoxville",
+     "population": 663
+    },
+    {
+     "name": "Ozone",
+     "population": 194
+    },
+    {
+     "name": "Hagarville",
+     "population": 89
+    },
+    {
+     "name": "Oark",
+     "population": 18
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05073",
+   "fips": "05073",
+   "name": "Lafayette County",
+   "short": "Lafayette",
+   "slug": "lafayette",
+   "seat": "Lewisville",
+   "founded": 1827,
+   "areaSqMi": 529,
+   "lat": 33.2489,
+   "lon": -93.5965,
+   "population": 6136,
+   "medianAge": 49.0,
+   "housingUnits": 3940,
+   "vacancyPct": 33.5,
+   "ownerPct": 79.3,
+   "singleFamilyPct": 68.4,
+   "mobileHomePct": 27.7,
+   "medianYearBuilt": 1978,
+   "builtPre1960Pct": 22.8,
+   "builtPre1980Pct": 53.0,
+   "built2000PlusPct": 19.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 19.5
+    }
+   ],
+   "heatGasPct": 35.0,
+   "heatElectricPct": 53.3,
+   "heatPropanePct": 8.7,
+   "heatWoodPct": 2.1,
+   "medianHomeValue": 81000,
+   "medianIncome": 41278,
+   "adjacent": [
+    "columbia",
+    "hempstead",
+    "miller",
+    "nevada"
+   ],
+   "places": [
+    {
+     "name": "Stamps",
+     "population": 1404
+    },
+    {
+     "name": "Lewisville",
+     "population": 903
+    },
+    {
+     "name": "Bradley",
+     "population": 528
+    },
+    {
+     "name": "Buckner",
+     "population": 284
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05075",
+   "fips": "05075",
+   "name": "Lawrence County",
+   "short": "Lawrence",
+   "slug": "lawrence",
+   "seat": "Walnut Ridge",
+   "founded": 1815,
+   "areaSqMi": 588,
+   "lat": 36.0694,
+   "lon": -91.087,
+   "population": 16238,
+   "medianAge": 40.3,
+   "housingUnits": 7644,
+   "vacancyPct": 13.5,
+   "ownerPct": 66.6,
+   "singleFamilyPct": 78.9,
+   "mobileHomePct": 11.2,
+   "medianYearBuilt": 1978,
+   "builtPre1960Pct": 16.3,
+   "builtPre1980Pct": 55.1,
+   "built2000PlusPct": 14.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 38.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 14.7
+    }
+   ],
+   "heatGasPct": 44.0,
+   "heatElectricPct": 32.4,
+   "heatPropanePct": 16.9,
+   "heatWoodPct": 5.6,
+   "medianHomeValue": 98900,
+   "medianIncome": 44882,
+   "adjacent": [
+    "craighead",
+    "greene",
+    "independence",
+    "jackson",
+    "randolph",
+    "sharp"
+   ],
+   "places": [
+    {
+     "name": "Walnut Ridge",
+     "population": 5434
+    },
+    {
+     "name": "Hoxie",
+     "population": 2618
+    },
+    {
+     "name": "Black Rock",
+     "population": 853
+    },
+    {
+     "name": "Imboden",
+     "population": 621
+    },
+    {
+     "name": "Portia",
+     "population": 453
+    },
+    {
+     "name": "Ravenden",
+     "population": 390
+    },
+    {
+     "name": "Lynn",
+     "population": 299
+    },
+    {
+     "name": "Strawberry",
+     "population": 285
+    },
+    {
+     "name": "Powhatan",
+     "population": 173
+    },
+    {
+     "name": "Sedgwick",
+     "population": 165
+    },
+    {
+     "name": "Alicia",
+     "population": 138
+    },
+    {
+     "name": "Minturn",
+     "population": 91
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05077",
+   "fips": "05077",
+   "name": "Lee County",
+   "short": "Lee",
+   "slug": "lee",
+   "seat": "Marianna",
+   "founded": 1873,
+   "areaSqMi": 600,
+   "lat": 34.7686,
+   "lon": -90.8228,
+   "population": 8359,
+   "medianAge": 41.9,
+   "housingUnits": 3694,
+   "vacancyPct": 27.2,
+   "ownerPct": 59.0,
+   "singleFamilyPct": 72.2,
+   "mobileHomePct": 10.6,
+   "medianYearBuilt": 1973,
+   "builtPre1960Pct": 23.5,
+   "builtPre1980Pct": 62.2,
+   "built2000PlusPct": 11.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 9.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 38.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 26.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 11.6
+    }
+   ],
+   "heatGasPct": 35.1,
+   "heatElectricPct": 45.0,
+   "heatPropanePct": 16.7,
+   "heatWoodPct": 2.4,
+   "medianHomeValue": 75300,
+   "medianIncome": 34375,
+   "adjacent": [
+    "crittenden",
+    "monroe",
+    "phillips",
+    "st-francis"
+   ],
+   "places": [
+    {
+     "name": "Marianna",
+     "population": 3417
+    },
+    {
+     "name": "Moro",
+     "population": 264
+    },
+    {
+     "name": "Aubrey",
+     "population": 139
+    },
+    {
+     "name": "Rondo",
+     "population": 111
+    },
+    {
+     "name": "Haynes",
+     "population": 75
+    },
+    {
+     "name": "LaGrange",
+     "population": 53
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05079",
+   "fips": "05079",
+   "name": "Lincoln County",
+   "short": "Lincoln",
+   "slug": "lincoln",
+   "seat": "Star City",
+   "founded": 1871,
+   "areaSqMi": 559,
+   "lat": 33.9879,
+   "lon": -91.7093,
+   "population": 12950,
+   "medianAge": 40.3,
+   "housingUnits": 4390,
+   "vacancyPct": 18.2,
+   "ownerPct": 76.1,
+   "singleFamilyPct": 65.2,
+   "mobileHomePct": 29.0,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 18.4,
+   "builtPre1980Pct": 44.1,
+   "built2000PlusPct": 22.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 25.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 33.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.6
+    }
+   ],
+   "heatGasPct": 30.5,
+   "heatElectricPct": 50.6,
+   "heatPropanePct": 14.6,
+   "heatWoodPct": 3.1,
+   "medianHomeValue": 108000,
+   "medianIncome": 51778,
+   "adjacent": [
+    "arkansas",
+    "cleveland",
+    "desha",
+    "drew",
+    "jefferson"
+   ],
+   "places": [
+    {
+     "name": "Star City",
+     "population": 2405
+    },
+    {
+     "name": "Gould",
+     "population": 661
+    },
+    {
+     "name": "Grady",
+     "population": 168
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05081",
+   "fips": "05081",
+   "name": "Little River County",
+   "short": "Little River",
+   "slug": "little-river",
+   "seat": "Ashdown",
+   "founded": 1867,
+   "areaSqMi": 531,
+   "lat": 33.7406,
+   "lon": -94.2257,
+   "population": 11821,
+   "medianAge": 42.6,
+   "housingUnits": 6059,
+   "vacancyPct": 20.4,
+   "ownerPct": 80.1,
+   "singleFamilyPct": 76.9,
+   "mobileHomePct": 17.6,
+   "medianYearBuilt": 1980,
+   "builtPre1960Pct": 10.1,
+   "builtPre1980Pct": 50.9,
+   "built2000PlusPct": 22.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 40.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.1
+    }
+   ],
+   "heatGasPct": 28.6,
+   "heatElectricPct": 63.2,
+   "heatPropanePct": 3.8,
+   "heatWoodPct": 3.1,
+   "medianHomeValue": 113500,
+   "medianIncome": 53344,
+   "adjacent": [
+    "hempstead",
+    "miller",
+    "sevier"
+   ],
+   "places": [
+    {
+     "name": "Ashdown",
+     "population": 4164
+    },
+    {
+     "name": "Foreman",
+     "population": 1044
+    },
+    {
+     "name": "Yarborough Landing",
+     "population": 380
+    },
+    {
+     "name": "Wilton",
+     "population": 305
+    },
+    {
+     "name": "Ogden",
+     "population": 140
+    },
+    {
+     "name": "Alleene",
+     "population": 96
+    },
+    {
+     "name": "Winthrop",
+     "population": 93
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05083",
+   "fips": "05083",
+   "name": "Logan County",
+   "short": "Logan",
+   "slug": "logan",
+   "seat": "Booneville",
+   "founded": 1871,
+   "areaSqMi": 709,
+   "lat": 35.2227,
+   "lon": -93.6541,
+   "population": 21277,
+   "medianAge": 43.6,
+   "housingUnits": 9759,
+   "vacancyPct": 12.7,
+   "ownerPct": 78.4,
+   "singleFamilyPct": 83.9,
+   "mobileHomePct": 10.1,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 20.5,
+   "builtPre1980Pct": 52.3,
+   "built2000PlusPct": 19.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 8.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 31.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 19.6
+    }
+   ],
+   "heatGasPct": 31.1,
+   "heatElectricPct": 59.3,
+   "heatPropanePct": 3.9,
+   "heatWoodPct": 4.0,
+   "medianHomeValue": 139900,
+   "medianIncome": 58555,
+   "adjacent": [
+    "franklin",
+    "johnson",
+    "pope",
+    "scott",
+    "sebastian",
+    "yell"
+   ],
+   "places": [
+    {
+     "name": "Booneville",
+     "population": 3798
+    },
+    {
+     "name": "Paris",
+     "population": 3284
+    },
+    {
+     "name": "Magazine",
+     "population": 986
+    },
+    {
+     "name": "New Blaine",
+     "population": 533
+    },
+    {
+     "name": "Subiaco",
+     "population": 405
+    },
+    {
+     "name": "Scranton",
+     "population": 220
+    },
+    {
+     "name": "Caulksville",
+     "population": 195
+    },
+    {
+     "name": "Blue Mountain",
+     "population": 139
+    },
+    {
+     "name": "Ratcliff",
+     "population": 97
+    },
+    {
+     "name": "Morrison Bluff",
+     "population": 91
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05085",
+   "fips": "05085",
+   "name": "Lonoke County",
+   "short": "Lonoke",
+   "slug": "lonoke",
+   "seat": "Lonoke",
+   "founded": 1873,
+   "areaSqMi": 772,
+   "lat": 34.8208,
+   "lon": -91.8863,
+   "population": 75272,
+   "medianAge": 37.8,
+   "housingUnits": 30884,
+   "vacancyPct": 7.5,
+   "ownerPct": 75.0,
+   "singleFamilyPct": 77.4,
+   "mobileHomePct": 13.0,
+   "medianYearBuilt": 1997,
+   "builtPre1960Pct": 6.1,
+   "builtPre1980Pct": 22.8,
+   "built2000PlusPct": 43.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 4.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 16.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 33.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 43.7
+    }
+   ],
+   "heatGasPct": 28.2,
+   "heatElectricPct": 66.5,
+   "heatPropanePct": 2.8,
+   "heatWoodPct": 1.8,
+   "medianHomeValue": 193600,
+   "medianIncome": 72828,
+   "adjacent": [
+    "arkansas",
+    "faulkner",
+    "jefferson",
+    "prairie",
+    "pulaski",
+    "white"
+   ],
+   "places": [
+    {
+     "name": "Cabot",
+     "population": 26960
+    },
+    {
+     "name": "Ward",
+     "population": 6573
+    },
+    {
+     "name": "Lonoke",
+     "population": 4267
+    },
+    {
+     "name": "Austin",
+     "population": 3915
+    },
+    {
+     "name": "England",
+     "population": 2294
+    },
+    {
+     "name": "Carlisle",
+     "population": 2227
+    },
+    {
+     "name": "Keo",
+     "population": 322
+    },
+    {
+     "name": "Humnoke",
+     "population": 122
+    },
+    {
+     "name": "Allport",
+     "population": 102
+    },
+    {
+     "name": "Coy",
+     "population": 60
+    },
+    {
+     "name": "Scott",
+     "population": 46
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05087",
+   "fips": "05087",
+   "name": "Madison County",
+   "short": "Madison",
+   "slug": "madison",
+   "seat": "Huntsville",
+   "founded": 1836,
+   "areaSqMi": 834,
+   "lat": 36.0108,
+   "lon": -93.698,
+   "population": 17329,
+   "medianAge": 41.7,
+   "housingUnits": 7744,
+   "vacancyPct": 16.5,
+   "ownerPct": 79.5,
+   "singleFamilyPct": 77.8,
+   "mobileHomePct": 17.7,
+   "medianYearBuilt": 1990,
+   "builtPre1960Pct": 16.2,
+   "builtPre1980Pct": 35.6,
+   "built2000PlusPct": 31.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 9.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 6.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 31.8
+    }
+   ],
+   "heatGasPct": 21.2,
+   "heatElectricPct": 33.0,
+   "heatPropanePct": 26.6,
+   "heatWoodPct": 17.9,
+   "medianHomeValue": 178100,
+   "medianIncome": 56798,
+   "adjacent": [
+    "benton",
+    "carroll",
+    "crawford",
+    "franklin",
+    "johnson",
+    "newton",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Huntsville",
+     "population": 3202
+    },
+    {
+     "name": "Wesley",
+     "population": 233
+    },
+    {
+     "name": "Hindsville",
+     "population": 146
+    },
+    {
+     "name": "St. Paul",
+     "population": 136
+    },
+    {
+     "name": "Kingston",
+     "population": 19
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05089",
+   "fips": "05089",
+   "name": "Marion County",
+   "short": "Marion",
+   "slug": "marion",
+   "seat": "Yellville",
+   "founded": 1836,
+   "areaSqMi": 597,
+   "lat": 36.2758,
+   "lon": -92.7125,
+   "population": 17228,
+   "medianAge": 51.8,
+   "housingUnits": 9749,
+   "vacancyPct": 21.4,
+   "ownerPct": 81.3,
+   "singleFamilyPct": 77.7,
+   "mobileHomePct": 17.0,
+   "medianYearBuilt": 1986,
+   "builtPre1960Pct": 12.6,
+   "builtPre1980Pct": 40.9,
+   "built2000PlusPct": 24.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 24.7
+    }
+   ],
+   "heatGasPct": 11.2,
+   "heatElectricPct": 59.1,
+   "heatPropanePct": 15.6,
+   "heatWoodPct": 11.8,
+   "medianHomeValue": 163300,
+   "medianIncome": 48619,
+   "adjacent": [
+    "baxter",
+    "boone",
+    "searcy"
+   ],
+   "places": [
+    {
+     "name": "Bull Shoals",
+     "population": 1678
+    },
+    {
+     "name": "Flippin",
+     "population": 1334
+    },
+    {
+     "name": "Yellville",
+     "population": 1223
+    },
+    {
+     "name": "Summit",
+     "population": 706
+    },
+    {
+     "name": "Oakland",
+     "population": 146
+    },
+    {
+     "name": "Pyatt",
+     "population": 135
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05091",
+   "fips": "05091",
+   "name": "Miller County",
+   "short": "Miller",
+   "slug": "miller",
+   "seat": "Texarkana",
+   "founded": 1874,
+   "areaSqMi": 624,
+   "lat": 33.3108,
+   "lon": -93.8664,
+   "population": 42360,
+   "medianAge": 39.3,
+   "housingUnits": 19844,
+   "vacancyPct": 17.6,
+   "ownerPct": 64.4,
+   "singleFamilyPct": 69.7,
+   "mobileHomePct": 13.6,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 16.6,
+   "builtPre1980Pct": 46.2,
+   "built2000PlusPct": 23.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 23.8
+    }
+   ],
+   "heatGasPct": 36.0,
+   "heatElectricPct": 58.3,
+   "heatPropanePct": 2.7,
+   "heatWoodPct": 1.4,
+   "medianHomeValue": 153900,
+   "medianIncome": 48836,
+   "adjacent": [
+    "hempstead",
+    "lafayette",
+    "little-river"
+   ],
+   "places": [
+    {
+     "name": "Texarkana",
+     "population": 29177
+    },
+    {
+     "name": "Genoa",
+     "population": 1113
+    },
+    {
+     "name": "Fouke",
+     "population": 859
+    },
+    {
+     "name": "Garland",
+     "population": 188
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05093",
+   "fips": "05093",
+   "name": "Mississippi County",
+   "short": "Mississippi",
+   "slug": "mississippi",
+   "seat": "Blytheville",
+   "founded": 1833,
+   "areaSqMi": 902,
+   "lat": 35.708,
+   "lon": -90.1221,
+   "population": 39126,
+   "medianAge": 37.3,
+   "housingUnits": 19133,
+   "vacancyPct": 19.2,
+   "ownerPct": 60.0,
+   "singleFamilyPct": 71.0,
+   "mobileHomePct": 7.1,
+   "medianYearBuilt": 1977,
+   "builtPre1960Pct": 17.8,
+   "builtPre1980Pct": 56.8,
+   "built2000PlusPct": 15.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 39.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.3
+    }
+   ],
+   "heatGasPct": 50.2,
+   "heatElectricPct": 43.9,
+   "heatPropanePct": 4.7,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 122500,
+   "medianIncome": 52548,
+   "adjacent": [
+    "craighead",
+    "crittenden",
+    "poinsett"
+   ],
+   "places": [
+    {
+     "name": "Blytheville",
+     "population": 12790
+    },
+    {
+     "name": "Osceola",
+     "population": 6688
+    },
+    {
+     "name": "Manila",
+     "population": 3691
+    },
+    {
+     "name": "Gosnell",
+     "population": 2778
+    },
+    {
+     "name": "Leachville",
+     "population": 1852
+    },
+    {
+     "name": "Wilson",
+     "population": 1023
+    },
+    {
+     "name": "Keiser",
+     "population": 774
+    },
+    {
+     "name": "Luxora",
+     "population": 741
+    },
+    {
+     "name": "Joiner",
+     "population": 454
+    },
+    {
+     "name": "Armorel",
+     "population": 345
+    },
+    {
+     "name": "Etowah",
+     "population": 316
+    },
+    {
+     "name": "Dyess",
+     "population": 289
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05095",
+   "fips": "05095",
+   "name": "Monroe County",
+   "short": "Monroe",
+   "slug": "monroe",
+   "seat": "Clarendon",
+   "founded": 1829,
+   "areaSqMi": 607,
+   "lat": 34.7009,
+   "lon": -91.212,
+   "population": 6589,
+   "medianAge": 45.5,
+   "housingUnits": 3829,
+   "vacancyPct": 27.1,
+   "ownerPct": 62.6,
+   "singleFamilyPct": 69.8,
+   "mobileHomePct": 16.0,
+   "medianYearBuilt": 1976,
+   "builtPre1960Pct": 19.8,
+   "builtPre1980Pct": 60.2,
+   "built2000PlusPct": 17.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 40.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 22.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.4
+    }
+   ],
+   "heatGasPct": 30.9,
+   "heatElectricPct": 59.5,
+   "heatPropanePct": 8.2,
+   "heatWoodPct": 0.4,
+   "medianHomeValue": 88700,
+   "medianIncome": 43214,
+   "adjacent": [
+    "arkansas",
+    "lee",
+    "phillips",
+    "prairie",
+    "st-francis",
+    "woodruff"
+   ],
+   "places": [
+    {
+     "name": "Brinkley",
+     "population": 2596
+    },
+    {
+     "name": "Clarendon",
+     "population": 1820
+    },
+    {
+     "name": "Holly Grove",
+     "population": 495
+    },
+    {
+     "name": "Roe",
+     "population": 129
+    },
+    {
+     "name": "Fargo",
+     "population": 30
+    },
+    {
+     "name": "Monroe",
+     "population": 11
+    },
+    {
+     "name": "Indian Bay",
+     "population": 0
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05097",
+   "fips": "05097",
+   "name": "Montgomery County",
+   "short": "Montgomery",
+   "slug": "montgomery",
+   "seat": "Mount Ida",
+   "founded": 1842,
+   "areaSqMi": 780,
+   "lat": 34.5231,
+   "lon": -93.669,
+   "population": 8553,
+   "medianAge": 50.8,
+   "housingUnits": 5485,
+   "vacancyPct": 32.3,
+   "ownerPct": 80.6,
+   "singleFamilyPct": 64.6,
+   "mobileHomePct": 28.2,
+   "medianYearBuilt": 1989,
+   "builtPre1960Pct": 16.0,
+   "builtPre1980Pct": 35.1,
+   "built2000PlusPct": 32.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 32.1
+    }
+   ],
+   "heatGasPct": 18.3,
+   "heatElectricPct": 49.4,
+   "heatPropanePct": 16.4,
+   "heatWoodPct": 12.0,
+   "medianHomeValue": 151900,
+   "medianIncome": 48906,
+   "adjacent": [
+    "clark",
+    "garland",
+    "hot-spring",
+    "pike",
+    "polk",
+    "scott",
+    "yell"
+   ],
+   "places": [
+    {
+     "name": "Mount Ida",
+     "population": 1376
+    },
+    {
+     "name": "Oden",
+     "population": 347
+    },
+    {
+     "name": "Norman",
+     "population": 339
+    },
+    {
+     "name": "Black Springs",
+     "population": 101
+    },
+    {
+     "name": "Pencil Bluff",
+     "population": 51
+    },
+    {
+     "name": "Caddo Gap",
+     "population": 27
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05099",
+   "fips": "05099",
+   "name": "Nevada County",
+   "short": "Nevada",
+   "slug": "nevada",
+   "seat": "Prescott",
+   "founded": 1871,
+   "areaSqMi": 618,
+   "lat": 33.6161,
+   "lon": -93.2943,
+   "population": 8159,
+   "medianAge": 44.9,
+   "housingUnits": 4308,
+   "vacancyPct": 24.5,
+   "ownerPct": 76.0,
+   "singleFamilyPct": 67.4,
+   "mobileHomePct": 29.3,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 17.6,
+   "builtPre1980Pct": 43.8,
+   "built2000PlusPct": 18.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 37.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 18.9
+    }
+   ],
+   "heatGasPct": 44.6,
+   "heatElectricPct": 44.4,
+   "heatPropanePct": 8.4,
+   "heatWoodPct": 2.1,
+   "medianHomeValue": 83300,
+   "medianIncome": 53886,
+   "adjacent": [
+    "clark",
+    "columbia",
+    "hempstead",
+    "lafayette",
+    "ouachita",
+    "pike"
+   ],
+   "places": [
+    {
+     "name": "Prescott",
+     "population": 3032
+    },
+    {
+     "name": "Emmet",
+     "population": 435
+    },
+    {
+     "name": "Rosston",
+     "population": 391
+    },
+    {
+     "name": "Willisville",
+     "population": 246
+    },
+    {
+     "name": "Bluff City",
+     "population": 222
+    },
+    {
+     "name": "Bodcaw",
+     "population": 177
+    },
+    {
+     "name": "Cale",
+     "population": 86
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05101",
+   "fips": "05101",
+   "name": "Newton County",
+   "short": "Newton",
+   "slug": "newton",
+   "seat": "Jasper",
+   "founded": 1842,
+   "areaSqMi": 821,
+   "lat": 35.9247,
+   "lon": -93.2148,
+   "population": 7112,
+   "medianAge": 49.9,
+   "housingUnits": 4099,
+   "vacancyPct": 22.4,
+   "ownerPct": 76.5,
+   "singleFamilyPct": 80.7,
+   "mobileHomePct": 14.8,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 21.6,
+   "builtPre1980Pct": 46.8,
+   "built2000PlusPct": 23.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 12.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 25.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 23.7
+    }
+   ],
+   "heatGasPct": 3.9,
+   "heatElectricPct": 38.4,
+   "heatPropanePct": 29.7,
+   "heatWoodPct": 27.0,
+   "medianHomeValue": 169300,
+   "medianIncome": 48986,
+   "adjacent": [
+    "boone",
+    "carroll",
+    "johnson",
+    "madison",
+    "pope",
+    "searcy"
+   ],
+   "places": [
+    {
+     "name": "Jasper",
+     "population": 453
+    },
+    {
+     "name": "Western Grove",
+     "population": 438
+    },
+    {
+     "name": "Wayton",
+     "population": 187
+    },
+    {
+     "name": "Deer",
+     "population": 113
+    },
+    {
+     "name": "Ponca",
+     "population": 73
+    },
+    {
+     "name": "Mount Judea",
+     "population": 61
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05103",
+   "fips": "05103",
+   "name": "Ouachita County",
+   "short": "Ouachita",
+   "slug": "ouachita",
+   "seat": "Camden",
+   "founded": 1842,
+   "areaSqMi": 733,
+   "lat": 33.5824,
+   "lon": -92.9112,
+   "population": 22085,
+   "medianAge": 43.8,
+   "housingUnits": 11869,
+   "vacancyPct": 27.3,
+   "ownerPct": 70.9,
+   "singleFamilyPct": 75.7,
+   "mobileHomePct": 13.8,
+   "medianYearBuilt": 1974,
+   "builtPre1960Pct": 30.2,
+   "builtPre1980Pct": 61.8,
+   "built2000PlusPct": 10.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 23.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 31.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 10.6
+    }
+   ],
+   "heatGasPct": 48.7,
+   "heatElectricPct": 40.5,
+   "heatPropanePct": 6.9,
+   "heatWoodPct": 3.3,
+   "medianHomeValue": 102100,
+   "medianIncome": 49268,
+   "adjacent": [
+    "calhoun",
+    "clark",
+    "columbia",
+    "dallas",
+    "nevada",
+    "union"
+   ],
+   "places": [
+    {
+     "name": "Camden",
+     "population": 10307
+    },
+    {
+     "name": "Stephens",
+     "population": 1099
+    },
+    {
+     "name": "East Camden",
+     "population": 1026
+    },
+    {
+     "name": "Bearden",
+     "population": 826
+    },
+    {
+     "name": "Chidester",
+     "population": 305
+    },
+    {
+     "name": "Louann",
+     "population": 119
+    },
+    {
+     "name": "Reader",
+     "population": 43
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05105",
+   "fips": "05105",
+   "name": "Perry County",
+   "short": "Perry",
+   "slug": "perry",
+   "seat": "Perryville",
+   "founded": 1840,
+   "areaSqMi": 551,
+   "lat": 34.9434,
+   "lon": -92.8809,
+   "population": 10101,
+   "medianAge": 43.3,
+   "housingUnits": 4972,
+   "vacancyPct": 17.7,
+   "ownerPct": 80.4,
+   "singleFamilyPct": 73.0,
+   "mobileHomePct": 23.7,
+   "medianYearBuilt": 1989,
+   "builtPre1960Pct": 10.5,
+   "builtPre1980Pct": 33.3,
+   "built2000PlusPct": 31.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 6.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 22.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 31.9
+    }
+   ],
+   "heatGasPct": 7.5,
+   "heatElectricPct": 70.8,
+   "heatPropanePct": 16.3,
+   "heatWoodPct": 4.1,
+   "medianHomeValue": 130200,
+   "medianIncome": 55764,
+   "adjacent": [
+    "conway",
+    "faulkner",
+    "garland",
+    "pulaski",
+    "saline",
+    "yell"
+   ],
+   "places": [
+    {
+     "name": "Perryville",
+     "population": 1390
+    },
+    {
+     "name": "Bigelow",
+     "population": 393
+    },
+    {
+     "name": "Perry",
+     "population": 356
+    },
+    {
+     "name": "Houston",
+     "population": 299
+    },
+    {
+     "name": "Aplin",
+     "population": 287
+    },
+    {
+     "name": "Casa",
+     "population": 206
+    },
+    {
+     "name": "Adona",
+     "population": 62
+    },
+    {
+     "name": "Fourche",
+     "population": 20
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05107",
+   "fips": "05107",
+   "name": "Phillips County",
+   "short": "Phillips",
+   "slug": "phillips",
+   "seat": "Helena-West Helena",
+   "founded": 1820,
+   "areaSqMi": 690,
+   "lat": 34.3794,
+   "lon": -90.8284,
+   "population": 15450,
+   "medianAge": 40.9,
+   "housingUnits": 8355,
+   "vacancyPct": 27.9,
+   "ownerPct": 51.2,
+   "singleFamilyPct": 71.2,
+   "mobileHomePct": 9.1,
+   "medianYearBuilt": 1974,
+   "builtPre1960Pct": 21.2,
+   "builtPre1980Pct": 65.5,
+   "built2000PlusPct": 9.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 9.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 44.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 9.4
+    }
+   ],
+   "heatGasPct": 53.1,
+   "heatElectricPct": 38.8,
+   "heatPropanePct": 6.7,
+   "heatWoodPct": 0.8,
+   "medianHomeValue": 78200,
+   "medianIncome": 40134,
+   "adjacent": [
+    "arkansas",
+    "desha",
+    "lee",
+    "monroe"
+   ],
+   "places": [
+    {
+     "name": "Helena-West Helena",
+     "population": 8935
+    },
+    {
+     "name": "Marvell",
+     "population": 1160
+    },
+    {
+     "name": "Elaine",
+     "population": 487
+    },
+    {
+     "name": "Lake View",
+     "population": 357
+    },
+    {
+     "name": "Poplar Grove",
+     "population": 255
+    },
+    {
+     "name": "Lexa",
+     "population": 138
+    },
+    {
+     "name": "Mellwood",
+     "population": 0
+    },
+    {
+     "name": "Oneida",
+     "population": 0
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05109",
+   "fips": "05109",
+   "name": "Pike County",
+   "short": "Pike",
+   "slug": "pike",
+   "seat": "Murfreesboro",
+   "founded": 1833,
+   "areaSqMi": 600,
+   "lat": 34.1467,
+   "lon": -93.6338,
+   "population": 10115,
+   "medianAge": 41.2,
+   "housingUnits": 5324,
+   "vacancyPct": 23.3,
+   "ownerPct": 75.0,
+   "singleFamilyPct": 67.3,
+   "mobileHomePct": 26.8,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 15.8,
+   "builtPre1980Pct": 43.6,
+   "built2000PlusPct": 20.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 27.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 36.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 20.3
+    }
+   ],
+   "heatGasPct": 25.4,
+   "heatElectricPct": 55.3,
+   "heatPropanePct": 12.3,
+   "heatWoodPct": 5.9,
+   "medianHomeValue": 121600,
+   "medianIncome": 49269,
+   "adjacent": [
+    "clark",
+    "hempstead",
+    "howard",
+    "montgomery",
+    "nevada"
+   ],
+   "places": [
+    {
+     "name": "Glenwood",
+     "population": 1841
+    },
+    {
+     "name": "Murfreesboro",
+     "population": 1819
+    },
+    {
+     "name": "Kirby",
+     "population": 579
+    },
+    {
+     "name": "Delight",
+     "population": 312
+    },
+    {
+     "name": "Antoine",
+     "population": 159
+    },
+    {
+     "name": "Daisy",
+     "population": 138
+    },
+    {
+     "name": "Newhope",
+     "population": 88
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05111",
+   "fips": "05111",
+   "name": "Poinsett County",
+   "short": "Poinsett",
+   "slug": "poinsett",
+   "seat": "Harrisburg",
+   "founded": 1838,
+   "areaSqMi": 758,
+   "lat": 35.6303,
+   "lon": -90.6625,
+   "population": 22543,
+   "medianAge": 40.0,
+   "housingUnits": 10449,
+   "vacancyPct": 15.9,
+   "ownerPct": 64.4,
+   "singleFamilyPct": 74.6,
+   "mobileHomePct": 10.9,
+   "medianYearBuilt": 1978,
+   "builtPre1960Pct": 15.1,
+   "builtPre1980Pct": 54.8,
+   "built2000PlusPct": 18.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 39.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 26.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 18.3
+    }
+   ],
+   "heatGasPct": 40.4,
+   "heatElectricPct": 49.4,
+   "heatPropanePct": 8.8,
+   "heatWoodPct": 0.8,
+   "medianHomeValue": 103000,
+   "medianIncome": 46707,
+   "adjacent": [
+    "craighead",
+    "crittenden",
+    "cross",
+    "jackson",
+    "mississippi"
+   ],
+   "places": [
+    {
+     "name": "Trumann",
+     "population": 7410
+    },
+    {
+     "name": "Marked Tree",
+     "population": 2249
+    },
+    {
+     "name": "Harrisburg",
+     "population": 2216
+    },
+    {
+     "name": "Lepanto",
+     "population": 2025
+    },
+    {
+     "name": "Weiner",
+     "population": 680
+    },
+    {
+     "name": "Tyronza",
+     "population": 627
+    },
+    {
+     "name": "Fisher",
+     "population": 167
+    },
+    {
+     "name": "Payneway",
+     "population": 133
+    },
+    {
+     "name": "Waldenburg",
+     "population": 63
+    },
+    {
+     "name": "Rivervale",
+     "population": 32
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05113",
+   "fips": "05113",
+   "name": "Polk County",
+   "short": "Polk",
+   "slug": "polk",
+   "seat": "Mena",
+   "founded": 1844,
+   "areaSqMi": 857,
+   "lat": 34.518,
+   "lon": -94.1967,
+   "population": 19361,
+   "medianAge": 44.3,
+   "housingUnits": 9643,
+   "vacancyPct": 18.1,
+   "ownerPct": 78.9,
+   "singleFamilyPct": 76.8,
+   "mobileHomePct": 17.8,
+   "medianYearBuilt": 1986,
+   "builtPre1960Pct": 18.3,
+   "builtPre1980Pct": 40.9,
+   "built2000PlusPct": 26.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 7.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 22.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.5
+    }
+   ],
+   "heatGasPct": 17.7,
+   "heatElectricPct": 59.1,
+   "heatPropanePct": 8.6,
+   "heatWoodPct": 9.9,
+   "medianHomeValue": 138400,
+   "medianIncome": 49191,
+   "adjacent": [
+    "howard",
+    "montgomery",
+    "scott",
+    "sevier"
+   ],
+   "places": [
+    {
+     "name": "Mena",
+     "population": 5582
+    },
+    {
+     "name": "Wickes",
+     "population": 694
+    },
+    {
+     "name": "Grannis",
+     "population": 691
+    },
+    {
+     "name": "Hatfield",
+     "population": 544
+    },
+    {
+     "name": "Cove",
+     "population": 462
+    },
+    {
+     "name": "Acorn",
+     "population": 203
+    },
+    {
+     "name": "Vandervoort",
+     "population": 202
+    },
+    {
+     "name": "Board Camp",
+     "population": 69
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05115",
+   "fips": "05115",
+   "name": "Pope County",
+   "short": "Pope",
+   "slug": "pope",
+   "seat": "Russellville",
+   "founded": 1829,
+   "areaSqMi": 811,
+   "lat": 35.3979,
+   "lon": -93.0746,
+   "population": 64131,
+   "medianAge": 37.0,
+   "housingUnits": 27156,
+   "vacancyPct": 10.3,
+   "ownerPct": 70.4,
+   "singleFamilyPct": 74.7,
+   "mobileHomePct": 11.8,
+   "medianYearBuilt": 1988,
+   "builtPre1960Pct": 8.6,
+   "builtPre1980Pct": 35.9,
+   "built2000PlusPct": 28.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 5.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 27.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 28.2
+    }
+   ],
+   "heatGasPct": 24.4,
+   "heatElectricPct": 69.2,
+   "heatPropanePct": 2.4,
+   "heatWoodPct": 2.3,
+   "medianHomeValue": 170100,
+   "medianIncome": 57344,
+   "adjacent": [
+    "conway",
+    "johnson",
+    "logan",
+    "newton",
+    "searcy",
+    "van-buren",
+    "yell"
+   ],
+   "places": [
+    {
+     "name": "Russellville",
+     "population": 29162
+    },
+    {
+     "name": "Pottsville",
+     "population": 3229
+    },
+    {
+     "name": "Atkins",
+     "population": 2877
+    },
+    {
+     "name": "Dover",
+     "population": 1795
+    },
+    {
+     "name": "London",
+     "population": 1217
+    },
+    {
+     "name": "Hector",
+     "population": 334
+    },
+    {
+     "name": "Appleton",
+     "population": 292
+    },
+    {
+     "name": "Oak Grove",
+     "population": 91
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05117",
+   "fips": "05117",
+   "name": "Prairie County",
+   "short": "Prairie",
+   "slug": "prairie",
+   "seat": "Des Arc",
+   "founded": 1846,
+   "areaSqMi": 648,
+   "lat": 34.7487,
+   "lon": -91.5356,
+   "population": 8064,
+   "medianAge": 45.7,
+   "housingUnits": 4086,
+   "vacancyPct": 20.3,
+   "ownerPct": 75.8,
+   "singleFamilyPct": 71.2,
+   "mobileHomePct": 18.8,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 13.6,
+   "builtPre1980Pct": 51.8,
+   "built2000PlusPct": 13.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 38.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.4
+    }
+   ],
+   "heatGasPct": 21.2,
+   "heatElectricPct": 67.1,
+   "heatPropanePct": 9.2,
+   "heatWoodPct": 2.1,
+   "medianHomeValue": 96400,
+   "medianIncome": 51646,
+   "adjacent": [
+    "arkansas",
+    "lonoke",
+    "monroe",
+    "white",
+    "woodruff"
+   ],
+   "places": [
+    {
+     "name": "Hazen",
+     "population": 1874
+    },
+    {
+     "name": "Des Arc",
+     "population": 1591
+    },
+    {
+     "name": "De Valls Bluff",
+     "population": 553
+    },
+    {
+     "name": "Ulm",
+     "population": 174
+    },
+    {
+     "name": "Fredonia (Biscoe)",
+     "population": 135
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05119",
+   "fips": "05119",
+   "name": "Pulaski County",
+   "short": "Pulaski",
+   "slug": "pulaski",
+   "seat": "Little Rock",
+   "founded": 1818,
+   "areaSqMi": 758,
+   "lat": 34.7418,
+   "lon": -92.3143,
+   "population": 399818,
+   "medianAge": 37.6,
+   "housingUnits": 193408,
+   "vacancyPct": 10.9,
+   "ownerPct": 57.0,
+   "singleFamilyPct": 65.8,
+   "mobileHomePct": 4.9,
+   "medianYearBuilt": 1981,
+   "builtPre1960Pct": 18.4,
+   "builtPre1980Pct": 49.3,
+   "built2000PlusPct": 25.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 25.1
+    }
+   ],
+   "heatGasPct": 50.2,
+   "heatElectricPct": 46.6,
+   "heatPropanePct": 1.9,
+   "heatWoodPct": 0.3,
+   "medianHomeValue": 214700,
+   "medianIncome": 62873,
+   "adjacent": [
+    "faulkner",
+    "grant",
+    "jefferson",
+    "lonoke",
+    "perry",
+    "saline"
+   ],
+   "places": [
+    {
+     "name": "Little Rock",
+     "population": 203436
+    },
+    {
+     "name": "North Little Rock",
+     "population": 64538
+    },
+    {
+     "name": "Sherwood",
+     "population": 33070
+    },
+    {
+     "name": "Jacksonville",
+     "population": 29221
+    },
+    {
+     "name": "Maumelle",
+     "population": 19373
+    },
+    {
+     "name": "Gibson",
+     "population": 4167
+    },
+    {
+     "name": "Landmark",
+     "population": 3948
+    },
+    {
+     "name": "Wrightsville",
+     "population": 1484
+    },
+    {
+     "name": "Roland",
+     "population": 1147
+    },
+    {
+     "name": "McAlmont",
+     "population": 1088
+    },
+    {
+     "name": "Sweet Home",
+     "population": 939
+    },
+    {
+     "name": "Cammack Village",
+     "population": 797
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05121",
+   "fips": "05121",
+   "name": "Randolph County",
+   "short": "Randolph",
+   "slug": "randolph",
+   "seat": "Pocahontas",
+   "founded": 1835,
+   "areaSqMi": 652,
+   "lat": 36.3125,
+   "lon": -91.0049,
+   "population": 18838,
+   "medianAge": 39.6,
+   "housingUnits": 8656,
+   "vacancyPct": 15.3,
+   "ownerPct": 73.5,
+   "singleFamilyPct": 77.0,
+   "mobileHomePct": 14.2,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 11.9,
+   "builtPre1980Pct": 51.4,
+   "built2000PlusPct": 22.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 39.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 26.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.3
+    }
+   ],
+   "heatGasPct": 34.4,
+   "heatElectricPct": 31.1,
+   "heatPropanePct": 25.9,
+   "heatWoodPct": 7.6,
+   "medianHomeValue": 130600,
+   "medianIncome": 50911,
+   "adjacent": [
+    "clay",
+    "greene",
+    "lawrence",
+    "sharp"
+   ],
+   "places": [
+    {
+     "name": "Pocahontas",
+     "population": 7538
+    },
+    {
+     "name": "Biggers",
+     "population": 428
+    },
+    {
+     "name": "Reyno",
+     "population": 310
+    },
+    {
+     "name": "Maynard",
+     "population": 303
+    },
+    {
+     "name": "O'Kean",
+     "population": 196
+    },
+    {
+     "name": "Ravenden Springs",
+     "population": 164
+    },
+    {
+     "name": "Warm Springs",
+     "population": 87
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05125",
+   "fips": "05125",
+   "name": "Saline County",
+   "short": "Saline",
+   "slug": "saline",
+   "seat": "Benton",
+   "founded": 1835,
+   "areaSqMi": 724,
+   "lat": 34.6311,
+   "lon": -92.6603,
+   "population": 127479,
+   "medianAge": 40.5,
+   "housingUnits": 52934,
+   "vacancyPct": 5.2,
+   "ownerPct": 78.2,
+   "singleFamilyPct": 76.4,
+   "mobileHomePct": 15.0,
+   "medianYearBuilt": 1997,
+   "builtPre1960Pct": 7.1,
+   "builtPre1980Pct": 24.6,
+   "built2000PlusPct": 45.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 1.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 5.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 17.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 45.3
+    }
+   ],
+   "heatGasPct": 38.0,
+   "heatElectricPct": 56.6,
+   "heatPropanePct": 3.1,
+   "heatWoodPct": 1.4,
+   "medianHomeValue": 221200,
+   "medianIncome": 79046,
+   "adjacent": [
+    "garland",
+    "grant",
+    "hot-spring",
+    "perry",
+    "pulaski"
+   ],
+   "places": [
+    {
+     "name": "Benton",
+     "population": 36595
+    },
+    {
+     "name": "Bryant",
+     "population": 21504
+    },
+    {
+     "name": "Hot Springs Village",
+     "population": 16327
+    },
+    {
+     "name": "East End",
+     "population": 6912
+    },
+    {
+     "name": "Shannon Hills",
+     "population": 4641
+    },
+    {
+     "name": "Haskell",
+     "population": 4100
+    },
+    {
+     "name": "Alexander",
+     "population": 3587
+    },
+    {
+     "name": "Salem",
+     "population": 2642
+    },
+    {
+     "name": "Avilla",
+     "population": 1833
+    },
+    {
+     "name": "Sardis",
+     "population": 890
+    },
+    {
+     "name": "Bauxite",
+     "population": 846
+    },
+    {
+     "name": "Traskwood",
+     "population": 552
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05127",
+   "fips": "05127",
+   "name": "Scott County",
+   "short": "Scott",
+   "slug": "scott",
+   "seat": "Waldron",
+   "founded": 1833,
+   "areaSqMi": 893,
+   "lat": 34.8258,
+   "lon": -94.0799,
+   "population": 9816,
+   "medianAge": 42.2,
+   "housingUnits": 4862,
+   "vacancyPct": 18.0,
+   "ownerPct": 78.1,
+   "singleFamilyPct": 74.6,
+   "mobileHomePct": 15.9,
+   "medianYearBuilt": 1981,
+   "builtPre1960Pct": 18.8,
+   "builtPre1980Pct": 48.3,
+   "built2000PlusPct": 21.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.9
+    }
+   ],
+   "heatGasPct": 17.1,
+   "heatElectricPct": 60.9,
+   "heatPropanePct": 7.3,
+   "heatWoodPct": 8.0,
+   "medianHomeValue": 115000,
+   "medianIncome": 43270,
+   "adjacent": [
+    "logan",
+    "montgomery",
+    "polk",
+    "sebastian",
+    "yell"
+   ],
+   "places": [
+    {
+     "name": "Waldron",
+     "population": 3344
+    },
+    {
+     "name": "Mansfield",
+     "population": 1204
+    },
+    {
+     "name": "Boles",
+     "population": 153
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05129",
+   "fips": "05129",
+   "name": "Searcy County",
+   "short": "Searcy",
+   "slug": "searcy",
+   "seat": "Marshall",
+   "founded": 1838,
+   "areaSqMi": 666,
+   "lat": 35.9759,
+   "lon": -92.6779,
+   "population": 7859,
+   "medianAge": 47.9,
+   "housingUnits": 4721,
+   "vacancyPct": 32.3,
+   "ownerPct": 79.4,
+   "singleFamilyPct": 76.9,
+   "mobileHomePct": 18.6,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 20.1,
+   "builtPre1980Pct": 43.8,
+   "built2000PlusPct": 24.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 10.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 24.2
+    }
+   ],
+   "heatGasPct": 2.7,
+   "heatElectricPct": 51.8,
+   "heatPropanePct": 24.2,
+   "heatWoodPct": 21.0,
+   "medianHomeValue": 110000,
+   "medianIncome": 44426,
+   "adjacent": [
+    "baxter",
+    "boone",
+    "marion",
+    "newton",
+    "pope",
+    "stone",
+    "van-buren"
+   ],
+   "places": [
+    {
+     "name": "Marshall",
+     "population": 1196
+    },
+    {
+     "name": "Leslie",
+     "population": 444
+    },
+    {
+     "name": "Pindall",
+     "population": 198
+    },
+    {
+     "name": "St. Joe",
+     "population": 136
+    },
+    {
+     "name": "Witts Springs",
+     "population": 77
+    },
+    {
+     "name": "Gilbert",
+     "population": 16
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05131",
+   "fips": "05131",
+   "name": "Sebastian County",
+   "short": "Sebastian",
+   "slug": "sebastian",
+   "seat": "Fort Smith",
+   "founded": 1851,
+   "areaSqMi": 531,
+   "lat": 35.1715,
+   "lon": -94.2348,
+   "population": 128900,
+   "medianAge": 38.0,
+   "housingUnits": 57470,
+   "vacancyPct": 9.2,
+   "ownerPct": 61.4,
+   "singleFamilyPct": 72.8,
+   "mobileHomePct": 3.6,
+   "medianYearBuilt": 1981,
+   "builtPre1960Pct": 21.2,
+   "builtPre1980Pct": 49.0,
+   "built2000PlusPct": 24.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 27.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 26.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 24.2
+    }
+   ],
+   "heatGasPct": 44.6,
+   "heatElectricPct": 52.4,
+   "heatPropanePct": 0.9,
+   "heatWoodPct": 1.2,
+   "medianHomeValue": 176200,
+   "medianIncome": 57790,
+   "adjacent": [
+    "crawford",
+    "franklin",
+    "logan",
+    "scott"
+   ],
+   "places": [
+    {
+     "name": "Fort Smith",
+     "population": 89805
+    },
+    {
+     "name": "Greenwood",
+     "population": 9616
+    },
+    {
+     "name": "Barling",
+     "population": 5007
+    },
+    {
+     "name": "Lavaca",
+     "population": 2489
+    },
+    {
+     "name": "Hackett",
+     "population": 1118
+    },
+    {
+     "name": "Bonanza",
+     "population": 711
+    },
+    {
+     "name": "Central City",
+     "population": 627
+    },
+    {
+     "name": "Hartford",
+     "population": 496
+    },
+    {
+     "name": "Huntington",
+     "population": 468
+    },
+    {
+     "name": "Midland",
+     "population": 262
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05133",
+   "fips": "05133",
+   "name": "Sevier County",
+   "short": "Sevier",
+   "slug": "sevier",
+   "seat": "De Queen",
+   "founded": 1828,
+   "areaSqMi": 564,
+   "lat": 33.9722,
+   "lon": -94.2701,
+   "population": 15712,
+   "medianAge": 34.7,
+   "housingUnits": 6791,
+   "vacancyPct": 17.2,
+   "ownerPct": 67.6,
+   "singleFamilyPct": 65.8,
+   "mobileHomePct": 27.9,
+   "medianYearBuilt": 1980,
+   "builtPre1960Pct": 12.6,
+   "builtPre1980Pct": 50.3,
+   "built2000PlusPct": 22.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 37.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.1
+    }
+   ],
+   "heatGasPct": 18.6,
+   "heatElectricPct": 70.9,
+   "heatPropanePct": 2.2,
+   "heatWoodPct": 5.4,
+   "medianHomeValue": 117600,
+   "medianIncome": 53527,
+   "adjacent": [
+    "howard",
+    "little-river",
+    "polk"
+   ],
+   "places": [
+    {
+     "name": "De Queen",
+     "population": 6058
+    },
+    {
+     "name": "Horatio",
+     "population": 1196
+    },
+    {
+     "name": "Lockesburg",
+     "population": 873
+    },
+    {
+     "name": "Ben Lomond",
+     "population": 330
+    },
+    {
+     "name": "Gillham",
+     "population": 147
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05135",
+   "fips": "05135",
+   "name": "Sharp County",
+   "short": "Sharp",
+   "slug": "sharp",
+   "seat": "Ash Flat",
+   "founded": 1868,
+   "areaSqMi": 605,
+   "lat": 36.1867,
+   "lon": -91.5129,
+   "population": 17773,
+   "medianAge": 47.1,
+   "housingUnits": 9525,
+   "vacancyPct": 28.0,
+   "ownerPct": 78.8,
+   "singleFamilyPct": 82.6,
+   "mobileHomePct": 12.2,
+   "medianYearBuilt": 1978,
+   "builtPre1960Pct": 8.2,
+   "builtPre1980Pct": 58.2,
+   "built2000PlusPct": 13.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 5.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 50.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.7
+    }
+   ],
+   "heatGasPct": 6.4,
+   "heatElectricPct": 53.9,
+   "heatPropanePct": 32.0,
+   "heatWoodPct": 7.0,
+   "medianHomeValue": 105100,
+   "medianIncome": 44637,
+   "adjacent": [
+    "fulton",
+    "independence",
+    "izard",
+    "lawrence",
+    "randolph"
+   ],
+   "places": [
+    {
+     "name": "Cherokee Village",
+     "population": 5046
+    },
+    {
+     "name": "Cave City",
+     "population": 2090
+    },
+    {
+     "name": "Highland",
+     "population": 1354
+    },
+    {
+     "name": "Ash Flat",
+     "population": 1217
+    },
+    {
+     "name": "Hardy",
+     "population": 890
+    },
+    {
+     "name": "Ozark Acres",
+     "population": 670
+    },
+    {
+     "name": "Evening Shade",
+     "population": 534
+    },
+    {
+     "name": "Sidney",
+     "population": 175
+    },
+    {
+     "name": "Williford",
+     "population": 71
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05123",
+   "fips": "05123",
+   "name": "St. Francis County",
+   "short": "St. Francis",
+   "slug": "st-francis",
+   "seat": "Forrest City",
+   "founded": 1827,
+   "areaSqMi": 635,
+   "lat": 35.0729,
+   "lon": -90.7228,
+   "population": 22400,
+   "medianAge": 40.1,
+   "housingUnits": 9570,
+   "vacancyPct": 18.7,
+   "ownerPct": 55.5,
+   "singleFamilyPct": 67.1,
+   "mobileHomePct": 13.5,
+   "medianYearBuilt": 1980,
+   "builtPre1960Pct": 13.4,
+   "builtPre1980Pct": 49.5,
+   "built2000PlusPct": 16.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 36.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 16.1
+    }
+   ],
+   "heatGasPct": 30.6,
+   "heatElectricPct": 56.8,
+   "heatPropanePct": 10.1,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 90900,
+   "medianIncome": 42574,
+   "adjacent": [
+    "crittenden",
+    "cross",
+    "lee",
+    "monroe",
+    "woodruff"
+   ],
+   "places": [
+    {
+     "name": "Forrest City",
+     "population": 12646
+    },
+    {
+     "name": "Hughes",
+     "population": 886
+    },
+    {
+     "name": "Palestine",
+     "population": 800
+    },
+    {
+     "name": "Colt",
+     "population": 510
+    },
+    {
+     "name": "Madison",
+     "population": 476
+    },
+    {
+     "name": "Caldwell",
+     "population": 441
+    },
+    {
+     "name": "Wheatley",
+     "population": 374
+    },
+    {
+     "name": "Widener",
+     "population": 238
+    },
+    {
+     "name": "Goodwin",
+     "population": 56
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05137",
+   "fips": "05137",
+   "name": "Stone County",
+   "short": "Stone",
+   "slug": "stone",
+   "seat": "Mountain View",
+   "founded": 1873,
+   "areaSqMi": 606,
+   "lat": 35.9198,
+   "lon": -92.2203,
+   "population": 12568,
+   "medianAge": 49.2,
+   "housingUnits": 6825,
+   "vacancyPct": 22.9,
+   "ownerPct": 75.9,
+   "singleFamilyPct": 71.7,
+   "mobileHomePct": 23.6,
+   "medianYearBuilt": 1988,
+   "builtPre1960Pct": 11.6,
+   "builtPre1980Pct": 34.9,
+   "built2000PlusPct": 25.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 39.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 25.5
+    }
+   ],
+   "heatGasPct": 7.1,
+   "heatElectricPct": 47.0,
+   "heatPropanePct": 35.7,
+   "heatWoodPct": 9.4,
+   "medianHomeValue": 171600,
+   "medianIncome": 40943,
+   "adjacent": [
+    "baxter",
+    "cleburne",
+    "independence",
+    "izard",
+    "searcy",
+    "van-buren"
+   ],
+   "places": [
+    {
+     "name": "Mountain View",
+     "population": 2913
+    },
+    {
+     "name": "Fox",
+     "population": 381
+    },
+    {
+     "name": "Fifty-Six",
+     "population": 205
+    },
+    {
+     "name": "Pleasant Grove",
+     "population": 186
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05139",
+   "fips": "05139",
+   "name": "Union County",
+   "short": "Union",
+   "slug": "union",
+   "seat": "El Dorado",
+   "founded": 1829,
+   "areaSqMi": 1039,
+   "lat": 33.1965,
+   "lon": -92.5802,
+   "population": 37900,
+   "medianAge": 41.4,
+   "housingUnits": 18649,
+   "vacancyPct": 19.6,
+   "ownerPct": 72.7,
+   "singleFamilyPct": 71.6,
+   "mobileHomePct": 20.2,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 21.4,
+   "builtPre1980Pct": 51.4,
+   "built2000PlusPct": 22.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 17.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 26.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.6
+    }
+   ],
+   "heatGasPct": 40.8,
+   "heatElectricPct": 53.6,
+   "heatPropanePct": 3.7,
+   "heatWoodPct": 0.8,
+   "medianHomeValue": 120900,
+   "medianIncome": 55259,
+   "adjacent": [
+    "ashley",
+    "bradley",
+    "calhoun",
+    "columbia",
+    "ouachita"
+   ],
+   "places": [
+    {
+     "name": "El Dorado",
+     "population": 17115
+    },
+    {
+     "name": "Smackover",
+     "population": 2419
+    },
+    {
+     "name": "Norphlet",
+     "population": 1003
+    },
+    {
+     "name": "Junction City",
+     "population": 564
+    },
+    {
+     "name": "Strong",
+     "population": 434
+    },
+    {
+     "name": "Huttig",
+     "population": 401
+    },
+    {
+     "name": "Calion",
+     "population": 355
+    },
+    {
+     "name": "Urbana",
+     "population": 147
+    },
+    {
+     "name": "Lawson",
+     "population": 86
+    },
+    {
+     "name": "Felsenthal",
+     "population": 40
+    },
+    {
+     "name": "Mount Holly",
+     "population": 18
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05141",
+   "fips": "05141",
+   "name": "Van Buren County",
+   "short": "Van Buren",
+   "slug": "van-buren",
+   "seat": "Clinton",
+   "founded": 1833,
+   "areaSqMi": 710,
+   "lat": 35.6308,
+   "lon": -92.5272,
+   "population": 15998,
+   "medianAge": 49.6,
+   "housingUnits": 9725,
+   "vacancyPct": 23.6,
+   "ownerPct": 77.9,
+   "singleFamilyPct": 71.5,
+   "mobileHomePct": 20.1,
+   "medianYearBuilt": 1986,
+   "builtPre1960Pct": 9.5,
+   "builtPre1980Pct": 37.8,
+   "built2000PlusPct": 26.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 6.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.9
+    }
+   ],
+   "heatGasPct": 12.1,
+   "heatElectricPct": 59.4,
+   "heatPropanePct": 19.2,
+   "heatWoodPct": 7.4,
+   "medianHomeValue": 135700,
+   "medianIncome": 50354,
+   "adjacent": [
+    "cleburne",
+    "conway",
+    "faulkner",
+    "pope",
+    "searcy",
+    "stone"
+   ],
+   "places": [
+    {
+     "name": "Fairfield Bay",
+     "population": 2515
+    },
+    {
+     "name": "Clinton",
+     "population": 2509
+    },
+    {
+     "name": "Dennard",
+     "population": 315
+    },
+    {
+     "name": "Shirley",
+     "population": 269
+    },
+    {
+     "name": "Bee Branch",
+     "population": 196
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05143",
+   "fips": "05143",
+   "name": "Washington County",
+   "short": "Washington",
+   "slug": "washington",
+   "seat": "Fayetteville",
+   "founded": 1828,
+   "areaSqMi": 941,
+   "lat": 35.9622,
+   "lon": -94.238,
+   "population": 256765,
+   "medianAge": 32.5,
+   "housingUnits": 105461,
+   "vacancyPct": 7.8,
+   "ownerPct": 55.6,
+   "singleFamilyPct": 66.9,
+   "mobileHomePct": 4.7,
+   "medianYearBuilt": 1995,
+   "builtPre1960Pct": 7.3,
+   "builtPre1980Pct": 26.6,
+   "built2000PlusPct": 41.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 4.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 41.5
+    }
+   ],
+   "heatGasPct": 45.5,
+   "heatElectricPct": 47.8,
+   "heatPropanePct": 3.3,
+   "heatWoodPct": 2.6,
+   "medianHomeValue": 298400,
+   "medianIncome": 70639,
+   "adjacent": [
+    "benton",
+    "crawford",
+    "madison"
+   ],
+   "places": [
+    {
+     "name": "Fayetteville",
+     "population": 99319
+    },
+    {
+     "name": "Springdale",
+     "population": 88160
+    },
+    {
+     "name": "Farmington",
+     "population": 9094
+    },
+    {
+     "name": "Prairie Grove",
+     "population": 7798
+    },
+    {
+     "name": "Tontitown",
+     "population": 6425
+    },
+    {
+     "name": "Elkins",
+     "population": 3808
+    },
+    {
+     "name": "Johnson",
+     "population": 3656
+    },
+    {
+     "name": "West Fork",
+     "population": 3095
+    },
+    {
+     "name": "Elm Springs",
+     "population": 3069
+    },
+    {
+     "name": "Lincoln",
+     "population": 2794
+    },
+    {
+     "name": "Goshen",
+     "population": 2298
+    },
+    {
+     "name": "Greenland",
+     "population": 1274
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05145",
+   "fips": "05145",
+   "name": "White County",
+   "short": "White",
+   "slug": "white",
+   "seat": "Searcy",
+   "founded": 1835,
+   "areaSqMi": 1034,
+   "lat": 35.2802,
+   "lon": -91.7627,
+   "population": 77838,
+   "medianAge": 38.8,
+   "housingUnits": 33900,
+   "vacancyPct": 12.6,
+   "ownerPct": 69.1,
+   "singleFamilyPct": 67.6,
+   "mobileHomePct": 18.3,
+   "medianYearBuilt": 1992,
+   "builtPre1960Pct": 8.5,
+   "builtPre1980Pct": 32.5,
+   "built2000PlusPct": 33.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 6.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 24.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 33.4
+    }
+   ],
+   "heatGasPct": 26.4,
+   "heatElectricPct": 63.8,
+   "heatPropanePct": 6.9,
+   "heatWoodPct": 2.0,
+   "medianHomeValue": 163600,
+   "medianIncome": 55249,
+   "adjacent": [
+    "cleburne",
+    "faulkner",
+    "independence",
+    "jackson",
+    "lonoke",
+    "prairie",
+    "woodruff"
+   ],
+   "places": [
+    {
+     "name": "Searcy",
+     "population": 23340
+    },
+    {
+     "name": "Beebe",
+     "population": 8707
+    },
+    {
+     "name": "Bald Knob",
+     "population": 2518
+    },
+    {
+     "name": "Judsonia",
+     "population": 2052
+    },
+    {
+     "name": "Kensett",
+     "population": 1937
+    },
+    {
+     "name": "Higginson",
+     "population": 1055
+    },
+    {
+     "name": "Floyd",
+     "population": 881
+    },
+    {
+     "name": "Rose Bud",
+     "population": 656
+    },
+    {
+     "name": "McRae",
+     "population": 623
+    },
+    {
+     "name": "Bradford",
+     "population": 522
+    },
+    {
+     "name": "Pangburn",
+     "population": 515
+    },
+    {
+     "name": "El Paso",
+     "population": 470
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05147",
+   "fips": "05147",
+   "name": "Woodruff County",
+   "short": "Woodruff",
+   "slug": "woodruff",
+   "seat": "Augusta",
+   "founded": 1862,
+   "areaSqMi": 586,
+   "lat": 35.1785,
+   "lon": -91.2322,
+   "population": 6026,
+   "medianAge": 45.3,
+   "housingUnits": 3256,
+   "vacancyPct": 17.3,
+   "ownerPct": 64.7,
+   "singleFamilyPct": 70.6,
+   "mobileHomePct": 12.9,
+   "medianYearBuilt": 1977,
+   "builtPre1960Pct": 9.6,
+   "builtPre1980Pct": 60.4,
+   "built2000PlusPct": 16.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 6.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 50.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 16.0
+    }
+   ],
+   "heatGasPct": 35.3,
+   "heatElectricPct": 55.8,
+   "heatPropanePct": 7.8,
+   "heatWoodPct": 0.4,
+   "medianHomeValue": 106500,
+   "medianIncome": 48158,
+   "adjacent": [
+    "cross",
+    "jackson",
+    "monroe",
+    "prairie",
+    "st-francis",
+    "white"
+   ],
+   "places": [
+    {
+     "name": "Augusta",
+     "population": 1859
+    },
+    {
+     "name": "McCrory",
+     "population": 1850
+    },
+    {
+     "name": "Cotton Plant",
+     "population": 444
+    },
+    {
+     "name": "Patterson",
+     "population": 364
+    },
+    {
+     "name": "Hunter",
+     "population": 100
+    },
+    {
+     "name": "Gregory",
+     "population": 0
+    }
+   ]
+  },
+  {
+   "geoid": "05000US05149",
+   "fips": "05149",
+   "name": "Yell County",
+   "short": "Yell",
+   "slug": "yell",
+   "seat": "Danville",
+   "founded": 1840,
+   "areaSqMi": 930,
+   "lat": 35.0263,
+   "lon": -93.4053,
+   "population": 20134,
+   "medianAge": 39.3,
+   "housingUnits": 9312,
+   "vacancyPct": 10.6,
+   "ownerPct": 67.5,
+   "singleFamilyPct": 73.7,
+   "mobileHomePct": 16.7,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 14.7,
+   "builtPre1980Pct": 44.2,
+   "built2000PlusPct": 25.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 7.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 25.9
+    }
+   ],
+   "heatGasPct": 19.8,
+   "heatElectricPct": 66.5,
+   "heatPropanePct": 7.3,
+   "heatWoodPct": 4.6,
+   "medianHomeValue": 143600,
+   "medianIncome": 55934,
+   "adjacent": [
+    "conway",
+    "garland",
+    "logan",
+    "montgomery",
+    "perry",
+    "pope",
+    "scott"
+   ],
+   "places": [
+    {
+     "name": "Dardanelle",
+     "population": 4511
+    },
+    {
+     "name": "Danville",
+     "population": 2289
+    },
+    {
+     "name": "Ola",
+     "population": 914
+    },
+    {
+     "name": "Plainview",
+     "population": 550
+    },
+    {
+     "name": "Belleville",
+     "population": 517
+    },
+    {
+     "name": "Havana",
+     "population": 343
+    },
+    {
+     "name": "Centerville",
+     "population": 211
+    },
+    {
+     "name": "Rover",
+     "population": 142
+    },
+    {
+     "name": "Corinth",
+     "population": 38
+    }
+   ]
+  }
+ ]
+}

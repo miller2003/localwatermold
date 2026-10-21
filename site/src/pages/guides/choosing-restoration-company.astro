@@ -1,0 +1,55 @@
+---
+import { S, cancellationText, contractorsText, FTC_COOLING_OFF, FIND_AG } from "../../lib/state";
+import Article from "../../layouts/Article.astro";
+---
+<Article
+  title={`How to choose a water damage restoration company in ${S.name}`}
+  seoTitle={`Choosing a Water Damage Restoration Company in ${S.name}: Questions and Red Flags`}
+  description={`What to ask a restoration company before work starts, what the paperwork means, red flags after storms, and your cancellation rights.`}
+  eyebrow="Guide · Hiring"
+  dek="In an emergency you'll hire the first company that answers. That's fine, as long as you ask a few questions and read what you sign."
+  path="/guides/choosing-restoration-company/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Choosing a company", href: "/guides/choosing-restoration-company/" }]}
+  related={[
+    { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: "Working with your insurer" },
+    { href: "/guides/water-damage-restoration-cost/", label: "What it should cost" },
+    { href: "/how-it-works/", label: "How our referrals work" },
+  ]}
+  sources={[
+    S.consumerAgency ?? FIND_AG,
+    S.cancellation ? { label: `${S.name} ${S.cancellation.law}`, href: S.cancellation.url } : FTC_COOLING_OFF,
+    ...(S.contractors?.link ? [S.contractors.link] : []),
+    { label: "IICRC: Find a certified technician", href: "https://iicrc.org/" },
+  ]}
+>
+  <h2>Five questions before they start</h2>
+  <ol class="steps">
+    <li><strong>Are your technicians IICRC certified in water damage restoration?</strong> The IICRC sets the industry's cleaning and restoration standards and certifies technicians.</li>
+    <li><strong>Can I see proof of insurance?</strong> At minimum, general liability and workers' compensation.</li>
+    <li><strong>Will you take and share daily moisture readings?</strong> Drying should be documented with meter readings, not judged by touch.</li>
+    <li><strong>Do you bill my insurer directly, and what will I owe?</strong> Get the answer in writing before the equipment goes in.</li>
+    <li><strong>Do you do the rebuild too, or only the drying?</strong> Many companies only mitigate. Know whether you'll need a second contractor.</li>
+  </ol>
+
+  <h2>Read the paperwork</h2>
+  <ul>
+    <li><strong>Work authorization:</strong> gives permission to start emergency work. Normal and expected.</li>
+    <li><strong>Assignment of benefits:</strong> transfers your right to be paid by your insurer to the company. It can make billing easier, but it also means the company deals with your insurer directly, and disputes can involve you. Read it carefully before you sign.</li>
+    <li><strong>Direction to pay:</strong> tells your insurer to pay the company directly, without assigning the rest of your rights.</li>
+  </ul>
+
+  <h2>Red flags</h2>
+  <ul>
+    <li>A crew that shows up uninvited after a storm and pressures you to sign that day.</li>
+    <li>A demand for full payment up front.</li>
+    <li>A refusal to give a written scope or estimate.</li>
+    <li>No physical business address, or a name that doesn't match the paperwork or truck.</li>
+    <li>Tearing out large amounts of material before documenting moisture readings.</li>
+  </ul>
+
+  <h2>Your cancellation rights</h2>
+  <p>{cancellationText()} If you think a contractor has acted unfairly, contact the state attorney general's consumer protection office.</p>
+
+  <h2>Licensing and registration</h2>
+  <p>{contractorsText()}</p>
+</Article>

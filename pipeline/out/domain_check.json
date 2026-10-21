@@ -1,0 +1,202 @@
+{
+ "oh": {
+  "dryohio.com": "taken",
+  "ohiowaterhelp.com": "FREE",
+  "buckeyedryout.com": "FREE",
+  "ohioleakline.com": "FREE",
+  "buckeyewaterhelp.com": "FREE",
+  "ohiowaterdamagehelp.com": "FREE"
+ },
+ "pa": {
+  "drypennsylvania.com": "FREE",
+  "pennsylvaniawaterhelp.com": "FREE",
+  "keystonedryout.com": "FREE",
+  "pennsylvanialeakline.com": "FREE",
+  "keystonewaterhelp.com": "FREE",
+  "pennsylvaniawaterdamagehelp.com": "FREE"
+ },
+ "mi": {
+  "drymichigan.com": "taken",
+  "michiganwaterhelp.com": "FREE",
+  "greatlakesdryout.com": "FREE",
+  "michiganleakline.com": "FREE",
+  "greatlakeswaterhelp.com": "FREE",
+  "michiganwaterdamagehelp.com": "taken"
+ },
+ "in": {
+  "dryindiana.com": "taken",
+  "indianawaterhelp.com": "FREE",
+  "hoosierdryout.com": "FREE",
+  "indianaleakline.com": "FREE",
+  "hoosierwaterhelp.com": "FREE",
+  "indianawaterdamagehelp.com": "FREE"
+ },
+ "ky": {
+  "drykentucky.com": "FREE",
+  "kentuckywaterhelp.com": "FREE",
+  "bluegrassdryout.com": "FREE",
+  "kentuckyleakline.com": "FREE",
+  "bluegrasswaterhelp.com": "FREE",
+  "kentuckywaterdamagehelp.com": "FREE"
+ },
+ "wv": {
+  "drywestvirginia.com": "FREE",
+  "westvirginiawaterhelp.com": "FREE",
+  "mountainstatedryout.com": "FREE",
+  "westvirginialeakline.com": "FREE",
+  "mountainstatewaterhelp.com": "FREE",
+  "westvirginiawaterdamagehelp.com": "FREE"
+ },
+ "tn": {
+  "drytennessee.com": "FREE",
+  "tennesseewaterhelp.com": "FREE",
+  "volunteerdryout.com": "FREE",
+  "tennesseeleakline.com": "FREE",
+  "volunteerwaterhelp.com": "FREE",
+  "tennesseewaterdamagehelp.com": "FREE"
+ },
+ "mo": {
+  "drymissouri.com": "FREE",
+  "missouriwaterhelp.com": "FREE",
+  "showmedryout.com": "FREE",
+  "missourileakline.com": "FREE",
+  "showmewaterhelp.com": "FREE",
+  "missouriwaterdamagehelp.com": "FREE"
+ },
+ "ia": {
+  "dryiowa.com": "FREE",
+  "iowawaterhelp.com": "FREE",
+  "hawkeyedryout.com": "FREE",
+  "iowaleakline.com": "FREE",
+  "hawkeyewaterhelp.com": "FREE",
+  "iowawaterdamagehelp.com": "FREE"
+ },
+ "wi": {
+  "drywisconsin.com": "FREE",
+  "wisconsinwaterhelp.com": "FREE",
+  "badgerdryout.com": "FREE",
+  "wisconsinleakline.com": "FREE",
+  "badgerwaterhelp.com": "FREE",
+  "wisconsinwaterdamagehelp.com": "FREE"
+ },
+ "ny": {
+  "drynewyork.com": "FREE",
+  "newyorkwaterhelp.com": "FREE",
+  "empiredryout.com": "FREE",
+  "newyorkleakline.com": "FREE",
+  "empirewaterhelp.com": "FREE",
+  "newyorkwaterdamagehelp.com": "taken"
+ },
+ "il": {
+  "dryillinois.com": "FREE",
+  "illinoiswaterhelp.com": "FREE",
+  "prairiestatedryout.com": "FREE",
+  "illinoisleakline.com": "FREE",
+  "prairiestatewaterhelp.com": "FREE",
+  "illinoiswaterdamagehelp.com": "FREE"
+ },
+ "mn": {
+  "dryminnesota.com": "FREE",
+  "minnesotawaterhelp.com": "FREE",
+  "northstardryout.com": "FREE",
+  "minnesotaleakline.com": "FREE",
+  "northstarwaterhelp.com": "FREE",
+  "minnesotawaterdamagehelp.com": "FREE"
+ },
+ "nc": {
+  "drynorthcarolina.com": "FREE",
+  "northcarolinawaterhelp.com": "FREE",
+  "tarheeldryout.com": "FREE",
+  "northcarolinaleakline.com": "FREE",
+  "tarheelwaterhelp.com": "FREE",
+  "northcarolinawaterdamagehelp.com": "FREE"
+ },
+ "va": {
+  "dryvirginia.com": "FREE",
+  "virginiawaterhelp.com": "FREE",
+  "olddominiondryout.com": "FREE",
+  "virginialeakline.com": "FREE",
+  "olddominionwaterhelp.com": "FREE",
+  "virginiawaterdamagehelp.com": "FREE"
+ },
+ "al": {
+  "dryalabama.com": "FREE",
+  "alabamawaterhelp.com": "FREE",
+  "yellowhammerdryout.com": "FREE",
+  "alabamaleakline.com": "FREE",
+  "yellowhammerwaterhelp.com": "FREE",
+  "alabamawaterdamagehelp.com": "FREE"
+ },
+ "ms": {
+  "drymississippi.com": "FREE",
+  "mississippiwaterhelp.com": "FREE",
+  "magnoliadryout.com": "FREE",
+  "mississippileakline.com": "FREE",
+  "magnoliawaterhelp.com": "FREE",
+  "mississippiwaterdamagehelp.com": "FREE"
+ },
+ "ar": {
+  "dryarkansas.com": "taken",
+  "arkansaswaterhelp.com": "FREE",
+  "naturalstatedryout.com": "FREE",
+  "arkansasleakline.com": "FREE",
+  "naturalstatewaterhelp.com": "FREE",
+  "arkansaswaterdamagehelp.com": "FREE"
+ },
+ "ok": {
+  "dryoklahoma.com": "FREE",
+  "oklahomawaterhelp.com": "FREE",
+  "soonerdryout.com": "FREE",
+  "oklahomaleakline.com": "FREE",
+  "soonerwaterhelp.com": "FREE",
+  "oklahomawaterdamagehelp.com": "FREE"
+ },
+ "ks": {
+  "drykansas.com": "FREE",
+  "kansaswaterhelp.com": "FREE",
+  "sunflowerdryout.com": "FREE",
+  "kansasleakline.com": "FREE",
+  "sunflowerwaterhelp.com": "FREE",
+  "kansaswaterdamagehelp.com": "FREE"
+ },
+ "ne": {
+  "drynebraska.com": "FREE",
+  "nebraskawaterhelp.com": "FREE",
+  "cornhuskerdryout.com": "FREE",
+  "nebraskaleakline.com": "FREE",
+  "cornhuskerwaterhelp.com": "FREE",
+  "nebraskawaterdamagehelp.com": "FREE"
+ },
+ "ga": {
+  "drygeorgia.com": "FREE",
+  "georgiawaterhelp.com": "FREE",
+  "peachstatedryout.com": "FREE",
+  "georgialeakline.com": "FREE",
+  "peachstatewaterhelp.com": "FREE",
+  "georgiawaterdamagehelp.com": "taken"
+ },
+ "sc": {
+  "drysouthcarolina.com": "FREE",
+  "southcarolinawaterhelp.com": "FREE",
+  "palmettodryout.com": "FREE",
+  "southcarolinaleakline.com": "FREE",
+  "palmettowaterhelp.com": "FREE",
+  "southcarolinawaterdamagehelp.com": "FREE"
+ },
+ "md": {
+  "drymaryland.com": "FREE",
+  "marylandwaterhelp.com": "FREE",
+  "oldlinedryout.com": "FREE",
+  "marylandleakline.com": "FREE",
+  "oldlinewaterhelp.com": "FREE",
+  "marylandwaterdamagehelp.com": "FREE"
+ },
+ "tx": {
+  "drytexas.com": "taken",
+  "texaswaterhelp.com": "FREE",
+  "lonestardryout.com": "FREE",
+  "texasleakline.com": "FREE",
+  "lonestarwaterhelp.com": "FREE",
+  "texaswaterdamagehelp.com": "taken"
+ }
+}

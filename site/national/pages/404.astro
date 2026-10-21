@@ -1,0 +1,20 @@
+---
+import Base from "../../src/layouts/Base.astro";
+import CallButton from "../../src/components/CallButton.astro";
+---
+<Base title="Page not found" description="This page doesn't exist." noindex>
+  <section class="wrap nf">
+    <p class="eyebrow">404</p>
+    <h1>This page doesn't exist</h1>
+    <p class="lede">If water is coming in right now, don't go hunting. Start here:</p>
+    <div class="row">
+      <CallButton placement="404" label="Call" />
+      <a class="btn btn-ghost" href="/#states">Find your state</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf { padding-top: clamp(40px, 8vw, 96px); padding-bottom: 96px; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+</style>

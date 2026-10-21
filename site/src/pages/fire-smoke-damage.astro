@@ -1,0 +1,39 @@
+---
+import { S } from "../lib/state";
+import Service from "../layouts/Service.astro";
+---
+<Service
+  title={`Fire and smoke damage restoration in ${S.name}`}
+  seoTitle={`Fire and Smoke Damage Restoration in ${S.name} | Soot, Odor and Water Cleanup`}
+  description={`After a house fire in ${S.name}: what to do first, how fire and smoke restoration works, and how to get connected with a local restoration company.`}
+  eyebrow="Fire and smoke"
+  lede="After the fire department leaves, the damage keeps working. Soot is acidic, smoke odor spreads through the house, and water from the hoses needs drying. Here's what happens next."
+  path="/fire-smoke-damage/"
+  name="Fire and smoke restoration"
+  metric="heat"
+  process={[
+    ["Secure the property", "Board up openings, tarp the roof, and protect the house from weather and entry."],
+    ["Water removal", "Extract and dry water used to put out the fire before it adds mold to the list."],
+    ["Soot and smoke cleaning", "Dry-sponge and clean soot from surfaces, clean or replace contents, and clean HVAC ducts."],
+    ["Odor removal and rebuild", "Treat lingering odor, seal surfaces that hold it, then repair or rebuild damaged areas."],
+  ]}
+  guides={[
+    { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: "Working with your insurer", note: `${S.name} claim deadlines apply to fire too` },
+    { href: "/guides/water-damage-restoration-cost/", label: "What fire restoration costs", note: "National 2026 ranges" },
+    { href: "/tools/emergency-checklist/", label: "Printable checklist", note: "For the first day after" },
+  ]}
+>
+  <h2>The first 24 hours after a fire</h2>
+  <ol class="steps">
+    <li><strong>Wait for the all-clear.</strong> Don't go back in until the fire department says it's safe. Ask for the incident or report number.</li>
+    <li><strong>Call your insurer</strong> and ask about emergency board-up, additional living expenses and advances for immediate needs.</li>
+    <li><strong>Get help if you need a place to stay.</strong> The American Red Cross helps families after home fires with shelter, food and other urgent needs.</li>
+    <li><strong>Don't turn on the furnace or air conditioning,</strong> and don't wipe soot. Both spread damage.</li>
+    <li><strong>Discard exposed food, drinks and medicine.</strong></li>
+    <li><strong>Photograph everything</strong> before cleanup starts, room by room.</li>
+  </ol>
+  <h2>Why smoke damage spreads so far</h2>
+  <p>Smoke moves with air pressure and heat, into closets, cabinets, attic space and wall cavities. Rooms the fire never touched can need cleaning, and the HVAC system can carry soot to every vent. Soot residue is also acidic and can etch metal, glass and stone the longer it sits, which is why cleaning should start within days.</p>
+  <h2>Don't forget the water</h2>
+  <p>Firefighting puts a lot of water into a house. That water soaks drywall, insulation and flooring and can lead to mold within a couple of days, so drying is part of fire restoration from day one.</p>
+</Service>

@@ -1,0 +1,20 @@
+---
+import Icon from "./Icon.astro";
+import { SITE, phoneFor, formatPhone } from "../config";
+
+interface Props { county?: string; label?: string; placement: string; block?: boolean; short?: boolean }
+const { county, label, placement, block, short } = Astro.props;
+const number = phoneFor(county);
+const live = SITE.launchMode === "live" && number;
+---
+{live ? (
+  <a class="btn btn-call" style={block ? "width:100%" : undefined} href={`tel:${number}`} data-call={placement} data-county={county ?? "state"}>
+    <Icon name="phone" />
+    <span>{label ?? "Call"} {formatPhone(number!)}</span>
+  </a>
+) : (
+  <a class="btn btn-call" style={block ? "width:100%" : undefined} href="/how-it-works/" data-call-preview={placement}>
+    <Icon name="phone" />
+    <span>{short ? "Opening soon" : "Call line opening soon"}</span>
+  </a>
+)}

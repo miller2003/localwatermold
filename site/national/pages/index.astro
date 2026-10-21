@@ -1,0 +1,136 @@
+---
+import Base from "../../src/layouts/Base.astro";
+import CallButton from "../../src/components/CallButton.astro";
+import Icon from "../../src/components/Icon.astro";
+import { SITE } from "../../src/config";
+import { STATE_SUMMARIES, TOTALS } from "../../src/lib/national";
+
+const int = (n: number) => Math.round(n).toLocaleString("en-US");
+const schema = [{
+  "@type": "ItemList",
+  name: "States with local water damage, mold and fire restoration guides",
+  itemListElement: STATE_SUMMARIES.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: s.name, url: new URL(`/${s.slug}/`, Astro.site).href })),
+}];
+---
+<Base
+  title={`Water Damage, Mold & Fire Restoration Near You | ${SITE.brand}`}
+  description={`${SITE.tagline}. Free county-by-county guides for ${TOTALS.states} states, and one call to a restoration company that serves your area.`}
+  schema={schema}
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">{SITE.taglineShort}</p>
+        <h1>Water in the house? Find local help, fast.</h1>
+        <p class="lede">{SITE.brand} connects homeowners with restoration companies that handle water damage, mold, fire and smoke, and flooded basements. Pick your state for county guides on what to do first and a call line to a company near you.</p>
+        <form class="finder" action="/" method="get" data-finder>
+          <label for="state-select">Find your state</label>
+          <div class="finder-row">
+            <select id="state-select" name="s">
+              <option value="">Choose a state</option>
+              {STATE_SUMMARIES.map((s) => <option value={`/${s.slug}/`}>{s.name}</option>)}
+            </select>
+            <button class="btn btn-call" type="submit">Go</button>
+          </div>
+        </form>
+        <p class="small faint" style="margin-top:12px">If anyone is in danger, you smell gas, or water is near live wiring, leave and call 911 first.</p>
+      </div>
+      <div class="hero-card card">
+        <p class="eyebrow">Coverage</p>
+        <div class="grid grid-2">
+          <div class="stat"><div class="stat-label">States</div><div class="stat-value">{TOTALS.states}</div></div>
+          <div class="stat"><div class="stat-label">County guides</div><div class="stat-value">{int(TOTALS.countyPages)}</div></div>
+        </div>
+        <p class="small muted" style="margin:14px 0 0">Every county guide is built from that county's Census housing data and ten years of NOAA daily weather, covering {int(TOTALS.residents / 1e6)} million residents.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">What we help with</p>
+      <h2>Water, mold, fire and basements: one call</h2>
+      <div class="grid grid-4">
+        <div class="card svc"><Icon name="droplet" size={26} /><h3>Water damage</h3><p class="muted">Burst and frozen pipes, water heaters, appliance leaks, roof leaks and sewage backups.</p></div>
+        <div class="card svc"><Icon name="mold" size={26} /><h3>Mold</h3><p class="muted">Growth after a leak, damp crawl spaces, and musty smells from mold hidden in walls or floors.</p></div>
+        <div class="card svc"><Icon name="flame" size={26} /><h3>Fire and smoke</h3><p class="muted">Soot, smoke odor, and the water left behind by firefighting, from a kitchen fire to a whole house.</p></div>
+        <div class="card svc"><Icon name="basement" size={26} /><h3>Flooded basements</h3><p class="muted">Sump pump failures, seepage after heavy rain, and backups through floor drains.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section numbers" id="states">
+    <div class="wrap">
+      <p class="eyebrow">Local guides</p>
+      <h2>Choose your state</h2>
+      <ul class="state-grid">
+        {STATE_SUMMARIES.map((s) => (
+          <li>
+            <a href={`/${s.slug}/`}>
+              <span class="n">{s.name}</span>
+              <span class="m">{s.countyPages} county guides</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="small faint" style="margin-top:16px">Don't see your state? We're adding more. The guides on what to do in the first hour apply anywhere.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>No charge for the referral. Here's what happens.</h2>
+      <ol class="how">
+        <li><span class="dot"><Icon name="phone" /></span><h3>You call</h3><p class="muted">Describe what happened and where. There's no charge for the referral.</p></li>
+        <li><span class="dot"><Icon name="map" /></span><h3>We connect you</h3><p class="muted">Your call goes to a participating restoration company that serves your county.</p></li>
+        <li><span class="dot"><Icon name="shield" /></span><h3>They take it from there</h3><p class="muted">The company inspects, quotes and does the work. You deal with them directly.</p></li>
+      </ol>
+      <div class="cta-row">
+        <CallButton placement="home-national" label="Call" />
+        <a class="btn btn-ghost" href="/how-it-works/">More on how we work</a>
+      </div>
+      <p class="small faint">Participating companies pay us for referrals. That never changes what we tell you in our guides. We're not affiliated with any insurer or government agency.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: clamp(32px, 6vw, 80px) 0 clamp(36px, 5vw, 64px); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+  .finder { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 16px; max-width: 520px; margin-top: 26px; }
+  .finder label { display: block; font-weight: 600; font-size: 0.92rem; margin-bottom: 8px; }
+  .finder-row { display: flex; gap: 8px; }
+  .finder select { flex: 1; min-width: 0; min-height: 48px; border-radius: var(--r); border: 1px solid var(--line-2); background: var(--paper); color: var(--ink); font: inherit; padding: 0 12px; }
+  .finder :global(.btn) { min-height: 48px; }
+  .hero-card { padding: 24px; }
+  .svc { display: grid; gap: 8px; align-content: start; }
+  .svc h3 { margin: 6px 0 0; }
+  .svc p { margin: 0; }
+  .svc :global(svg) { color: var(--water); }
+  .numbers { background: var(--sunk); }
+  .state-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 10px; }
+  .state-grid li { margin: 0; }
+  .state-grid a { display: grid; gap: 2px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); text-decoration: none; color: var(--ink); height: 100%; }
+  .state-grid a:hover { border-color: var(--water); }
+  .state-grid .n { font-weight: 600; }
+  .state-grid .m { font-size: 0.85rem; color: var(--ink-3); }
+  .how { list-style: none; padding: 0; margin: 24px 0 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; }
+  .how li { margin: 0; }
+  .dot { width: 44px; height: 44px; border-radius: 50%; background: var(--water-soft); color: var(--water-ink); display: grid; place-items: center; margin-bottom: 12px; }
+  .how h3 { margin-bottom: 4px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 18px; }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("[data-finder]");
+  if (form) {
+    const select = form.querySelector("select")!;
+    select.addEventListener("change", () => { if (select.value) location.href = select.value; });
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (select.value) location.href = select.value;
+    });
+  }
+</script>

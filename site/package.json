@@ -1,0 +1,23 @@
+{
+  "name": "localwatermold",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/build.mjs",
+    "build:all": "node scripts/build.mjs all",
+    "deploy": "node scripts/build.mjs all --deploy",
+    "preview": "wrangler dev --port 8787"
+  },
+  "dependencies": {
+    "astro": "5.18.2"
+  },
+  "overrides": {
+    "@rollup/pluginutils": {
+      "estree-walker": "3.0.3"
+    }
+  },
+  "devDependencies": {
+    "wrangler": "^4.151.3"
+  }
+}

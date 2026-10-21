@@ -1,0 +1,71 @@
+---
+import { S } from "../../lib/state";
+import Article from "../../layouts/Article.astro";
+---
+<Article
+  title="Water damage: what to do in the first hour"
+  seoTitle={`Water Damage: What to Do in the First Hour (${S.name} Homeowner Checklist)`}
+  description="A step-by-step checklist for the first 60 minutes after a pipe bursts, a basement floods or a toilet backs up: safety, stopping the water, protecting your claim and starting to dry."
+  eyebrow="Guide · Emergency"
+  dek="What you do in the first hour decides how much has to be torn out later. Here's the order that limits damage and keeps your insurance claim clean."
+  path="/guides/water-damage-first-hour/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "The first hour", href: "/guides/water-damage-first-hour/" }]}
+  related={[
+    { href: "/guides/water-damage-categories/", label: "Clean, gray or black water?" },
+    { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: `Filing an ${S.name} insurance claim` },
+    { href: "/tools/emergency-checklist/", label: "Printable emergency checklist" },
+  ]}
+  sources={[
+    { label: "U.S. EPA: A Brief Guide to Mold, Moisture and Your Home", href: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
+    { label: "American Red Cross: Flood safety", href: "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/flood.html" },
+    { label: `${S.name} Department of Insurance: Consumer services`, href: "https://insurance.ohio.gov/" },
+  ]}
+>
+  <h2>Minutes 0 to 5: make it safe</h2>
+  <p>Water and electricity are the first danger, not the damage. Before you step into standing water, ask three questions:</p>
+  <ul>
+    <li><strong>Is water near outlets, cords, a space heater or the electrical panel?</strong> If yes, stay out and call your electric utility to cut power at the meter.</li>
+    <li><strong>Do you smell gas?</strong> Leave the house and call your gas utility or 911 from outside.</li>
+    <li><strong>Is a ceiling sagging?</strong> Keep everyone out of the room. Waterlogged drywall can fall without warning.</li>
+  </ul>
+  <p>If the water may be sewage or floodwater, keep children and pets away and wear rubber boots and gloves.</p>
+
+  <h2>Minutes 5 to 15: stop the water</h2>
+  <ol class="steps">
+    <li><strong>Shut off the main water valve.</strong> In most {S.name} homes it's in the basement or crawl space where the line comes through the foundation wall, often next to the meter. Turn it clockwise. If you have a well, switch off the breaker for the well pump.</li>
+    <li><strong>Open a low faucet</strong> to drain what's left in the pipes.</li>
+    <li><strong>Turn off the water heater</strong> so it doesn't heat an empty tank: gas to pilot or off, electric at the breaker.</li>
+    <li><strong>For an appliance leak,</strong> close the small supply valve behind the washer, dishwasher, ice maker or toilet instead of the main.</li>
+  </ol>
+  <p>If you can't find or turn the main, many water utilities will send someone to shut it at the curb. Keep their emergency number with your other utility numbers.</p>
+
+  <h2>Minutes 15 to 30: document before you move anything</h2>
+  <p>Insurers decide claims on evidence. Before cleanup changes the scene:</p>
+  <ul>
+    <li>Take a slow video walking through every affected room, then photos of the source (the split pipe, the failed hose, the backed-up drain).</li>
+    <li>Photograph waterlines on walls and the bottoms of furniture.</li>
+    <li>Keep the failed part. Don't let anyone throw away the burst supply line or broken fitting.</li>
+    <li>Write down the time you found the water and what you did.</li>
+  </ul>
+
+  <h2>Minutes 30 to 60: protect what you can and get help moving</h2>
+  <ul>
+    <li>Move electronics, documents, photos and rugs to a dry floor.</li>
+    <li>Put aluminum foil or wood blocks under furniture legs so stain doesn't wick into carpet.</li>
+    <li>Mop and blot standing water if it's clean. Don't use a household vacuum on water.</li>
+    <li>Open windows if the weather allows, and run fans only where nothing electrical sits in water.</li>
+    <li>Call your insurer to open a claim and ask whether they require a specific mitigation company or approval before work starts.</li>
+    <li>Call a restoration company. Professional drying uses moisture meters, air movers and dehumidifiers to dry inside walls and floors, not just what you can see.</li>
+  </ul>
+
+  <h2>Why speed matters</h2>
+  <p>The EPA advises drying water-damaged materials within 24 to 48 hours to prevent mold. Clean water from a supply line also gets dirtier the longer it sits, as it picks up contaminants from flooring and walls. The faster drying starts, the more drywall, trim and flooring can usually be saved instead of replaced.</p>
+
+  <h2>What not to do</h2>
+  <ul>
+    <li>Don't turn the main breaker on or off while standing in water.</li>
+    <li>Don't use a heat gun or torch on a frozen or leaking pipe.</li>
+    <li>Don't start tearing out drywall or flooring before you've photographed it and talked to your insurer.</li>
+    <li>Don't sign an assignment of benefits or a contract you haven't read. Ask what you're agreeing to and what it costs.</li>
+  </ul>
+</Article>

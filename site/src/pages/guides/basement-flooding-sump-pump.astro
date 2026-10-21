@@ -1,0 +1,85 @@
+---
+import { S } from "../../lib/state";
+import Article from "../../layouts/Article.astro";
+import { pilotCounties } from "../../lib/data";
+import { p } from "../../lib/paths";
+
+const rainy = pilotCounties()
+  .filter((c) => c.weather)
+  .sort((a, b) => b.weather!.heavyRainDays - a.weather!.heavyRainDays)
+  .slice(0, 8);
+const M = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const peakMonth = (v: number[]) => M[v.indexOf(Math.max(...v))];
+---
+<Article
+  title="Basement flooding and sump pump failure: causes, cleanup and coverage"
+  seoTitle={`Flooded Basement in ${S.name}? Sump Pump Failure, Cleanup Steps and Insurance`}
+  description={`Why ${S.name} basements take on water, how to check a failed sump pump, what to do first, and why a flooded basement may or may not be covered by homeowners insurance.`}
+  eyebrow="Guide · Basements"
+  dek="A flooded basement can come from five different places, and each one is handled differently, by the crew and by your insurer. Start by figuring out which one it is."
+  path="/guides/basement-flooding-sump-pump/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Basement flooding", href: "/guides/basement-flooding-sump-pump/" }]}
+  related={[
+    { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: `What ${S.name} policies cover` },
+    { href: "/guides/water-damage-categories/", label: "Is it clean or contaminated water?" },
+    { href: "/guides/mold-after-water-damage/", label: "Preventing basement mold" },
+  ]}
+  sources={[
+    { label: "FloodSmart (National Flood Insurance Program)", href: "https://www.floodsmart.gov/" },
+    { label: "U.S. EPA: A Brief Guide to Mold, Moisture and Your Home", href: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
+  ]}
+>
+  <h2>Where the water is coming from</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Source</th><th>Signs</th><th>Typical coverage</th></tr></thead>
+      <tbody>
+        <tr><td>Sump pump failure</td><td>Water around the sump pit, pump not running, power outage during a storm</td><td>Water backup endorsement</td></tr>
+        <tr><td>Sewer or floor drain backup</td><td>Water coming up through the floor drain or lowest toilet, sewage smell</td><td>Water backup endorsement</td></tr>
+        <tr><td>Groundwater seepage</td><td>Damp walls, water along the wall-floor joint, worse after days of rain</td><td>Usually excluded</td></tr>
+        <tr><td>Surface flooding</td><td>Water coming in through window wells or doors from outside</td><td>Flood policy only</td></tr>
+        <tr><td>Plumbing or appliance failure</td><td>Water heater, washer hose, or supply line leaking</td><td>Usually covered</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>First steps</h2>
+  <ol class="steps">
+    <li><strong>Don't wade in if the water could touch outlets or the panel.</strong> Call the electric utility to disconnect power first.</li>
+    <li><strong>If it's sewage, treat it as Category 3.</strong> Stop using drains and toilets, keep people and pets out, and let professionals handle porous materials.</li>
+    <li><strong>Check the sump pump.</strong> Look at the plug, the breaker or GFCI outlet, whether the float switch is stuck, and whether the discharge line outside is frozen or blocked.</li>
+    <li><strong>Photograph the water level</strong> on walls, the sump pit, the drain and damaged belongings.</li>
+    <li><strong>Get drying started the same day.</strong> Basements are slow to dry and quick to grow mold.</li>
+    <li><strong>Have a furnace or water heater that sat in water checked</strong> before you relight it.</li>
+  </ol>
+
+  <h2>When {S.name} basements flood</h2>
+  <p>Heavy rain days, an inch or more in 24 hours, are when sump pumps run hardest and storm sewers back up. In the counties we cover, these are the places that average the most of them:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>County</th><th>Days with 1"+ of rain per year</th><th>Wettest month</th><th>Average yearly precipitation</th></tr></thead>
+      <tbody>
+        {rainy.map((c) => (
+          <tr>
+            <td><a href={p(`/counties/${c.slug}/`)}>{c.name}</a></td>
+            <td>{c.weather!.heavyRainDays}</td>
+            <td>{peakMonth(c.weather!.monthlyHeavyRain)}</td>
+            <td>{c.weather!.annualPrecip} in</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="small faint">NOAA nClimGrid-Daily county averages, {rainy[0].weather!.period}.</p>
+  <p>Late winter and early spring add a second risk: snowmelt on frozen ground can't soak in, so it runs toward foundations.</p>
+
+  <h2>Keeping it from happening again</h2>
+  <ul>
+    <li>Test the sump pump each spring by pouring a bucket of water into the pit.</li>
+    <li>Add a battery backup or water-powered backup pump. Storms that knock out power are the same storms that fill the pit.</li>
+    <li>Keep downspouts discharging several feet from the foundation, and make sure soil slopes away from the house.</li>
+    <li>Ask a plumber about a backwater valve if your floor drain has backed up before.</li>
+    <li>Run a dehumidifier in summer to keep basement humidity under 60%.</li>
+    <li>Ask your agent about adding water backup coverage, and whether you need flood insurance.</li>
+  </ul>
+</Article>

@@ -1,0 +1,11 @@
+// One static-assets Worker for the whole site. Build first: node scripts/build.mjs all
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "localwatermold",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist/site",
+    "not_found_handling": "404-page",
+    "html_handling": "force-trailing-slash"
+  }
+}

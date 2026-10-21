@@ -1,0 +1,39 @@
+---
+import Page from "../../src/layouts/Page.astro";
+import { SITE } from "../../src/config";
+import { DATA_META as META, TOTALS } from "../../src/lib/national";
+---
+<Page title="Data sources and methodology" seoTitle={`Data Sources and Methodology | ${SITE.brand}`} description="Where the county housing and weather numbers on this site come from, how they're calculated, and their limits." eyebrow="About" path="/data-sources/">
+  <p class="lede">The numbers on our county pages come from public data. Here's exactly what we use and how to read it.</p>
+
+  <h2>Housing and population</h2>
+  <p>U.S. Census Bureau, American Community Survey (ACS) {META.acsRelease} estimates covering {META.acsYears}, accessed through Census Reporter. Tables used:</p>
+  <ul>
+    <li>B01003 total population, B01002 median age</li>
+    <li>B25001 housing units, B25002 occupancy, B25003 tenure</li>
+    <li>B25024 units in structure (single-family and mobile homes)</li>
+    <li>B25034 and B25035 year structure built</li>
+    <li>B25040 house heating fuel</li>
+    <li>B25077 median home value, B19013 median household income</li>
+  </ul>
+  <p>ACS figures are survey estimates with margins of error, which are larger in smaller counties. A "state county median" means the median across all of that state's counties, not the statewide total.</p>
+
+  <h2>Weather</h2>
+  <p>Daily county averages for {META.weatherPeriod} from NOAA's nClimGrid-Daily dataset (EpiNOAA county series), published by NOAA's National Centers for Environmental Information on the AWS Open Data registry. nClimGrid interpolates daily station observations onto a roughly 5-kilometer grid, and the county series averages that grid over each county. From daily minimum and maximum temperature and precipitation we count:</p>
+  <ul>
+    <li><strong>Freezing nights:</strong> days with a low at or below 32°F.</li>
+    <li><strong>Pipe-freeze nights:</strong> days with a low at or below 20°F.</li>
+    <li><strong>Freeze-thaw days:</strong> a low at or below 32°F and a high above 32°F on the same day.</li>
+    <li><strong>Longest cold spell:</strong> most consecutive days with a high at or below 32°F.</li>
+    <li><strong>Heavy-rain days:</strong> days with 1 inch or more of precipitation, plus the wettest single day and three-day total.</li>
+    <li><strong>Muggy nights:</strong> days with a low of 65°F or more, a simple sign of humid summer air.</li>
+    <li><strong>First and last freeze:</strong> the average date of the first fall and last spring night at or below 32°F.</li>
+  </ul>
+  <p>Because the values are averaged across each county, low spots, ridgetops and lakeshores can be colder or warmer than the county figure. The data has no humidity or snowfall, so we don't publish those.</p>
+
+  <h2>Boundaries and neighbors</h2>
+  <p>County and place boundaries are from Census TIGER files ({META.boundarySource}). Neighboring counties share a boundary. Communities are Census places whose center falls inside the county, ranked by population.</p>
+
+  <h2>Coverage</h2>
+  <p>We currently publish {TOTALS.countyPages.toLocaleString("en-US")} county pages across {TOTALS.states} states and add more as the data and call coverage are ready. Data last generated {META.generated}.</p>
+</Page>

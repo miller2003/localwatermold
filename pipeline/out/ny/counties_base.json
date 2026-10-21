@@ -1,0 +1,5830 @@
+{
+ "meta": {
+  "acsRelease": "ACS 2024 5-year",
+  "acsYears": "2020-2024",
+  "countyCount": 57,
+  "state": "New York",
+  "stateAbbr": "NY"
+ },
+ "counties": [
+  {
+   "geoid": "05000US36001",
+   "fips": "36001",
+   "name": "Albany County",
+   "short": "Albany",
+   "slug": "albany",
+   "seat": "Albany",
+   "founded": 1683,
+   "areaSqMi": 523,
+   "lat": 42.6147,
+   "lon": -73.9784,
+   "population": 317018,
+   "medianAge": 38.4,
+   "housingUnits": 147662,
+   "vacancyPct": 8.8,
+   "ownerPct": 56.6,
+   "singleFamilyPct": 54.2,
+   "mobileHomePct": 1.2,
+   "medianYearBuilt": 1964,
+   "builtPre1960Pct": 45.6,
+   "builtPre1980Pct": 68.4,
+   "built2000PlusPct": 13.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 26.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 19.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 22.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 18.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.5
+    }
+   ],
+   "heatGasPct": 64.5,
+   "heatElectricPct": 23.5,
+   "heatPropanePct": 3.4,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 294600,
+   "medianIncome": 85333,
+   "adjacent": [
+    "greene",
+    "rensselaer",
+    "saratoga",
+    "schenectady",
+    "schoharie"
+   ],
+   "places": [
+    {
+     "name": "Albany",
+     "population": 100492
+    },
+    {
+     "name": "Cohoes",
+     "population": 18159
+    },
+    {
+     "name": "Latham",
+     "population": 13802
+    },
+    {
+     "name": "Roessleville",
+     "population": 10968
+    },
+    {
+     "name": "Loudonville",
+     "population": 10527
+    },
+    {
+     "name": "Watervliet",
+     "population": 10287
+    },
+    {
+     "name": "Westmere",
+     "population": 8334
+    },
+    {
+     "name": "Colonie",
+     "population": 7702
+    },
+    {
+     "name": "Menands",
+     "population": 4505
+    },
+    {
+     "name": "Ravena",
+     "population": 3243
+    },
+    {
+     "name": "Green Island",
+     "population": 2970
+    },
+    {
+     "name": "Voorheesville",
+     "population": 2824
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36003",
+   "fips": "36003",
+   "name": "Allegany County",
+   "short": "Allegany",
+   "slug": "allegany",
+   "seat": "Belmont",
+   "founded": 1806,
+   "areaSqMi": 1030,
+   "lat": 42.2022,
+   "lon": -78.0244,
+   "population": 47159,
+   "medianAge": 38.7,
+   "housingUnits": 23540,
+   "vacancyPct": 24.8,
+   "ownerPct": 79.3,
+   "singleFamilyPct": 72.7,
+   "mobileHomePct": 16.1,
+   "medianYearBuilt": 1966,
+   "builtPre1960Pct": 44.5,
+   "builtPre1980Pct": 68.0,
+   "built2000PlusPct": 13.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 31.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 19.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.1
+    }
+   ],
+   "heatGasPct": 53.3,
+   "heatElectricPct": 12.9,
+   "heatPropanePct": 14.6,
+   "heatWoodPct": 10.7,
+   "medianHomeValue": 101700,
+   "medianIncome": 62869,
+   "adjacent": [
+    "cattaraugus",
+    "livingston",
+    "steuben",
+    "wyoming"
+   ],
+   "places": [
+    {
+     "name": "Wellsville",
+     "population": 4923
+    },
+    {
+     "name": "Alfred",
+     "population": 4819
+    },
+    {
+     "name": "Cuba",
+     "population": 1807
+    },
+    {
+     "name": "Houghton",
+     "population": 1728
+    },
+    {
+     "name": "Bolivar",
+     "population": 1124
+    },
+    {
+     "name": "Belmont",
+     "population": 955
+    },
+    {
+     "name": "Andover",
+     "population": 915
+    },
+    {
+     "name": "Scio",
+     "population": 727
+    },
+    {
+     "name": "Friendship",
+     "population": 712
+    },
+    {
+     "name": "Richburg",
+     "population": 650
+    },
+    {
+     "name": "Stannards",
+     "population": 642
+    },
+    {
+     "name": "Belfast",
+     "population": 633
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36007",
+   "fips": "36007",
+   "name": "Broome County",
+   "short": "Broome",
+   "slug": "broome",
+   "seat": "Binghamton",
+   "founded": 1806,
+   "areaSqMi": 706,
+   "lat": 42.2032,
+   "lon": -75.861,
+   "population": 197378,
+   "medianAge": 39.2,
+   "housingUnits": 93164,
+   "vacancyPct": 12.0,
+   "ownerPct": 64.5,
+   "singleFamilyPct": 62.5,
+   "mobileHomePct": 4.4,
+   "medianYearBuilt": 1958,
+   "builtPre1960Pct": 52.3,
+   "builtPre1980Pct": 78.5,
+   "built2000PlusPct": 6.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 28.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 24.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 14.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 6.9
+    }
+   ],
+   "heatGasPct": 59.4,
+   "heatElectricPct": 18.4,
+   "heatPropanePct": 8.4,
+   "heatWoodPct": 2.3,
+   "medianHomeValue": 154900,
+   "medianIncome": 62616,
+   "adjacent": [
+    "chenango",
+    "cortland",
+    "delaware",
+    "tioga"
+   ],
+   "places": [
+    {
+     "name": "Binghamton",
+     "population": 47151
+    },
+    {
+     "name": "Johnson City",
+     "population": 14940
+    },
+    {
+     "name": "Endicott",
+     "population": 13387
+    },
+    {
+     "name": "Endwell",
+     "population": 11546
+    },
+    {
+     "name": "Binghamton University",
+     "population": 7449
+    },
+    {
+     "name": "Chenango Bridge",
+     "population": 3116
+    },
+    {
+     "name": "Port Dickinson",
+     "population": 1635
+    },
+    {
+     "name": "Windsor",
+     "population": 1128
+    },
+    {
+     "name": "Whitney Point",
+     "population": 965
+    },
+    {
+     "name": "Glen Aubrey",
+     "population": 311
+    },
+    {
+     "name": "Lisle",
+     "population": 239
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36009",
+   "fips": "36009",
+   "name": "Cattaraugus County",
+   "short": "Cattaraugus",
+   "slug": "cattaraugus",
+   "seat": "Little Valley",
+   "founded": 1817,
+   "areaSqMi": 1308,
+   "lat": 42.2625,
+   "lon": -78.6841,
+   "population": 76145,
+   "medianAge": 42.8,
+   "housingUnits": 40356,
+   "vacancyPct": 21.0,
+   "ownerPct": 75.2,
+   "singleFamilyPct": 73.0,
+   "mobileHomePct": 11.0,
+   "medianYearBuilt": 1960,
+   "builtPre1960Pct": 49.8,
+   "builtPre1980Pct": 68.8,
+   "built2000PlusPct": 10.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 35.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 20.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 10.8
+    }
+   ],
+   "heatGasPct": 52.9,
+   "heatElectricPct": 14.6,
+   "heatPropanePct": 15.3,
+   "heatWoodPct": 8.2,
+   "medianHomeValue": 113100,
+   "medianIncome": 59540,
+   "adjacent": [
+    "allegany",
+    "chautauqua",
+    "erie",
+    "wyoming"
+   ],
+   "places": [
+    {
+     "name": "Olean",
+     "population": 13738
+    },
+    {
+     "name": "Salamanca",
+     "population": 5846
+    },
+    {
+     "name": "Gowanda",
+     "population": 2683
+    },
+    {
+     "name": "St. Bonaventure",
+     "population": 1976
+    },
+    {
+     "name": "Franklinville",
+     "population": 1938
+    },
+    {
+     "name": "Allegany",
+     "population": 1740
+    },
+    {
+     "name": "Weston Mills",
+     "population": 1431
+    },
+    {
+     "name": "Delevan",
+     "population": 1275
+    },
+    {
+     "name": "Little Valley",
+     "population": 1243
+    },
+    {
+     "name": "Yorkshire",
+     "population": 1138
+    },
+    {
+     "name": "Cattaraugus",
+     "population": 1034
+    },
+    {
+     "name": "Randolph",
+     "population": 953
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36011",
+   "fips": "36011",
+   "name": "Cayuga County",
+   "short": "Cayuga",
+   "slug": "cayuga",
+   "seat": "Auburn",
+   "founded": 1799,
+   "areaSqMi": 692,
+   "lat": 43.1998,
+   "lon": -76.5936,
+   "population": 75102,
+   "medianAge": 43.8,
+   "housingUnits": 36829,
+   "vacancyPct": 14.4,
+   "ownerPct": 71.4,
+   "singleFamilyPct": 68.5,
+   "mobileHomePct": 9.2,
+   "medianYearBuilt": 1958,
+   "builtPre1960Pct": 52.2,
+   "builtPre1980Pct": 71.4,
+   "built2000PlusPct": 11.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 36.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 17.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 11.0
+    }
+   ],
+   "heatGasPct": 47.8,
+   "heatElectricPct": 15.4,
+   "heatPropanePct": 15.1,
+   "heatWoodPct": 5.8,
+   "medianHomeValue": 171000,
+   "medianIncome": 67904,
+   "adjacent": [
+    "cortland",
+    "jefferson",
+    "onondaga",
+    "oswego",
+    "seneca",
+    "tompkins",
+    "wayne"
+   ],
+   "places": [
+    {
+     "name": "Auburn",
+     "population": 26285
+    },
+    {
+     "name": "Melrose Park",
+     "population": 1960
+    },
+    {
+     "name": "Weedsport",
+     "population": 1954
+    },
+    {
+     "name": "Moravia",
+     "population": 1385
+    },
+    {
+     "name": "Union Springs",
+     "population": 1255
+    },
+    {
+     "name": "Fair Haven",
+     "population": 1013
+    },
+    {
+     "name": "Port Byron",
+     "population": 900
+    },
+    {
+     "name": "Aurora",
+     "population": 651
+    },
+    {
+     "name": "Cayuga",
+     "population": 575
+    },
+    {
+     "name": "Cato",
+     "population": 515
+    },
+    {
+     "name": "Meridian",
+     "population": 220
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36013",
+   "fips": "36013",
+   "name": "Chautauqua County",
+   "short": "Chautauqua",
+   "slug": "chautauqua",
+   "seat": "Mayville",
+   "founded": 1811,
+   "areaSqMi": 1060,
+   "lat": 42.3015,
+   "lon": -79.4111,
+   "population": 125544,
+   "medianAge": 42.9,
+   "housingUnits": 66476,
+   "vacancyPct": 19.7,
+   "ownerPct": 68.9,
+   "singleFamilyPct": 69.9,
+   "mobileHomePct": 6.4,
+   "medianYearBuilt": 1953,
+   "builtPre1960Pct": 59.0,
+   "builtPre1980Pct": 77.4,
+   "built2000PlusPct": 8.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 39.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 19.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 18.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 13.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 8.6
+    }
+   ],
+   "heatGasPct": 66.6,
+   "heatElectricPct": 15.6,
+   "heatPropanePct": 9.5,
+   "heatWoodPct": 3.8,
+   "medianHomeValue": 127900,
+   "medianIncome": 58351,
+   "adjacent": [
+    "cattaraugus",
+    "erie"
+   ],
+   "places": [
+    {
+     "name": "Jamestown",
+     "population": 28188
+    },
+    {
+     "name": "Dunkirk",
+     "population": 12549
+    },
+    {
+     "name": "Fredonia",
+     "population": 9467
+    },
+    {
+     "name": "Westfield",
+     "population": 3185
+    },
+    {
+     "name": "Lakewood",
+     "population": 2957
+    },
+    {
+     "name": "Silver Creek",
+     "population": 2604
+    },
+    {
+     "name": "Jamestown West",
+     "population": 2424
+    },
+    {
+     "name": "Falconer",
+     "population": 2149
+    },
+    {
+     "name": "Frewsburg",
+     "population": 1792
+    },
+    {
+     "name": "Brocton",
+     "population": 1404
+    },
+    {
+     "name": "Celoron",
+     "population": 1397
+    },
+    {
+     "name": "Mayville",
+     "population": 1268
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36015",
+   "fips": "36015",
+   "name": "Chemung County",
+   "short": "Chemung",
+   "slug": "chemung",
+   "seat": "Elmira",
+   "founded": 1836,
+   "areaSqMi": 407,
+   "lat": 42.1469,
+   "lon": -76.7622,
+   "population": 82147,
+   "medianAge": 42.0,
+   "housingUnits": 39252,
+   "vacancyPct": 10.2,
+   "ownerPct": 68.4,
+   "singleFamilyPct": 69.8,
+   "mobileHomePct": 4.4,
+   "medianYearBuilt": 1955,
+   "builtPre1960Pct": 57.6,
+   "builtPre1980Pct": 81.7,
+   "built2000PlusPct": 8.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 34.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 23.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 24.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 10.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 8.3
+    }
+   ],
+   "heatGasPct": 69.2,
+   "heatElectricPct": 15.2,
+   "heatPropanePct": 6.1,
+   "heatWoodPct": 2.5,
+   "medianHomeValue": 141100,
+   "medianIncome": 63716,
+   "adjacent": [
+    "schuyler",
+    "steuben",
+    "tioga"
+   ],
+   "places": [
+    {
+     "name": "Elmira",
+     "population": 26257
+    },
+    {
+     "name": "Southport",
+     "population": 6450
+    },
+    {
+     "name": "Horseheads",
+     "population": 6449
+    },
+    {
+     "name": "Big Flats",
+     "population": 5651
+    },
+    {
+     "name": "West Elmira",
+     "population": 4750
+    },
+    {
+     "name": "Elmira Heights",
+     "population": 4110
+    },
+    {
+     "name": "Horseheads North",
+     "population": 2676
+    },
+    {
+     "name": "Pine Valley",
+     "population": 721
+    },
+    {
+     "name": "Breesport",
+     "population": 628
+    },
+    {
+     "name": "Van Etten",
+     "population": 587
+    },
+    {
+     "name": "Erin",
+     "population": 473
+    },
+    {
+     "name": "Wellsburg",
+     "population": 448
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36017",
+   "fips": "36017",
+   "name": "Chenango County",
+   "short": "Chenango",
+   "slug": "chenango",
+   "seat": "Norwich",
+   "founded": 1798,
+   "areaSqMi": 893,
+   "lat": 42.4671,
+   "lon": -75.6345,
+   "population": 46321,
+   "medianAge": 45.0,
+   "housingUnits": 24586,
+   "vacancyPct": 19.1,
+   "ownerPct": 75.4,
+   "singleFamilyPct": 65.7,
+   "mobileHomePct": 18.5,
+   "medianYearBuilt": 1967,
+   "builtPre1960Pct": 43.9,
+   "builtPre1980Pct": 64.8,
+   "built2000PlusPct": 12.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 31.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 12.0
+    }
+   ],
+   "heatGasPct": 15.1,
+   "heatElectricPct": 18.5,
+   "heatPropanePct": 16.4,
+   "heatWoodPct": 12.0,
+   "medianHomeValue": 137900,
+   "medianIncome": 62948,
+   "adjacent": [
+    "broome",
+    "cortland",
+    "delaware",
+    "madison",
+    "otsego"
+   ],
+   "places": [
+    {
+     "name": "Norwich",
+     "population": 6782
+    },
+    {
+     "name": "Greene",
+     "population": 1567
+    },
+    {
+     "name": "Oxford",
+     "population": 1514
+    },
+    {
+     "name": "Sherburne",
+     "population": 1422
+    },
+    {
+     "name": "Afton",
+     "population": 1225
+    },
+    {
+     "name": "Bainbridge",
+     "population": 1181
+    },
+    {
+     "name": "New Berlin",
+     "population": 989
+    },
+    {
+     "name": "Guilford",
+     "population": 385
+    },
+    {
+     "name": "Smithville Flats",
+     "population": 366
+    },
+    {
+     "name": "Smyrna",
+     "population": 148
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36019",
+   "fips": "36019",
+   "name": "Clinton County",
+   "short": "Clinton",
+   "slug": "clinton",
+   "seat": "Plattsburgh",
+   "founded": 1788,
+   "areaSqMi": 1038,
+   "lat": 44.7255,
+   "lon": -73.6772,
+   "population": 78493,
+   "medianAge": 41.9,
+   "housingUnits": 37658,
+   "vacancyPct": 10.9,
+   "ownerPct": 69.4,
+   "singleFamilyPct": 64.4,
+   "mobileHomePct": 12.3,
+   "medianYearBuilt": 1974,
+   "builtPre1960Pct": 37.0,
+   "builtPre1980Pct": 57.4,
+   "built2000PlusPct": 18.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 20.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 24.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 18.0
+    }
+   ],
+   "heatGasPct": 12.3,
+   "heatElectricPct": 34.5,
+   "heatPropanePct": 8.0,
+   "heatWoodPct": 5.9,
+   "medianHomeValue": 180600,
+   "medianIncome": 71224,
+   "adjacent": [
+    "essex",
+    "franklin"
+   ],
+   "places": [
+    {
+     "name": "Plattsburgh",
+     "population": 19830
+    },
+    {
+     "name": "Dannemora",
+     "population": 2684
+    },
+    {
+     "name": "Keeseville",
+     "population": 2570
+    },
+    {
+     "name": "Rouses Point",
+     "population": 2414
+    },
+    {
+     "name": "Peru",
+     "population": 1965
+    },
+    {
+     "name": "Morrisonville",
+     "population": 1950
+    },
+    {
+     "name": "Cumberland Head",
+     "population": 1535
+    },
+    {
+     "name": "Plattsburgh West",
+     "population": 1328
+    },
+    {
+     "name": "Champlain",
+     "population": 1270
+    },
+    {
+     "name": "West Chazy",
+     "population": 867
+    },
+    {
+     "name": "Altona",
+     "population": 544
+    },
+    {
+     "name": "Cadyville",
+     "population": 479
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36021",
+   "fips": "36021",
+   "name": "Columbia County",
+   "short": "Columbia",
+   "slug": "columbia",
+   "seat": "Hudson",
+   "founded": 1786,
+   "areaSqMi": 635,
+   "lat": 42.2372,
+   "lon": -73.6465,
+   "population": 61100,
+   "medianAge": 49.8,
+   "housingUnits": 33393,
+   "vacancyPct": 20.3,
+   "ownerPct": 76.3,
+   "singleFamilyPct": 75.6,
+   "mobileHomePct": 7.7,
+   "medianYearBuilt": 1966,
+   "builtPre1960Pct": 44.1,
+   "builtPre1980Pct": 66.2,
+   "built2000PlusPct": 15.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 31.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 22.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 18.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.3
+    }
+   ],
+   "heatGasPct": 13.1,
+   "heatElectricPct": 15.4,
+   "heatPropanePct": 19.0,
+   "heatWoodPct": 5.1,
+   "medianHomeValue": 347100,
+   "medianIncome": 81528,
+   "adjacent": [
+    "dutchess",
+    "greene",
+    "rensselaer",
+    "ulster"
+   ],
+   "places": [
+    {
+     "name": "Hudson",
+     "population": 5865
+    },
+    {
+     "name": "Lorenz Park",
+     "population": 1991
+    },
+    {
+     "name": "Valatie",
+     "population": 1796
+    },
+    {
+     "name": "Chatham",
+     "population": 1669
+    },
+    {
+     "name": "Philmont",
+     "population": 1439
+    },
+    {
+     "name": "Niverville",
+     "population": 1181
+    },
+    {
+     "name": "Kinderhook",
+     "population": 1072
+    },
+    {
+     "name": "Stottville",
+     "population": 1045
+    },
+    {
+     "name": "Germantown",
+     "population": 1042
+    },
+    {
+     "name": "Claverack-Red Mills",
+     "population": 925
+    },
+    {
+     "name": "Copake Lake",
+     "population": 784
+    },
+    {
+     "name": "Taconic Shores",
+     "population": 606
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36023",
+   "fips": "36023",
+   "name": "Cortland County",
+   "short": "Cortland",
+   "slug": "cortland",
+   "seat": "Cortland",
+   "founded": 1808,
+   "areaSqMi": 499,
+   "lat": 42.6686,
+   "lon": -76.077,
+   "population": 46246,
+   "medianAge": 37.0,
+   "housingUnits": 20841,
+   "vacancyPct": 8.8,
+   "ownerPct": 66.3,
+   "singleFamilyPct": 64.2,
+   "mobileHomePct": 7.6,
+   "medianYearBuilt": 1961,
+   "builtPre1960Pct": 49.3,
+   "builtPre1980Pct": 74.1,
+   "built2000PlusPct": 8.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 33.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 24.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 17.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 8.2
+    }
+   ],
+   "heatGasPct": 45.0,
+   "heatElectricPct": 18.0,
+   "heatPropanePct": 12.1,
+   "heatWoodPct": 8.0,
+   "medianHomeValue": 162100,
+   "medianIncome": 70418,
+   "adjacent": [
+    "broome",
+    "cayuga",
+    "chenango",
+    "onondaga",
+    "tioga",
+    "tompkins"
+   ],
+   "places": [
+    {
+     "name": "Cortland",
+     "population": 17450
+    },
+    {
+     "name": "Homer",
+     "population": 3114
+    },
+    {
+     "name": "Munsons Corners",
+     "population": 2662
+    },
+    {
+     "name": "Cortland West",
+     "population": 1020
+    },
+    {
+     "name": "McGraw",
+     "population": 974
+    },
+    {
+     "name": "Marathon",
+     "population": 952
+    },
+    {
+     "name": "Virgil",
+     "population": 220
+    },
+    {
+     "name": "Blodgett Mills",
+     "population": 212
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36025",
+   "fips": "36025",
+   "name": "Delaware County",
+   "short": "Delaware",
+   "slug": "delaware",
+   "seat": "Delhi",
+   "founded": 1797,
+   "areaSqMi": 1443,
+   "lat": 42.1853,
+   "lon": -74.9568,
+   "population": 44487,
+   "medianAge": 48.8,
+   "housingUnits": 30057,
+   "vacancyPct": 36.1,
+   "ownerPct": 77.3,
+   "singleFamilyPct": 76.0,
+   "mobileHomePct": 12.6,
+   "medianYearBuilt": 1972,
+   "builtPre1960Pct": 40.3,
+   "builtPre1980Pct": 60.8,
+   "built2000PlusPct": 13.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 30.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.5
+    }
+   ],
+   "heatGasPct": 12.1,
+   "heatElectricPct": 14.4,
+   "heatPropanePct": 16.8,
+   "heatWoodPct": 13.8,
+   "medianHomeValue": 183100,
+   "medianIncome": 63337,
+   "adjacent": [
+    "broome",
+    "chenango",
+    "greene",
+    "otsego",
+    "schoharie",
+    "sullivan",
+    "ulster"
+   ],
+   "places": [
+    {
+     "name": "Sidney",
+     "population": 3931
+    },
+    {
+     "name": "Delhi",
+     "population": 3136
+    },
+    {
+     "name": "Walton",
+     "population": 2423
+    },
+    {
+     "name": "Deposit",
+     "population": 1424
+    },
+    {
+     "name": "Stamford",
+     "population": 1053
+    },
+    {
+     "name": "Hancock",
+     "population": 745
+    },
+    {
+     "name": "Margaretville",
+     "population": 617
+    },
+    {
+     "name": "Franklin",
+     "population": 424
+    },
+    {
+     "name": "Davenport Center",
+     "population": 414
+    },
+    {
+     "name": "Hobart",
+     "population": 409
+    },
+    {
+     "name": "Bloomville",
+     "population": 289
+    },
+    {
+     "name": "Downsville",
+     "population": 163
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36027",
+   "fips": "36027",
+   "name": "Dutchess County",
+   "short": "Dutchess",
+   "slug": "dutchess",
+   "seat": "Poughkeepsie",
+   "founded": 1683,
+   "areaSqMi": 796,
+   "lat": 41.7646,
+   "lon": -73.7287,
+   "population": 298220,
+   "medianAge": 42.5,
+   "housingUnits": 123169,
+   "vacancyPct": 5.6,
+   "ownerPct": 69.2,
+   "singleFamilyPct": 68.5,
+   "mobileHomePct": 3.1,
+   "medianYearBuilt": 1971,
+   "builtPre1960Pct": 34.5,
+   "builtPre1980Pct": 63.7,
+   "built2000PlusPct": 14.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 17.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 21.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 14.9
+    }
+   ],
+   "heatGasPct": 28.3,
+   "heatElectricPct": 17.2,
+   "heatPropanePct": 6.7,
+   "heatWoodPct": 1.6,
+   "medianHomeValue": 400600,
+   "medianIncome": 99478,
+   "adjacent": [
+    "columbia",
+    "orange",
+    "putnam",
+    "ulster"
+   ],
+   "places": [
+    {
+     "name": "Poughkeepsie",
+     "population": 31958
+    },
+    {
+     "name": "Beacon",
+     "population": 14834
+    },
+    {
+     "name": "Myers Corner",
+     "population": 10877
+    },
+    {
+     "name": "Fairview",
+     "population": 6213
+    },
+    {
+     "name": "Wappingers Falls",
+     "population": 5761
+    },
+    {
+     "name": "Spackenkill",
+     "population": 4279
+    },
+    {
+     "name": "Haviland",
+     "population": 3923
+    },
+    {
+     "name": "Vassar College",
+     "population": 3529
+    },
+    {
+     "name": "Red Oaks Mill",
+     "population": 3254
+    },
+    {
+     "name": "Brinckerhoff",
+     "population": 2813
+    },
+    {
+     "name": "Arlington",
+     "population": 2806
+    },
+    {
+     "name": "Crown Heights",
+     "population": 2718
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36029",
+   "fips": "36029",
+   "name": "Erie County",
+   "short": "Erie",
+   "slug": "erie",
+   "seat": "Buffalo",
+   "founded": 1821,
+   "areaSqMi": 1043,
+   "lat": 42.737,
+   "lon": -78.8212,
+   "population": 950622,
+   "medianAge": 40.4,
+   "housingUnits": 441214,
+   "vacancyPct": 7.2,
+   "ownerPct": 65.8,
+   "singleFamilyPct": 62.1,
+   "mobileHomePct": 1.5,
+   "medianYearBuilt": 1957,
+   "builtPre1960Pct": 55.1,
+   "builtPre1980Pct": 76.9,
+   "built2000PlusPct": 9.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 29.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 25.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 13.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 9.9
+    }
+   ],
+   "heatGasPct": 86.8,
+   "heatElectricPct": 8.7,
+   "heatPropanePct": 2.0,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 233800,
+   "medianIncome": 72839,
+   "adjacent": [
+    "cattaraugus",
+    "chautauqua",
+    "genesee",
+    "niagara",
+    "wyoming"
+   ],
+   "places": [
+    {
+     "name": "Buffalo",
+     "population": 276854
+    },
+    {
+     "name": "Cheektowaga",
+     "population": 76056
+    },
+    {
+     "name": "Tonawanda Town",
+     "population": 56806
+    },
+    {
+     "name": "West Seneca",
+     "population": 45303
+    },
+    {
+     "name": "Lackawanna",
+     "population": 19753
+    },
+    {
+     "name": "Kenmore",
+     "population": 15044
+    },
+    {
+     "name": "Tonawanda",
+     "population": 15030
+    },
+    {
+     "name": "Depew",
+     "population": 15000
+    },
+    {
+     "name": "Eggertsville",
+     "population": 14894
+    },
+    {
+     "name": "Lancaster",
+     "population": 10113
+    },
+    {
+     "name": "Hamburg",
+     "population": 9792
+    },
+    {
+     "name": "University at Buffalo",
+     "population": 7020
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36031",
+   "fips": "36031",
+   "name": "Essex County",
+   "short": "Essex",
+   "slug": "essex",
+   "seat": "Elizabethtown",
+   "founded": 1799,
+   "areaSqMi": 1794,
+   "lat": 44.1477,
+   "lon": -73.7491,
+   "population": 36973,
+   "medianAge": 49.9,
+   "housingUnits": 25484,
+   "vacancyPct": 35.9,
+   "ownerPct": 77.3,
+   "singleFamilyPct": 80.7,
+   "mobileHomePct": 5.9,
+   "medianYearBuilt": 1969,
+   "builtPre1960Pct": 43.3,
+   "builtPre1980Pct": 62.5,
+   "built2000PlusPct": 16.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 29.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 20.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 16.6
+    }
+   ],
+   "heatGasPct": 3.9,
+   "heatElectricPct": 21.1,
+   "heatPropanePct": 16.9,
+   "heatWoodPct": 11.3,
+   "medianHomeValue": 211900,
+   "medianIncome": 71661,
+   "adjacent": [
+    "clinton",
+    "franklin",
+    "hamilton",
+    "warren",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Ticonderoga",
+     "population": 3260
+    },
+    {
+     "name": "Lake Placid",
+     "population": 2306
+    },
+    {
+     "name": "Port Henry",
+     "population": 1410
+    },
+    {
+     "name": "Mineville",
+     "population": 1206
+    },
+    {
+     "name": "Wilmington",
+     "population": 904
+    },
+    {
+     "name": "Schroon Lake",
+     "population": 898
+    },
+    {
+     "name": "Elizabethtown",
+     "population": 721
+    },
+    {
+     "name": "Willsboro",
+     "population": 661
+    },
+    {
+     "name": "Willsboro Point",
+     "population": 646
+    },
+    {
+     "name": "Westport",
+     "population": 403
+    },
+    {
+     "name": "Witherbee",
+     "population": 202
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36033",
+   "fips": "36033",
+   "name": "Franklin County",
+   "short": "Franklin",
+   "slug": "franklin",
+   "seat": "Malone",
+   "founded": 1808,
+   "areaSqMi": 1629,
+   "lat": 44.5023,
+   "lon": -74.2482,
+   "population": 46696,
+   "medianAge": 42.0,
+   "housingUnits": 25494,
+   "vacancyPct": 23.5,
+   "ownerPct": 72.5,
+   "singleFamilyPct": 71.6,
+   "mobileHomePct": 11.5,
+   "medianYearBuilt": 1967,
+   "builtPre1960Pct": 46.2,
+   "builtPre1980Pct": 62.9,
+   "built2000PlusPct": 14.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 35.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 16.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 22.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 14.8
+    }
+   ],
+   "heatGasPct": 4.1,
+   "heatElectricPct": 15.0,
+   "heatPropanePct": 16.8,
+   "heatWoodPct": 11.0,
+   "medianHomeValue": 145400,
+   "medianIncome": 65151,
+   "adjacent": [
+    "clinton",
+    "essex",
+    "hamilton",
+    "st-lawrence"
+   ],
+   "places": [
+    {
+     "name": "Malone",
+     "population": 5429
+    },
+    {
+     "name": "Saranac Lake",
+     "population": 4965
+    },
+    {
+     "name": "Akwesasne",
+     "population": 4089
+    },
+    {
+     "name": "Tupper Lake",
+     "population": 2929
+    },
+    {
+     "name": "Fort Covington",
+     "population": 1041
+    },
+    {
+     "name": "Chateaugay",
+     "population": 724
+    },
+    {
+     "name": "Paul Smiths",
+     "population": 623
+    },
+    {
+     "name": "Brushton",
+     "population": 504
+    },
+    {
+     "name": "St. Regis Falls",
+     "population": 316
+    },
+    {
+     "name": "Burke",
+     "population": 165
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36035",
+   "fips": "36035",
+   "name": "Fulton County",
+   "short": "Fulton",
+   "slug": "fulton",
+   "seat": "Johnstown",
+   "founded": 1838,
+   "areaSqMi": 495,
+   "lat": 43.1349,
+   "lon": -74.4268,
+   "population": 52487,
+   "medianAge": 44.1,
+   "housingUnits": 28199,
+   "vacancyPct": 18.9,
+   "ownerPct": 71.4,
+   "singleFamilyPct": 67.2,
+   "mobileHomePct": 8.6,
+   "medianYearBuilt": 1954,
+   "builtPre1960Pct": 55.8,
+   "builtPre1980Pct": 74.6,
+   "built2000PlusPct": 9.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 35.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 20.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 18.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 16.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 9.2
+    }
+   ],
+   "heatGasPct": 40.0,
+   "heatElectricPct": 10.4,
+   "heatPropanePct": 14.0,
+   "heatWoodPct": 6.2,
+   "medianHomeValue": 163100,
+   "medianIncome": 66533,
+   "adjacent": [
+    "hamilton",
+    "herkimer",
+    "montgomery",
+    "saratoga"
+   ],
+   "places": [
+    {
+     "name": "Gloversville",
+     "population": 14962
+    },
+    {
+     "name": "Johnstown",
+     "population": 8111
+    },
+    {
+     "name": "Broadalbin",
+     "population": 1819
+    },
+    {
+     "name": "Mayfield",
+     "population": 1099
+    },
+    {
+     "name": "Northville",
+     "population": 1038
+    },
+    {
+     "name": "Caroga Lake",
+     "population": 448
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36037",
+   "fips": "36037",
+   "name": "Genesee County",
+   "short": "Genesee",
+   "slug": "genesee",
+   "seat": "Batavia",
+   "founded": 1803,
+   "areaSqMi": 493,
+   "lat": 42.985,
+   "lon": -78.1869,
+   "population": 57787,
+   "medianAge": 42.4,
+   "housingUnits": 26176,
+   "vacancyPct": 5.0,
+   "ownerPct": 73.8,
+   "singleFamilyPct": 70.8,
+   "mobileHomePct": 5.5,
+   "medianYearBuilt": 1956,
+   "builtPre1960Pct": 53.7,
+   "builtPre1980Pct": 77.0,
+   "built2000PlusPct": 8.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 39.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 14.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 8.6
+    }
+   ],
+   "heatGasPct": 61.7,
+   "heatElectricPct": 13.4,
+   "heatPropanePct": 11.8,
+   "heatWoodPct": 2.3,
+   "medianHomeValue": 170500,
+   "medianIncome": 73314,
+   "adjacent": [
+    "erie",
+    "livingston",
+    "monroe",
+    "niagara",
+    "orleans",
+    "wyoming"
+   ],
+   "places": [
+    {
+     "name": "Batavia",
+     "population": 15097
+    },
+    {
+     "name": "Le Roy",
+     "population": 4301
+    },
+    {
+     "name": "Oakfield",
+     "population": 1659
+    },
+    {
+     "name": "Bergen",
+     "population": 1360
+    },
+    {
+     "name": "Pavilion",
+     "population": 751
+    },
+    {
+     "name": "Corfu",
+     "population": 695
+    },
+    {
+     "name": "Elba",
+     "population": 485
+    },
+    {
+     "name": "Alexander",
+     "population": 404
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36039",
+   "fips": "36039",
+   "name": "Greene County",
+   "short": "Greene",
+   "slug": "greene",
+   "seat": "Catskill",
+   "founded": 1800,
+   "areaSqMi": 647,
+   "lat": 42.2751,
+   "lon": -74.1345,
+   "population": 47409,
+   "medianAge": 47.4,
+   "housingUnits": 29080,
+   "vacancyPct": 35.8,
+   "ownerPct": 77.2,
+   "singleFamilyPct": 78.3,
+   "mobileHomePct": 6.8,
+   "medianYearBuilt": 1972,
+   "builtPre1960Pct": 38.3,
+   "builtPre1980Pct": 61.1,
+   "built2000PlusPct": 14.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 24.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 22.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 24.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 14.7
+    }
+   ],
+   "heatGasPct": 9.3,
+   "heatElectricPct": 16.1,
+   "heatPropanePct": 16.9,
+   "heatWoodPct": 6.4,
+   "medianHomeValue": 271600,
+   "medianIncome": 77945,
+   "adjacent": [
+    "albany",
+    "columbia",
+    "delaware",
+    "schoharie",
+    "ulster"
+   ],
+   "places": [
+    {
+     "name": "Catskill",
+     "population": 3779
+    },
+    {
+     "name": "Coxsackie",
+     "population": 2737
+    },
+    {
+     "name": "Athens",
+     "population": 1943
+    },
+    {
+     "name": "Cairo",
+     "population": 1660
+    },
+    {
+     "name": "Sleepy Hollow Lake",
+     "population": 1354
+    },
+    {
+     "name": "Jefferson Heights",
+     "population": 1192
+    },
+    {
+     "name": "Palenville",
+     "population": 870
+    },
+    {
+     "name": "Round Top",
+     "population": 831
+    },
+    {
+     "name": "Tannersville",
+     "population": 759
+    },
+    {
+     "name": "Greenville",
+     "population": 620
+    },
+    {
+     "name": "South Cairo",
+     "population": 619
+    },
+    {
+     "name": "Haines Falls",
+     "population": 513
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36041",
+   "fips": "36041",
+   "name": "Hamilton County",
+   "short": "Hamilton",
+   "slug": "hamilton",
+   "seat": "Lake Pleasant",
+   "founded": 1847,
+   "areaSqMi": 1717,
+   "lat": 43.6077,
+   "lon": -74.494,
+   "population": 5089,
+   "medianAge": 58.1,
+   "housingUnits": 7911,
+   "vacancyPct": 69.4,
+   "ownerPct": 82.4,
+   "singleFamilyPct": 84.5,
+   "mobileHomePct": 12.0,
+   "medianYearBuilt": 1969,
+   "builtPre1960Pct": 38.7,
+   "builtPre1980Pct": 63.5,
+   "built2000PlusPct": 15.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 22.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 24.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 20.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.9
+    }
+   ],
+   "heatGasPct": 2.4,
+   "heatElectricPct": 8.3,
+   "heatPropanePct": 30.7,
+   "heatWoodPct": 19.1,
+   "medianHomeValue": 260200,
+   "medianIncome": 68835,
+   "adjacent": [
+    "essex",
+    "franklin",
+    "fulton",
+    "herkimer",
+    "saratoga",
+    "st-lawrence",
+    "warren"
+   ],
+   "places": [
+    {
+     "name": "Long Lake",
+     "population": 716
+    },
+    {
+     "name": "Wells",
+     "population": 581
+    },
+    {
+     "name": "Speculator",
+     "population": 409
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36043",
+   "fips": "36043",
+   "name": "Herkimer County",
+   "short": "Herkimer",
+   "slug": "herkimer",
+   "seat": "Herkimer",
+   "founded": 1791,
+   "areaSqMi": 1411,
+   "lat": 43.4133,
+   "lon": -74.954,
+   "population": 59757,
+   "medianAge": 44.8,
+   "housingUnits": 32459,
+   "vacancyPct": 20.7,
+   "ownerPct": 76.6,
+   "singleFamilyPct": 73.3,
+   "mobileHomePct": 8.7,
+   "medianYearBuilt": 1954,
+   "builtPre1960Pct": 55.4,
+   "builtPre1980Pct": 73.1,
+   "built2000PlusPct": 10.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 39.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 17.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 16.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 10.5
+    }
+   ],
+   "heatGasPct": 44.9,
+   "heatElectricPct": 14.1,
+   "heatPropanePct": 9.2,
+   "heatWoodPct": 6.4,
+   "medianHomeValue": 147700,
+   "medianIncome": 68515,
+   "adjacent": [
+    "fulton",
+    "hamilton",
+    "lewis",
+    "montgomery",
+    "oneida",
+    "otsego",
+    "st-lawrence"
+   ],
+   "places": [
+    {
+     "name": "Ilion",
+     "population": 7593
+    },
+    {
+     "name": "Herkimer",
+     "population": 7566
+    },
+    {
+     "name": "Little Falls",
+     "population": 4550
+    },
+    {
+     "name": "Mohawk",
+     "population": 2520
+    },
+    {
+     "name": "Frankfort",
+     "population": 2503
+    },
+    {
+     "name": "Dolgeville",
+     "population": 1874
+    },
+    {
+     "name": "West Winfield",
+     "population": 837
+    },
+    {
+     "name": "East Herkimer",
+     "population": 659
+    },
+    {
+     "name": "Middleville",
+     "population": 652
+    },
+    {
+     "name": "Old Forge",
+     "population": 574
+    },
+    {
+     "name": "East Frankfort",
+     "population": 571
+    },
+    {
+     "name": "Newport",
+     "population": 491
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36045",
+   "fips": "36045",
+   "name": "Jefferson County",
+   "short": "Jefferson",
+   "slug": "jefferson",
+   "seat": "Watertown",
+   "founded": 1805,
+   "areaSqMi": 1268,
+   "lat": 44.0276,
+   "lon": -75.9912,
+   "population": 115040,
+   "medianAge": 33.7,
+   "housingUnits": 61862,
+   "vacancyPct": 23.0,
+   "ownerPct": 54.7,
+   "singleFamilyPct": 64.4,
+   "mobileHomePct": 10.1,
+   "medianYearBuilt": 1972,
+   "builtPre1960Pct": 42.0,
+   "builtPre1980Pct": 56.3,
+   "built2000PlusPct": 21.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 30.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 14.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 22.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.6
+    }
+   ],
+   "heatGasPct": 39.0,
+   "heatElectricPct": 23.4,
+   "heatPropanePct": 17.3,
+   "heatWoodPct": 5.0,
+   "medianHomeValue": 188200,
+   "medianIncome": 66301,
+   "adjacent": [
+    "cayuga",
+    "lewis",
+    "oswego",
+    "st-lawrence"
+   ],
+   "places": [
+    {
+     "name": "Watertown",
+     "population": 24375
+    },
+    {
+     "name": "Fort Drum",
+     "population": 16065
+    },
+    {
+     "name": "Carthage",
+     "population": 3510
+    },
+    {
+     "name": "Calcium",
+     "population": 2935
+    },
+    {
+     "name": "West Carthage",
+     "population": 1864
+    },
+    {
+     "name": "Clayton",
+     "population": 1661
+    },
+    {
+     "name": "Black River",
+     "population": 1651
+    },
+    {
+     "name": "Adams",
+     "population": 1531
+    },
+    {
+     "name": "Sackets Harbor",
+     "population": 1490
+    },
+    {
+     "name": "Alexandria Bay",
+     "population": 1212
+    },
+    {
+     "name": "Adams Center",
+     "population": 1075
+    },
+    {
+     "name": "Theresa",
+     "population": 945
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36049",
+   "fips": "36049",
+   "name": "Lewis County",
+   "short": "Lewis",
+   "slug": "lewis",
+   "seat": "Lowville",
+   "founded": 1805,
+   "areaSqMi": 1276,
+   "lat": 43.8353,
+   "lon": -75.4914,
+   "population": 26607,
+   "medianAge": 41.9,
+   "housingUnits": 15637,
+   "vacancyPct": 29.0,
+   "ownerPct": 80.2,
+   "singleFamilyPct": 78.9,
+   "mobileHomePct": 11.0,
+   "medianYearBuilt": 1972,
+   "builtPre1960Pct": 41.8,
+   "builtPre1980Pct": 57.8,
+   "built2000PlusPct": 17.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 32.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 16.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 24.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.4
+    }
+   ],
+   "heatGasPct": 17.8,
+   "heatElectricPct": 8.7,
+   "heatPropanePct": 21.6,
+   "heatWoodPct": 18.7,
+   "medianHomeValue": 166100,
+   "medianIncome": 68182,
+   "adjacent": [
+    "herkimer",
+    "jefferson",
+    "oneida",
+    "oswego",
+    "st-lawrence"
+   ],
+   "places": [
+    {
+     "name": "Lowville",
+     "population": 3404
+    },
+    {
+     "name": "Port Leyden",
+     "population": 659
+    },
+    {
+     "name": "Croghan",
+     "population": 642
+    },
+    {
+     "name": "Copenhagen",
+     "population": 635
+    },
+    {
+     "name": "Lyons Falls",
+     "population": 569
+    },
+    {
+     "name": "Castorland",
+     "population": 481
+    },
+    {
+     "name": "Constableville",
+     "population": 332
+    },
+    {
+     "name": "Turin",
+     "population": 297
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36051",
+   "fips": "36051",
+   "name": "Livingston County",
+   "short": "Livingston",
+   "slug": "livingston",
+   "seat": "Geneseo",
+   "founded": 1821,
+   "areaSqMi": 632,
+   "lat": 42.7175,
+   "lon": -77.7805,
+   "population": 61498,
+   "medianAge": 41.5,
+   "housingUnits": 27328,
+   "vacancyPct": 10.4,
+   "ownerPct": 76.3,
+   "singleFamilyPct": 72.7,
+   "mobileHomePct": 9.9,
+   "medianYearBuilt": 1970,
+   "builtPre1960Pct": 42.2,
+   "builtPre1980Pct": 63.9,
+   "built2000PlusPct": 12.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 33.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 12.2
+    }
+   ],
+   "heatGasPct": 49.5,
+   "heatElectricPct": 15.4,
+   "heatPropanePct": 17.3,
+   "heatWoodPct": 6.5,
+   "medianHomeValue": 174600,
+   "medianIncome": 74001,
+   "adjacent": [
+    "allegany",
+    "genesee",
+    "monroe",
+    "ontario",
+    "steuben",
+    "wyoming"
+   ],
+   "places": [
+    {
+     "name": "Geneseo",
+     "population": 7701
+    },
+    {
+     "name": "Dansville",
+     "population": 4653
+    },
+    {
+     "name": "Avon",
+     "population": 3417
+    },
+    {
+     "name": "Mount Morris",
+     "population": 3146
+    },
+    {
+     "name": "Conesus Lake",
+     "population": 2424
+    },
+    {
+     "name": "Caledonia",
+     "population": 2120
+    },
+    {
+     "name": "Lima",
+     "population": 2064
+    },
+    {
+     "name": "Livonia",
+     "population": 1580
+    },
+    {
+     "name": "Nunda",
+     "population": 1242
+    },
+    {
+     "name": "Hemlock",
+     "population": 778
+    },
+    {
+     "name": "East Avon",
+     "population": 611
+    },
+    {
+     "name": "Springwater",
+     "population": 584
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36053",
+   "fips": "36053",
+   "name": "Madison County",
+   "short": "Madison",
+   "slug": "madison",
+   "seat": "Wampsville",
+   "founded": 1806,
+   "areaSqMi": 655,
+   "lat": 42.9842,
+   "lon": -75.729,
+   "population": 67328,
+   "medianAge": 42.4,
+   "housingUnits": 30730,
+   "vacancyPct": 14.6,
+   "ownerPct": 78.3,
+   "singleFamilyPct": 74.5,
+   "mobileHomePct": 8.0,
+   "medianYearBuilt": 1964,
+   "builtPre1960Pct": 46.4,
+   "builtPre1980Pct": 65.9,
+   "built2000PlusPct": 13.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 30.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 20.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.2
+    }
+   ],
+   "heatGasPct": 41.2,
+   "heatElectricPct": 14.5,
+   "heatPropanePct": 16.6,
+   "heatWoodPct": 5.6,
+   "medianHomeValue": 184600,
+   "medianIncome": 75499,
+   "adjacent": [
+    "chenango",
+    "oneida",
+    "onondaga",
+    "oswego",
+    "otsego"
+   ],
+   "places": [
+    {
+     "name": "Oneida",
+     "population": 10171
+    },
+    {
+     "name": "Chittenango",
+     "population": 4831
+    },
+    {
+     "name": "Canastota",
+     "population": 4487
+    },
+    {
+     "name": "Hamilton",
+     "population": 4370
+    },
+    {
+     "name": "Cazenovia",
+     "population": 2753
+    },
+    {
+     "name": "Morrisville",
+     "population": 1594
+    },
+    {
+     "name": "Bridgeport",
+     "population": 1391
+    },
+    {
+     "name": "Earlville",
+     "population": 654
+    },
+    {
+     "name": "Wampsville",
+     "population": 540
+    },
+    {
+     "name": "Madison",
+     "population": 403
+    },
+    {
+     "name": "Munnsville",
+     "population": 369
+    },
+    {
+     "name": "DeRuyter",
+     "population": 349
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36055",
+   "fips": "36055",
+   "name": "Monroe County",
+   "short": "Monroe",
+   "slug": "monroe",
+   "seat": "Rochester",
+   "founded": 1821,
+   "areaSqMi": 657,
+   "lat": 43.2528,
+   "lon": -77.6859,
+   "population": 753753,
+   "medianAge": 39.6,
+   "housingUnits": 339430,
+   "vacancyPct": 6.2,
+   "ownerPct": 63.7,
+   "singleFamilyPct": 68.4,
+   "mobileHomePct": 0.9,
+   "medianYearBuilt": 1965,
+   "builtPre1960Pct": 43.3,
+   "builtPre1980Pct": 69.5,
+   "built2000PlusPct": 12.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 24.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 18.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 18.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 12.3
+    }
+   ],
+   "heatGasPct": 74.6,
+   "heatElectricPct": 19.9,
+   "heatPropanePct": 2.3,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 213700,
+   "medianIncome": 76382,
+   "adjacent": [
+    "genesee",
+    "livingston",
+    "ontario",
+    "orleans",
+    "wayne"
+   ],
+   "places": [
+    {
+     "name": "Rochester",
+     "population": 208772
+    },
+    {
+     "name": "Irondequoit",
+     "population": 50657
+    },
+    {
+     "name": "Brighton",
+     "population": 36834
+    },
+    {
+     "name": "Greece",
+     "population": 13943
+    },
+    {
+     "name": "North Gates",
+     "population": 9904
+    },
+    {
+     "name": "Brockport",
+     "population": 7277
+    },
+    {
+     "name": "Rochester Institute of Technology",
+     "population": 6959
+    },
+    {
+     "name": "East Rochester",
+     "population": 6218
+    },
+    {
+     "name": "Hilton",
+     "population": 5968
+    },
+    {
+     "name": "Webster",
+     "population": 5718
+    },
+    {
+     "name": "Fairport",
+     "population": 5403
+    },
+    {
+     "name": "Hamlin",
+     "population": 4987
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36057",
+   "fips": "36057",
+   "name": "Montgomery County",
+   "short": "Montgomery",
+   "slug": "montgomery",
+   "seat": "Fonda",
+   "founded": 1772,
+   "areaSqMi": 403,
+   "lat": 42.9105,
+   "lon": -74.4202,
+   "population": 49528,
+   "medianAge": 40.3,
+   "housingUnits": 22981,
+   "vacancyPct": 14.7,
+   "ownerPct": 70.4,
+   "singleFamilyPct": 59.7,
+   "mobileHomePct": 6.6,
+   "medianYearBuilt": 1944,
+   "builtPre1960Pct": 65.1,
+   "builtPre1980Pct": 78.1,
+   "built2000PlusPct": 8.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 46.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 18.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 13.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 13.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 8.4
+    }
+   ],
+   "heatGasPct": 46.4,
+   "heatElectricPct": 11.4,
+   "heatPropanePct": 8.3,
+   "heatWoodPct": 6.3,
+   "medianHomeValue": 157500,
+   "medianIncome": 64943,
+   "adjacent": [
+    "fulton",
+    "herkimer",
+    "otsego",
+    "schenectady",
+    "schoharie"
+   ],
+   "places": [
+    {
+     "name": "Amsterdam",
+     "population": 18166
+    },
+    {
+     "name": "Fort Plain",
+     "population": 2290
+    },
+    {
+     "name": "Canajoharie",
+     "population": 1839
+    },
+    {
+     "name": "St. Johnsville",
+     "population": 1790
+    },
+    {
+     "name": "Hagaman",
+     "population": 1044
+    },
+    {
+     "name": "Tribes Hill",
+     "population": 959
+    },
+    {
+     "name": "Palatine Bridge",
+     "population": 727
+    },
+    {
+     "name": "Nelliston",
+     "population": 707
+    },
+    {
+     "name": "Fultonville",
+     "population": 678
+    },
+    {
+     "name": "Fonda",
+     "population": 596
+    },
+    {
+     "name": "Fort Johnson",
+     "population": 364
+    },
+    {
+     "name": "Ames",
+     "population": 87
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36059",
+   "fips": "36059",
+   "name": "Nassau County",
+   "short": "Nassau",
+   "slug": "nassau",
+   "seat": "Mineola",
+   "founded": 1899,
+   "areaSqMi": 285,
+   "lat": 40.7675,
+   "lon": -73.5837,
+   "population": 1389591,
+   "medianAge": 42.0,
+   "housingUnits": 479044,
+   "vacancyPct": 4.4,
+   "ownerPct": 81.9,
+   "singleFamilyPct": 79.3,
+   "mobileHomePct": 0.2,
+   "medianYearBuilt": 1955,
+   "builtPre1960Pct": 66.1,
+   "builtPre1980Pct": 85.4,
+   "built2000PlusPct": 7.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 19.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 46.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 7.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 7.3
+    }
+   ],
+   "heatGasPct": 62.4,
+   "heatElectricPct": 7.3,
+   "heatPropanePct": 2.3,
+   "heatWoodPct": 0.1,
+   "medianHomeValue": 684700,
+   "medianIncome": 146202,
+   "adjacent": [
+    "suffolk",
+    "westchester"
+   ],
+   "places": [
+    {
+     "name": "Hempstead",
+     "population": 58801
+    },
+    {
+     "name": "Levittown",
+     "population": 51904
+    },
+    {
+     "name": "Freeport",
+     "population": 44088
+    },
+    {
+     "name": "Hicksville",
+     "population": 43780
+    },
+    {
+     "name": "Valley Stream",
+     "population": 40315
+    },
+    {
+     "name": "East Meadow",
+     "population": 36821
+    },
+    {
+     "name": "Elmont",
+     "population": 36518
+    },
+    {
+     "name": "Baldwin",
+     "population": 34994
+    },
+    {
+     "name": "Long Beach",
+     "population": 34756
+    },
+    {
+     "name": "Uniondale",
+     "population": 33148
+    },
+    {
+     "name": "Oceanside",
+     "population": 31639
+    },
+    {
+     "name": "Franklin Square",
+     "population": 30897
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36063",
+   "fips": "36063",
+   "name": "Niagara County",
+   "short": "Niagara",
+   "slug": "niagara",
+   "seat": "Lockport",
+   "founded": 1808,
+   "areaSqMi": 522,
+   "lat": 43.3766,
+   "lon": -78.8077,
+   "population": 210721,
+   "medianAge": 43.3,
+   "housingUnits": 100446,
+   "vacancyPct": 8.5,
+   "ownerPct": 71.2,
+   "singleFamilyPct": 70.1,
+   "mobileHomePct": 4.0,
+   "medianYearBuilt": 1958,
+   "builtPre1960Pct": 53.5,
+   "builtPre1980Pct": 75.0,
+   "built2000PlusPct": 9.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 28.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 25.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 15.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 9.5
+    }
+   ],
+   "heatGasPct": 76.2,
+   "heatElectricPct": 11.8,
+   "heatPropanePct": 5.6,
+   "heatWoodPct": 1.0,
+   "medianHomeValue": 189800,
+   "medianIncome": 69633,
+   "adjacent": [
+    "erie",
+    "genesee",
+    "orleans"
+   ],
+   "places": [
+    {
+     "name": "Niagara Falls",
+     "population": 47987
+    },
+    {
+     "name": "North Tonawanda",
+     "population": 30198
+    },
+    {
+     "name": "Lockport",
+     "population": 20610
+    },
+    {
+     "name": "South Lockport",
+     "population": 9144
+    },
+    {
+     "name": "Newfane",
+     "population": 3938
+    },
+    {
+     "name": "Lewiston",
+     "population": 2588
+    },
+    {
+     "name": "Middleport",
+     "population": 1987
+    },
+    {
+     "name": "Youngstown",
+     "population": 1758
+    },
+    {
+     "name": "Rapids",
+     "population": 1655
+    },
+    {
+     "name": "Sanborn",
+     "population": 1573
+    },
+    {
+     "name": "Ransomville",
+     "population": 1564
+    },
+    {
+     "name": "Niagara University",
+     "population": 1473
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36065",
+   "fips": "36065",
+   "name": "Oneida County",
+   "short": "Oneida",
+   "slug": "oneida",
+   "seat": "Utica",
+   "founded": 1798,
+   "areaSqMi": 1212,
+   "lat": 43.2378,
+   "lon": -75.4931,
+   "population": 229124,
+   "medianAge": 40.7,
+   "housingUnits": 105443,
+   "vacancyPct": 9.7,
+   "ownerPct": 67.7,
+   "singleFamilyPct": 64.9,
+   "mobileHomePct": 5.5,
+   "medianYearBuilt": 1958,
+   "builtPre1960Pct": 53.7,
+   "builtPre1980Pct": 74.5,
+   "built2000PlusPct": 10.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 32.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 21.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 15.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 10.0
+    }
+   ],
+   "heatGasPct": 57.3,
+   "heatElectricPct": 16.4,
+   "heatPropanePct": 8.0,
+   "heatWoodPct": 2.6,
+   "medianHomeValue": 182600,
+   "medianIncome": 70154,
+   "adjacent": [
+    "herkimer",
+    "lewis",
+    "madison",
+    "oswego",
+    "otsego"
+   ],
+   "places": [
+    {
+     "name": "Utica",
+     "population": 64217
+    },
+    {
+     "name": "Rome",
+     "population": 31795
+    },
+    {
+     "name": "New York Mills",
+     "population": 3856
+    },
+    {
+     "name": "Whitesboro",
+     "population": 3633
+    },
+    {
+     "name": "Lake Delta",
+     "population": 3202
+    },
+    {
+     "name": "Sherrill",
+     "population": 3028
+    },
+    {
+     "name": "Camden",
+     "population": 2695
+    },
+    {
+     "name": "Yorkville",
+     "population": 2613
+    },
+    {
+     "name": "Washington Mills",
+     "population": 2112
+    },
+    {
+     "name": "Hamilton College",
+     "population": 2058
+    },
+    {
+     "name": "New Hartford",
+     "population": 1989
+    },
+    {
+     "name": "Boonville",
+     "population": 1880
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36067",
+   "fips": "36067",
+   "name": "Onondaga County",
+   "short": "Onondaga",
+   "slug": "onondaga",
+   "seat": "Syracuse",
+   "founded": 1792,
+   "areaSqMi": 778,
+   "lat": 43.0459,
+   "lon": -76.2048,
+   "population": 471129,
+   "medianAge": 39.6,
+   "housingUnits": 212002,
+   "vacancyPct": 6.7,
+   "ownerPct": 65.9,
+   "singleFamilyPct": 67.9,
+   "mobileHomePct": 1.1,
+   "medianYearBuilt": 1964,
+   "builtPre1960Pct": 44.6,
+   "builtPre1980Pct": 69.9,
+   "built2000PlusPct": 11.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 22.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 22.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 25.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 18.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 11.6
+    }
+   ],
+   "heatGasPct": 69.5,
+   "heatElectricPct": 21.0,
+   "heatPropanePct": 3.4,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 200200,
+   "medianIncome": 76945,
+   "adjacent": [
+    "cayuga",
+    "cortland",
+    "madison",
+    "oswego"
+   ],
+   "places": [
+    {
+     "name": "Syracuse",
+     "population": 146384
+    },
+    {
+     "name": "De Witt",
+     "population": 11060
+    },
+    {
+     "name": "Fairmount",
+     "population": 9724
+    },
+    {
+     "name": "Baldwinsville",
+     "population": 7715
+    },
+    {
+     "name": "North Syracuse",
+     "population": 6693
+    },
+    {
+     "name": "Radisson",
+     "population": 6676
+    },
+    {
+     "name": "Solvay",
+     "population": 6544
+    },
+    {
+     "name": "Mattydale",
+     "population": 5971
+    },
+    {
+     "name": "Westvale",
+     "population": 5212
+    },
+    {
+     "name": "Manlius",
+     "population": 4644
+    },
+    {
+     "name": "Brewerton",
+     "population": 4330
+    },
+    {
+     "name": "Fayetteville",
+     "population": 4214
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36069",
+   "fips": "36069",
+   "name": "Ontario County",
+   "short": "Ontario",
+   "slug": "ontario",
+   "seat": "Canandaigua",
+   "founded": 1789,
+   "areaSqMi": 644,
+   "lat": 42.8053,
+   "lon": -77.2819,
+   "population": 112625,
+   "medianAge": 44.2,
+   "housingUnits": 53379,
+   "vacancyPct": 9.5,
+   "ownerPct": 73.7,
+   "singleFamilyPct": 72.7,
+   "mobileHomePct": 6.9,
+   "medianYearBuilt": 1976,
+   "builtPre1960Pct": 35.3,
+   "builtPre1980Pct": 55.3,
+   "built2000PlusPct": 21.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 25.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.5
+    }
+   ],
+   "heatGasPct": 58.6,
+   "heatElectricPct": 16.5,
+   "heatPropanePct": 13.6,
+   "heatWoodPct": 2.5,
+   "medianHomeValue": 222900,
+   "medianIncome": 82324,
+   "adjacent": [
+    "livingston",
+    "monroe",
+    "seneca",
+    "steuben",
+    "wayne",
+    "yates"
+   ],
+   "places": [
+    {
+     "name": "Geneva",
+     "population": 12512
+    },
+    {
+     "name": "Canandaigua",
+     "population": 10514
+    },
+    {
+     "name": "Victor",
+     "population": 2687
+    },
+    {
+     "name": "Clifton Springs",
+     "population": 2273
+    },
+    {
+     "name": "Phelps",
+     "population": 2254
+    },
+    {
+     "name": "Shortsville",
+     "population": 1713
+    },
+    {
+     "name": "Manchester",
+     "population": 1631
+    },
+    {
+     "name": "Bloomfield",
+     "population": 1310
+    },
+    {
+     "name": "Naples",
+     "population": 1028
+    },
+    {
+     "name": "Port Gibson",
+     "population": 661
+    },
+    {
+     "name": "Honeoye",
+     "population": 539
+    },
+    {
+     "name": "Crystal Beach",
+     "population": 531
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36071",
+   "fips": "36071",
+   "name": "Orange County",
+   "short": "Orange",
+   "slug": "orange",
+   "seat": "Goshen",
+   "founded": 1683,
+   "areaSqMi": 812,
+   "lat": 41.3837,
+   "lon": -74.3311,
+   "population": 406616,
+   "medianAge": 37.0,
+   "housingUnits": 149699,
+   "vacancyPct": 7.4,
+   "ownerPct": 67.8,
+   "singleFamilyPct": 68.5,
+   "mobileHomePct": 2.0,
+   "medianYearBuilt": 1975,
+   "builtPre1960Pct": 34.5,
+   "builtPre1980Pct": 55.8,
+   "built2000PlusPct": 21.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 20.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.2
+    }
+   ],
+   "heatGasPct": 47.6,
+   "heatElectricPct": 14.8,
+   "heatPropanePct": 7.3,
+   "heatWoodPct": 1.5,
+   "medianHomeValue": 387900,
+   "medianIncome": 97178,
+   "adjacent": [
+    "dutchess",
+    "putnam",
+    "rockland",
+    "sullivan",
+    "ulster"
+   ],
+   "places": [
+    {
+     "name": "Kiryas Joel",
+     "population": 38916
+    },
+    {
+     "name": "Middletown",
+     "population": 30289
+    },
+    {
+     "name": "Newburgh",
+     "population": 28519
+    },
+    {
+     "name": "Woodbury",
+     "population": 11334
+    },
+    {
+     "name": "Scotchtown",
+     "population": 10252
+    },
+    {
+     "name": "Orange Lake",
+     "population": 9784
+    },
+    {
+     "name": "Monroe",
+     "population": 9515
+    },
+    {
+     "name": "New Windsor",
+     "population": 8919
+    },
+    {
+     "name": "Mechanicstown",
+     "population": 8808
+    },
+    {
+     "name": "Port Jervis",
+     "population": 8652
+    },
+    {
+     "name": "Walden",
+     "population": 6868
+    },
+    {
+     "name": "Warwick",
+     "population": 6585
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36073",
+   "fips": "36073",
+   "name": "Orleans County",
+   "short": "Orleans",
+   "slug": "orleans",
+   "seat": "Albion",
+   "founded": 1824,
+   "areaSqMi": 391,
+   "lat": 43.4376,
+   "lon": -78.2298,
+   "population": 39608,
+   "medianAge": 43.5,
+   "housingUnits": 18326,
+   "vacancyPct": 11.5,
+   "ownerPct": 77.2,
+   "singleFamilyPct": 75.1,
+   "mobileHomePct": 8.7,
+   "medianYearBuilt": 1955,
+   "builtPre1960Pct": 54.2,
+   "builtPre1980Pct": 72.2,
+   "built2000PlusPct": 8.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 43.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 18.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 19.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 8.5
+    }
+   ],
+   "heatGasPct": 41.6,
+   "heatElectricPct": 15.0,
+   "heatPropanePct": 24.0,
+   "heatWoodPct": 5.1,
+   "medianHomeValue": 140800,
+   "medianIncome": 65969,
+   "adjacent": [
+    "genesee",
+    "monroe",
+    "niagara"
+   ],
+   "places": [
+    {
+     "name": "Medina",
+     "population": 5770
+    },
+    {
+     "name": "Albion",
+     "population": 5506
+    },
+    {
+     "name": "Holley",
+     "population": 1927
+    },
+    {
+     "name": "Lyndonville",
+     "population": 771
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36075",
+   "fips": "36075",
+   "name": "Oswego County",
+   "short": "Oswego",
+   "slug": "oswego",
+   "seat": "Oswego",
+   "founded": 1816,
+   "areaSqMi": 952,
+   "lat": 43.4407,
+   "lon": -76.2266,
+   "population": 117953,
+   "medianAge": 40.9,
+   "housingUnits": 54844,
+   "vacancyPct": 13.9,
+   "ownerPct": 73.4,
+   "singleFamilyPct": 70.1,
+   "mobileHomePct": 12.8,
+   "medianYearBuilt": 1971,
+   "builtPre1960Pct": 40.4,
+   "builtPre1980Pct": 60.8,
+   "built2000PlusPct": 13.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 27.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 26.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.2
+    }
+   ],
+   "heatGasPct": 41.0,
+   "heatElectricPct": 15.4,
+   "heatPropanePct": 22.0,
+   "heatWoodPct": 7.8,
+   "medianHomeValue": 151700,
+   "medianIncome": 69183,
+   "adjacent": [
+    "cayuga",
+    "jefferson",
+    "lewis",
+    "madison",
+    "oneida",
+    "onondaga"
+   ],
+   "places": [
+    {
+     "name": "Oswego",
+     "population": 17033
+    },
+    {
+     "name": "Fulton",
+     "population": 11272
+    },
+    {
+     "name": "SUNY Oswego",
+     "population": 3564
+    },
+    {
+     "name": "Phoenix",
+     "population": 2329
+    },
+    {
+     "name": "Mexico",
+     "population": 2241
+    },
+    {
+     "name": "Central Square",
+     "population": 2163
+    },
+    {
+     "name": "Pulaski",
+     "population": 2156
+    },
+    {
+     "name": "Minetto",
+     "population": 1437
+    },
+    {
+     "name": "Constantia",
+     "population": 1371
+    },
+    {
+     "name": "Sand Ridge",
+     "population": 838
+    },
+    {
+     "name": "Lacona",
+     "population": 808
+    },
+    {
+     "name": "Cleveland",
+     "population": 785
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36077",
+   "fips": "36077",
+   "name": "Otsego County",
+   "short": "Otsego",
+   "slug": "otsego",
+   "seat": "Cooperstown",
+   "founded": 1791,
+   "areaSqMi": 1002,
+   "lat": 42.6109,
+   "lon": -74.9896,
+   "population": 60108,
+   "medianAge": 39.9,
+   "housingUnits": 30057,
+   "vacancyPct": 22.8,
+   "ownerPct": 73.9,
+   "singleFamilyPct": 68.2,
+   "mobileHomePct": 10.9,
+   "medianYearBuilt": 1954,
+   "builtPre1960Pct": 54.3,
+   "builtPre1980Pct": 69.6,
+   "built2000PlusPct": 12.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 40.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 15.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 18.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 12.2
+    }
+   ],
+   "heatGasPct": 21.8,
+   "heatElectricPct": 15.2,
+   "heatPropanePct": 17.6,
+   "heatWoodPct": 11.0,
+   "medianHomeValue": 179100,
+   "medianIncome": 68885,
+   "adjacent": [
+    "chenango",
+    "delaware",
+    "herkimer",
+    "madison",
+    "montgomery",
+    "oneida",
+    "schoharie"
+   ],
+   "places": [
+    {
+     "name": "Oneonta",
+     "population": 15045
+    },
+    {
+     "name": "Cooperstown",
+     "population": 2220
+    },
+    {
+     "name": "West End",
+     "population": 1891
+    },
+    {
+     "name": "Unadilla",
+     "population": 1419
+    },
+    {
+     "name": "Richfield Springs",
+     "population": 1104
+    },
+    {
+     "name": "Worcester",
+     "population": 1032
+    },
+    {
+     "name": "Otego",
+     "population": 936
+    },
+    {
+     "name": "Morris",
+     "population": 626
+    },
+    {
+     "name": "Edmeston",
+     "population": 515
+    },
+    {
+     "name": "Cherry Valley",
+     "population": 482
+    },
+    {
+     "name": "Milford",
+     "population": 475
+    },
+    {
+     "name": "Schenevus",
+     "population": 390
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36079",
+   "fips": "36079",
+   "name": "Putnam County",
+   "short": "Putnam",
+   "slug": "putnam",
+   "seat": "Carmel",
+   "founded": 1812,
+   "areaSqMi": 230,
+   "lat": 41.421,
+   "lon": -73.7546,
+   "population": 98107,
+   "medianAge": 44.0,
+   "housingUnits": 38450,
+   "vacancyPct": 7.6,
+   "ownerPct": 83.8,
+   "singleFamilyPct": 85.2,
+   "mobileHomePct": 0.7,
+   "medianYearBuilt": 1968,
+   "builtPre1960Pct": 37.4,
+   "builtPre1980Pct": 66.8,
+   "built2000PlusPct": 11.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 17.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 20.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 21.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 11.8
+    }
+   ],
+   "heatGasPct": 9.8,
+   "heatElectricPct": 23.3,
+   "heatPropanePct": 6.5,
+   "heatWoodPct": 1.3,
+   "medianHomeValue": 471300,
+   "medianIncome": 126257,
+   "adjacent": [
+    "dutchess",
+    "orange",
+    "rockland",
+    "westchester"
+   ],
+   "places": [
+    {
+     "name": "Mahopac",
+     "population": 9039
+    },
+    {
+     "name": "Lake Carmel",
+     "population": 7854
+    },
+    {
+     "name": "Carmel",
+     "population": 7306
+    },
+    {
+     "name": "Putnam Lake",
+     "population": 3664
+    },
+    {
+     "name": "Brewster",
+     "population": 2512
+    },
+    {
+     "name": "Brewster Hill",
+     "population": 2149
+    },
+    {
+     "name": "Cold Spring",
+     "population": 1863
+    },
+    {
+     "name": "Brewster Heights",
+     "population": 1196
+    },
+    {
+     "name": "Peach Lake",
+     "population": 1038
+    },
+    {
+     "name": "Nelsonville",
+     "population": 714
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36083",
+   "fips": "36083",
+   "name": "Rensselaer County",
+   "short": "Rensselaer",
+   "slug": "rensselaer",
+   "seat": "Troy",
+   "founded": 1791,
+   "areaSqMi": 652,
+   "lat": 42.7153,
+   "lon": -73.4889,
+   "population": 160332,
+   "medianAge": 40.1,
+   "housingUnits": 74543,
+   "vacancyPct": 10.5,
+   "ownerPct": 64.8,
+   "singleFamilyPct": 60.0,
+   "mobileHomePct": 2.5,
+   "medianYearBuilt": 1962,
+   "builtPre1960Pct": 48.2,
+   "builtPre1980Pct": 66.8,
+   "built2000PlusPct": 15.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 33.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 18.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 18.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.2
+    }
+   ],
+   "heatGasPct": 47.8,
+   "heatElectricPct": 16.3,
+   "heatPropanePct": 9.4,
+   "heatWoodPct": 3.7,
+   "medianHomeValue": 258400,
+   "medianIncome": 87915,
+   "adjacent": [
+    "albany",
+    "columbia",
+    "saratoga",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Troy",
+     "population": 51033
+    },
+    {
+     "name": "Rensselaer",
+     "population": 9287
+    },
+    {
+     "name": "East Greenbush",
+     "population": 6581
+    },
+    {
+     "name": "Hampton Manor",
+     "population": 5334
+    },
+    {
+     "name": "Wynantskill",
+     "population": 3487
+    },
+    {
+     "name": "West Sand Lake",
+     "population": 3479
+    },
+    {
+     "name": "Hoosick Falls",
+     "population": 3177
+    },
+    {
+     "name": "Averill Park",
+     "population": 1615
+    },
+    {
+     "name": "Castleton-on-Hudson",
+     "population": 1591
+    },
+    {
+     "name": "Nassau",
+     "population": 1058
+    },
+    {
+     "name": "Nassau Lake",
+     "population": 830
+    },
+    {
+     "name": "Poestenkill",
+     "population": 744
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36087",
+   "fips": "36087",
+   "name": "Rockland County",
+   "short": "Rockland",
+   "slug": "rockland",
+   "seat": "New City",
+   "founded": 1798,
+   "areaSqMi": 174,
+   "lat": 41.1579,
+   "lon": -74.0575,
+   "population": 341883,
+   "medianAge": 34.8,
+   "housingUnits": 108945,
+   "vacancyPct": 4.7,
+   "ownerPct": 67.9,
+   "singleFamilyPct": 65.7,
+   "mobileHomePct": 0.9,
+   "medianYearBuilt": 1971,
+   "builtPre1960Pct": 27.8,
+   "builtPre1980Pct": 66.4,
+   "built2000PlusPct": 14.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 10.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 17.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 38.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 19.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 14.0
+    }
+   ],
+   "heatGasPct": 84.2,
+   "heatElectricPct": 10.4,
+   "heatPropanePct": 1.6,
+   "heatWoodPct": 0.2,
+   "medianHomeValue": 596900,
+   "medianIncome": 109959,
+   "adjacent": [
+    "orange",
+    "putnam",
+    "westchester"
+   ],
+   "places": [
+    {
+     "name": "New City",
+     "population": 34458
+    },
+    {
+     "name": "Spring Valley",
+     "population": 33192
+    },
+    {
+     "name": "Monsey",
+     "population": 28160
+    },
+    {
+     "name": "Nanuet",
+     "population": 19799
+    },
+    {
+     "name": "Pearl River",
+     "population": 16155
+    },
+    {
+     "name": "Stony Point",
+     "population": 12728
+    },
+    {
+     "name": "Haverstraw",
+     "population": 12325
+    },
+    {
+     "name": "Suffern",
+     "population": 11441
+    },
+    {
+     "name": "West Haverstraw",
+     "population": 10711
+    },
+    {
+     "name": "Chestnut Ridge",
+     "population": 10557
+    },
+    {
+     "name": "Airmont",
+     "population": 10205
+    },
+    {
+     "name": "New Square",
+     "population": 9803
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36091",
+   "fips": "36091",
+   "name": "Saratoga County",
+   "short": "Saratoga",
+   "slug": "saratoga",
+   "seat": "Ballston Spa",
+   "founded": 1791,
+   "areaSqMi": 810,
+   "lat": 43.0861,
+   "lon": -73.8451,
+   "population": 238284,
+   "medianAge": 43.6,
+   "housingUnits": 112109,
+   "vacancyPct": 9.1,
+   "ownerPct": 72.3,
+   "singleFamilyPct": 67.5,
+   "mobileHomePct": 6.7,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 23.4,
+   "builtPre1980Pct": 44.2,
+   "built2000PlusPct": 28.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 14.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 28.5
+    }
+   ],
+   "heatGasPct": 57.8,
+   "heatElectricPct": 14.7,
+   "heatPropanePct": 11.4,
+   "heatWoodPct": 2.2,
+   "medianHomeValue": 348600,
+   "medianIncome": 100787,
+   "adjacent": [
+    "albany",
+    "fulton",
+    "hamilton",
+    "rensselaer",
+    "schenectady",
+    "warren",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Saratoga Springs",
+     "population": 28631
+    },
+    {
+     "name": "Country Knolls",
+     "population": 5445
+    },
+    {
+     "name": "Mechanicville",
+     "population": 5124
+    },
+    {
+     "name": "Ballston Spa",
+     "population": 5027
+    },
+    {
+     "name": "Milton",
+     "population": 4450
+    },
+    {
+     "name": "South Glens Falls",
+     "population": 3737
+    },
+    {
+     "name": "Clifton Knolls-Mill Creek",
+     "population": 3349
+    },
+    {
+     "name": "Corinth",
+     "population": 2592
+    },
+    {
+     "name": "Clifton Gardens",
+     "population": 2420
+    },
+    {
+     "name": "Waterford",
+     "population": 2085
+    },
+    {
+     "name": "Stillwater",
+     "population": 1874
+    },
+    {
+     "name": "Schuylerville",
+     "population": 1571
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36093",
+   "fips": "36093",
+   "name": "Schenectady County",
+   "short": "Schenectady",
+   "slug": "schenectady",
+   "seat": "Schenectady",
+   "founded": 1809,
+   "areaSqMi": 205,
+   "lat": 42.8313,
+   "lon": -74.0447,
+   "population": 160369,
+   "medianAge": 39.6,
+   "housingUnits": 71244,
+   "vacancyPct": 6.1,
+   "ownerPct": 64.0,
+   "singleFamilyPct": 61.6,
+   "mobileHomePct": 0.9,
+   "medianYearBuilt": 1956,
+   "builtPre1960Pct": 57.3,
+   "builtPre1980Pct": 75.2,
+   "built2000PlusPct": 13.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 31.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 25.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 17.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 11.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.1
+    }
+   ],
+   "heatGasPct": 69.1,
+   "heatElectricPct": 17.9,
+   "heatPropanePct": 5.0,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 235700,
+   "medianIncome": 79623,
+   "adjacent": [
+    "albany",
+    "montgomery",
+    "saratoga",
+    "schoharie"
+   ],
+   "places": [
+    {
+     "name": "Schenectady",
+     "population": 68847
+    },
+    {
+     "name": "Rotterdam",
+     "population": 22695
+    },
+    {
+     "name": "Niskayuna",
+     "population": 21227
+    },
+    {
+     "name": "East Glenville",
+     "population": 11914
+    },
+    {
+     "name": "Scotia",
+     "population": 7264
+    },
+    {
+     "name": "Mariaville Lake",
+     "population": 1085
+    },
+    {
+     "name": "Delanson",
+     "population": 263
+    },
+    {
+     "name": "Duane Lake",
+     "population": 236
+    },
+    {
+     "name": "Duanesburg",
+     "population": 63
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36095",
+   "fips": "36095",
+   "name": "Schoharie County",
+   "short": "Schoharie",
+   "slug": "schoharie",
+   "seat": "Schoharie",
+   "founded": 1795,
+   "areaSqMi": 622,
+   "lat": 42.5944,
+   "lon": -74.4348,
+   "population": 30049,
+   "medianAge": 45.8,
+   "housingUnits": 16562,
+   "vacancyPct": 22.3,
+   "ownerPct": 76.4,
+   "singleFamilyPct": 72.7,
+   "mobileHomePct": 11.9,
+   "medianYearBuilt": 1974,
+   "builtPre1960Pct": 37.7,
+   "builtPre1980Pct": 58.6,
+   "built2000PlusPct": 16.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 30.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 16.0
+    }
+   ],
+   "heatGasPct": 5.9,
+   "heatElectricPct": 21.0,
+   "heatPropanePct": 16.4,
+   "heatWoodPct": 12.7,
+   "medianHomeValue": 192500,
+   "medianIncome": 70133,
+   "adjacent": [
+    "albany",
+    "delaware",
+    "greene",
+    "montgomery",
+    "otsego",
+    "schenectady"
+   ],
+   "places": [
+    {
+     "name": "Cobleskill",
+     "population": 4682
+    },
+    {
+     "name": "Middleburgh",
+     "population": 1220
+    },
+    {
+     "name": "Schoharie",
+     "population": 1144
+    },
+    {
+     "name": "Richmondville",
+     "population": 931
+    },
+    {
+     "name": "Sharon Springs",
+     "population": 634
+    },
+    {
+     "name": "Central Bridge",
+     "population": 456
+    },
+    {
+     "name": "Esperance",
+     "population": 248
+    },
+    {
+     "name": "Jefferson",
+     "population": 177
+    },
+    {
+     "name": "North Blenheim",
+     "population": 79
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36097",
+   "fips": "36097",
+   "name": "Schuyler County",
+   "short": "Schuyler",
+   "slug": "schuyler",
+   "seat": "Watkins Glen",
+   "founded": 1854,
+   "areaSqMi": 328,
+   "lat": 42.4242,
+   "lon": -76.8973,
+   "population": 17562,
+   "medianAge": 47.6,
+   "housingUnits": 9752,
+   "vacancyPct": 24.6,
+   "ownerPct": 79.2,
+   "singleFamilyPct": 70.5,
+   "mobileHomePct": 17.5,
+   "medianYearBuilt": 1969,
+   "builtPre1960Pct": 40.5,
+   "builtPre1980Pct": 63.8,
+   "built2000PlusPct": 15.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 29.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 20.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.3
+    }
+   ],
+   "heatGasPct": 18.1,
+   "heatElectricPct": 19.3,
+   "heatPropanePct": 30.3,
+   "heatWoodPct": 9.3,
+   "medianHomeValue": 171800,
+   "medianIncome": 67663,
+   "adjacent": [
+    "chemung",
+    "seneca",
+    "steuben",
+    "tompkins",
+    "yates"
+   ],
+   "places": [
+    {
+     "name": "Montour Falls",
+     "population": 1743
+    },
+    {
+     "name": "Watkins Glen",
+     "population": 1725
+    },
+    {
+     "name": "Burdett",
+     "population": 536
+    },
+    {
+     "name": "Odessa",
+     "population": 508
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36099",
+   "fips": "36099",
+   "name": "Seneca County",
+   "short": "Seneca",
+   "slug": "seneca",
+   "seat": "Waterloo",
+   "founded": 1804,
+   "areaSqMi": 324,
+   "lat": 42.7815,
+   "lon": -76.858,
+   "population": 32920,
+   "medianAge": 43.0,
+   "housingUnits": 16194,
+   "vacancyPct": 16.0,
+   "ownerPct": 71.0,
+   "singleFamilyPct": 71.2,
+   "mobileHomePct": 9.9,
+   "medianYearBuilt": 1959,
+   "builtPre1960Pct": 51.2,
+   "builtPre1980Pct": 68.8,
+   "built2000PlusPct": 13.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 35.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 17.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 18.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.1
+    }
+   ],
+   "heatGasPct": 43.5,
+   "heatElectricPct": 16.6,
+   "heatPropanePct": 20.3,
+   "heatWoodPct": 4.5,
+   "medianHomeValue": 155400,
+   "medianIncome": 68089,
+   "adjacent": [
+    "cayuga",
+    "ontario",
+    "schuyler",
+    "tompkins",
+    "wayne",
+    "yates"
+   ],
+   "places": [
+    {
+     "name": "Seneca Falls",
+     "population": 6956
+    },
+    {
+     "name": "Waterloo",
+     "population": 4605
+    },
+    {
+     "name": "Interlaken",
+     "population": 493
+    },
+    {
+     "name": "Ovid",
+     "population": 402
+    },
+    {
+     "name": "Lodi",
+     "population": 307
+    },
+    {
+     "name": "Romulus",
+     "population": 265
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36089",
+   "fips": "36089",
+   "name": "St. Lawrence County",
+   "short": "St. Lawrence",
+   "slug": "st-lawrence",
+   "seat": "Canton",
+   "founded": 1802,
+   "areaSqMi": 2680,
+   "lat": 44.5536,
+   "lon": -75.1487,
+   "population": 107226,
+   "medianAge": 39.3,
+   "housingUnits": 51970,
+   "vacancyPct": 19.8,
+   "ownerPct": 71.9,
+   "singleFamilyPct": 73.1,
+   "mobileHomePct": 10.0,
+   "medianYearBuilt": 1964,
+   "builtPre1960Pct": 47.1,
+   "builtPre1980Pct": 67.0,
+   "built2000PlusPct": 13.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 30.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 17.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 19.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 19.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.6
+    }
+   ],
+   "heatGasPct": 33.5,
+   "heatElectricPct": 13.3,
+   "heatPropanePct": 15.9,
+   "heatWoodPct": 10.6,
+   "medianHomeValue": 121900,
+   "medianIncome": 62850,
+   "adjacent": [
+    "franklin",
+    "hamilton",
+    "herkimer",
+    "jefferson",
+    "lewis"
+   ],
+   "places": [
+    {
+     "name": "Massena",
+     "population": 10238
+    },
+    {
+     "name": "Ogdensburg",
+     "population": 9455
+    },
+    {
+     "name": "Potsdam",
+     "population": 8427
+    },
+    {
+     "name": "Canton",
+     "population": 7167
+    },
+    {
+     "name": "Gouverneur",
+     "population": 3615
+    },
+    {
+     "name": "Norwood",
+     "population": 1374
+    },
+    {
+     "name": "Norfolk",
+     "population": 1204
+    },
+    {
+     "name": "Waddington",
+     "population": 1062
+    },
+    {
+     "name": "Brasher Falls",
+     "population": 776
+    },
+    {
+     "name": "Hannawa Falls",
+     "population": 744
+    },
+    {
+     "name": "Star Lake",
+     "population": 713
+    },
+    {
+     "name": "Madrid",
+     "population": 641
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36101",
+   "fips": "36101",
+   "name": "Steuben County",
+   "short": "Steuben",
+   "slug": "steuben",
+   "seat": "Bath",
+   "founded": 1796,
+   "areaSqMi": 1391,
+   "lat": 42.3339,
+   "lon": -77.4184,
+   "population": 92588,
+   "medianAge": 43.0,
+   "housingUnits": 47665,
+   "vacancyPct": 17.7,
+   "ownerPct": 73.3,
+   "singleFamilyPct": 68.6,
+   "mobileHomePct": 12.8,
+   "medianYearBuilt": 1963,
+   "builtPre1960Pct": 47.2,
+   "builtPre1980Pct": 67.5,
+   "built2000PlusPct": 11.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 32.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 20.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 11.7
+    }
+   ],
+   "heatGasPct": 54.6,
+   "heatElectricPct": 14.7,
+   "heatPropanePct": 14.3,
+   "heatWoodPct": 6.8,
+   "medianHomeValue": 137900,
+   "medianIncome": 65887,
+   "adjacent": [
+    "allegany",
+    "chemung",
+    "livingston",
+    "ontario",
+    "schuyler",
+    "yates"
+   ],
+   "places": [
+    {
+     "name": "Corning",
+     "population": 10643
+    },
+    {
+     "name": "Hornell",
+     "population": 8152
+    },
+    {
+     "name": "Bath",
+     "population": 5560
+    },
+    {
+     "name": "Gang Mills",
+     "population": 4177
+    },
+    {
+     "name": "Canisteo",
+     "population": 2085
+    },
+    {
+     "name": "Wayland",
+     "population": 2007
+    },
+    {
+     "name": "Painted Post",
+     "population": 1824
+    },
+    {
+     "name": "Addison",
+     "population": 1688
+    },
+    {
+     "name": "South Corning",
+     "population": 1132
+    },
+    {
+     "name": "North Hornell",
+     "population": 1043
+    },
+    {
+     "name": "Avoca",
+     "population": 1023
+    },
+    {
+     "name": "Cohocton",
+     "population": 946
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36103",
+   "fips": "36103",
+   "name": "Suffolk County",
+   "short": "Suffolk",
+   "slug": "suffolk",
+   "seat": "Riverhead",
+   "founded": 1683,
+   "areaSqMi": 911,
+   "lat": 40.9198,
+   "lon": -72.7968,
+   "population": 1530146,
+   "medianAge": 41.7,
+   "housingUnits": 580772,
+   "vacancyPct": 11.7,
+   "ownerPct": 82.2,
+   "singleFamilyPct": 85.7,
+   "mobileHomePct": 1.3,
+   "medianYearBuilt": 1970,
+   "builtPre1960Pct": 30.8,
+   "builtPre1980Pct": 68.3,
+   "built2000PlusPct": 12.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 9.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 21.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 37.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 19.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 12.6
+    }
+   ],
+   "heatGasPct": 41.1,
+   "heatElectricPct": 9.2,
+   "heatPropanePct": 4.0,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 578400,
+   "medianIncome": 130686,
+   "adjacent": [
+    "nassau"
+   ],
+   "places": [
+    {
+     "name": "West Babylon",
+     "population": 43570
+    },
+    {
+     "name": "Coram",
+     "population": 39539
+    },
+    {
+     "name": "Central Islip",
+     "population": 38373
+    },
+    {
+     "name": "Commack",
+     "population": 36558
+    },
+    {
+     "name": "Huntington Station",
+     "population": 32601
+    },
+    {
+     "name": "Centereach",
+     "population": 31839
+    },
+    {
+     "name": "Bay Shore",
+     "population": 31683
+    },
+    {
+     "name": "Shirley",
+     "population": 28375
+    },
+    {
+     "name": "Deer Park",
+     "population": 27990
+    },
+    {
+     "name": "Lindenhurst",
+     "population": 27142
+    },
+    {
+     "name": "West Islip",
+     "population": 26865
+    },
+    {
+     "name": "Holbrook",
+     "population": 26449
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36105",
+   "fips": "36105",
+   "name": "Sullivan County",
+   "short": "Sullivan",
+   "slug": "sullivan",
+   "seat": "Monticello",
+   "founded": 1809,
+   "areaSqMi": 968,
+   "lat": 41.7241,
+   "lon": -74.7953,
+   "population": 79721,
+   "medianAge": 41.7,
+   "housingUnits": 49994,
+   "vacancyPct": 37.1,
+   "ownerPct": 67.4,
+   "singleFamilyPct": 75.1,
+   "mobileHomePct": 8.8,
+   "medianYearBuilt": 1974,
+   "builtPre1960Pct": 36.8,
+   "builtPre1980Pct": 57.5,
+   "built2000PlusPct": 18.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 20.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 24.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 18.1
+    }
+   ],
+   "heatGasPct": 4.1,
+   "heatElectricPct": 20.4,
+   "heatPropanePct": 18.0,
+   "heatWoodPct": 7.4,
+   "medianHomeValue": 249000,
+   "medianIncome": 72382,
+   "adjacent": [
+    "delaware",
+    "orange",
+    "ulster"
+   ],
+   "places": [
+    {
+     "name": "Monticello",
+     "population": 7279
+    },
+    {
+     "name": "Liberty",
+     "population": 5142
+    },
+    {
+     "name": "Rock Hill",
+     "population": 2546
+    },
+    {
+     "name": "South Fallsburg",
+     "population": 1914
+    },
+    {
+     "name": "Fallsburg",
+     "population": 1865
+    },
+    {
+     "name": "Loch Sheldrake",
+     "population": 1308
+    },
+    {
+     "name": "Wurtsboro",
+     "population": 1243
+    },
+    {
+     "name": "Wurtsboro Hills",
+     "population": 1179
+    },
+    {
+     "name": "Hurleyville",
+     "population": 1061
+    },
+    {
+     "name": "Woodridge",
+     "population": 955
+    },
+    {
+     "name": "Livingston Manor",
+     "population": 727
+    },
+    {
+     "name": "Smallwood",
+     "population": 693
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36107",
+   "fips": "36107",
+   "name": "Tioga County",
+   "short": "Tioga",
+   "slug": "tioga",
+   "seat": "Owego",
+   "founded": 1791,
+   "areaSqMi": 519,
+   "lat": 42.2023,
+   "lon": -76.3104,
+   "population": 47864,
+   "medianAge": 44.8,
+   "housingUnits": 22104,
+   "vacancyPct": 7.9,
+   "ownerPct": 79.1,
+   "singleFamilyPct": 70.3,
+   "mobileHomePct": 14.9,
+   "medianYearBuilt": 1969,
+   "builtPre1960Pct": 40.2,
+   "builtPre1980Pct": 66.1,
+   "built2000PlusPct": 13.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 26.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 25.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 20.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.1
+    }
+   ],
+   "heatGasPct": 31.8,
+   "heatElectricPct": 12.3,
+   "heatPropanePct": 17.3,
+   "heatWoodPct": 6.9,
+   "medianHomeValue": 160800,
+   "medianIncome": 72739,
+   "adjacent": [
+    "broome",
+    "chemung",
+    "cortland",
+    "tompkins"
+   ],
+   "places": [
+    {
+     "name": "Waverly",
+     "population": 4305
+    },
+    {
+     "name": "Owego",
+     "population": 3912
+    },
+    {
+     "name": "Apalachin",
+     "population": 2553
+    },
+    {
+     "name": "Tioga Terrace",
+     "population": 2057
+    },
+    {
+     "name": "Crest View Heights",
+     "population": 1852
+    },
+    {
+     "name": "Newark Valley",
+     "population": 1051
+    },
+    {
+     "name": "Candor",
+     "population": 984
+    },
+    {
+     "name": "Spencer",
+     "population": 932
+    },
+    {
+     "name": "Nichols",
+     "population": 601
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36109",
+   "fips": "36109",
+   "name": "Tompkins County",
+   "short": "Tompkins",
+   "slug": "tompkins",
+   "seat": "Ithaca",
+   "founded": 1817,
+   "areaSqMi": 475,
+   "lat": 42.4815,
+   "lon": -76.475,
+   "population": 104537,
+   "medianAge": 32.3,
+   "housingUnits": 47804,
+   "vacancyPct": 9.5,
+   "ownerPct": 54.1,
+   "singleFamilyPct": 54.1,
+   "mobileHomePct": 7.6,
+   "medianYearBuilt": 1974,
+   "builtPre1960Pct": 36.2,
+   "builtPre1980Pct": 57.4,
+   "built2000PlusPct": 17.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 25.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.3
+    }
+   ],
+   "heatGasPct": 46.3,
+   "heatElectricPct": 25.8,
+   "heatPropanePct": 13.1,
+   "heatWoodPct": 4.4,
+   "medianHomeValue": 290900,
+   "medianIncome": 74024,
+   "adjacent": [
+    "cayuga",
+    "cortland",
+    "schuyler",
+    "seneca",
+    "tioga"
+   ],
+   "places": [
+    {
+     "name": "Ithaca",
+     "population": 32814
+    },
+    {
+     "name": "South Hill",
+     "population": 6951
+    },
+    {
+     "name": "Cayuga Heights",
+     "population": 4000
+    },
+    {
+     "name": "Lansing",
+     "population": 3876
+    },
+    {
+     "name": "Northeast Ithaca",
+     "population": 2661
+    },
+    {
+     "name": "Northwest Ithaca",
+     "population": 2225
+    },
+    {
+     "name": "East Ithaca",
+     "population": 1918
+    },
+    {
+     "name": "Groton",
+     "population": 1834
+    },
+    {
+     "name": "Dryden",
+     "population": 1671
+    },
+    {
+     "name": "Trumansburg",
+     "population": 1665
+    },
+    {
+     "name": "South Lansing",
+     "population": 1496
+    },
+    {
+     "name": "Forest Home",
+     "population": 1303
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36111",
+   "fips": "36111",
+   "name": "Ulster County",
+   "short": "Ulster",
+   "slug": "ulster",
+   "seat": "Kingston",
+   "founded": 1683,
+   "areaSqMi": 1124,
+   "lat": 41.8785,
+   "lon": -74.2019,
+   "population": 182601,
+   "medianAge": 44.1,
+   "housingUnits": 86503,
+   "vacancyPct": 14.1,
+   "ownerPct": 69.9,
+   "singleFamilyPct": 70.9,
+   "mobileHomePct": 5.8,
+   "medianYearBuilt": 1966,
+   "builtPre1960Pct": 44.5,
+   "builtPre1980Pct": 66.4,
+   "built2000PlusPct": 14.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 26.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 17.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 19.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 14.5
+    }
+   ],
+   "heatGasPct": 21.0,
+   "heatElectricPct": 15.5,
+   "heatPropanePct": 13.8,
+   "heatWoodPct": 4.3,
+   "medianHomeValue": 352500,
+   "medianIncome": 86271,
+   "adjacent": [
+    "columbia",
+    "delaware",
+    "dutchess",
+    "greene",
+    "orange",
+    "sullivan"
+   ],
+   "places": [
+    {
+     "name": "Kingston",
+     "population": 23911
+    },
+    {
+     "name": "New Paltz",
+     "population": 8314
+    },
+    {
+     "name": "Highland",
+     "population": 6367
+    },
+    {
+     "name": "Ellenville",
+     "population": 4211
+    },
+    {
+     "name": "Watchtower",
+     "population": 3974
+    },
+    {
+     "name": "Saugerties",
+     "population": 3884
+    },
+    {
+     "name": "Marlboro",
+     "population": 3679
+    },
+    {
+     "name": "Port Ewen",
+     "population": 3426
+    },
+    {
+     "name": "Hurley",
+     "population": 3346
+    },
+    {
+     "name": "Lincoln Park",
+     "population": 2431
+    },
+    {
+     "name": "Saugerties South",
+     "population": 2251
+    },
+    {
+     "name": "Woodstock",
+     "population": 2239
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36113",
+   "fips": "36113",
+   "name": "Warren County",
+   "short": "Warren",
+   "slug": "warren",
+   "seat": "Glens Falls",
+   "founded": 1813,
+   "areaSqMi": 867,
+   "lat": 43.5154,
+   "lon": -73.9063,
+   "population": 65517,
+   "medianAge": 46.8,
+   "housingUnits": 40342,
+   "vacancyPct": 25.3,
+   "ownerPct": 72.1,
+   "singleFamilyPct": 75.4,
+   "mobileHomePct": 4.9,
+   "medianYearBuilt": 1973,
+   "builtPre1960Pct": 37.5,
+   "builtPre1980Pct": 58.7,
+   "built2000PlusPct": 16.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 22.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 16.3
+    }
+   ],
+   "heatGasPct": 44.3,
+   "heatElectricPct": 15.6,
+   "heatPropanePct": 13.5,
+   "heatWoodPct": 4.0,
+   "medianHomeValue": 267400,
+   "medianIncome": 78442,
+   "adjacent": [
+    "essex",
+    "hamilton",
+    "saratoga",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Glens Falls",
+     "population": 14609
+    },
+    {
+     "name": "West Glens Falls",
+     "population": 10050
+    },
+    {
+     "name": "Glens Falls North",
+     "population": 9154
+    },
+    {
+     "name": "Warrensburg",
+     "population": 3194
+    },
+    {
+     "name": "Lake George",
+     "population": 1038
+    },
+    {
+     "name": "Lake Luzerne",
+     "population": 907
+    },
+    {
+     "name": "Chestertown",
+     "population": 499
+    },
+    {
+     "name": "North Creek",
+     "population": 414
+    },
+    {
+     "name": "Bolton Landing",
+     "population": 216
+    },
+    {
+     "name": "Pottersville",
+     "population": 140
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36115",
+   "fips": "36115",
+   "name": "Washington County",
+   "short": "Washington",
+   "slug": "washington",
+   "seat": "Fort Edward",
+   "founded": 1772,
+   "areaSqMi": 831,
+   "lat": 43.3962,
+   "lon": -73.4315,
+   "population": 60522,
+   "medianAge": 45.4,
+   "housingUnits": 29192,
+   "vacancyPct": 16.2,
+   "ownerPct": 76.6,
+   "singleFamilyPct": 76.4,
+   "mobileHomePct": 5.2,
+   "medianYearBuilt": 1963,
+   "builtPre1960Pct": 47.6,
+   "builtPre1980Pct": 64.1,
+   "built2000PlusPct": 15.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 35.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 16.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 20.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.4
+    }
+   ],
+   "heatGasPct": 23.3,
+   "heatElectricPct": 11.9,
+   "heatPropanePct": 15.3,
+   "heatWoodPct": 10.0,
+   "medianHomeValue": 196200,
+   "medianIncome": 73495,
+   "adjacent": [
+    "essex",
+    "rensselaer",
+    "saratoga",
+    "warren"
+   ],
+   "places": [
+    {
+     "name": "Hudson Falls",
+     "population": 7395
+    },
+    {
+     "name": "Fort Edward",
+     "population": 3152
+    },
+    {
+     "name": "Whitehall",
+     "population": 2690
+    },
+    {
+     "name": "Granville",
+     "population": 2310
+    },
+    {
+     "name": "Cambridge",
+     "population": 2262
+    },
+    {
+     "name": "Greenwich",
+     "population": 1689
+    },
+    {
+     "name": "Salem",
+     "population": 770
+    },
+    {
+     "name": "North Granville",
+     "population": 531
+    },
+    {
+     "name": "Fort Ann",
+     "population": 436
+    },
+    {
+     "name": "Argyle",
+     "population": 355
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36117",
+   "fips": "36117",
+   "name": "Wayne County",
+   "short": "Wayne",
+   "slug": "wayne",
+   "seat": "Lyons",
+   "founded": 1823,
+   "areaSqMi": 604,
+   "lat": 43.3601,
+   "lon": -77.0508,
+   "population": 90929,
+   "medianAge": 43.6,
+   "housingUnits": 42570,
+   "vacancyPct": 9.8,
+   "ownerPct": 79.9,
+   "singleFamilyPct": 76.5,
+   "mobileHomePct": 7.5,
+   "medianYearBuilt": 1968,
+   "builtPre1960Pct": 43.5,
+   "builtPre1980Pct": 64.8,
+   "built2000PlusPct": 12.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 30.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 12.1
+    }
+   ],
+   "heatGasPct": 53.6,
+   "heatElectricPct": 15.8,
+   "heatPropanePct": 12.7,
+   "heatWoodPct": 5.2,
+   "medianHomeValue": 170000,
+   "medianIncome": 74506,
+   "adjacent": [
+    "cayuga",
+    "monroe",
+    "ontario",
+    "seneca"
+   ],
+   "places": [
+    {
+     "name": "Newark",
+     "population": 8991
+    },
+    {
+     "name": "Gananda",
+     "population": 6273
+    },
+    {
+     "name": "Lyons",
+     "population": 3738
+    },
+    {
+     "name": "Palmyra",
+     "population": 3287
+    },
+    {
+     "name": "Williamson",
+     "population": 2387
+    },
+    {
+     "name": "Macedon",
+     "population": 2157
+    },
+    {
+     "name": "Ontario",
+     "population": 2044
+    },
+    {
+     "name": "Clyde",
+     "population": 2001
+    },
+    {
+     "name": "Sodus",
+     "population": 1820
+    },
+    {
+     "name": "Wolcott",
+     "population": 1444
+    },
+    {
+     "name": "Marion",
+     "population": 1400
+    },
+    {
+     "name": "Sodus Point",
+     "population": 1051
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36119",
+   "fips": "36119",
+   "name": "Westchester County",
+   "short": "Westchester",
+   "slug": "westchester",
+   "seat": "White Plains",
+   "founded": 1683,
+   "areaSqMi": 431,
+   "lat": 41.1147,
+   "lon": -73.7934,
+   "population": 999677,
+   "medianAge": 41.8,
+   "housingUnits": 394358,
+   "vacancyPct": 5.4,
+   "ownerPct": 61.8,
+   "singleFamilyPct": 49.8,
+   "mobileHomePct": 0.2,
+   "medianYearBuilt": 1959,
+   "builtPre1960Pct": 52.1,
+   "builtPre1980Pct": 76.0,
+   "built2000PlusPct": 10.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 27.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 24.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 13.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 10.6
+    }
+   ],
+   "heatGasPct": 52.0,
+   "heatElectricPct": 14.4,
+   "heatPropanePct": 3.1,
+   "heatWoodPct": 0.2,
+   "medianHomeValue": 663200,
+   "medianIncome": 118976,
+   "adjacent": [
+    "nassau",
+    "putnam",
+    "rockland"
+   ],
+   "places": [
+    {
+     "name": "Yonkers",
+     "population": 209978
+    },
+    {
+     "name": "New Rochelle",
+     "population": 82769
+    },
+    {
+     "name": "Mount Vernon",
+     "population": 72427
+    },
+    {
+     "name": "White Plains",
+     "population": 60666
+    },
+    {
+     "name": "Port Chester",
+     "population": 31102
+    },
+    {
+     "name": "Harrison",
+     "population": 29961
+    },
+    {
+     "name": "Ossining",
+     "population": 26950
+    },
+    {
+     "name": "Peekskill",
+     "population": 25625
+    },
+    {
+     "name": "Eastchester",
+     "population": 20491
+    },
+    {
+     "name": "Mamaroneck",
+     "population": 19826
+    },
+    {
+     "name": "Scarsdale",
+     "population": 18010
+    },
+    {
+     "name": "Rye",
+     "population": 16428
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36121",
+   "fips": "36121",
+   "name": "Wyoming County",
+   "short": "Wyoming",
+   "slug": "wyoming",
+   "seat": "Warsaw",
+   "founded": 1841,
+   "areaSqMi": 593,
+   "lat": 42.7036,
+   "lon": -78.2097,
+   "population": 39753,
+   "medianAge": 43.3,
+   "housingUnits": 18263,
+   "vacancyPct": 9.9,
+   "ownerPct": 75.9,
+   "singleFamilyPct": 76.3,
+   "mobileHomePct": 8.9,
+   "medianYearBuilt": 1960,
+   "builtPre1960Pct": 49.8,
+   "builtPre1980Pct": 72.0,
+   "built2000PlusPct": 10.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 39.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 22.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 17.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 10.4
+    }
+   ],
+   "heatGasPct": 45.4,
+   "heatElectricPct": 18.2,
+   "heatPropanePct": 16.1,
+   "heatWoodPct": 7.7,
+   "medianHomeValue": 162300,
+   "medianIncome": 69110,
+   "adjacent": [
+    "allegany",
+    "cattaraugus",
+    "erie",
+    "genesee",
+    "livingston"
+   ],
+   "places": [
+    {
+     "name": "Perry",
+     "population": 3871
+    },
+    {
+     "name": "Warsaw",
+     "population": 3048
+    },
+    {
+     "name": "Attica",
+     "population": 2028
+    },
+    {
+     "name": "Arcade",
+     "population": 1915
+    },
+    {
+     "name": "Castile",
+     "population": 805
+    },
+    {
+     "name": "Strykersville",
+     "population": 665
+    },
+    {
+     "name": "Silver Springs",
+     "population": 558
+    },
+    {
+     "name": "Bliss",
+     "population": 447
+    },
+    {
+     "name": "Wyoming",
+     "population": 414
+    },
+    {
+     "name": "Gainesville",
+     "population": 224
+    },
+    {
+     "name": "Pike",
+     "population": 199
+    }
+   ]
+  },
+  {
+   "geoid": "05000US36123",
+   "fips": "36123",
+   "name": "Yates County",
+   "short": "Yates",
+   "slug": "yates",
+   "seat": "Penn Yan",
+   "founded": 1823,
+   "areaSqMi": 338,
+   "lat": 42.6166,
+   "lon": -77.1309,
+   "population": 24526,
+   "medianAge": 42.5,
+   "housingUnits": 13211,
+   "vacancyPct": 28.2,
+   "ownerPct": 77.2,
+   "singleFamilyPct": 77.2,
+   "mobileHomePct": 11.3,
+   "medianYearBuilt": 1969,
+   "builtPre1960Pct": 42.4,
+   "builtPre1980Pct": 62.5,
+   "built2000PlusPct": 14.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 31.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 14.4
+    }
+   ],
+   "heatGasPct": 28.5,
+   "heatElectricPct": 21.0,
+   "heatPropanePct": 27.4,
+   "heatWoodPct": 9.0,
+   "medianHomeValue": 184700,
+   "medianIncome": 69701,
+   "adjacent": [
+    "ontario",
+    "schuyler",
+    "seneca",
+    "steuben"
+   ],
+   "places": [
+    {
+     "name": "Penn Yan",
+     "population": 4714
+    },
+    {
+     "name": "Dundee",
+     "population": 2001
+    },
+    {
+     "name": "Keuka Park",
+     "population": 1121
+    },
+    {
+     "name": "Rushville",
+     "population": 603
+    },
+    {
+     "name": "Dresden",
+     "population": 272
+    }
+   ]
+  }
+ ]
+}

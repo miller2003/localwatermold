@@ -1,0 +1,75 @@
+---
+import { S, claimsGeneric } from "../../lib/state";
+export function getStaticPaths() {
+  return [{ params: { st: S.slug } }];
+}
+import Article from "../../layouts/Article.astro";
+---
+<Article
+  title={`Filing a water damage insurance claim in ${S.name}`}
+  seoTitle={`${S.name} Water Damage Insurance Claims: Coverage, Deadlines and Your Rights`}
+  description={`What ${S.name} homeowners policies usually cover for water damage, what they don't, the deadlines ${S.name}'s claim rules put on insurers, and how to document a claim so it holds up.`}
+  eyebrow="Guide · Insurance"
+  dek={`Most water damage claims are decided by two things: what caused the water, and how well you documented it. Here's how coverage usually works and what ${S.name}'s rules require of your insurer.`}
+  path={`/guides/${S.slug}-water-damage-insurance-claim/`}
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: `${S.name} insurance claims`, href: `/guides/${S.slug}-water-damage-insurance-claim/` }]}
+  related={[
+    { href: "/guides/water-damage-first-hour/", label: "What to do in the first hour" },
+    { href: "/guides/basement-flooding-sump-pump/", label: "Basement flooding and sump pumps" },
+    { href: "/tools/cost-estimator/", label: "Estimate the cost" },
+  ]}
+  sources={[
+    ...(S.claims ? [{ label: S.claims.citation, href: S.claims.url }] : []),
+    { label: S.regulator.name, href: S.regulator.url },
+    { label: "FloodSmart (National Flood Insurance Program)", href: "https://www.floodsmart.gov/" },
+  ]}
+>
+  <p class="notice notice-water">This is general information, not legal or insurance advice. Your policy's wording controls. Read the declarations page and the exclusions, or ask your agent.</p>
+
+  <h2>What a standard {S.name} homeowners policy usually covers</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Cause</th><th>Usually covered?</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Burst or frozen pipe</td><td>Usually yes</td><td>Sudden and accidental. If the house was vacant or unheated, check the freezing condition in your policy.</td></tr>
+        <tr><td>Appliance or water heater failure</td><td>Usually yes</td><td>The resulting water damage is typically covered. The appliance itself often isn't.</td></tr>
+        <tr><td>Roof leak from a storm</td><td>Usually yes</td><td>Wind or hail opening the roof is the covered cause. Wear and tear isn't.</td></tr>
+        <tr><td>Slow leak over weeks or months</td><td>Usually no</td><td>Gradual leaks, seepage and resulting mold are commonly excluded.</td></tr>
+        <tr><td>Sewer or drain backup</td><td>Only with an endorsement</td><td>Often called water backup coverage. It's an add-on with its own limit.</td></tr>
+        <tr><td>Sump pump failure or overflow</td><td>Only with an endorsement</td><td>Usually the same water backup endorsement.</td></tr>
+        <tr><td>Flooding or rising surface water</td><td>No</td><td>Needs a separate flood policy, through the NFIP or a private insurer. NFIP policies generally have a 30-day waiting period.</td></tr>
+        <tr><td>Groundwater seeping through the foundation</td><td>Usually no</td><td>Treated as flood or seepage in most policies.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Your duties after a loss</h2>
+  <p>Nearly every homeowners policy requires you to give prompt notice and to take reasonable steps to protect the property from further damage. In practice that means stopping the water and starting drying quickly. Insurers can reduce or deny the part of a claim caused by waiting. Keep receipts for emergency repairs, fans, dehumidifiers, tarps and hotel nights.</p>
+
+  <h2>What {S.name}'s claim rules require of your insurer</h2>
+  {S.claims ? (
+    <>
+      <p>{S.claims.citation} sets minimum standards for how insurers handle property claims. Among them:</p>
+      <ul>
+        {S.claims.bullets.map(([head, body]) => <li><strong>{head}</strong> {body}</li>)}
+      </ul>
+      <p>{S.claims.note} If you think an insurer isn't following the rules, you can file a complaint with the {S.regulator.name}{S.regulator.phone ? ` at ${S.regulator.phone}` : ""} or through {S.regulator.urlLabel}.</p>
+    </>
+  ) : <p>{claimsGeneric()}</p>}
+
+  <h2>How to document a water damage claim</h2>
+  <ol class="steps">
+    <li><strong>Photos and video before cleanup.</strong> Every room, the source, waterlines, damaged belongings.</li>
+    <li><strong>Keep the failed part.</strong> The burst hose, cracked fitting or failed valve can prove a sudden event.</li>
+    <li><strong>Get the moisture readings.</strong> A restoration company should log moisture readings and drying progress each day. Ask for copies.</li>
+    <li><strong>List damaged contents.</strong> Item, age, where you bought it, and what it would cost to replace.</li>
+    <li><strong>Write everything down.</strong> Every call with the insurer: date, name, what was said, claim number.</li>
+  </ol>
+
+  <h2>Working with the restoration company and the adjuster</h2>
+  <p>You can usually choose your own restoration company. Some insurers have preferred vendor programs, which can speed approvals but aren't mandatory unless your policy says so. Before you sign anything, read whether it's a work authorization or an assignment of benefits, which hands your claim payments to the contractor.</p>
+  <p>If a claim is large or disputed, some homeowners hire a public adjuster, who represents you rather than the insurer and is paid a percentage of the settlement. Public adjusters must be licensed by the {S.regulator.name}. Confirm the license before you sign.</p>
+
+  <h2>Additional living expenses</h2>
+  <p>If your home isn't livable during repairs, the loss of use part of your policy may pay for a hotel, meals above your normal costs, and other extra expenses. Ask about limits and keep every receipt.</p>
+</Article>

@@ -1,0 +1,86 @@
+---
+import { S } from "../lib/state";
+import Base from "./Base.astro";
+import CallButton from "../components/CallButton.astro";
+import { SITE } from "../config";
+import { p } from "../lib/paths";
+
+interface Source { label: string; href: string }
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description: string;
+  eyebrow: string;
+  dek: string;
+  path: string;
+  crumbs: { name: string; href: string }[];
+  sources?: Source[];
+  related?: { href: string; label: string }[];
+}
+const { title, seoTitle, description, eyebrow, dek, path, crumbs, sources = [], related = [] } = Astro.props;
+const origin = Astro.site!.origin;
+const schema = [{
+  "@type": "Article",
+  headline: title,
+  description,
+  mainEntityOfPage: `${origin}${p(path)}`,
+  dateModified: SITE.lastReviewed,
+  publisher: { "@id": `${origin}/#org` },
+  author: { "@id": `${origin}/#org` },
+  ...(SITE.reviewer ? { reviewedBy: { "@type": "Person", name: SITE.reviewer.name, description: SITE.reviewer.credential } } : {}),
+}];
+---
+<Base title={seoTitle ?? `${title} | ${SITE.brand}`} description={description} crumbs={crumbs} schema={schema}>
+  <article>
+    <header class="wrap art-head">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="lede">{dek}</p>
+      <p class="small faint byline">
+        {SITE.reviewer ? <>Reviewed by {SITE.reviewer.name}, {SITE.reviewer.credential}. </> : null}
+        Last reviewed {new Date(SITE.lastReviewed + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}. <a href="/editorial-policy/">How we write and check these guides</a>
+      </p>
+    </header>
+    <div class="wrap art-grid">
+      <div class="prose read">
+        <slot />
+        {sources.length > 0 && (
+          <section class="sources">
+            <h2>Sources</h2>
+            <ol class="small">
+              {sources.map((s) => <li><a href={s.href} rel="noopener">{s.label}</a></li>)}
+            </ol>
+          </section>
+        )}
+      </div>
+      <aside class="side no-print">
+        <div class="card help">
+          <p class="eyebrow">Need help now?</p>
+          <p class="muted small">Get connected with a restoration company that serves your {S.name} county.</p>
+          <CallButton placement="article-side" block />
+          <a class="small" href={p("/counties/")}>Find your county</a>
+        </div>
+        {related.length > 0 && (
+          <nav class="card related" aria-label="Related guides">
+            <p class="eyebrow">Related</p>
+            <ul>{related.map((r) => <li><a href={p(r.href)}>{r.label}</a></li>)}</ul>
+          </nav>
+        )}
+      </aside>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .art-head { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 28px; max-width: calc(var(--read) + 40px); margin-left: max(0px, calc((100% - var(--wrap)) / 2)); }
+  .byline { margin-top: 18px; }
+  .art-grid { display: grid; grid-template-columns: minmax(0, var(--read)) minmax(0, 300px); gap: 56px; justify-content: space-between; padding-bottom: 72px; }
+  .side { display: grid; gap: 16px; align-content: start; position: sticky; top: 88px; }
+  .help { display: grid; gap: 12px; }
+  .help p { margin: 0; }
+  .related ul { list-style: none; padding: 0; margin: 0; }
+  .related li { padding: 8px 0; border-top: 1px solid var(--line); margin: 0; }
+  .sources { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .sources h2 { font-size: 1.1rem; margin-top: 0; }
+  @media (max-width: 960px) { .art-grid { grid-template-columns: 1fr; gap: 32px; } .side { position: static; } .art-head { margin-left: auto; } }
+</style>

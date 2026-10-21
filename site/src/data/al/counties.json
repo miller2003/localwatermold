@@ -1,0 +1,10471 @@
+{
+ "meta": {
+  "acsRelease": "ACS 2024 5-year",
+  "acsYears": "2020-2024",
+  "countyCount": 67,
+  "state": "Alabama",
+  "stateAbbr": "AL",
+  "weatherSource": "NOAA nClimGrid-Daily county averages (EpiNOAA)",
+  "weatherPeriod": "2015\u20132024",
+  "boundarySource": "U.S. Census Bureau TIGER boundaries via Census Reporter",
+  "generated": "2026-10-21"
+ },
+ "state": {
+  "builtPre1960Pct": 16.1,
+  "builtPre1980Pct": 43.5,
+  "built2000PlusPct": 22.6,
+  "medianYearBuilt": 1984,
+  "ownerPct": 75.1,
+  "vacancyPct": 15.8,
+  "mobileHomePct": 21.7,
+  "heatPropanePct": 9.0,
+  "heatWoodPct": 0.9,
+  "heatElectricPct": 69.5,
+  "medianHomeValue": 156600,
+  "medianIncome": 54563,
+  "medianAge": 41.3,
+  "weather": {
+   "freezeNights": 39,
+   "pipeRiskNights": 3,
+   "belowZeroNights": 0.0,
+   "iceDays": 0,
+   "annualPrecip": 58.3,
+   "heavyRainDays": 15.1,
+   "freezeThawDays": 38,
+   "muggyNights": 112,
+   "max3DayRain": 6.5
+  },
+  "population": 5086768,
+  "housingUnits": 2337265
+ },
+ "pilot": [
+  "autauga",
+  "baldwin",
+  "barbour",
+  "bibb",
+  "blount",
+  "bullock",
+  "butler",
+  "calhoun",
+  "chambers",
+  "cherokee",
+  "chilton",
+  "choctaw",
+  "clarke",
+  "clay",
+  "cleburne",
+  "coffee",
+  "colbert",
+  "conecuh",
+  "coosa",
+  "covington",
+  "crenshaw",
+  "cullman",
+  "dale",
+  "dallas",
+  "dekalb",
+  "elmore",
+  "escambia",
+  "etowah",
+  "fayette",
+  "franklin",
+  "geneva",
+  "greene",
+  "hale",
+  "henry",
+  "houston",
+  "jackson",
+  "jefferson",
+  "lamar",
+  "lauderdale",
+  "lawrence",
+  "lee",
+  "limestone",
+  "lowndes",
+  "macon",
+  "madison",
+  "marengo",
+  "marion",
+  "marshall",
+  "mobile",
+  "monroe",
+  "montgomery",
+  "morgan",
+  "perry",
+  "pickens",
+  "pike",
+  "randolph",
+  "russell",
+  "shelby",
+  "st-clair",
+  "sumter",
+  "talladega",
+  "tallapoosa",
+  "tuscaloosa",
+  "walker",
+  "washington",
+  "wilcox",
+  "winston"
+ ],
+ "counties": [
+  {
+   "geoid": "05000US01001",
+   "fips": "01001",
+   "name": "Autauga County",
+   "short": "Autauga",
+   "slug": "autauga",
+   "seat": "Prattville",
+   "founded": 1818,
+   "areaSqMi": 594,
+   "lat": 32.5063,
+   "lon": -86.6509,
+   "population": 59947,
+   "medianAge": 39.0,
+   "housingUnits": 25039,
+   "vacancyPct": 8.5,
+   "ownerPct": 77.1,
+   "singleFamilyPct": 76.1,
+   "mobileHomePct": 15.6,
+   "medianYearBuilt": 1994,
+   "builtPre1960Pct": 7.4,
+   "builtPre1980Pct": 34.0,
+   "built2000PlusPct": 38.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 4.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 38.9
+    }
+   ],
+   "heatGasPct": 33.8,
+   "heatElectricPct": 57.6,
+   "heatPropanePct": 7.9,
+   "heatWoodPct": 0.4,
+   "medianHomeValue": 207200,
+   "medianIncome": 72481,
+   "adjacent": [
+    "chilton",
+    "dallas",
+    "elmore",
+    "lowndes",
+    "montgomery"
+   ],
+   "places": [
+    {
+     "name": "Prattville",
+     "population": 39482
+    },
+    {
+     "name": "Pine Level",
+     "population": 4170
+    },
+    {
+     "name": "Marbury",
+     "population": 1570
+    },
+    {
+     "name": "Autaugaville",
+     "population": 809
+    },
+    {
+     "name": "Billingsley",
+     "population": 115
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 33,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 33,
+    "muggyNights": 120,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 12,
+    "coldestDate": "2015-01-09",
+    "annualPrecip": 57.5,
+    "heavyRainDays": 15.0,
+    "wettestDay": 4.49,
+    "wettestDate": "2020-04-20",
+    "max3DayRain": 7.18,
+    "max3DayEnd": "2018-05-31",
+    "avgFirstFreeze": "Nov 17",
+    "avgLastFreeze": "Mar 7",
+    "monthlyFreeze": [
+     13.0,
+     6.1,
+     2.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1,
+     3.2,
+     8.7
+    ],
+    "monthlyHeavyRain": [
+     2.3,
+     1.9,
+     1.8,
+     1.7,
+     1.2,
+     0.9,
+     0.6,
+     0.5,
+     0.9,
+     1.0,
+     0.8,
+     1.4
+    ],
+    "monthlyRain": [
+     6.51,
+     5.57,
+     5.73,
+     5.6,
+     5.39,
+     4.68,
+     4.7,
+     4.47,
+     3.35,
+     2.92,
+     3.41,
+     5.15
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01003",
+   "fips": "01003",
+   "name": "Baldwin County",
+   "short": "Baldwin",
+   "slug": "baldwin",
+   "seat": "Bay Minette",
+   "founded": 1809,
+   "areaSqMi": 1590,
+   "lat": 30.73,
+   "lon": -87.7618,
+   "population": 246989,
+   "medianAge": 43.9,
+   "housingUnits": 132258,
+   "vacancyPct": 25.5,
+   "ownerPct": 77.6,
+   "singleFamilyPct": 66.6,
+   "mobileHomePct": 9.6,
+   "medianYearBuilt": 1999,
+   "builtPre1960Pct": 4.9,
+   "builtPre1980Pct": 18.3,
+   "built2000PlusPct": 47.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 1.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 3.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 13.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 47.5
+    }
+   ],
+   "heatGasPct": 10.4,
+   "heatElectricPct": 86.7,
+   "heatPropanePct": 1.7,
+   "heatWoodPct": 0.3,
+   "medianHomeValue": 316900,
+   "medianIncome": 78775,
+   "adjacent": [
+    "clarke",
+    "escambia",
+    "mobile",
+    "monroe",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Daphne",
+     "population": 29453
+    },
+    {
+     "name": "Fairhope",
+     "population": 24190
+    },
+    {
+     "name": "Foley",
+     "population": 24026
+    },
+    {
+     "name": "Gulf Shores",
+     "population": 16401
+    },
+    {
+     "name": "Spanish Fort",
+     "population": 10662
+    },
+    {
+     "name": "Orange Beach",
+     "population": 8407
+    },
+    {
+     "name": "Bay Minette",
+     "population": 8295
+    },
+    {
+     "name": "Robertsdale",
+     "population": 7194
+    },
+    {
+     "name": "Loxley",
+     "population": 4357
+    },
+    {
+     "name": "Stapleton",
+     "population": 3009
+    },
+    {
+     "name": "Bon Secour",
+     "population": 2789
+    },
+    {
+     "name": "Elberta",
+     "population": 2293
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 10,
+    "pipeRiskNights": 0,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 10,
+    "muggyNights": 154,
+    "longestIceStreak": 0,
+    "longestIceStreakEnd": null,
+    "coldestTemp": 19,
+    "coldestDate": "2018-01-18",
+    "annualPrecip": 64.8,
+    "heavyRainDays": 16.9,
+    "wettestDay": 5.56,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 9.33,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Dec 3",
+    "avgLastFreeze": "Feb 8",
+    "monthlyFreeze": [
+     5.2,
+     1.8,
+     0.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     2.1
+    ],
+    "monthlyHeavyRain": [
+     1.2,
+     0.7,
+     1.3,
+     1.9,
+     1.4,
+     1.7,
+     0.8,
+     1.8,
+     1.1,
+     1.4,
+     1.1,
+     2.5
+    ],
+    "monthlyRain": [
+     4.78,
+     3.54,
+     4.44,
+     5.84,
+     5.06,
+     7.36,
+     6.91,
+     7.32,
+     5.37,
+     4.29,
+     3.5,
+     6.36
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01005",
+   "fips": "01005",
+   "name": "Barbour County",
+   "short": "Barbour",
+   "slug": "barbour",
+   "seat": "Clayton",
+   "founded": 1832,
+   "areaSqMi": 885,
+   "lat": 31.8844,
+   "lon": -85.3932,
+   "population": 24643,
+   "medianAge": 40.8,
+   "housingUnits": 11762,
+   "vacancyPct": 22.4,
+   "ownerPct": 68.2,
+   "singleFamilyPct": 61.5,
+   "mobileHomePct": 26.7,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 18.5,
+   "builtPre1980Pct": 45.3,
+   "built2000PlusPct": 16.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 8.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 38.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 16.4
+    }
+   ],
+   "heatGasPct": 5.0,
+   "heatElectricPct": 85.9,
+   "heatPropanePct": 7.5,
+   "heatWoodPct": 0.1,
+   "medianHomeValue": 112900,
+   "medianIncome": 46042,
+   "adjacent": [
+    "bullock",
+    "dale",
+    "henry",
+    "pike",
+    "russell"
+   ],
+   "places": [
+    {
+     "name": "Eufaula",
+     "population": 12584
+    },
+    {
+     "name": "Clayton",
+     "population": 2295
+    },
+    {
+     "name": "Clio",
+     "population": 1422
+    },
+    {
+     "name": "Louisville",
+     "population": 518
+    },
+    {
+     "name": "Bakerhill",
+     "population": 244
+    },
+    {
+     "name": "Blue Springs",
+     "population": 100
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 22,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 22,
+    "muggyNights": 125,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 13,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 55.7,
+    "heavyRainDays": 13.8,
+    "wettestDay": 9.58,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 11.36,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 24",
+    "avgLastFreeze": "Mar 2",
+    "monthlyFreeze": [
+     9.8,
+     3.4,
+     1.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.0,
+     5.8
+    ],
+    "monthlyHeavyRain": [
+     2.2,
+     1.1,
+     1.1,
+     2.0,
+     1.1,
+     0.9,
+     0.2,
+     0.7,
+     0.9,
+     0.8,
+     0.9,
+     1.9
+    ],
+    "monthlyRain": [
+     6.12,
+     4.27,
+     4.24,
+     5.42,
+     4.45,
+     5.0,
+     4.28,
+     5.28,
+     4.61,
+     2.8,
+     3.24,
+     5.98
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01007",
+   "fips": "01007",
+   "name": "Bibb County",
+   "short": "Bibb",
+   "slug": "bibb",
+   "seat": "Centreville",
+   "founded": 1818,
+   "areaSqMi": 622,
+   "lat": 33.0362,
+   "lon": -87.0968,
+   "population": 22130,
+   "medianAge": 41.2,
+   "housingUnits": 9133,
+   "vacancyPct": 15.6,
+   "ownerPct": 79.2,
+   "singleFamilyPct": 61.5,
+   "mobileHomePct": 27.8,
+   "medianYearBuilt": 1990,
+   "builtPre1960Pct": 14.5,
+   "builtPre1980Pct": 35.0,
+   "built2000PlusPct": 31.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 33.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 31.7
+    }
+   ],
+   "heatGasPct": 17.5,
+   "heatElectricPct": 73.8,
+   "heatPropanePct": 5.4,
+   "heatWoodPct": 2.7,
+   "medianHomeValue": 145700,
+   "medianIncome": 52541,
+   "adjacent": [
+    "chilton",
+    "hale",
+    "jefferson",
+    "perry",
+    "shelby",
+    "tuscaloosa"
+   ],
+   "places": [
+    {
+     "name": "Brent",
+     "population": 4010
+    },
+    {
+     "name": "Centreville",
+     "population": 2741
+    },
+    {
+     "name": "Woodstock",
+     "population": 1218
+    },
+    {
+     "name": "West Blocton",
+     "population": 1077
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 43,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 42,
+    "muggyNights": 106,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 10,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 55.7,
+    "heavyRainDays": 14.6,
+    "wettestDay": 4.0,
+    "wettestDate": "2020-04-20",
+    "max3DayRain": 5.88,
+    "max3DayEnd": "2017-06-24",
+    "avgFirstFreeze": "Nov 14",
+    "avgLastFreeze": "Mar 14",
+    "monthlyFreeze": [
+     15.6,
+     8.4,
+     2.9,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     4.9,
+     10.6
+    ],
+    "monthlyHeavyRain": [
+     2.0,
+     2.5,
+     1.7,
+     1.8,
+     0.9,
+     1.1,
+     0.5,
+     0.6,
+     0.6,
+     0.7,
+     0.9,
+     1.3
+    ],
+    "monthlyRain": [
+     5.78,
+     6.56,
+     5.63,
+     5.84,
+     3.97,
+     4.97,
+     4.57,
+     4.48,
+     2.48,
+     2.77,
+     3.67,
+     4.95
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01009",
+   "fips": "01009",
+   "name": "Blount County",
+   "short": "Blount",
+   "slug": "blount",
+   "seat": "Oneonta",
+   "founded": 1818,
+   "areaSqMi": 645,
+   "lat": 34.0128,
+   "lon": -86.5332,
+   "population": 59518,
+   "medianAge": 41.3,
+   "housingUnits": 24918,
+   "vacancyPct": 11.0,
+   "ownerPct": 81.0,
+   "singleFamilyPct": 70.6,
+   "mobileHomePct": 24.3,
+   "medianYearBuilt": 1990,
+   "builtPre1960Pct": 13.2,
+   "builtPre1980Pct": 36.1,
+   "built2000PlusPct": 29.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 22.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 29.1
+    }
+   ],
+   "heatGasPct": 11.7,
+   "heatElectricPct": 74.9,
+   "heatPropanePct": 10.0,
+   "heatWoodPct": 2.4,
+   "medianHomeValue": 175200,
+   "medianIncome": 64190,
+   "adjacent": [
+    "cullman",
+    "etowah",
+    "jefferson",
+    "marshall",
+    "st-clair",
+    "walker"
+   ],
+   "places": [
+    {
+     "name": "Oneonta",
+     "population": 6971
+    },
+    {
+     "name": "Remlap",
+     "population": 2761
+    },
+    {
+     "name": "Blountsville",
+     "population": 1648
+    },
+    {
+     "name": "Smoke Rise",
+     "population": 1471
+    },
+    {
+     "name": "Locust Fork",
+     "population": 1402
+    },
+    {
+     "name": "Hayden",
+     "population": 1389
+    },
+    {
+     "name": "Susan Moore",
+     "population": 1336
+    },
+    {
+     "name": "Snead",
+     "population": 1247
+    },
+    {
+     "name": "Cleveland",
+     "population": 1182
+    },
+    {
+     "name": "Rosa",
+     "population": 777
+    },
+    {
+     "name": "Allgood",
+     "population": 759
+    },
+    {
+     "name": "Highland Lake",
+     "population": 503
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 41,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 40,
+    "muggyNights": 105,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2017-01-08",
+    "coldestTemp": 8,
+    "coldestDate": "2018-01-18",
+    "annualPrecip": 58.3,
+    "heavyRainDays": 16.2,
+    "wettestDay": 3.57,
+    "wettestDate": "2018-12-28",
+    "max3DayRain": 6.39,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 13",
+    "avgLastFreeze": "Mar 13",
+    "monthlyFreeze": [
+     15.2,
+     8.4,
+     3.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     4.7,
+     9.5
+    ],
+    "monthlyHeavyRain": [
+     1.7,
+     2.5,
+     2.0,
+     1.8,
+     1.0,
+     0.9,
+     0.6,
+     1.0,
+     0.8,
+     1.0,
+     1.0,
+     1.9
+    ],
+    "monthlyRain": [
+     5.34,
+     6.75,
+     6.89,
+     5.56,
+     4.11,
+     4.65,
+     4.3,
+     4.72,
+     2.75,
+     3.37,
+     3.34,
+     6.52
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01011",
+   "fips": "01011",
+   "name": "Bullock County",
+   "short": "Bullock",
+   "slug": "bullock",
+   "seat": "Union Springs",
+   "founded": 1866,
+   "areaSqMi": 623,
+   "lat": 32.1006,
+   "lon": -85.7131,
+   "population": 10058,
+   "medianAge": 43.0,
+   "housingUnits": 4579,
+   "vacancyPct": 19.5,
+   "ownerPct": 66.6,
+   "singleFamilyPct": 43.2,
+   "mobileHomePct": 43.3,
+   "medianYearBuilt": 1987,
+   "builtPre1960Pct": 11.1,
+   "builtPre1980Pct": 38.3,
+   "built2000PlusPct": 19.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 27.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 42.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 19.3
+    }
+   ],
+   "heatGasPct": 9.9,
+   "heatElectricPct": 69.2,
+   "heatPropanePct": 18.4,
+   "heatWoodPct": 2.3,
+   "medianHomeValue": 81700,
+   "medianIncome": 31310,
+   "adjacent": [
+    "barbour",
+    "macon",
+    "montgomery",
+    "pike",
+    "russell"
+   ],
+   "places": [
+    {
+     "name": "Union Springs",
+     "population": 3248
+    },
+    {
+     "name": "Midway",
+     "population": 503
+    },
+    {
+     "name": "Fitzpatrick",
+     "population": 0
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 26,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 26,
+    "muggyNights": 121,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2018-01-18",
+    "coldestTemp": 13,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 56.0,
+    "heavyRainDays": 14.1,
+    "wettestDay": 8.4,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 9.84,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 22",
+    "avgLastFreeze": "Mar 5",
+    "monthlyFreeze": [
+     11.4,
+     4.3,
+     1.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.4,
+     6.7
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     1.3,
+     1.3,
+     1.9,
+     1.2,
+     1.0,
+     0.2,
+     0.4,
+     1.1,
+     0.9,
+     1.1,
+     1.9
+    ],
+    "monthlyRain": [
+     5.75,
+     4.43,
+     4.41,
+     5.36,
+     4.57,
+     5.26,
+     4.35,
+     4.96,
+     4.52,
+     2.98,
+     3.52,
+     5.91
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01013",
+   "fips": "01013",
+   "name": "Butler County",
+   "short": "Butler",
+   "slug": "butler",
+   "seat": "Greenville",
+   "founded": 1819,
+   "areaSqMi": 777,
+   "lat": 31.7432,
+   "lon": -86.6758,
+   "population": 18630,
+   "medianAge": 42.7,
+   "housingUnits": 9885,
+   "vacancyPct": 23.1,
+   "ownerPct": 65.8,
+   "singleFamilyPct": 67.5,
+   "mobileHomePct": 19.8,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 17.8,
+   "builtPre1980Pct": 51.8,
+   "built2000PlusPct": 13.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 34.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 13.5
+    }
+   ],
+   "heatGasPct": 12.7,
+   "heatElectricPct": 70.9,
+   "heatPropanePct": 14.8,
+   "heatWoodPct": 1.0,
+   "medianHomeValue": 99800,
+   "medianIncome": 44755,
+   "adjacent": [
+    "conecuh",
+    "covington",
+    "crenshaw",
+    "lowndes",
+    "monroe",
+    "wilcox"
+   ],
+   "places": [
+    {
+     "name": "Greenville",
+     "population": 7163
+    },
+    {
+     "name": "Georgiana",
+     "population": 1578
+    },
+    {
+     "name": "McKenzie",
+     "population": 557
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 30,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 30,
+    "muggyNights": 122,
+    "longestIceStreak": 0,
+    "longestIceStreakEnd": null,
+    "coldestTemp": 14,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 58.4,
+    "heavyRainDays": 15.7,
+    "wettestDay": 4.27,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 7.71,
+    "max3DayEnd": "2017-01-03",
+    "avgFirstFreeze": "Nov 16",
+    "avgLastFreeze": "Mar 7",
+    "monthlyFreeze": [
+     11.6,
+     5.9,
+     1.8,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1,
+     2.9,
+     7.4
+    ],
+    "monthlyHeavyRain": [
+     2.1,
+     1.3,
+     1.4,
+     2.0,
+     1.3,
+     0.8,
+     0.4,
+     1.1,
+     1.2,
+     1.2,
+     1.0,
+     1.9
+    ],
+    "monthlyRain": [
+     5.89,
+     4.25,
+     4.86,
+     5.76,
+     5.1,
+     5.56,
+     5.14,
+     4.86,
+     3.74,
+     3.77,
+     3.57,
+     5.89
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01015",
+   "fips": "01015",
+   "name": "Calhoun County",
+   "short": "Calhoun",
+   "slug": "calhoun",
+   "seat": "Anniston",
+   "founded": 1832,
+   "areaSqMi": 606,
+   "lat": 33.7623,
+   "lon": -85.842,
+   "population": 116090,
+   "medianAge": 39.3,
+   "housingUnits": 53361,
+   "vacancyPct": 15.6,
+   "ownerPct": 70.3,
+   "singleFamilyPct": 71.9,
+   "mobileHomePct": 14.7,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 23.3,
+   "builtPre1980Pct": 52.6,
+   "built2000PlusPct": 19.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 19.0
+    }
+   ],
+   "heatGasPct": 26.3,
+   "heatElectricPct": 65.7,
+   "heatPropanePct": 5.8,
+   "heatWoodPct": 1.1,
+   "medianHomeValue": 156600,
+   "medianIncome": 55029,
+   "adjacent": [
+    "cherokee",
+    "cleburne",
+    "etowah",
+    "st-clair",
+    "talladega"
+   ],
+   "places": [
+    {
+     "name": "Oxford",
+     "population": 22063
+    },
+    {
+     "name": "Anniston",
+     "population": 21271
+    },
+    {
+     "name": "Jacksonville",
+     "population": 14437
+    },
+    {
+     "name": "Saks",
+     "population": 10681
+    },
+    {
+     "name": "Piedmont",
+     "population": 4740
+    },
+    {
+     "name": "Alexandria",
+     "population": 3475
+    },
+    {
+     "name": "West End-Cobb Town",
+     "population": 3453
+    },
+    {
+     "name": "Weaver",
+     "population": 3324
+    },
+    {
+     "name": "Choccolocco",
+     "population": 2620
+    },
+    {
+     "name": "Ohatchee",
+     "population": 1148
+    },
+    {
+     "name": "Hobson City",
+     "population": 1142
+    },
+    {
+     "name": "White Plains",
+     "population": 919
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 44,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 43,
+    "muggyNights": 99,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 9,
+    "coldestDate": "2015-01-09",
+    "annualPrecip": 55.6,
+    "heavyRainDays": 13.4,
+    "wettestDay": 4.21,
+    "wettestDate": "2021-06-20",
+    "max3DayRain": 5.83,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 13",
+    "avgLastFreeze": "Mar 17",
+    "monthlyFreeze": [
+     16.1,
+     9.2,
+     3.3,
+     0.2,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     5.2,
+     9.9
+    ],
+    "monthlyHeavyRain": [
+     1.6,
+     1.9,
+     1.4,
+     1.3,
+     1.0,
+     1.0,
+     0.5,
+     0.7,
+     0.7,
+     0.7,
+     0.9,
+     1.7
+    ],
+    "monthlyRain": [
+     5.6,
+     6.21,
+     5.69,
+     4.78,
+     4.67,
+     4.85,
+     4.48,
+     4.51,
+     2.8,
+     2.82,
+     3.6,
+     5.55
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01017",
+   "fips": "01017",
+   "name": "Chambers County",
+   "short": "Chambers",
+   "slug": "chambers",
+   "seat": "LaFayette",
+   "founded": 1832,
+   "areaSqMi": 597,
+   "lat": 32.9985,
+   "lon": -85.4018,
+   "population": 34192,
+   "medianAge": 41.3,
+   "housingUnits": 16435,
+   "vacancyPct": 18.3,
+   "ownerPct": 71.8,
+   "singleFamilyPct": 71.7,
+   "mobileHomePct": 14.3,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 28.3,
+   "builtPre1980Pct": 51.0,
+   "built2000PlusPct": 22.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 12.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 22.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.0
+    }
+   ],
+   "heatGasPct": 20.0,
+   "heatElectricPct": 66.7,
+   "heatPropanePct": 10.2,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 135800,
+   "medianIncome": 49656,
+   "adjacent": [
+    "lee",
+    "randolph",
+    "tallapoosa"
+   ],
+   "places": [
+    {
+     "name": "Valley",
+     "population": 10277
+    },
+    {
+     "name": "Lanett",
+     "population": 6814
+    },
+    {
+     "name": "La Fayette",
+     "population": 2633
+    },
+    {
+     "name": "Huguley",
+     "population": 2577
+    },
+    {
+     "name": "Fredonia",
+     "population": 329
+    },
+    {
+     "name": "Abanda",
+     "population": 257
+    },
+    {
+     "name": "Cusseta",
+     "population": 148
+    },
+    {
+     "name": "Five Points",
+     "population": 139
+    },
+    {
+     "name": "Penton",
+     "population": 93
+    },
+    {
+     "name": "Standing Rock",
+     "population": 56
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 48,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 48,
+    "muggyNights": 93,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 8,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 57.9,
+    "heavyRainDays": 14.9,
+    "wettestDay": 4.76,
+    "wettestDate": "2020-04-20",
+    "max3DayRain": 7.75,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 8",
+    "avgLastFreeze": "Mar 20",
+    "monthlyFreeze": [
+     17.3,
+     9.2,
+     4.1,
+     0.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.5,
+     5.0,
+     11.4
+    ],
+    "monthlyHeavyRain": [
+     2.0,
+     1.7,
+     1.2,
+     1.8,
+     1.1,
+     0.9,
+     0.4,
+     0.8,
+     0.7,
+     1.2,
+     1.2,
+     1.9
+    ],
+    "monthlyRain": [
+     6.08,
+     5.12,
+     5.05,
+     5.6,
+     4.29,
+     4.98,
+     4.45,
+     4.87,
+     3.54,
+     3.77,
+     3.86,
+     6.25
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01019",
+   "fips": "01019",
+   "name": "Cherokee County",
+   "short": "Cherokee",
+   "slug": "cherokee",
+   "seat": "Centre",
+   "founded": 1836,
+   "areaSqMi": 554,
+   "lat": 34.1829,
+   "lon": -85.642,
+   "population": 25443,
+   "medianAge": 47.5,
+   "housingUnits": 14702,
+   "vacancyPct": 30.7,
+   "ownerPct": 81.1,
+   "singleFamilyPct": 71.4,
+   "mobileHomePct": 23.8,
+   "medianYearBuilt": 1986,
+   "builtPre1960Pct": 14.6,
+   "builtPre1980Pct": 40.9,
+   "built2000PlusPct": 26.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.4
+    }
+   ],
+   "heatGasPct": 12.4,
+   "heatElectricPct": 67.5,
+   "heatPropanePct": 18.4,
+   "heatWoodPct": 1.4,
+   "medianHomeValue": 179700,
+   "medianIncome": 53863,
+   "adjacent": [
+    "calhoun",
+    "cleburne",
+    "dekalb",
+    "etowah"
+   ],
+   "places": [
+    {
+     "name": "Centre",
+     "population": 3700
+    },
+    {
+     "name": "Cedar Bluff",
+     "population": 1629
+    },
+    {
+     "name": "Leesburg",
+     "population": 998
+    },
+    {
+     "name": "Sand Rock",
+     "population": 868
+    },
+    {
+     "name": "Broomtown",
+     "population": 279
+    },
+    {
+     "name": "Spring Garden",
+     "population": 201
+    },
+    {
+     "name": "Gaylesville",
+     "population": 151
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 46,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 46,
+    "muggyNights": 94,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 8,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 57.3,
+    "heavyRainDays": 14.2,
+    "wettestDay": 4.42,
+    "wettestDate": "2021-06-20",
+    "max3DayRain": 5.86,
+    "max3DayEnd": "2021-06-22",
+    "avgFirstFreeze": "Nov 12",
+    "avgLastFreeze": "Mar 16",
+    "monthlyFreeze": [
+     16.2,
+     10.0,
+     3.3,
+     0.2,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     5.2,
+     11.3
+    ],
+    "monthlyHeavyRain": [
+     1.7,
+     2.4,
+     1.6,
+     1.2,
+     1.1,
+     0.6,
+     0.2,
+     0.7,
+     0.7,
+     0.9,
+     1.0,
+     2.1
+    ],
+    "monthlyRain": [
+     5.48,
+     6.7,
+     5.96,
+     5.15,
+     4.33,
+     4.44,
+     4.11,
+     4.73,
+     3.25,
+     3.37,
+     3.41,
+     6.33
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01021",
+   "fips": "01021",
+   "name": "Chilton County",
+   "short": "Chilton",
+   "slug": "chilton",
+   "seat": "Clanton",
+   "founded": 1868,
+   "areaSqMi": 693,
+   "lat": 32.866,
+   "lon": -86.6656,
+   "population": 45992,
+   "medianAge": 38.7,
+   "housingUnits": 19839,
+   "vacancyPct": 9.9,
+   "ownerPct": 76.9,
+   "singleFamilyPct": 65.2,
+   "mobileHomePct": 29.5,
+   "medianYearBuilt": 1988,
+   "builtPre1960Pct": 13.5,
+   "builtPre1980Pct": 41.0,
+   "built2000PlusPct": 31.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 27.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 31.0
+    }
+   ],
+   "heatGasPct": 8.2,
+   "heatElectricPct": 76.1,
+   "heatPropanePct": 13.9,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 161300,
+   "medianIncome": 65603,
+   "adjacent": [
+    "autauga",
+    "bibb",
+    "coosa",
+    "dallas",
+    "elmore",
+    "perry",
+    "shelby"
+   ],
+   "places": [
+    {
+     "name": "Clanton",
+     "population": 8958
+    },
+    {
+     "name": "Jemison",
+     "population": 2796
+    },
+    {
+     "name": "Thorsby",
+     "population": 2365
+    },
+    {
+     "name": "Maplesville",
+     "population": 1200
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 40,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 40,
+    "muggyNights": 101,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 10,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 57.0,
+    "heavyRainDays": 14.6,
+    "wettestDay": 5.67,
+    "wettestDate": "2020-04-20",
+    "max3DayRain": 7.33,
+    "max3DayEnd": "2018-05-31",
+    "avgFirstFreeze": "Nov 16",
+    "avgLastFreeze": "Mar 16",
+    "monthlyFreeze": [
+     15.2,
+     7.5,
+     2.7,
+     0.2,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     4.0,
+     10.7
+    ],
+    "monthlyHeavyRain": [
+     2.4,
+     1.9,
+     1.8,
+     1.5,
+     1.1,
+     1.2,
+     0.5,
+     0.5,
+     0.8,
+     0.8,
+     0.7,
+     1.4
+    ],
+    "monthlyRain": [
+     6.41,
+     5.96,
+     5.96,
+     5.72,
+     4.88,
+     4.71,
+     4.7,
+     4.32,
+     2.88,
+     2.94,
+     3.52,
+     4.97
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01023",
+   "fips": "01023",
+   "name": "Choctaw County",
+   "short": "Choctaw",
+   "slug": "choctaw",
+   "seat": "Butler",
+   "founded": 1847,
+   "areaSqMi": 913,
+   "lat": 32.0038,
+   "lon": -88.2853,
+   "population": 12380,
+   "medianAge": 47.4,
+   "housingUnits": 7200,
+   "vacancyPct": 27.0,
+   "ownerPct": 82.4,
+   "singleFamilyPct": 58.5,
+   "mobileHomePct": 38.9,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 14.3,
+   "builtPre1980Pct": 43.5,
+   "built2000PlusPct": 21.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.4
+    }
+   ],
+   "heatGasPct": 3.4,
+   "heatElectricPct": 74.3,
+   "heatPropanePct": 19.0,
+   "heatWoodPct": 3.1,
+   "medianHomeValue": 123400,
+   "medianIncome": 47813,
+   "adjacent": [
+    "clarke",
+    "marengo",
+    "sumter",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Butler",
+     "population": 2386
+    },
+    {
+     "name": "Gilbertown",
+     "population": 770
+    },
+    {
+     "name": "Pennington",
+     "population": 591
+    },
+    {
+     "name": "Silas",
+     "population": 559
+    },
+    {
+     "name": "Lisman",
+     "population": 437
+    },
+    {
+     "name": "Cullomburg",
+     "population": 363
+    },
+    {
+     "name": "Toxey",
+     "population": 239
+    },
+    {
+     "name": "Needham",
+     "population": 79
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 30,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 30,
+    "muggyNights": 129,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-24",
+    "coldestTemp": 13,
+    "coldestDate": "2018-01-17",
+    "annualPrecip": 58.1,
+    "heavyRainDays": 16.7,
+    "wettestDay": 5.28,
+    "wettestDate": "2018-12-28",
+    "max3DayRain": 5.65,
+    "max3DayEnd": "2018-12-30",
+    "avgFirstFreeze": "Nov 17",
+    "avgLastFreeze": "Mar 1",
+    "monthlyFreeze": [
+     11.4,
+     5.7,
+     1.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1,
+     3.7,
+     8.1
+    ],
+    "monthlyHeavyRain": [
+     2.0,
+     1.7,
+     2.0,
+     2.3,
+     1.2,
+     1.4,
+     0.8,
+     0.9,
+     0.9,
+     1.1,
+     1.0,
+     1.4
+    ],
+    "monthlyRain": [
+     5.28,
+     5.44,
+     5.84,
+     5.97,
+     4.25,
+     5.7,
+     4.97,
+     5.24,
+     3.08,
+     3.48,
+     3.46,
+     5.38
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01025",
+   "fips": "01025",
+   "name": "Clarke County",
+   "short": "Clarke",
+   "slug": "clarke",
+   "seat": "Grove Hill",
+   "founded": 1812,
+   "areaSqMi": 1238,
+   "lat": 31.589,
+   "lon": -87.8138,
+   "population": 22543,
+   "medianAge": 42.8,
+   "housingUnits": 11749,
+   "vacancyPct": 28.3,
+   "ownerPct": 70.8,
+   "singleFamilyPct": 68.4,
+   "mobileHomePct": 25.6,
+   "medianYearBuilt": 1981,
+   "builtPre1960Pct": 14.8,
+   "builtPre1980Pct": 48.6,
+   "built2000PlusPct": 15.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 33.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 36.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.0
+    }
+   ],
+   "heatGasPct": 22.3,
+   "heatElectricPct": 64.6,
+   "heatPropanePct": 11.3,
+   "heatWoodPct": 1.5,
+   "medianHomeValue": 121700,
+   "medianIncome": 49249,
+   "adjacent": [
+    "baldwin",
+    "choctaw",
+    "marengo",
+    "monroe",
+    "washington",
+    "wilcox"
+   ],
+   "places": [
+    {
+     "name": "Jackson",
+     "population": 4589
+    },
+    {
+     "name": "Thomasville",
+     "population": 3619
+    },
+    {
+     "name": "Grove Hill",
+     "population": 2341
+    },
+    {
+     "name": "Fulton",
+     "population": 431
+    },
+    {
+     "name": "Coffeeville",
+     "population": 237
+    },
+    {
+     "name": "Rockville",
+     "population": 223
+    },
+    {
+     "name": "Whatley",
+     "population": 162
+    },
+    {
+     "name": "Carlton",
+     "population": 35
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 25,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 25,
+    "muggyNights": 131,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-24",
+    "coldestTemp": 14,
+    "coldestDate": "2018-01-17",
+    "annualPrecip": 59.6,
+    "heavyRainDays": 18.0,
+    "wettestDay": 4.24,
+    "wettestDate": "2018-04-15",
+    "max3DayRain": 6.72,
+    "max3DayEnd": "2017-01-03",
+    "avgFirstFreeze": "Nov 19",
+    "avgLastFreeze": "Mar 1",
+    "monthlyFreeze": [
+     9.4,
+     5.1,
+     1.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.7,
+     6.6
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     1.2,
+     2.0,
+     2.1,
+     1.4,
+     1.7,
+     1.1,
+     1.1,
+     1.3,
+     1.1,
+     1.4,
+     1.8
+    ],
+    "monthlyRain": [
+     5.57,
+     4.25,
+     5.13,
+     5.54,
+     4.5,
+     6.7,
+     5.58,
+     5.56,
+     3.89,
+     3.39,
+     3.62,
+     5.86
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01027",
+   "fips": "01027",
+   "name": "Clay County",
+   "short": "Clay",
+   "slug": "clay",
+   "seat": "Ashland",
+   "founded": 1866,
+   "areaSqMi": 604,
+   "lat": 33.2953,
+   "lon": -85.8155,
+   "population": 14192,
+   "medianAge": 44.7,
+   "housingUnits": 7106,
+   "vacancyPct": 18.1,
+   "ownerPct": 79.4,
+   "singleFamilyPct": 67.5,
+   "mobileHomePct": 22.1,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 21.3,
+   "builtPre1980Pct": 43.0,
+   "built2000PlusPct": 23.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 9.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 33.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 23.4
+    }
+   ],
+   "heatGasPct": 23.1,
+   "heatElectricPct": 57.3,
+   "heatPropanePct": 13.4,
+   "heatWoodPct": 5.3,
+   "medianHomeValue": 156700,
+   "medianIncome": 55250,
+   "adjacent": [
+    "cleburne",
+    "coosa",
+    "randolph",
+    "talladega",
+    "tallapoosa"
+   ],
+   "places": [
+    {
+     "name": "Lineville",
+     "population": 2546
+    },
+    {
+     "name": "Ashland",
+     "population": 1797
+    },
+    {
+     "name": "Hollins",
+     "population": 465
+    },
+    {
+     "name": "Millerville",
+     "population": 447
+    },
+    {
+     "name": "Delta",
+     "population": 225
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 52,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 52,
+    "muggyNights": 85,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 8,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 60.9,
+    "heavyRainDays": 16.6,
+    "wettestDay": 3.97,
+    "wettestDate": "2020-04-20",
+    "max3DayRain": 5.88,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 8",
+    "avgLastFreeze": "Mar 23",
+    "monthlyFreeze": [
+     17.7,
+     10.7,
+     4.3,
+     0.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     6.4,
+     12.4
+    ],
+    "monthlyHeavyRain": [
+     2.3,
+     2.4,
+     1.9,
+     1.6,
+     1.4,
+     1.1,
+     0.9,
+     0.6,
+     0.9,
+     1.2,
+     1.1,
+     1.2
+    ],
+    "monthlyRain": [
+     6.64,
+     6.44,
+     5.77,
+     5.47,
+     4.99,
+     5.66,
+     5.41,
+     4.61,
+     3.19,
+     3.19,
+     4.01,
+     5.57
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01029",
+   "fips": "01029",
+   "name": "Cleburne County",
+   "short": "Cleburne",
+   "slug": "cleburne",
+   "seat": "Heflin",
+   "founded": 1866,
+   "areaSqMi": 560,
+   "lat": 33.7111,
+   "lon": -85.4938,
+   "population": 15426,
+   "medianAge": 42.7,
+   "housingUnits": 6874,
+   "vacancyPct": 13.0,
+   "ownerPct": 78.5,
+   "singleFamilyPct": 68.5,
+   "mobileHomePct": 26.1,
+   "medianYearBuilt": 1989,
+   "builtPre1960Pct": 17.7,
+   "builtPre1980Pct": 38.1,
+   "built2000PlusPct": 26.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.1
+    }
+   ],
+   "heatGasPct": 8.3,
+   "heatElectricPct": 62.1,
+   "heatPropanePct": 23.4,
+   "heatWoodPct": 4.4,
+   "medianHomeValue": 165600,
+   "medianIncome": 55345,
+   "adjacent": [
+    "calhoun",
+    "cherokee",
+    "clay",
+    "randolph",
+    "talladega"
+   ],
+   "places": [
+    {
+     "name": "Heflin",
+     "population": 3467
+    },
+    {
+     "name": "Hollis Crossroads",
+     "population": 785
+    },
+    {
+     "name": "Ranburne",
+     "population": 556
+    },
+    {
+     "name": "Fruithurst",
+     "population": 554
+    },
+    {
+     "name": "Edwardsville",
+     "population": 238
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 49,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 48,
+    "muggyNights": 84,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 8,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 57.4,
+    "heavyRainDays": 14.0,
+    "wettestDay": 3.74,
+    "wettestDate": "2021-06-20",
+    "max3DayRain": 5.79,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 9",
+    "avgLastFreeze": "Mar 19",
+    "monthlyFreeze": [
+     17.0,
+     10.1,
+     4.0,
+     0.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     6.0,
+     10.9
+    ],
+    "monthlyHeavyRain": [
+     1.7,
+     1.6,
+     1.3,
+     1.4,
+     1.0,
+     1.0,
+     0.4,
+     1.1,
+     0.7,
+     0.9,
+     1.1,
+     1.8
+    ],
+    "monthlyRain": [
+     6.15,
+     5.89,
+     5.48,
+     5.09,
+     4.67,
+     4.96,
+     4.6,
+     4.96,
+     3.29,
+     3.0,
+     3.73,
+     5.64
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01031",
+   "fips": "01031",
+   "name": "Coffee County",
+   "short": "Coffee",
+   "slug": "coffee",
+   "seat": "Elba",
+   "founded": 1841,
+   "areaSqMi": 679,
+   "lat": 31.3991,
+   "lon": -85.9929,
+   "population": 54920,
+   "medianAge": 39.0,
+   "housingUnits": 24656,
+   "vacancyPct": 14.9,
+   "ownerPct": 72.3,
+   "singleFamilyPct": 76.8,
+   "mobileHomePct": 12.1,
+   "medianYearBuilt": 1987,
+   "builtPre1960Pct": 13.0,
+   "builtPre1980Pct": 41.0,
+   "built2000PlusPct": 32.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 26.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 32.4
+    }
+   ],
+   "heatGasPct": 8.2,
+   "heatElectricPct": 86.3,
+   "heatPropanePct": 4.2,
+   "heatWoodPct": 0.2,
+   "medianHomeValue": 188600,
+   "medianIncome": 68353,
+   "adjacent": [
+    "covington",
+    "crenshaw",
+    "dale",
+    "geneva",
+    "pike"
+   ],
+   "places": [
+    {
+     "name": "Enterprise",
+     "population": 29505
+    },
+    {
+     "name": "Elba",
+     "population": 3468
+    },
+    {
+     "name": "New Brockton",
+     "population": 1430
+    },
+    {
+     "name": "Kinston",
+     "population": 704
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 26,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 26,
+    "muggyNights": 130,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 14,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 58.3,
+    "heavyRainDays": 14.4,
+    "wettestDay": 7.32,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 11.68,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 20",
+    "avgLastFreeze": "Mar 7",
+    "monthlyFreeze": [
+     10.9,
+     4.5,
+     1.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.0,
+     7.1
+    ],
+    "monthlyHeavyRain": [
+     1.9,
+     1.3,
+     1.2,
+     2.0,
+     1.0,
+     0.8,
+     0.2,
+     0.8,
+     1.0,
+     1.1,
+     0.7,
+     2.4
+    ],
+    "monthlyRain": [
+     5.62,
+     4.18,
+     4.51,
+     5.09,
+     5.06,
+     5.19,
+     5.6,
+     5.32,
+     4.96,
+     3.34,
+     3.1,
+     6.37
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01033",
+   "fips": "01033",
+   "name": "Colbert County",
+   "short": "Colbert",
+   "slug": "colbert",
+   "seat": "Tuscumbia",
+   "founded": 1867,
+   "areaSqMi": 593,
+   "lat": 34.7363,
+   "lon": -87.5957,
+   "population": 58022,
+   "medianAge": 42.9,
+   "housingUnits": 28040,
+   "vacancyPct": 13.3,
+   "ownerPct": 71.3,
+   "singleFamilyPct": 77.7,
+   "mobileHomePct": 7.5,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 22.8,
+   "builtPre1980Pct": 50.8,
+   "built2000PlusPct": 26.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 16.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 22.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.9
+    }
+   ],
+   "heatGasPct": 28.6,
+   "heatElectricPct": 62.2,
+   "heatPropanePct": 7.5,
+   "heatWoodPct": 0.4,
+   "medianHomeValue": 171000,
+   "medianIncome": 60628,
+   "adjacent": [
+    "franklin",
+    "lauderdale",
+    "lawrence"
+   ],
+   "places": [
+    {
+     "name": "Muscle Shoals",
+     "population": 16951
+    },
+    {
+     "name": "Sheffield",
+     "population": 9340
+    },
+    {
+     "name": "Tuscumbia",
+     "population": 9115
+    },
+    {
+     "name": "Cherokee",
+     "population": 1120
+    },
+    {
+     "name": "Littleville",
+     "population": 932
+    },
+    {
+     "name": "Leighton",
+     "population": 893
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 57,
+    "pipeRiskNights": 7,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 55,
+    "muggyNights": 89,
+    "longestIceStreak": 5,
+    "longestIceStreakEnd": "2021-02-18",
+    "coldestTemp": 1,
+    "coldestDate": "2024-01-17",
+    "annualPrecip": 59.7,
+    "heavyRainDays": 16.0,
+    "wettestDay": 4.81,
+    "wettestDate": "2021-08-31",
+    "max3DayRain": 7.01,
+    "max3DayEnd": "2019-02-23",
+    "avgFirstFreeze": "Nov 9",
+    "avgLastFreeze": "Mar 23",
+    "monthlyFreeze": [
+     17.5,
+     12.0,
+     5.3,
+     0.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     8.2,
+     13.5
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     2.0,
+     2.5,
+     1.7,
+     0.6,
+     0.8,
+     0.9,
+     1.3,
+     0.8,
+     0.8,
+     0.9,
+     2.2
+    ],
+    "monthlyRain": [
+     5.44,
+     7.33,
+     6.96,
+     5.46,
+     4.14,
+     4.01,
+     4.91,
+     5.81,
+     3.19,
+     3.24,
+     3.3,
+     5.9
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01035",
+   "fips": "01035",
+   "name": "Conecuh County",
+   "short": "Conecuh",
+   "slug": "conecuh",
+   "seat": "Evergreen",
+   "founded": 1818,
+   "areaSqMi": 850,
+   "lat": 31.4657,
+   "lon": -86.9515,
+   "population": 11275,
+   "medianAge": 46.7,
+   "housingUnits": 6444,
+   "vacancyPct": 31.5,
+   "ownerPct": 74.3,
+   "singleFamilyPct": 67.3,
+   "mobileHomePct": 26.0,
+   "medianYearBuilt": 1982,
+   "builtPre1960Pct": 16.7,
+   "builtPre1980Pct": 46.4,
+   "built2000PlusPct": 14.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 38.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 14.7
+    }
+   ],
+   "heatGasPct": 17.4,
+   "heatElectricPct": 67.3,
+   "heatPropanePct": 12.9,
+   "heatWoodPct": 1.5,
+   "medianHomeValue": 105300,
+   "medianIncome": 41327,
+   "adjacent": [
+    "butler",
+    "covington",
+    "escambia",
+    "monroe"
+   ],
+   "places": [
+    {
+     "name": "Evergreen",
+     "population": 3404
+    },
+    {
+     "name": "Castleberry",
+     "population": 279
+    },
+    {
+     "name": "Repton",
+     "population": 170
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 24,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 24,
+    "muggyNights": 130,
+    "longestIceStreak": 0,
+    "longestIceStreakEnd": null,
+    "coldestTemp": 15,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 59.7,
+    "heavyRainDays": 16.9,
+    "wettestDay": 3.76,
+    "wettestDate": "2024-05-14",
+    "max3DayRain": 7.8,
+    "max3DayEnd": "2017-01-03",
+    "avgFirstFreeze": "Nov 19",
+    "avgLastFreeze": "Mar 5",
+    "monthlyFreeze": [
+     9.4,
+     4.6,
+     1.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.6,
+     6.6
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     1.2,
+     1.4,
+     2.2,
+     1.8,
+     1.3,
+     0.4,
+     1.0,
+     1.2,
+     1.2,
+     1.2,
+     2.2
+    ],
+    "monthlyRain": [
+     5.5,
+     3.72,
+     4.52,
+     5.76,
+     5.89,
+     6.05,
+     5.65,
+     5.33,
+     4.36,
+     3.47,
+     3.44,
+     6.07
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01037",
+   "fips": "01037",
+   "name": "Coosa County",
+   "short": "Coosa",
+   "slug": "coosa",
+   "seat": "Rockford",
+   "founded": 1832,
+   "areaSqMi": 651,
+   "lat": 32.9263,
+   "lon": -86.2611,
+   "population": 10300,
+   "medianAge": 50.1,
+   "housingUnits": 6058,
+   "vacancyPct": 27.1,
+   "ownerPct": 81.6,
+   "singleFamilyPct": 63.1,
+   "mobileHomePct": 31.6,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 15.6,
+   "builtPre1980Pct": 42.1,
+   "built2000PlusPct": 24.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 7.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 33.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 24.5
+    }
+   ],
+   "heatGasPct": 5.2,
+   "heatElectricPct": 69.5,
+   "heatPropanePct": 16.9,
+   "heatWoodPct": 4.3,
+   "medianHomeValue": 115500,
+   "medianIncome": 57355,
+   "adjacent": [
+    "chilton",
+    "clay",
+    "elmore",
+    "shelby",
+    "talladega",
+    "tallapoosa"
+   ],
+   "places": [
+    {
+     "name": "Stewartville",
+     "population": 1629
+    },
+    {
+     "name": "Goodwater",
+     "population": 1445
+    },
+    {
+     "name": "Rockford",
+     "population": 622
+    },
+    {
+     "name": "Ray",
+     "population": 548
+    },
+    {
+     "name": "Nixburg",
+     "population": 256
+    },
+    {
+     "name": "Hanover",
+     "population": 248
+    },
+    {
+     "name": "Mount Olive",
+     "population": 208
+    },
+    {
+     "name": "Hissop",
+     "population": 206
+    },
+    {
+     "name": "Weogufka",
+     "population": 184
+    },
+    {
+     "name": "Kellyton",
+     "population": 106
+    },
+    {
+     "name": "Equality",
+     "population": 93
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 44,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 44,
+    "muggyNights": 99,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 10,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 59.9,
+    "heavyRainDays": 16.1,
+    "wettestDay": 5.81,
+    "wettestDate": "2020-04-20",
+    "max3DayRain": 6.3,
+    "max3DayEnd": "2020-04-20",
+    "avgFirstFreeze": "Nov 13",
+    "avgLastFreeze": "Mar 17",
+    "monthlyFreeze": [
+     16.2,
+     8.2,
+     3.3,
+     0.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     5.0,
+     11.2
+    ],
+    "monthlyHeavyRain": [
+     2.5,
+     2.0,
+     1.9,
+     1.5,
+     1.1,
+     1.3,
+     0.8,
+     0.4,
+     1.1,
+     1.2,
+     0.9,
+     1.4
+    ],
+    "monthlyRain": [
+     6.57,
+     5.92,
+     5.7,
+     5.78,
+     5.16,
+     5.49,
+     5.2,
+     4.32,
+     3.41,
+     3.23,
+     3.81,
+     5.33
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01039",
+   "fips": "01039",
+   "name": "Covington County",
+   "short": "Covington",
+   "slug": "covington",
+   "seat": "Andalusia",
+   "founded": 1821,
+   "areaSqMi": 1031,
+   "lat": 31.2938,
+   "lon": -86.4478,
+   "population": 37628,
+   "medianAge": 43.3,
+   "housingUnits": 18714,
+   "vacancyPct": 21.8,
+   "ownerPct": 76.3,
+   "singleFamilyPct": 73.8,
+   "mobileHomePct": 18.9,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 21.7,
+   "builtPre1980Pct": 52.6,
+   "built2000PlusPct": 17.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.3
+    }
+   ],
+   "heatGasPct": 14.5,
+   "heatElectricPct": 77.1,
+   "heatPropanePct": 7.0,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 152100,
+   "medianIncome": 52456,
+   "adjacent": [
+    "butler",
+    "coffee",
+    "conecuh",
+    "crenshaw",
+    "escambia",
+    "geneva"
+   ],
+   "places": [
+    {
+     "name": "Andalusia",
+     "population": 8766
+    },
+    {
+     "name": "Opp",
+     "population": 6709
+    },
+    {
+     "name": "Florala",
+     "population": 1822
+    },
+    {
+     "name": "Babbie",
+     "population": 790
+    },
+    {
+     "name": "Red Level",
+     "population": 621
+    },
+    {
+     "name": "River Falls",
+     "population": 403
+    },
+    {
+     "name": "Lockhart",
+     "population": 359
+    },
+    {
+     "name": "Carolina",
+     "population": 337
+    },
+    {
+     "name": "Heath",
+     "population": 267
+    },
+    {
+     "name": "Onycha",
+     "population": 238
+    },
+    {
+     "name": "Sanford",
+     "population": 232
+    },
+    {
+     "name": "Horn Hill",
+     "population": 215
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 27,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 27,
+    "muggyNights": 130,
+    "longestIceStreak": 0,
+    "longestIceStreakEnd": null,
+    "coldestTemp": 15,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 58.7,
+    "heavyRainDays": 15.3,
+    "wettestDay": 5.25,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 10.87,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 19",
+    "avgLastFreeze": "Mar 7",
+    "monthlyFreeze": [
+     10.8,
+     5.0,
+     1.5,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.6,
+     6.9
+    ],
+    "monthlyHeavyRain": [
+     1.6,
+     1.2,
+     1.1,
+     1.8,
+     1.7,
+     1.1,
+     0.2,
+     0.9,
+     1.2,
+     1.3,
+     1.0,
+     2.2
+    ],
+    "monthlyRain": [
+     5.3,
+     3.95,
+     4.27,
+     5.4,
+     5.32,
+     5.87,
+     5.59,
+     5.29,
+     4.6,
+     3.61,
+     3.2,
+     6.33
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01041",
+   "fips": "01041",
+   "name": "Crenshaw County",
+   "short": "Crenshaw",
+   "slug": "crenshaw",
+   "seat": "Luverne",
+   "founded": 1866,
+   "areaSqMi": 609,
+   "lat": 31.7302,
+   "lon": -86.2966,
+   "population": 13122,
+   "medianAge": 42.2,
+   "housingUnits": 6583,
+   "vacancyPct": 20.5,
+   "ownerPct": 73.2,
+   "singleFamilyPct": 65.5,
+   "mobileHomePct": 24.5,
+   "medianYearBuilt": 1982,
+   "builtPre1960Pct": 14.6,
+   "builtPre1980Pct": 46.5,
+   "built2000PlusPct": 22.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.7
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 31.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 31.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.1
+    }
+   ],
+   "heatGasPct": 13.4,
+   "heatElectricPct": 69.9,
+   "heatPropanePct": 15.2,
+   "heatWoodPct": 0.6,
+   "medianHomeValue": 114000,
+   "medianIncome": 48560,
+   "adjacent": [
+    "butler",
+    "coffee",
+    "covington",
+    "lowndes",
+    "montgomery",
+    "pike"
+   ],
+   "places": [
+    {
+     "name": "Luverne",
+     "population": 2694
+    },
+    {
+     "name": "Brantley",
+     "population": 888
+    },
+    {
+     "name": "Dozier",
+     "population": 385
+    },
+    {
+     "name": "Rutledge",
+     "population": 230
+    },
+    {
+     "name": "Glenwood",
+     "population": 114
+    },
+    {
+     "name": "Petrey",
+     "population": 39
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 31,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 31,
+    "muggyNights": 119,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 13,
+    "coldestDate": "2015-01-09",
+    "annualPrecip": 58.8,
+    "heavyRainDays": 15.1,
+    "wettestDay": 7.22,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 11.39,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 19",
+    "avgLastFreeze": "Mar 7",
+    "monthlyFreeze": [
+     12.9,
+     5.9,
+     1.7,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.9,
+     7.9
+    ],
+    "monthlyHeavyRain": [
+     2.0,
+     1.3,
+     1.3,
+     2.1,
+     1.1,
+     0.9,
+     0.5,
+     0.8,
+     1.1,
+     1.1,
+     1.0,
+     1.9
+    ],
+    "monthlyRain": [
+     5.88,
+     4.26,
+     4.8,
+     5.47,
+     5.05,
+     5.43,
+     5.08,
+     5.07,
+     4.52,
+     3.53,
+     3.57,
+     6.14
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01043",
+   "fips": "01043",
+   "name": "Cullman County",
+   "short": "Cullman",
+   "slug": "cullman",
+   "seat": "Cullman",
+   "founded": 1877,
+   "areaSqMi": 735,
+   "lat": 34.0858,
+   "lon": -86.9044,
+   "population": 90566,
+   "medianAge": 40.8,
+   "housingUnits": 39871,
+   "vacancyPct": 11.3,
+   "ownerPct": 76.6,
+   "singleFamilyPct": 70.7,
+   "mobileHomePct": 19.8,
+   "medianYearBuilt": 1987,
+   "builtPre1960Pct": 12.8,
+   "builtPre1980Pct": 41.0,
+   "built2000PlusPct": 27.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 31.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 27.5
+    }
+   ],
+   "heatGasPct": 11.4,
+   "heatElectricPct": 75.3,
+   "heatPropanePct": 10.3,
+   "heatWoodPct": 1.4,
+   "medianHomeValue": 199100,
+   "medianIncome": 62656,
+   "adjacent": [
+    "blount",
+    "lawrence",
+    "marshall",
+    "morgan",
+    "walker",
+    "winston"
+   ],
+   "places": [
+    {
+     "name": "Cullman",
+     "population": 19319
+    },
+    {
+     "name": "Hanceville",
+     "population": 3270
+    },
+    {
+     "name": "Good Hope",
+     "population": 2574
+    },
+    {
+     "name": "Baileyton",
+     "population": 1039
+    },
+    {
+     "name": "Berlin",
+     "population": 887
+    },
+    {
+     "name": "Fairview",
+     "population": 796
+    },
+    {
+     "name": "Holly Pond",
+     "population": 782
+    },
+    {
+     "name": "South Vinemont",
+     "population": 693
+    },
+    {
+     "name": "Garden City",
+     "population": 557
+    },
+    {
+     "name": "West Point",
+     "population": 543
+    },
+    {
+     "name": "Dodge City",
+     "population": 494
+    },
+    {
+     "name": "Joppa",
+     "population": 448
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 44,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 42,
+    "muggyNights": 103,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2018-01-03",
+    "coldestTemp": 6,
+    "coldestDate": "2018-01-18",
+    "annualPrecip": 59.9,
+    "heavyRainDays": 16.2,
+    "wettestDay": 3.58,
+    "wettestDate": "2018-12-28",
+    "max3DayRain": 6.42,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 12",
+    "avgLastFreeze": "Mar 14",
+    "monthlyFreeze": [
+     16.2,
+     8.8,
+     3.5,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     5.3,
+     9.6
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     2.7,
+     2.0,
+     1.8,
+     0.7,
+     1.1,
+     0.7,
+     0.9,
+     0.9,
+     1.0,
+     1.0,
+     1.9
+    ],
+    "monthlyRain": [
+     5.41,
+     6.99,
+     7.04,
+     5.7,
+     3.9,
+     4.65,
+     4.39,
+     4.46,
+     3.3,
+     3.39,
+     3.67,
+     6.96
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01045",
+   "fips": "01045",
+   "name": "Dale County",
+   "short": "Dale",
+   "slug": "dale",
+   "seat": "Ozark",
+   "founded": 1824,
+   "areaSqMi": 561,
+   "lat": 31.408,
+   "lon": -85.6036,
+   "population": 49599,
+   "medianAge": 37.7,
+   "housingUnits": 22968,
+   "vacancyPct": 14.1,
+   "ownerPct": 61.9,
+   "singleFamilyPct": 67.0,
+   "mobileHomePct": 19.5,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 13.2,
+   "builtPre1980Pct": 45.4,
+   "built2000PlusPct": 22.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.6
+    }
+   ],
+   "heatGasPct": 7.9,
+   "heatElectricPct": 87.7,
+   "heatPropanePct": 2.8,
+   "heatWoodPct": 0.3,
+   "medianHomeValue": 143500,
+   "medianIncome": 54963,
+   "adjacent": [
+    "barbour",
+    "coffee",
+    "geneva",
+    "henry",
+    "houston",
+    "pike"
+   ],
+   "places": [
+    {
+     "name": "Ozark",
+     "population": 14327
+    },
+    {
+     "name": "Daleville",
+     "population": 4919
+    },
+    {
+     "name": "Fort Rucker",
+     "population": 4705
+    },
+    {
+     "name": "Level Plains",
+     "population": 1667
+    },
+    {
+     "name": "Midland City",
+     "population": 1603
+    },
+    {
+     "name": "Newton",
+     "population": 1329
+    },
+    {
+     "name": "Pinckard",
+     "population": 672
+    },
+    {
+     "name": "Ariton",
+     "population": 614
+    },
+    {
+     "name": "Grimes",
+     "population": 582
+    },
+    {
+     "name": "Napier Field",
+     "population": 422
+    },
+    {
+     "name": "Clayhatchee",
+     "population": 414
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 20,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 20,
+    "muggyNights": 135,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 15,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 57.3,
+    "heavyRainDays": 14.3,
+    "wettestDay": 8.09,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 11.38,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 24",
+    "avgLastFreeze": "Mar 1",
+    "monthlyFreeze": [
+     9.0,
+     2.9,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.6,
+     5.3
+    ],
+    "monthlyHeavyRain": [
+     2.0,
+     1.4,
+     1.0,
+     2.1,
+     1.0,
+     0.8,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     0.7,
+     2.3
+    ],
+    "monthlyRain": [
+     5.8,
+     4.31,
+     4.45,
+     5.21,
+     4.54,
+     5.22,
+     5.24,
+     5.3,
+     4.91,
+     3.09,
+     3.0,
+     6.25
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01047",
+   "fips": "01047",
+   "name": "Dallas County",
+   "short": "Dallas",
+   "slug": "dallas",
+   "seat": "Selma",
+   "founded": 1818,
+   "areaSqMi": 979,
+   "lat": 32.3852,
+   "lon": -87.1269,
+   "population": 36858,
+   "medianAge": 41.2,
+   "housingUnits": 18936,
+   "vacancyPct": 15.8,
+   "ownerPct": 63.8,
+   "singleFamilyPct": 60.6,
+   "mobileHomePct": 18.2,
+   "medianYearBuilt": 1977,
+   "builtPre1960Pct": 22.8,
+   "builtPre1980Pct": 56.1,
+   "built2000PlusPct": 16.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 17.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 33.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 16.3
+    }
+   ],
+   "heatGasPct": 32.1,
+   "heatElectricPct": 55.3,
+   "heatPropanePct": 9.3,
+   "heatWoodPct": 1.4,
+   "medianHomeValue": 94600,
+   "medianIncome": 35627,
+   "adjacent": [
+    "autauga",
+    "chilton",
+    "lowndes",
+    "marengo",
+    "perry",
+    "wilcox"
+   ],
+   "places": [
+    {
+     "name": "Selma",
+     "population": 17057
+    },
+    {
+     "name": "Valley Grande",
+     "population": 4047
+    },
+    {
+     "name": "Selmont-West Selmont",
+     "population": 2150
+    },
+    {
+     "name": "Orrville",
+     "population": 158
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 31,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 30,
+    "muggyNights": 124,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 13,
+    "coldestDate": "2018-01-18",
+    "annualPrecip": 53.8,
+    "heavyRainDays": 13.5,
+    "wettestDay": 3.87,
+    "wettestDate": "2024-01-09",
+    "max3DayRain": 5.66,
+    "max3DayEnd": "2018-05-31",
+    "avgFirstFreeze": "Nov 17",
+    "avgLastFreeze": "Mar 5",
+    "monthlyFreeze": [
+     12.1,
+     6.0,
+     1.6,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1,
+     3.0,
+     8.1
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     1.6,
+     1.8,
+     1.7,
+     1.5,
+     0.8,
+     0.3,
+     0.4,
+     0.9,
+     0.7,
+     0.8,
+     1.2
+    ],
+    "monthlyRain": [
+     5.97,
+     5.14,
+     5.53,
+     5.58,
+     5.14,
+     4.79,
+     3.96,
+     4.27,
+     2.92,
+     2.8,
+     3.08,
+     4.67
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01049",
+   "fips": "01049",
+   "name": "DeKalb County",
+   "short": "DeKalb",
+   "slug": "dekalb",
+   "seat": "Fort Payne",
+   "founded": 1836,
+   "areaSqMi": 777,
+   "lat": 34.5754,
+   "lon": -85.6929,
+   "population": 72269,
+   "medianAge": 39.5,
+   "housingUnits": 30963,
+   "vacancyPct": 15.4,
+   "ownerPct": 78.3,
+   "singleFamilyPct": 71.5,
+   "mobileHomePct": 22.2,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 16.4,
+   "builtPre1980Pct": 44.4,
+   "built2000PlusPct": 22.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 33.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.0
+    }
+   ],
+   "heatGasPct": 12.3,
+   "heatElectricPct": 68.5,
+   "heatPropanePct": 17.2,
+   "heatWoodPct": 1.1,
+   "medianHomeValue": 152700,
+   "medianIncome": 51204,
+   "adjacent": [
+    "cherokee",
+    "etowah",
+    "jackson",
+    "marshall"
+   ],
+   "places": [
+    {
+     "name": "Fort Payne",
+     "population": 14927
+    },
+    {
+     "name": "Rainsville",
+     "population": 5702
+    },
+    {
+     "name": "Henagar",
+     "population": 2501
+    },
+    {
+     "name": "Crossville",
+     "population": 2143
+    },
+    {
+     "name": "Sylvania",
+     "population": 1925
+    },
+    {
+     "name": "Collinsville",
+     "population": 1781
+    },
+    {
+     "name": "Fyffe",
+     "population": 1190
+    },
+    {
+     "name": "Geraldine",
+     "population": 1011
+    },
+    {
+     "name": "Powell",
+     "population": 912
+    },
+    {
+     "name": "Ider",
+     "population": 731
+    },
+    {
+     "name": "Valley Head",
+     "population": 669
+    },
+    {
+     "name": "Pine Ridge",
+     "population": 506
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 49,
+    "pipeRiskNights": 6,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 47,
+    "muggyNights": 83,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2022-12-26",
+    "coldestTemp": 4,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 60.6,
+    "heavyRainDays": 15.3,
+    "wettestDay": 4.39,
+    "wettestDate": "2020-04-13",
+    "max3DayRain": 6.21,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 12",
+    "avgLastFreeze": "Mar 21",
+    "monthlyFreeze": [
+     16.7,
+     10.2,
+     3.9,
+     0.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.5,
+     5.1,
+     12.3
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     2.6,
+     1.7,
+     1.4,
+     1.1,
+     0.8,
+     0.3,
+     0.7,
+     1.0,
+     1.1,
+     0.8,
+     2.3
+    ],
+    "monthlyRain": [
+     5.46,
+     6.96,
+     6.33,
+     5.64,
+     4.46,
+     4.95,
+     4.46,
+     5.0,
+     3.21,
+     3.78,
+     3.56,
+     6.79
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01051",
+   "fips": "01051",
+   "name": "Elmore County",
+   "short": "Elmore",
+   "slug": "elmore",
+   "seat": "Wetumpka",
+   "founded": 1866,
+   "areaSqMi": 619,
+   "lat": 32.5889,
+   "lon": -86.1522,
+   "population": 89526,
+   "medianAge": 39.5,
+   "housingUnits": 37323,
+   "vacancyPct": 12.0,
+   "ownerPct": 77.0,
+   "singleFamilyPct": 76.8,
+   "mobileHomePct": 15.4,
+   "medianYearBuilt": 1995,
+   "builtPre1960Pct": 8.3,
+   "builtPre1980Pct": 29.3,
+   "built2000PlusPct": 41.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 6.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 21.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 41.3
+    }
+   ],
+   "heatGasPct": 16.6,
+   "heatElectricPct": 72.8,
+   "heatPropanePct": 8.9,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 223900,
+   "medianIncome": 78243,
+   "adjacent": [
+    "autauga",
+    "chilton",
+    "coosa",
+    "macon",
+    "montgomery",
+    "tallapoosa"
+   ],
+   "places": [
+    {
+     "name": "Millbrook",
+     "population": 17189
+    },
+    {
+     "name": "Wetumpka",
+     "population": 7437
+    },
+    {
+     "name": "Holtville",
+     "population": 5158
+    },
+    {
+     "name": "Tallassee",
+     "population": 5134
+    },
+    {
+     "name": "Redland",
+     "population": 4982
+    },
+    {
+     "name": "Emerald Mountain",
+     "population": 3535
+    },
+    {
+     "name": "Deatsville",
+     "population": 2097
+    },
+    {
+     "name": "Elmore",
+     "population": 1517
+    },
+    {
+     "name": "Blue Ridge",
+     "population": 1190
+    },
+    {
+     "name": "Eclectic",
+     "population": 1141
+    },
+    {
+     "name": "Coosada",
+     "population": 1105
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 33,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 33,
+    "muggyNights": 119,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 13,
+    "coldestDate": "2015-01-09",
+    "annualPrecip": 58.8,
+    "heavyRainDays": 15.7,
+    "wettestDay": 4.89,
+    "wettestDate": "2020-04-20",
+    "max3DayRain": 6.46,
+    "max3DayEnd": "2015-12-25",
+    "avgFirstFreeze": "Nov 17",
+    "avgLastFreeze": "Mar 7",
+    "monthlyFreeze": [
+     13.7,
+     5.6,
+     2.2,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     3.3,
+     8.3
+    ],
+    "monthlyHeavyRain": [
+     2.2,
+     1.8,
+     1.4,
+     1.6,
+     1.4,
+     1.2,
+     0.8,
+     0.3,
+     0.9,
+     1.2,
+     1.1,
+     1.8
+    ],
+    "monthlyRain": [
+     6.25,
+     5.13,
+     5.19,
+     5.53,
+     5.16,
+     5.43,
+     5.03,
+     4.26,
+     3.99,
+     3.07,
+     3.75,
+     5.96
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01053",
+   "fips": "01053",
+   "name": "Escambia County",
+   "short": "Escambia",
+   "slug": "escambia",
+   "seat": "Brewton",
+   "founded": 1868,
+   "areaSqMi": 945,
+   "lat": 31.0908,
+   "lon": -87.1579,
+   "population": 36629,
+   "medianAge": 40.6,
+   "housingUnits": 16816,
+   "vacancyPct": 23.8,
+   "ownerPct": 70.9,
+   "singleFamilyPct": 68.9,
+   "mobileHomePct": 21.0,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 16.2,
+   "builtPre1980Pct": 44.7,
+   "built2000PlusPct": 19.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 36.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 19.0
+    }
+   ],
+   "heatGasPct": 8.8,
+   "heatElectricPct": 84.1,
+   "heatPropanePct": 4.7,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 136500,
+   "medianIncome": 48225,
+   "adjacent": [
+    "baldwin",
+    "conecuh",
+    "covington",
+    "monroe"
+   ],
+   "places": [
+    {
+     "name": "Atmore",
+     "population": 8334
+    },
+    {
+     "name": "Brewton",
+     "population": 5186
+    },
+    {
+     "name": "East Brewton",
+     "population": 3168
+    },
+    {
+     "name": "Flomaton",
+     "population": 1535
+    },
+    {
+     "name": "Riverview",
+     "population": 260
+    },
+    {
+     "name": "Pollard",
+     "population": 147
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 19,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 19,
+    "muggyNights": 138,
+    "longestIceStreak": 0,
+    "longestIceStreakEnd": null,
+    "coldestTemp": 17,
+    "coldestDate": "2015-01-09",
+    "annualPrecip": 60.8,
+    "heavyRainDays": 17.0,
+    "wettestDay": 4.48,
+    "wettestDate": "2020-09-16",
+    "max3DayRain": 8.53,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 21",
+    "avgLastFreeze": "Mar 5",
+    "monthlyFreeze": [
+     7.7,
+     3.3,
+     1.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.8,
+     5.0
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     1.1,
+     1.3,
+     2.0,
+     1.8,
+     1.6,
+     0.5,
+     1.2,
+     1.2,
+     1.1,
+     1.1,
+     2.3
+    ],
+    "monthlyRain": [
+     5.31,
+     3.47,
+     4.3,
+     5.79,
+     5.61,
+     6.46,
+     6.04,
+     6.2,
+     4.67,
+     3.47,
+     3.33,
+     6.15
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01055",
+   "fips": "01055",
+   "name": "Etowah County",
+   "short": "Etowah",
+   "slug": "etowah",
+   "seat": "Gadsden",
+   "founded": 1866,
+   "areaSqMi": 535,
+   "lat": 34.0179,
+   "lon": -86.0426,
+   "population": 103105,
+   "medianAge": 41.7,
+   "housingUnits": 47603,
+   "vacancyPct": 17.2,
+   "ownerPct": 73.9,
+   "singleFamilyPct": 79.4,
+   "mobileHomePct": 9.2,
+   "medianYearBuilt": 1975,
+   "builtPre1960Pct": 28.2,
+   "builtPre1980Pct": 57.5,
+   "built2000PlusPct": 18.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 22.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 23.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 18.9
+    }
+   ],
+   "heatGasPct": 34.1,
+   "heatElectricPct": 60.1,
+   "heatPropanePct": 4.6,
+   "heatWoodPct": 0.6,
+   "medianHomeValue": 167100,
+   "medianIncome": 54563,
+   "adjacent": [
+    "blount",
+    "calhoun",
+    "cherokee",
+    "dekalb",
+    "marshall",
+    "st-clair"
+   ],
+   "places": [
+    {
+     "name": "Gadsden",
+     "population": 33374
+    },
+    {
+     "name": "Rainbow City",
+     "population": 10284
+    },
+    {
+     "name": "Southside",
+     "population": 9483
+    },
+    {
+     "name": "Attalla",
+     "population": 5775
+    },
+    {
+     "name": "Glencoe",
+     "population": 5353
+    },
+    {
+     "name": "Hokes Bluff",
+     "population": 4547
+    },
+    {
+     "name": "Sardis City",
+     "population": 2046
+    },
+    {
+     "name": "Carlisle-Rockledge",
+     "population": 1993
+    },
+    {
+     "name": "Whitesboro",
+     "population": 1918
+    },
+    {
+     "name": "Coats Bend",
+     "population": 1630
+    },
+    {
+     "name": "Altoona",
+     "population": 1252
+    },
+    {
+     "name": "Tidmore Bend",
+     "population": 1192
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 43,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 42,
+    "muggyNights": 103,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 8,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 57.3,
+    "heavyRainDays": 14.8,
+    "wettestDay": 4.62,
+    "wettestDate": "2021-06-20",
+    "max3DayRain": 6.56,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 13",
+    "avgLastFreeze": "Mar 17",
+    "monthlyFreeze": [
+     15.4,
+     9.6,
+     3.2,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     4.0,
+     10.0
+    ],
+    "monthlyHeavyRain": [
+     1.4,
+     2.9,
+     2.0,
+     1.3,
+     1.1,
+     0.7,
+     0.4,
+     0.7,
+     0.6,
+     0.9,
+     0.7,
+     2.1
+    ],
+    "monthlyRain": [
+     5.04,
+     7.17,
+     6.48,
+     5.26,
+     4.24,
+     4.6,
+     4.31,
+     4.71,
+     2.76,
+     3.2,
+     3.17,
+     6.35
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01057",
+   "fips": "01057",
+   "name": "Fayette County",
+   "short": "Fayette",
+   "slug": "fayette",
+   "seat": "Fayette",
+   "founded": 1824,
+   "areaSqMi": 628,
+   "lat": 33.7798,
+   "lon": -87.7397,
+   "population": 16053,
+   "medianAge": 43.3,
+   "housingUnits": 7810,
+   "vacancyPct": 19.9,
+   "ownerPct": 78.4,
+   "singleFamilyPct": 66.5,
+   "mobileHomePct": 22.0,
+   "medianYearBuilt": 1980,
+   "builtPre1960Pct": 19.8,
+   "builtPre1980Pct": 50.1,
+   "built2000PlusPct": 20.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 20.8
+    }
+   ],
+   "heatGasPct": 21.9,
+   "heatElectricPct": 67.9,
+   "heatPropanePct": 8.0,
+   "heatWoodPct": 1.6,
+   "medianHomeValue": 125900,
+   "medianIncome": 49488,
+   "adjacent": [
+    "lamar",
+    "marion",
+    "pickens",
+    "tuscaloosa",
+    "walker"
+   ],
+   "places": [
+    {
+     "name": "Fayette",
+     "population": 4164
+    },
+    {
+     "name": "Berry",
+     "population": 1040
+    },
+    {
+     "name": "Glen Allen",
+     "population": 372
+    },
+    {
+     "name": "Belk",
+     "population": 293
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 48,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 47,
+    "muggyNights": 105,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 8,
+    "coldestDate": "2018-01-18",
+    "annualPrecip": 61.5,
+    "heavyRainDays": 15.8,
+    "wettestDay": 4.97,
+    "wettestDate": "2018-12-28",
+    "max3DayRain": 5.67,
+    "max3DayEnd": "2019-10-27",
+    "avgFirstFreeze": "Nov 13",
+    "avgLastFreeze": "Mar 20",
+    "monthlyFreeze": [
+     16.2,
+     9.6,
+     4.2,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     6.6,
+     11.2
+    ],
+    "monthlyHeavyRain": [
+     1.4,
+     3.0,
+     1.7,
+     2.0,
+     1.0,
+     1.1,
+     0.6,
+     0.4,
+     1.0,
+     0.5,
+     1.3,
+     1.8
+    ],
+    "monthlyRain": [
+     5.9,
+     7.37,
+     6.4,
+     6.81,
+     4.22,
+     4.93,
+     5.04,
+     4.55,
+     3.09,
+     3.17,
+     3.87,
+     6.15
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01059",
+   "fips": "01059",
+   "name": "Franklin County",
+   "short": "Franklin",
+   "slug": "franklin",
+   "seat": "Russellville",
+   "founded": 1818,
+   "areaSqMi": 634,
+   "lat": 34.4356,
+   "lon": -87.8452,
+   "population": 31966,
+   "medianAge": 38.0,
+   "housingUnits": 14002,
+   "vacancyPct": 14.6,
+   "ownerPct": 72.4,
+   "singleFamilyPct": 73.5,
+   "mobileHomePct": 15.3,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 14.5,
+   "builtPre1980Pct": 45.5,
+   "built2000PlusPct": 22.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 31.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.1
+    }
+   ],
+   "heatGasPct": 32.0,
+   "heatElectricPct": 57.0,
+   "heatPropanePct": 9.8,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 136000,
+   "medianIncome": 53338,
+   "adjacent": [
+    "colbert",
+    "lawrence",
+    "marion",
+    "winston"
+   ],
+   "places": [
+    {
+     "name": "Russellville",
+     "population": 10799
+    },
+    {
+     "name": "Red Bay",
+     "population": 3201
+    },
+    {
+     "name": "Phil Campbell",
+     "population": 780
+    },
+    {
+     "name": "Hodges",
+     "population": 420
+    },
+    {
+     "name": "Vina",
+     "population": 358
+    },
+    {
+     "name": "Spruce Pine",
+     "population": 189
+    },
+    {
+     "name": "Belgreen",
+     "population": 58
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 56,
+    "pipeRiskNights": 7,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 54,
+    "muggyNights": 89,
+    "longestIceStreak": 5,
+    "longestIceStreakEnd": "2021-02-18",
+    "coldestTemp": 2,
+    "coldestDate": "2024-01-17",
+    "annualPrecip": 62.6,
+    "heavyRainDays": 17.8,
+    "wettestDay": 5.06,
+    "wettestDate": "2021-08-31",
+    "max3DayRain": 6.43,
+    "max3DayEnd": "2019-02-22",
+    "avgFirstFreeze": "Nov 10",
+    "avgLastFreeze": "Mar 27",
+    "monthlyFreeze": [
+     17.9,
+     11.3,
+     5.7,
+     0.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     7.5,
+     13.1
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     2.6,
+     2.5,
+     1.6,
+     0.8,
+     1.1,
+     1.0,
+     1.2,
+     1.0,
+     0.8,
+     0.8,
+     2.6
+    ],
+    "monthlyRain": [
+     5.47,
+     7.57,
+     7.04,
+     5.77,
+     4.23,
+     4.66,
+     5.48,
+     5.79,
+     3.07,
+     3.4,
+     3.44,
+     6.68
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01061",
+   "fips": "01061",
+   "name": "Geneva County",
+   "short": "Geneva",
+   "slug": "geneva",
+   "seat": "Geneva",
+   "founded": 1868,
+   "areaSqMi": 574,
+   "lat": 31.1034,
+   "lon": -85.8392,
+   "population": 26887,
+   "medianAge": 43.7,
+   "housingUnits": 12584,
+   "vacancyPct": 15.4,
+   "ownerPct": 78.1,
+   "singleFamilyPct": 70.8,
+   "mobileHomePct": 24.4,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 21.3,
+   "builtPre1980Pct": 51.6,
+   "built2000PlusPct": 20.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 20.7
+    }
+   ],
+   "heatGasPct": 5.2,
+   "heatElectricPct": 89.1,
+   "heatPropanePct": 3.0,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 130700,
+   "medianIncome": 52771,
+   "adjacent": [
+    "coffee",
+    "covington",
+    "dale",
+    "houston"
+   ],
+   "places": [
+    {
+     "name": "Geneva",
+     "population": 4225
+    },
+    {
+     "name": "Hartford",
+     "population": 2701
+    },
+    {
+     "name": "Slocomb",
+     "population": 1952
+    },
+    {
+     "name": "Malvern",
+     "population": 1913
+    },
+    {
+     "name": "Samson",
+     "population": 1669
+    },
+    {
+     "name": "Black",
+     "population": 467
+    },
+    {
+     "name": "Coffee Springs",
+     "population": 283
+    },
+    {
+     "name": "Eunola",
+     "population": 155
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 22,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 22,
+    "muggyNights": 138,
+    "longestIceStreak": 0,
+    "longestIceStreakEnd": null,
+    "coldestTemp": 17,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 60.0,
+    "heavyRainDays": 15.6,
+    "wettestDay": 6.96,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 12.47,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 20",
+    "avgLastFreeze": "Mar 5",
+    "monthlyFreeze": [
+     9.6,
+     3.6,
+     1.2,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.7,
+     6.0
+    ],
+    "monthlyHeavyRain": [
+     1.7,
+     1.7,
+     1.7,
+     1.8,
+     1.0,
+     1.0,
+     0.5,
+     0.7,
+     1.1,
+     1.3,
+     0.7,
+     2.4
+    ],
+    "monthlyRain": [
+     5.28,
+     4.76,
+     4.53,
+     5.46,
+     4.9,
+     5.08,
+     6.26,
+     5.54,
+     5.5,
+     3.26,
+     2.97,
+     6.45
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01063",
+   "fips": "01063",
+   "name": "Greene County",
+   "short": "Greene",
+   "slug": "greene",
+   "seat": "Eutaw",
+   "founded": 1819,
+   "areaSqMi": 647,
+   "lat": 32.835,
+   "lon": -88.0,
+   "population": 7424,
+   "medianAge": 42.5,
+   "housingUnits": 4279,
+   "vacancyPct": 24.6,
+   "ownerPct": 61.6,
+   "singleFamilyPct": 53.3,
+   "mobileHomePct": 34.7,
+   "medianYearBuilt": 1981,
+   "builtPre1960Pct": 16.5,
+   "builtPre1980Pct": 48.7,
+   "built2000PlusPct": 17.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 33.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.5
+    }
+   ],
+   "heatGasPct": 13.9,
+   "heatElectricPct": 68.6,
+   "heatPropanePct": 16.3,
+   "heatWoodPct": 0.2,
+   "medianHomeValue": 81200,
+   "medianIncome": 29200,
+   "adjacent": [
+    "hale",
+    "marengo",
+    "pickens",
+    "sumter",
+    "tuscaloosa"
+   ],
+   "places": [
+    {
+     "name": "Eutaw",
+     "population": 2786
+    },
+    {
+     "name": "Forkland",
+     "population": 660
+    },
+    {
+     "name": "Union",
+     "population": 212
+    },
+    {
+     "name": "Boligee",
+     "population": 185
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 37,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 36,
+    "muggyNights": 119,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 10,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 56.6,
+    "heavyRainDays": 14.9,
+    "wettestDay": 4.69,
+    "wettestDate": "2018-12-28",
+    "max3DayRain": 5.57,
+    "max3DayEnd": "2019-10-27",
+    "avgFirstFreeze": "Nov 16",
+    "avgLastFreeze": "Mar 11",
+    "monthlyFreeze": [
+     13.6,
+     7.6,
+     2.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     4.1,
+     9.3
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     2.1,
+     1.5,
+     2.4,
+     1.1,
+     1.2,
+     0.5,
+     0.6,
+     0.8,
+     0.7,
+     0.9,
+     1.3
+    ],
+    "monthlyRain": [
+     5.62,
+     6.3,
+     5.75,
+     6.1,
+     3.97,
+     5.21,
+     4.4,
+     4.76,
+     2.96,
+     2.78,
+     3.56,
+     5.14
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01065",
+   "fips": "01065",
+   "name": "Hale County",
+   "short": "Hale",
+   "slug": "hale",
+   "seat": "Greensboro",
+   "founded": 1867,
+   "areaSqMi": 644,
+   "lat": 32.7471,
+   "lon": -87.6394,
+   "population": 14829,
+   "medianAge": 40.6,
+   "housingUnits": 7594,
+   "vacancyPct": 25.7,
+   "ownerPct": 74.4,
+   "singleFamilyPct": 55.2,
+   "mobileHomePct": 37.5,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 14.1,
+   "builtPre1980Pct": 43.0,
+   "built2000PlusPct": 21.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.3
+    }
+   ],
+   "heatGasPct": 11.6,
+   "heatElectricPct": 77.8,
+   "heatPropanePct": 9.0,
+   "heatWoodPct": 1.3,
+   "medianHomeValue": 127600,
+   "medianIncome": 39250,
+   "adjacent": [
+    "bibb",
+    "greene",
+    "marengo",
+    "perry",
+    "tuscaloosa"
+   ],
+   "places": [
+    {
+     "name": "Moundville",
+     "population": 3754
+    },
+    {
+     "name": "Greensboro",
+     "population": 2135
+    },
+    {
+     "name": "Newbern",
+     "population": 325
+    },
+    {
+     "name": "Akron",
+     "population": 243
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 37,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 36,
+    "muggyNights": 118,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 10,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 54.1,
+    "heavyRainDays": 13.8,
+    "wettestDay": 4.25,
+    "wettestDate": "2018-12-28",
+    "max3DayRain": 5.74,
+    "max3DayEnd": "2017-06-24",
+    "avgFirstFreeze": "Nov 16",
+    "avgLastFreeze": "Mar 9",
+    "monthlyFreeze": [
+     14.1,
+     7.4,
+     2.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     3.9,
+     9.2
+    ],
+    "monthlyHeavyRain": [
+     1.9,
+     2.0,
+     1.3,
+     1.9,
+     1.0,
+     1.0,
+     0.4,
+     0.7,
+     0.6,
+     0.6,
+     1.0,
+     1.4
+    ],
+    "monthlyRain": [
+     5.38,
+     6.03,
+     5.38,
+     5.59,
+     4.04,
+     5.21,
+     4.27,
+     4.77,
+     2.58,
+     2.5,
+     3.49,
+     4.9
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01067",
+   "fips": "01067",
+   "name": "Henry County",
+   "short": "Henry",
+   "slug": "henry",
+   "seat": "Abbeville",
+   "founded": 1819,
+   "areaSqMi": 562,
+   "lat": 31.5401,
+   "lon": -85.2286,
+   "population": 17647,
+   "medianAge": 44.8,
+   "housingUnits": 9215,
+   "vacancyPct": 23.4,
+   "ownerPct": 79.5,
+   "singleFamilyPct": 73.5,
+   "mobileHomePct": 21.7,
+   "medianYearBuilt": 1982,
+   "builtPre1960Pct": 17.4,
+   "builtPre1980Pct": 47.0,
+   "built2000PlusPct": 25.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 25.2
+    }
+   ],
+   "heatGasPct": 3.2,
+   "heatElectricPct": 89.0,
+   "heatPropanePct": 6.0,
+   "heatWoodPct": 0.8,
+   "medianHomeValue": 161000,
+   "medianIncome": 59931,
+   "adjacent": [
+    "barbour",
+    "dale",
+    "houston"
+   ],
+   "places": [
+    {
+     "name": "Headland",
+     "population": 5217
+    },
+    {
+     "name": "Abbeville",
+     "population": 2748
+    },
+    {
+     "name": "Newville",
+     "population": 515
+    },
+    {
+     "name": "Haleburg",
+     "population": 211
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 17,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 17,
+    "muggyNights": 136,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 15,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 55.9,
+    "heavyRainDays": 12.7,
+    "wettestDay": 9.11,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 11.84,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 28",
+    "avgLastFreeze": "Feb 26",
+    "monthlyFreeze": [
+     7.7,
+     2.4,
+     0.7,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.1,
+     4.9
+    ],
+    "monthlyHeavyRain": [
+     2.1,
+     1.3,
+     0.6,
+     1.8,
+     1.1,
+     0.7,
+     0.1,
+     0.7,
+     0.8,
+     0.7,
+     0.8,
+     2.0
+    ],
+    "monthlyRain": [
+     6.18,
+     4.35,
+     4.11,
+     5.4,
+     4.42,
+     4.98,
+     4.72,
+     5.41,
+     4.78,
+     2.41,
+     2.97,
+     6.13
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01069",
+   "fips": "01069",
+   "name": "Houston County",
+   "short": "Houston",
+   "slug": "houston",
+   "seat": "Dothan",
+   "founded": 1903,
+   "areaSqMi": 580,
+   "lat": 31.152,
+   "lon": -85.2793,
+   "population": 108140,
+   "medianAge": 40.3,
+   "housingUnits": 50158,
+   "vacancyPct": 13.7,
+   "ownerPct": 63.8,
+   "singleFamilyPct": 71.3,
+   "mobileHomePct": 12.7,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 14.2,
+   "builtPre1980Pct": 43.2,
+   "built2000PlusPct": 26.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 29.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.9
+    }
+   ],
+   "heatGasPct": 5.4,
+   "heatElectricPct": 92.3,
+   "heatPropanePct": 1.0,
+   "heatWoodPct": 0.1,
+   "medianHomeValue": 183300,
+   "medianIncome": 58626,
+   "adjacent": [
+    "dale",
+    "geneva",
+    "henry"
+   ],
+   "places": [
+    {
+     "name": "Dothan",
+     "population": 71514
+    },
+    {
+     "name": "Taylor",
+     "population": 3063
+    },
+    {
+     "name": "Ashford",
+     "population": 2447
+    },
+    {
+     "name": "Cowarts",
+     "population": 2204
+    },
+    {
+     "name": "Kinsey",
+     "population": 2195
+    },
+    {
+     "name": "Rehobeth",
+     "population": 1887
+    },
+    {
+     "name": "Webb",
+     "population": 1475
+    },
+    {
+     "name": "Cottonwood",
+     "population": 971
+    },
+    {
+     "name": "Columbia",
+     "population": 785
+    },
+    {
+     "name": "Avon",
+     "population": 378
+    },
+    {
+     "name": "Gordon",
+     "population": 323
+    },
+    {
+     "name": "Madrid",
+     "population": 220
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 14,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 14,
+    "muggyNights": 144,
+    "longestIceStreak": 0,
+    "longestIceStreakEnd": null,
+    "coldestTemp": 16,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 57.7,
+    "heavyRainDays": 13.9,
+    "wettestDay": 8.39,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 12.72,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Dec 1",
+    "avgLastFreeze": "Feb 26",
+    "monthlyFreeze": [
+     6.8,
+     2.3,
+     0.5,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.9,
+     4.0
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     1.4,
+     1.3,
+     1.6,
+     1.0,
+     0.7,
+     0.4,
+     0.6,
+     1.1,
+     0.8,
+     0.8,
+     2.4
+    ],
+    "monthlyRain": [
+     5.1,
+     4.55,
+     4.46,
+     5.18,
+     4.55,
+     5.0,
+     5.72,
+     5.74,
+     5.97,
+     2.44,
+     2.6,
+     6.41
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01071",
+   "fips": "01071",
+   "name": "Jackson County",
+   "short": "Jackson",
+   "slug": "jackson",
+   "seat": "Scottsboro",
+   "founded": 1819,
+   "areaSqMi": 1078,
+   "lat": 34.6838,
+   "lon": -86.0492,
+   "population": 53053,
+   "medianAge": 43.5,
+   "housingUnits": 24914,
+   "vacancyPct": 12.5,
+   "ownerPct": 75.1,
+   "singleFamilyPct": 71.8,
+   "mobileHomePct": 21.6,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 16.3,
+   "builtPre1980Pct": 42.9,
+   "built2000PlusPct": 21.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 7.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.5
+    }
+   ],
+   "heatGasPct": 9.8,
+   "heatElectricPct": 72.6,
+   "heatPropanePct": 13.2,
+   "heatWoodPct": 2.8,
+   "medianHomeValue": 159500,
+   "medianIncome": 51908,
+   "adjacent": [
+    "dekalb",
+    "madison",
+    "marshall"
+   ],
+   "places": [
+    {
+     "name": "Scottsboro",
+     "population": 15712
+    },
+    {
+     "name": "Bridgeport",
+     "population": 2246
+    },
+    {
+     "name": "Stevenson",
+     "population": 1995
+    },
+    {
+     "name": "Skyline",
+     "population": 1126
+    },
+    {
+     "name": "Section",
+     "population": 1069
+    },
+    {
+     "name": "Woodville",
+     "population": 947
+    },
+    {
+     "name": "Hollywood",
+     "population": 942
+    },
+    {
+     "name": "Pisgah",
+     "population": 923
+    },
+    {
+     "name": "Hytop",
+     "population": 726
+    },
+    {
+     "name": "Pleasant Groves",
+     "population": 485
+    },
+    {
+     "name": "Dutton",
+     "population": 435
+    },
+    {
+     "name": "Langston",
+     "population": 284
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 51,
+    "pipeRiskNights": 6,
+    "belowZeroNights": 0.0,
+    "iceDays": 3,
+    "freezeThawDays": 48,
+    "muggyNights": 86,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2015-02-20",
+    "coldestTemp": 3,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 61.2,
+    "heavyRainDays": 16.5,
+    "wettestDay": 3.89,
+    "wettestDate": "2020-04-13",
+    "max3DayRain": 6.21,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 9",
+    "avgLastFreeze": "Mar 23",
+    "monthlyFreeze": [
+     17.0,
+     10.2,
+     4.2,
+     0.5,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     6.1,
+     12.5
+    ],
+    "monthlyHeavyRain": [
+     1.6,
+     2.2,
+     2.2,
+     1.2,
+     1.1,
+     0.8,
+     0.6,
+     1.1,
+     1.1,
+     1.1,
+     1.1,
+     2.4
+    ],
+    "monthlyRain": [
+     5.32,
+     6.92,
+     6.71,
+     5.46,
+     4.42,
+     4.58,
+     4.87,
+     5.08,
+     3.51,
+     3.77,
+     3.94,
+     6.67
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01073",
+   "fips": "01073",
+   "name": "Jefferson County",
+   "short": "Jefferson",
+   "slug": "jefferson",
+   "seat": "Birmingham",
+   "founded": 1819,
+   "areaSqMi": 1112,
+   "lat": 33.5445,
+   "lon": -86.8608,
+   "population": 667755,
+   "medianAge": 37.7,
+   "housingUnits": 310789,
+   "vacancyPct": 13.2,
+   "ownerPct": 63.9,
+   "singleFamilyPct": 71.3,
+   "mobileHomePct": 3.1,
+   "medianYearBuilt": 1975,
+   "builtPre1960Pct": 28.4,
+   "builtPre1980Pct": 59.0,
+   "built2000PlusPct": 20.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 10.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 18.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 20.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 20.1
+    }
+   ],
+   "heatGasPct": 48.2,
+   "heatElectricPct": 48.7,
+   "heatPropanePct": 2.0,
+   "heatWoodPct": 0.1,
+   "medianHomeValue": 240000,
+   "medianIncome": 66388,
+   "adjacent": [
+    "bibb",
+    "blount",
+    "shelby",
+    "st-clair",
+    "tuscaloosa",
+    "walker"
+   ],
+   "places": [
+    {
+     "name": "Birmingham",
+     "population": 198173
+    },
+    {
+     "name": "Hoover",
+     "population": 92642
+    },
+    {
+     "name": "Vestavia Hills",
+     "population": 38616
+    },
+    {
+     "name": "Homewood",
+     "population": 27829
+    },
+    {
+     "name": "Trussville",
+     "population": 26673
+    },
+    {
+     "name": "Bessemer",
+     "population": 25400
+    },
+    {
+     "name": "Mountain Brook",
+     "population": 22029
+    },
+    {
+     "name": "Gardendale",
+     "population": 16534
+    },
+    {
+     "name": "Hueytown",
+     "population": 16414
+    },
+    {
+     "name": "Center Point",
+     "population": 15914
+    },
+    {
+     "name": "Irondale",
+     "population": 13464
+    },
+    {
+     "name": "McCalla",
+     "population": 13253
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 43,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 42,
+    "muggyNights": 106,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 9,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 56.8,
+    "heavyRainDays": 14.9,
+    "wettestDay": 3.88,
+    "wettestDate": "2022-06-08",
+    "max3DayRain": 5.82,
+    "max3DayEnd": "2017-06-24",
+    "avgFirstFreeze": "Nov 14",
+    "avgLastFreeze": "Mar 16",
+    "monthlyFreeze": [
+     15.5,
+     8.6,
+     3.0,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     5.4,
+     10.2
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     2.4,
+     1.6,
+     2.0,
+     0.9,
+     1.3,
+     0.9,
+     0.6,
+     0.6,
+     0.8,
+     0.9,
+     1.4
+    ],
+    "monthlyRain": [
+     5.28,
+     6.72,
+     5.58,
+     5.95,
+     3.79,
+     5.42,
+     5.24,
+     4.33,
+     2.5,
+     3.11,
+     3.3,
+     5.58
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01075",
+   "fips": "01075",
+   "name": "Lamar County",
+   "short": "Lamar",
+   "slug": "lamar",
+   "seat": "Vernon",
+   "founded": 1867,
+   "areaSqMi": 605,
+   "lat": 33.7306,
+   "lon": -88.0993,
+   "population": 13693,
+   "medianAge": 44.2,
+   "housingUnits": 7123,
+   "vacancyPct": 28.6,
+   "ownerPct": 75.7,
+   "singleFamilyPct": 61.1,
+   "mobileHomePct": 24.5,
+   "medianYearBuilt": 1978,
+   "builtPre1960Pct": 21.8,
+   "builtPre1980Pct": 54.4,
+   "built2000PlusPct": 14.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 32.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 31.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 14.1
+    }
+   ],
+   "heatGasPct": 24.4,
+   "heatElectricPct": 62.5,
+   "heatPropanePct": 10.2,
+   "heatWoodPct": 1.9,
+   "medianHomeValue": 114000,
+   "medianIncome": 50000,
+   "adjacent": [
+    "fayette",
+    "marion",
+    "pickens"
+   ],
+   "places": [
+    {
+     "name": "Vernon",
+     "population": 1714
+    },
+    {
+     "name": "Sulligent",
+     "population": 1627
+    },
+    {
+     "name": "Millport",
+     "population": 1412
+    },
+    {
+     "name": "Kennedy",
+     "population": 436
+    },
+    {
+     "name": "Beaverton",
+     "population": 208
+    },
+    {
+     "name": "Detroit",
+     "population": 189
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 47,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 46,
+    "muggyNights": 109,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 7,
+    "coldestDate": "2018-01-18",
+    "annualPrecip": 60.1,
+    "heavyRainDays": 15.3,
+    "wettestDay": 4.46,
+    "wettestDate": "2021-08-31",
+    "max3DayRain": 6.0,
+    "max3DayEnd": "2020-02-13",
+    "avgFirstFreeze": "Nov 13",
+    "avgLastFreeze": "Mar 20",
+    "monthlyFreeze": [
+     15.6,
+     9.6,
+     3.8,
+     0.2,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     6.6,
+     10.8
+    ],
+    "monthlyHeavyRain": [
+     1.4,
+     2.8,
+     1.5,
+     1.9,
+     1.0,
+     0.9,
+     0.6,
+     0.7,
+     0.7,
+     0.7,
+     1.2,
+     1.9
+    ],
+    "monthlyRain": [
+     5.65,
+     7.38,
+     6.35,
+     6.84,
+     4.33,
+     4.49,
+     4.93,
+     4.44,
+     2.73,
+     3.12,
+     3.8,
+     6.02
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01077",
+   "fips": "01077",
+   "name": "Lauderdale County",
+   "short": "Lauderdale",
+   "slug": "lauderdale",
+   "seat": "Florence",
+   "founded": 1818,
+   "areaSqMi": 668,
+   "lat": 34.8752,
+   "lon": -87.5882,
+   "population": 95830,
+   "medianAge": 40.8,
+   "housingUnits": 44936,
+   "vacancyPct": 12.6,
+   "ownerPct": 68.9,
+   "singleFamilyPct": 73.4,
+   "mobileHomePct": 8.0,
+   "medianYearBuilt": 1980,
+   "builtPre1960Pct": 19.3,
+   "builtPre1980Pct": 49.8,
+   "built2000PlusPct": 22.5,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.2
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.8
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.5
+    }
+   ],
+   "heatGasPct": 24.3,
+   "heatElectricPct": 68.1,
+   "heatPropanePct": 5.1,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 200300,
+   "medianIncome": 62649,
+   "adjacent": [
+    "colbert",
+    "lawrence",
+    "limestone"
+   ],
+   "places": [
+    {
+     "name": "Florence",
+     "population": 41701
+    },
+    {
+     "name": "Underwood-Petersville",
+     "population": 3100
+    },
+    {
+     "name": "Rogersville",
+     "population": 1260
+    },
+    {
+     "name": "Killen",
+     "population": 1150
+    },
+    {
+     "name": "St. Florian",
+     "population": 697
+    },
+    {
+     "name": "Lexington",
+     "population": 638
+    },
+    {
+     "name": "Anderson",
+     "population": 410
+    },
+    {
+     "name": "Waterloo",
+     "population": 113
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 59,
+    "pipeRiskNights": 7,
+    "belowZeroNights": 0.1,
+    "iceDays": 3,
+    "freezeThawDays": 56,
+    "muggyNights": 84,
+    "longestIceStreak": 5,
+    "longestIceStreakEnd": "2021-02-18",
+    "coldestTemp": -1,
+    "coldestDate": "2024-01-17",
+    "annualPrecip": 59.0,
+    "heavyRainDays": 14.8,
+    "wettestDay": 3.94,
+    "wettestDate": "2021-08-31",
+    "max3DayRain": 6.86,
+    "max3DayEnd": "2019-02-23",
+    "avgFirstFreeze": "Nov 7",
+    "avgLastFreeze": "Mar 26",
+    "monthlyFreeze": [
+     18.0,
+     12.1,
+     5.6,
+     0.5,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.6,
+     8.5,
+     13.4
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     2.2,
+     2.3,
+     1.4,
+     0.4,
+     0.4,
+     0.6,
+     1.1,
+     0.8,
+     1.0,
+     0.9,
+     2.2
+    ],
+    "monthlyRain": [
+     5.44,
+     7.37,
+     6.95,
+     5.35,
+     4.13,
+     3.72,
+     4.59,
+     5.39,
+     3.25,
+     3.4,
+     3.35,
+     6.05
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01079",
+   "fips": "01079",
+   "name": "Lawrence County",
+   "short": "Lawrence",
+   "slug": "lawrence",
+   "seat": "Moulton",
+   "founded": 1818,
+   "areaSqMi": 691,
+   "lat": 34.5326,
+   "lon": -87.3183,
+   "population": 33276,
+   "medianAge": 42.3,
+   "housingUnits": 15403,
+   "vacancyPct": 11.5,
+   "ownerPct": 81.7,
+   "singleFamilyPct": 69.6,
+   "mobileHomePct": 24.9,
+   "medianYearBuilt": 1990,
+   "builtPre1960Pct": 10.7,
+   "builtPre1980Pct": 36.4,
+   "built2000PlusPct": 28.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 25.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 28.1
+    }
+   ],
+   "heatGasPct": 15.9,
+   "heatElectricPct": 71.1,
+   "heatPropanePct": 11.3,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 172300,
+   "medianIncome": 66071,
+   "adjacent": [
+    "colbert",
+    "cullman",
+    "franklin",
+    "lauderdale",
+    "limestone",
+    "morgan",
+    "winston"
+   ],
+   "places": [
+    {
+     "name": "Moulton",
+     "population": 3401
+    },
+    {
+     "name": "Town Creek",
+     "population": 979
+    },
+    {
+     "name": "Courtland",
+     "population": 723
+    },
+    {
+     "name": "Hillsboro",
+     "population": 527
+    },
+    {
+     "name": "North Courtland",
+     "population": 427
+    },
+    {
+     "name": "Hatton",
+     "population": 405
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 57,
+    "pipeRiskNights": 6,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 55,
+    "muggyNights": 89,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2018-01-03",
+    "coldestTemp": 4,
+    "coldestDate": "2024-01-17",
+    "annualPrecip": 59.7,
+    "heavyRainDays": 16.3,
+    "wettestDay": 4.22,
+    "wettestDate": "2015-12-26",
+    "max3DayRain": 6.27,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 8",
+    "avgLastFreeze": "Mar 25",
+    "monthlyFreeze": [
+     18.1,
+     11.4,
+     5.6,
+     0.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     8.4,
+     13.1
+    ],
+    "monthlyHeavyRain": [
+     1.4,
+     2.3,
+     2.2,
+     1.7,
+     0.5,
+     0.6,
+     0.9,
+     1.3,
+     1.0,
+     0.9,
+     1.1,
+     2.4
+    ],
+    "monthlyRain": [
+     5.24,
+     6.93,
+     6.71,
+     5.95,
+     4.16,
+     3.91,
+     5.03,
+     5.01,
+     3.28,
+     3.35,
+     3.55,
+     6.57
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01081",
+   "fips": "01081",
+   "name": "Lee County",
+   "short": "Lee",
+   "slug": "lee",
+   "seat": "Opelika",
+   "founded": 1866,
+   "areaSqMi": 608,
+   "lat": 32.5764,
+   "lon": -85.3606,
+   "population": 181134,
+   "medianAge": 34.0,
+   "housingUnits": 79619,
+   "vacancyPct": 12.8,
+   "ownerPct": 66.3,
+   "singleFamilyPct": 62.6,
+   "mobileHomePct": 14.3,
+   "medianYearBuilt": 1997,
+   "builtPre1960Pct": 7.0,
+   "builtPre1980Pct": 23.3,
+   "built2000PlusPct": 45.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 4.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 16.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 31.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 45.0
+    }
+   ],
+   "heatGasPct": 17.5,
+   "heatElectricPct": 77.6,
+   "heatPropanePct": 3.4,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 262200,
+   "medianIncome": 65824,
+   "adjacent": [
+    "chambers",
+    "macon",
+    "russell",
+    "tallapoosa"
+   ],
+   "places": [
+    {
+     "name": "Auburn",
+     "population": 80594
+    },
+    {
+     "name": "Opelika",
+     "population": 32820
+    },
+    {
+     "name": "Smiths Station",
+     "population": 5496
+    },
+    {
+     "name": "Waverly",
+     "population": 315
+    },
+    {
+     "name": "Loachapoka",
+     "population": 223
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 35,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 35,
+    "muggyNights": 108,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 10,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 58.2,
+    "heavyRainDays": 14.6,
+    "wettestDay": 5.8,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 8.6,
+    "max3DayEnd": "2015-12-25",
+    "avgFirstFreeze": "Nov 18",
+    "avgLastFreeze": "Mar 11",
+    "monthlyFreeze": [
+     14.4,
+     6.9,
+     2.1,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     3.3,
+     8.4
+    ],
+    "monthlyHeavyRain": [
+     2.1,
+     1.3,
+     1.3,
+     1.5,
+     1.1,
+     0.8,
+     0.5,
+     0.9,
+     0.9,
+     1.0,
+     1.3,
+     1.9
+    ],
+    "monthlyRain": [
+     5.99,
+     4.91,
+     4.68,
+     5.58,
+     4.51,
+     4.89,
+     4.44,
+     5.12,
+     4.07,
+     3.56,
+     4.02,
+     6.46
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01083",
+   "fips": "01083",
+   "name": "Limestone County",
+   "short": "Limestone",
+   "slug": "limestone",
+   "seat": "Athens",
+   "founded": 1818,
+   "areaSqMi": 563,
+   "lat": 34.776,
+   "lon": -87.0317,
+   "population": 111233,
+   "medianAge": 40.8,
+   "housingUnits": 44354,
+   "vacancyPct": 7.7,
+   "ownerPct": 77.6,
+   "singleFamilyPct": 80.0,
+   "mobileHomePct": 9.4,
+   "medianYearBuilt": 1998,
+   "builtPre1960Pct": 9.1,
+   "builtPre1980Pct": 26.2,
+   "built2000PlusPct": 46.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 5.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 17.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 46.7
+    }
+   ],
+   "heatGasPct": 15.7,
+   "heatElectricPct": 76.6,
+   "heatPropanePct": 6.4,
+   "heatWoodPct": 0.4,
+   "medianHomeValue": 281000,
+   "medianIncome": 83629,
+   "adjacent": [
+    "lauderdale",
+    "lawrence",
+    "madison",
+    "morgan"
+   ],
+   "places": [
+    {
+     "name": "Athens",
+     "population": 29002
+    },
+    {
+     "name": "Ardmore",
+     "population": 1384
+    },
+    {
+     "name": "Elkmont",
+     "population": 264
+    },
+    {
+     "name": "Lester",
+     "population": 181
+    },
+    {
+     "name": "Mooresville",
+     "population": 81
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 52,
+    "pipeRiskNights": 6,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 50,
+    "muggyNights": 94,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2015-02-20",
+    "coldestTemp": 3,
+    "coldestDate": "2024-01-17",
+    "annualPrecip": 59.6,
+    "heavyRainDays": 14.9,
+    "wettestDay": 4.1,
+    "wettestDate": "2015-12-26",
+    "max3DayRain": 6.25,
+    "max3DayEnd": "2019-02-22",
+    "avgFirstFreeze": "Nov 9",
+    "avgLastFreeze": "Mar 22",
+    "monthlyFreeze": [
+     17.2,
+     10.9,
+     4.2,
+     0.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     7.3,
+     12.0
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     2.2,
+     1.8,
+     1.3,
+     0.7,
+     0.4,
+     1.0,
+     1.1,
+     0.7,
+     0.9,
+     1.0,
+     2.3
+    ],
+    "monthlyRain": [
+     5.39,
+     7.22,
+     6.47,
+     5.59,
+     4.54,
+     3.64,
+     5.07,
+     4.93,
+     3.13,
+     3.23,
+     3.73,
+     6.63
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01085",
+   "fips": "01085",
+   "name": "Lowndes County",
+   "short": "Lowndes",
+   "slug": "lowndes",
+   "seat": "Hayneville",
+   "founded": 1830,
+   "areaSqMi": 716,
+   "lat": 32.1365,
+   "lon": -86.6575,
+   "population": 9833,
+   "medianAge": 42.7,
+   "housingUnits": 4847,
+   "vacancyPct": 11.6,
+   "ownerPct": 77.5,
+   "singleFamilyPct": 53.6,
+   "mobileHomePct": 37.4,
+   "medianYearBuilt": 1991,
+   "builtPre1960Pct": 10.1,
+   "builtPre1980Pct": 36.1,
+   "built2000PlusPct": 29.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 6.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 29.2
+    }
+   ],
+   "heatGasPct": 4.8,
+   "heatElectricPct": 66.3,
+   "heatPropanePct": 26.5,
+   "heatWoodPct": 1.1,
+   "medianHomeValue": 86300,
+   "medianIncome": 37052,
+   "adjacent": [
+    "autauga",
+    "butler",
+    "crenshaw",
+    "dallas",
+    "montgomery",
+    "wilcox"
+   ],
+   "places": [
+    {
+     "name": "Fort Deposit",
+     "population": 1525
+    },
+    {
+     "name": "White Hall",
+     "population": 875
+    },
+    {
+     "name": "Mosses",
+     "population": 836
+    },
+    {
+     "name": "Hayneville",
+     "population": 716
+    },
+    {
+     "name": "Gordonville",
+     "population": 275
+    },
+    {
+     "name": "Lowndesboro",
+     "population": 70
+    },
+    {
+     "name": "Benton",
+     "population": 32
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 28,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 28,
+    "muggyNights": 129,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2018-01-18",
+    "coldestTemp": 14,
+    "coldestDate": "2015-01-09",
+    "annualPrecip": 56.3,
+    "heavyRainDays": 14.9,
+    "wettestDay": 3.47,
+    "wettestDate": "2024-03-09",
+    "max3DayRain": 6.82,
+    "max3DayEnd": "2017-01-03",
+    "avgFirstFreeze": "Nov 20",
+    "avgLastFreeze": "Mar 5",
+    "monthlyFreeze": [
+     11.6,
+     5.0,
+     1.5,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.9,
+     7.4
+    ],
+    "monthlyHeavyRain": [
+     1.9,
+     1.6,
+     1.6,
+     1.6,
+     1.4,
+     1.0,
+     0.5,
+     0.7,
+     1.1,
+     1.2,
+     0.9,
+     1.4
+    ],
+    "monthlyRain": [
+     6.06,
+     4.77,
+     5.12,
+     5.41,
+     5.21,
+     5.34,
+     4.71,
+     4.61,
+     3.36,
+     3.23,
+     3.33,
+     5.14
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01087",
+   "fips": "01087",
+   "name": "Macon County",
+   "short": "Macon",
+   "slug": "macon",
+   "seat": "Tuskegee",
+   "founded": 1832,
+   "areaSqMi": 609,
+   "lat": 32.4152,
+   "lon": -85.728,
+   "population": 18691,
+   "medianAge": 37.4,
+   "housingUnits": 9653,
+   "vacancyPct": 25.0,
+   "ownerPct": 61.5,
+   "singleFamilyPct": 63.6,
+   "mobileHomePct": 17.2,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 16.2,
+   "builtPre1980Pct": 51.9,
+   "built2000PlusPct": 15.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 35.6
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.7
+    }
+   ],
+   "heatGasPct": 29.4,
+   "heatElectricPct": 50.2,
+   "heatPropanePct": 18.0,
+   "heatWoodPct": 0.4,
+   "medianHomeValue": 102000,
+   "medianIncome": 43707,
+   "adjacent": [
+    "bullock",
+    "elmore",
+    "lee",
+    "montgomery",
+    "russell",
+    "tallapoosa"
+   ],
+   "places": [
+    {
+     "name": "Tuskegee",
+     "population": 8938
+    },
+    {
+     "name": "Notasulga",
+     "population": 1050
+    },
+    {
+     "name": "Franklin",
+     "population": 981
+    },
+    {
+     "name": "Shorter",
+     "population": 404
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 30,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 30,
+    "muggyNights": 121,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 13,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 56.8,
+    "heavyRainDays": 14.5,
+    "wettestDay": 6.45,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 7.8,
+    "max3DayEnd": "2015-12-25",
+    "avgFirstFreeze": "Nov 22",
+    "avgLastFreeze": "Mar 6",
+    "monthlyFreeze": [
+     13.3,
+     4.5,
+     1.8,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.9,
+     7.5
+    ],
+    "monthlyHeavyRain": [
+     2.0,
+     1.3,
+     1.2,
+     1.8,
+     1.2,
+     0.7,
+     0.6,
+     0.6,
+     1.0,
+     1.0,
+     1.2,
+     1.9
+    ],
+    "monthlyRain": [
+     5.81,
+     4.84,
+     4.59,
+     5.33,
+     4.49,
+     5.12,
+     4.5,
+     4.89,
+     4.15,
+     3.06,
+     3.82,
+     6.19
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01089",
+   "fips": "01089",
+   "name": "Madison County",
+   "short": "Madison",
+   "slug": "madison",
+   "seat": "Huntsville",
+   "founded": 1808,
+   "areaSqMi": 802,
+   "lat": 34.7059,
+   "lon": -86.5724,
+   "population": 405718,
+   "medianAge": 38.2,
+   "housingUnits": 178607,
+   "vacancyPct": 7.6,
+   "ownerPct": 68.3,
+   "singleFamilyPct": 74.3,
+   "mobileHomePct": 3.6,
+   "medianYearBuilt": 1992,
+   "builtPre1960Pct": 9.2,
+   "builtPre1980Pct": 32.3,
+   "built2000PlusPct": 38.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 7.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 38.9
+    }
+   ],
+   "heatGasPct": 21.4,
+   "heatElectricPct": 74.4,
+   "heatPropanePct": 3.0,
+   "heatWoodPct": 0.4,
+   "medianHomeValue": 299200,
+   "medianIncome": 86499,
+   "adjacent": [
+    "jackson",
+    "limestone",
+    "marshall",
+    "morgan"
+   ],
+   "places": [
+    {
+     "name": "Huntsville",
+     "population": 222791
+    },
+    {
+     "name": "Madison",
+     "population": 60106
+    },
+    {
+     "name": "Meridianville",
+     "population": 11150
+    },
+    {
+     "name": "Moores Mill",
+     "population": 6378
+    },
+    {
+     "name": "Harvest",
+     "population": 5955
+    },
+    {
+     "name": "Triana",
+     "population": 3964
+    },
+    {
+     "name": "Hazel Green",
+     "population": 3940
+    },
+    {
+     "name": "New Hope",
+     "population": 2911
+    },
+    {
+     "name": "Owens Cross Roads",
+     "population": 2826
+    },
+    {
+     "name": "New Market",
+     "population": 1314
+    },
+    {
+     "name": "Redstone Arsenal",
+     "population": 858
+    },
+    {
+     "name": "Gurley",
+     "population": 607
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 49,
+    "pipeRiskNights": 6,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 47,
+    "muggyNights": 95,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2015-02-20",
+    "coldestTemp": 4,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 61.2,
+    "heavyRainDays": 15.9,
+    "wettestDay": 4.03,
+    "wettestDate": "2015-12-26",
+    "max3DayRain": 6.11,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 11",
+    "avgLastFreeze": "Mar 20",
+    "monthlyFreeze": [
+     16.5,
+     10.7,
+     4.1,
+     0.2,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     6.2,
+     11.3
+    ],
+    "monthlyHeavyRain": [
+     1.7,
+     2.5,
+     1.8,
+     1.4,
+     1.0,
+     0.8,
+     1.0,
+     1.0,
+     0.6,
+     0.8,
+     1.0,
+     2.3
+    ],
+    "monthlyRain": [
+     5.58,
+     7.36,
+     6.61,
+     5.5,
+     4.45,
+     4.38,
+     5.26,
+     5.06,
+     3.23,
+     3.21,
+     3.92,
+     6.64
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01091",
+   "fips": "01091",
+   "name": "Marengo County",
+   "short": "Marengo",
+   "slug": "marengo",
+   "seat": "Linden",
+   "founded": 1818,
+   "areaSqMi": 977,
+   "lat": 32.2685,
+   "lon": -87.7606,
+   "population": 18851,
+   "medianAge": 41.4,
+   "housingUnits": 9867,
+   "vacancyPct": 20.0,
+   "ownerPct": 70.2,
+   "singleFamilyPct": 56.7,
+   "mobileHomePct": 29.5,
+   "medianYearBuilt": 1982,
+   "builtPre1960Pct": 17.2,
+   "builtPre1980Pct": 47.0,
+   "built2000PlusPct": 17.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 8.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 9.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 29.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 35.3
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.7
+    }
+   ],
+   "heatGasPct": 15.0,
+   "heatElectricPct": 70.7,
+   "heatPropanePct": 10.7,
+   "heatWoodPct": 1.5,
+   "medianHomeValue": 107400,
+   "medianIncome": 43825,
+   "adjacent": [
+    "choctaw",
+    "clarke",
+    "dallas",
+    "greene",
+    "hale",
+    "perry",
+    "sumter",
+    "wilcox"
+   ],
+   "places": [
+    {
+     "name": "Demopolis",
+     "population": 6908
+    },
+    {
+     "name": "Linden",
+     "population": 1961
+    },
+    {
+     "name": "Thomaston",
+     "population": 308
+    },
+    {
+     "name": "Sweet Water",
+     "population": 216
+    },
+    {
+     "name": "Faunsdale",
+     "population": 140
+    },
+    {
+     "name": "Providence",
+     "population": 112
+    },
+    {
+     "name": "Myrtlewood",
+     "population": 78
+    },
+    {
+     "name": "Putnam",
+     "population": 75
+    },
+    {
+     "name": "Dayton",
+     "population": 46
+    },
+    {
+     "name": "Nanafalia",
+     "population": 16
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 34,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 34,
+    "muggyNights": 122,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 13,
+    "coldestDate": "2018-01-17",
+    "annualPrecip": 51.6,
+    "heavyRainDays": 12.7,
+    "wettestDay": 3.64,
+    "wettestDate": "2018-12-28",
+    "max3DayRain": 4.99,
+    "max3DayEnd": "2017-06-24",
+    "avgFirstFreeze": "Nov 17",
+    "avgLastFreeze": "Mar 6",
+    "monthlyFreeze": [
+     12.8,
+     6.6,
+     1.7,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1,
+     4.2,
+     8.7
+    ],
+    "monthlyHeavyRain": [
+     1.7,
+     1.5,
+     1.6,
+     1.5,
+     0.9,
+     1.0,
+     0.2,
+     0.6,
+     0.6,
+     0.9,
+     0.9,
+     1.3
+    ],
+    "monthlyRain": [
+     5.01,
+     5.11,
+     5.29,
+     5.31,
+     3.92,
+     5.15,
+     3.8,
+     4.41,
+     2.71,
+     2.59,
+     3.46,
+     4.87
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01093",
+   "fips": "01093",
+   "name": "Marion County",
+   "short": "Marion",
+   "slug": "marion",
+   "seat": "Hamilton",
+   "founded": 1818,
+   "areaSqMi": 742,
+   "lat": 34.0969,
+   "lon": -87.9195,
+   "population": 29184,
+   "medianAge": 43.9,
+   "housingUnits": 14220,
+   "vacancyPct": 25.4,
+   "ownerPct": 76.8,
+   "singleFamilyPct": 63.4,
+   "mobileHomePct": 22.2,
+   "medianYearBuilt": 1978,
+   "builtPre1960Pct": 17.2,
+   "builtPre1980Pct": 54.2,
+   "built2000PlusPct": 15.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 36.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 15.8
+    }
+   ],
+   "heatGasPct": 35.3,
+   "heatElectricPct": 57.8,
+   "heatPropanePct": 5.1,
+   "heatWoodPct": 0.9,
+   "medianHomeValue": 106600,
+   "medianIncome": 50088,
+   "adjacent": [
+    "fayette",
+    "franklin",
+    "lamar",
+    "walker",
+    "winston"
+   ],
+   "places": [
+    {
+     "name": "Hamilton",
+     "population": 6922
+    },
+    {
+     "name": "Winfield",
+     "population": 4999
+    },
+    {
+     "name": "Guin",
+     "population": 2381
+    },
+    {
+     "name": "Hackleburg",
+     "population": 1709
+    },
+    {
+     "name": "Bear Creek",
+     "population": 1474
+    },
+    {
+     "name": "Brilliant",
+     "population": 1097
+    },
+    {
+     "name": "Twin",
+     "population": 475
+    },
+    {
+     "name": "Gu-Win",
+     "population": 178
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 54,
+    "pipeRiskNights": 6,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 53,
+    "muggyNights": 94,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2021-02-17",
+    "coldestTemp": 5,
+    "coldestDate": "2018-01-17",
+    "annualPrecip": 63.4,
+    "heavyRainDays": 17.2,
+    "wettestDay": 4.28,
+    "wettestDate": "2021-08-31",
+    "max3DayRain": 6.4,
+    "max3DayEnd": "2020-02-13",
+    "avgFirstFreeze": "Nov 10",
+    "avgLastFreeze": "Mar 23",
+    "monthlyFreeze": [
+     17.9,
+     11.1,
+     5.1,
+     0.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     7.3,
+     12.4
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     2.7,
+     2.3,
+     1.8,
+     0.7,
+     1.1,
+     0.9,
+     0.7,
+     1.0,
+     0.8,
+     0.8,
+     2.9
+    ],
+    "monthlyRain": [
+     5.51,
+     7.91,
+     7.06,
+     6.4,
+     4.17,
+     4.97,
+     5.51,
+     4.79,
+     3.09,
+     3.39,
+     3.65,
+     6.91
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01095",
+   "fips": "01095",
+   "name": "Marshall County",
+   "short": "Marshall",
+   "slug": "marshall",
+   "seat": "Guntersville",
+   "founded": 1836,
+   "areaSqMi": 566,
+   "lat": 34.3379,
+   "lon": -86.3452,
+   "population": 99748,
+   "medianAge": 38.5,
+   "housingUnits": 41762,
+   "vacancyPct": 12.7,
+   "ownerPct": 75.8,
+   "singleFamilyPct": 77.1,
+   "mobileHomePct": 13.5,
+   "medianYearBuilt": 1986,
+   "builtPre1960Pct": 13.8,
+   "builtPre1980Pct": 41.0,
+   "built2000PlusPct": 24.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 27.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 24.9
+    }
+   ],
+   "heatGasPct": 27.2,
+   "heatElectricPct": 67.0,
+   "heatPropanePct": 4.3,
+   "heatWoodPct": 0.6,
+   "medianHomeValue": 201500,
+   "medianIncome": 62571,
+   "adjacent": [
+    "blount",
+    "cullman",
+    "dekalb",
+    "etowah",
+    "jackson",
+    "madison",
+    "morgan"
+   ],
+   "places": [
+    {
+     "name": "Albertville",
+     "population": 22813
+    },
+    {
+     "name": "Boaz",
+     "population": 10814
+    },
+    {
+     "name": "Guntersville",
+     "population": 8916
+    },
+    {
+     "name": "Arab",
+     "population": 8679
+    },
+    {
+     "name": "Grant",
+     "population": 1336
+    },
+    {
+     "name": "Douglas",
+     "population": 1113
+    },
+    {
+     "name": "Cherokee Ridge",
+     "population": 577
+    },
+    {
+     "name": "Union Grove",
+     "population": 93
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 42,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 40,
+    "muggyNights": 101,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2018-01-03",
+    "coldestTemp": 6,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 58.5,
+    "heavyRainDays": 15.3,
+    "wettestDay": 4.45,
+    "wettestDate": "2015-12-26",
+    "max3DayRain": 8.02,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 13",
+    "avgLastFreeze": "Mar 16",
+    "monthlyFreeze": [
+     15.3,
+     9.2,
+     3.0,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     4.1,
+     9.8
+    ],
+    "monthlyHeavyRain": [
+     1.6,
+     2.5,
+     1.4,
+     1.5,
+     1.0,
+     1.1,
+     0.5,
+     0.7,
+     0.8,
+     1.1,
+     1.0,
+     2.1
+    ],
+    "monthlyRain": [
+     5.2,
+     6.61,
+     6.53,
+     5.35,
+     3.85,
+     4.88,
+     4.3,
+     4.75,
+     3.0,
+     3.58,
+     3.58,
+     6.9
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01097",
+   "fips": "01097",
+   "name": "Mobile County",
+   "short": "Mobile",
+   "slug": "mobile",
+   "seat": "Mobile",
+   "founded": 1812,
+   "areaSqMi": 1229,
+   "lat": 30.6538,
+   "lon": -88.199,
+   "population": 412590,
+   "medianAge": 38.5,
+   "housingUnits": 186082,
+   "vacancyPct": 13.1,
+   "ownerPct": 66.0,
+   "singleFamilyPct": 74.6,
+   "mobileHomePct": 6.9,
+   "medianYearBuilt": 1980,
+   "builtPre1960Pct": 19.0,
+   "builtPre1980Pct": 50.8,
+   "built2000PlusPct": 21.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 31.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 21.6
+    }
+   ],
+   "heatGasPct": 34.2,
+   "heatElectricPct": 63.4,
+   "heatPropanePct": 1.5,
+   "heatWoodPct": 0.2,
+   "medianHomeValue": 190700,
+   "medianIncome": 58880,
+   "adjacent": [
+    "baldwin",
+    "washington"
+   ],
+   "places": [
+    {
+     "name": "Mobile",
+     "population": 203416
+    },
+    {
+     "name": "Prichard",
+     "population": 18961
+    },
+    {
+     "name": "Tillmans Corner",
+     "population": 17677
+    },
+    {
+     "name": "Saraland",
+     "population": 16404
+    },
+    {
+     "name": "Satsuma",
+     "population": 6822
+    },
+    {
+     "name": "Chickasaw",
+     "population": 6332
+    },
+    {
+     "name": "Semmes",
+     "population": 5626
+    },
+    {
+     "name": "Theodore",
+     "population": 4964
+    },
+    {
+     "name": "Citronelle",
+     "population": 3913
+    },
+    {
+     "name": "Grand Bay",
+     "population": 3553
+    },
+    {
+     "name": "Creola",
+     "population": 2088
+    },
+    {
+     "name": "Bayou La Batre",
+     "population": 1881
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 12,
+    "pipeRiskNights": 0,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 12,
+    "muggyNights": 151,
+    "longestIceStreak": 0,
+    "longestIceStreakEnd": null,
+    "coldestTemp": 17,
+    "coldestDate": "2018-01-18",
+    "annualPrecip": 65.8,
+    "heavyRainDays": 17.6,
+    "wettestDay": 5.1,
+    "wettestDate": "2017-10-23",
+    "max3DayRain": 8.44,
+    "max3DayEnd": "2017-01-03",
+    "avgFirstFreeze": "Nov 28",
+    "avgLastFreeze": "Feb 19",
+    "monthlyFreeze": [
+     5.9,
+     2.5,
+     0.9,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.7,
+     2.5
+    ],
+    "monthlyHeavyRain": [
+     1.6,
+     1.0,
+     1.6,
+     2.1,
+     1.5,
+     1.8,
+     1.0,
+     1.5,
+     0.9,
+     1.3,
+     1.1,
+     2.2
+    ],
+    "monthlyRain": [
+     5.12,
+     3.64,
+     4.62,
+     6.34,
+     5.73,
+     7.56,
+     7.02,
+     7.14,
+     4.62,
+     4.37,
+     3.35,
+     6.3
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01099",
+   "fips": "01099",
+   "name": "Monroe County",
+   "short": "Monroe",
+   "slug": "monroe",
+   "seat": "Monroeville",
+   "founded": 1815,
+   "areaSqMi": 1026,
+   "lat": 31.5309,
+   "lon": -87.3813,
+   "population": 19388,
+   "medianAge": 44.2,
+   "housingUnits": 10208,
+   "vacancyPct": 27.9,
+   "ownerPct": 71.7,
+   "singleFamilyPct": 69.2,
+   "mobileHomePct": 21.4,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 11.5,
+   "builtPre1980Pct": 42.1,
+   "built2000PlusPct": 19.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.9
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.6
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 38.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 19.3
+    }
+   ],
+   "heatGasPct": 10.4,
+   "heatElectricPct": 80.0,
+   "heatPropanePct": 8.0,
+   "heatWoodPct": 0.7,
+   "medianHomeValue": 120600,
+   "medianIncome": 42292,
+   "adjacent": [
+    "baldwin",
+    "butler",
+    "clarke",
+    "conecuh",
+    "escambia",
+    "wilcox"
+   ],
+   "places": [
+    {
+     "name": "Monroeville",
+     "population": 5802
+    },
+    {
+     "name": "Frisco City",
+     "population": 1416
+    },
+    {
+     "name": "Excel",
+     "population": 524
+    },
+    {
+     "name": "Uriah",
+     "population": 199
+    },
+    {
+     "name": "Beatrice",
+     "population": 182
+    },
+    {
+     "name": "Vredenburgh",
+     "population": 65
+    },
+    {
+     "name": "Megargel",
+     "population": 46
+    },
+    {
+     "name": "Peterman",
+     "population": 19
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 23,
+    "pipeRiskNights": 1,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 22,
+    "muggyNights": 134,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-24",
+    "coldestTemp": 16,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 58.7,
+    "heavyRainDays": 17.7,
+    "wettestDay": 3.58,
+    "wettestDate": "2017-10-08",
+    "max3DayRain": 7.58,
+    "max3DayEnd": "2017-01-03",
+    "avgFirstFreeze": "Nov 19",
+    "avgLastFreeze": "Mar 1",
+    "monthlyFreeze": [
+     8.5,
+     4.3,
+     1.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.3,
+     6.3
+    ],
+    "monthlyHeavyRain": [
+     1.9,
+     1.1,
+     1.7,
+     2.3,
+     1.8,
+     1.6,
+     0.5,
+     0.9,
+     1.2,
+     1.1,
+     1.4,
+     2.2
+    ],
+    "monthlyRain": [
+     5.53,
+     3.81,
+     4.75,
+     5.44,
+     5.46,
+     6.3,
+     5.23,
+     5.21,
+     4.18,
+     3.33,
+     3.49,
+     6.0
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01101",
+   "fips": "01101",
+   "name": "Montgomery County",
+   "short": "Montgomery",
+   "slug": "montgomery",
+   "seat": "Montgomery",
+   "founded": 1816,
+   "areaSqMi": 785,
+   "lat": 32.148,
+   "lon": -86.2027,
+   "population": 226718,
+   "medianAge": 37.1,
+   "housingUnits": 106121,
+   "vacancyPct": 13.9,
+   "ownerPct": 57.8,
+   "singleFamilyPct": 73.2,
+   "mobileHomePct": 3.9,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 20.3,
+   "builtPre1980Pct": 51.5,
+   "built2000PlusPct": 20.2,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 6.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 31.1
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.4
+    },
+    {
+     "label": "2000 or later",
+     "pct": 20.2
+    }
+   ],
+   "heatGasPct": 45.0,
+   "heatElectricPct": 51.8,
+   "heatPropanePct": 2.2,
+   "heatWoodPct": 0.2,
+   "medianHomeValue": 171900,
+   "medianIncome": 59386,
+   "adjacent": [
+    "autauga",
+    "bullock",
+    "crenshaw",
+    "elmore",
+    "lowndes",
+    "macon",
+    "pike"
+   ],
+   "places": [
+    {
+     "name": "Montgomery",
+     "population": 197494
+    },
+    {
+     "name": "Pike Road",
+     "population": 10574
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 28,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 28,
+    "muggyNights": 127,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2018-01-18",
+    "coldestTemp": 13,
+    "coldestDate": "2015-01-09",
+    "annualPrecip": 58.1,
+    "heavyRainDays": 14.4,
+    "wettestDay": 5.67,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 7.51,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 22",
+    "avgLastFreeze": "Mar 6",
+    "monthlyFreeze": [
+     11.8,
+     4.3,
+     1.7,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.7,
+     7.4
+    ],
+    "monthlyHeavyRain": [
+     2.1,
+     1.2,
+     1.3,
+     1.5,
+     1.5,
+     0.9,
+     0.6,
+     0.4,
+     1.1,
+     1.1,
+     1.0,
+     1.7
+    ],
+    "monthlyRain": [
+     5.89,
+     4.72,
+     4.81,
+     5.39,
+     5.22,
+     5.69,
+     4.86,
+     4.78,
+     4.22,
+     3.27,
+     3.54,
+     5.77
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01103",
+   "fips": "01103",
+   "name": "Morgan County",
+   "short": "Morgan",
+   "slug": "morgan",
+   "seat": "Decatur",
+   "founded": 1818,
+   "areaSqMi": 580,
+   "lat": 34.4427,
+   "lon": -86.8389,
+   "population": 124471,
+   "medianAge": 40.0,
+   "housingUnits": 53905,
+   "vacancyPct": 9.0,
+   "ownerPct": 72.7,
+   "singleFamilyPct": 75.7,
+   "mobileHomePct": 10.7,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 13.8,
+   "builtPre1980Pct": 45.5,
+   "built2000PlusPct": 23.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.1
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 31.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 31.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 23.4
+    }
+   ],
+   "heatGasPct": 18.8,
+   "heatElectricPct": 74.5,
+   "heatPropanePct": 5.1,
+   "heatWoodPct": 0.8,
+   "medianHomeValue": 212000,
+   "medianIncome": 68845,
+   "adjacent": [
+    "cullman",
+    "lawrence",
+    "limestone",
+    "madison",
+    "marshall"
+   ],
+   "places": [
+    {
+     "name": "Decatur",
+     "population": 57361
+    },
+    {
+     "name": "Hartselle",
+     "population": 15847
+    },
+    {
+     "name": "Priceville",
+     "population": 3726
+    },
+    {
+     "name": "Trinity",
+     "population": 2561
+    },
+    {
+     "name": "Falkville",
+     "population": 1606
+    },
+    {
+     "name": "Somerville",
+     "population": 921
+    },
+    {
+     "name": "Eva",
+     "population": 845
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 47,
+    "pipeRiskNights": 5,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 45,
+    "muggyNights": 100,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2018-01-03",
+    "coldestTemp": 6,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 58.6,
+    "heavyRainDays": 14.9,
+    "wettestDay": 4.2,
+    "wettestDate": "2015-12-26",
+    "max3DayRain": 6.48,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 11",
+    "avgLastFreeze": "Mar 16",
+    "monthlyFreeze": [
+     16.5,
+     9.7,
+     3.8,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     6.2,
+     10.7
+    ],
+    "monthlyHeavyRain": [
+     1.6,
+     2.3,
+     1.7,
+     1.9,
+     0.7,
+     0.7,
+     0.7,
+     1.0,
+     0.6,
+     0.8,
+     0.9,
+     2.0
+    ],
+    "monthlyRain": [
+     5.28,
+     6.87,
+     6.62,
+     5.74,
+     4.14,
+     4.12,
+     4.65,
+     4.66,
+     3.1,
+     3.2,
+     3.69,
+     6.55
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01105",
+   "fips": "01105",
+   "name": "Perry County",
+   "short": "Perry",
+   "slug": "perry",
+   "seat": "Marion",
+   "founded": 1819,
+   "areaSqMi": 720,
+   "lat": 32.5913,
+   "lon": -87.2885,
+   "population": 8031,
+   "medianAge": 41.1,
+   "housingUnits": 3962,
+   "vacancyPct": 13.2,
+   "ownerPct": 77.5,
+   "singleFamilyPct": 53.8,
+   "mobileHomePct": 32.1,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 22.0,
+   "builtPre1980Pct": 42.4,
+   "built2000PlusPct": 20.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 17.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 20.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 37.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 20.4
+    }
+   ],
+   "heatGasPct": 19.9,
+   "heatElectricPct": 66.9,
+   "heatPropanePct": 11.6,
+   "heatWoodPct": 1.1,
+   "medianHomeValue": 86400,
+   "medianIncome": 37654,
+   "adjacent": [
+    "bibb",
+    "chilton",
+    "dallas",
+    "hale",
+    "marengo"
+   ],
+   "places": [
+    {
+     "name": "Marion",
+     "population": 2886
+    },
+    {
+     "name": "Uniontown",
+     "population": 1798
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 36,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 36,
+    "muggyNights": 115,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 11,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 52.8,
+    "heavyRainDays": 12.9,
+    "wettestDay": 3.58,
+    "wettestDate": "2018-04-15",
+    "max3DayRain": 5.91,
+    "max3DayEnd": "2017-06-24",
+    "avgFirstFreeze": "Nov 16",
+    "avgLastFreeze": "Mar 7",
+    "monthlyFreeze": [
+     14.3,
+     7.0,
+     1.9,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1,
+     3.9,
+     9.2
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     1.7,
+     1.4,
+     1.7,
+     1.3,
+     0.8,
+     0.2,
+     0.5,
+     0.6,
+     1.0,
+     0.9,
+     1.3
+    ],
+    "monthlyRain": [
+     5.48,
+     5.44,
+     5.47,
+     5.5,
+     4.46,
+     5.0,
+     3.86,
+     4.38,
+     2.62,
+     2.66,
+     3.29,
+     4.64
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01107",
+   "fips": "01107",
+   "name": "Pickens County",
+   "short": "Pickens",
+   "slug": "pickens",
+   "seat": "Carrollton",
+   "founded": 1820,
+   "areaSqMi": 881,
+   "lat": 33.3438,
+   "lon": -88.0679,
+   "population": 18721,
+   "medianAge": 42.2,
+   "housingUnits": 8729,
+   "vacancyPct": 22.5,
+   "ownerPct": 75.8,
+   "singleFamilyPct": 65.8,
+   "mobileHomePct": 24.3,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 16.7,
+   "builtPre1980Pct": 51.7,
+   "built2000PlusPct": 17.6,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 35.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.6
+    }
+   ],
+   "heatGasPct": 14.9,
+   "heatElectricPct": 66.4,
+   "heatPropanePct": 13.4,
+   "heatWoodPct": 3.8,
+   "medianHomeValue": 123900,
+   "medianIncome": 46274,
+   "adjacent": [
+    "fayette",
+    "greene",
+    "lamar",
+    "sumter",
+    "tuscaloosa"
+   ],
+   "places": [
+    {
+     "name": "Aliceville",
+     "population": 2211
+    },
+    {
+     "name": "Gordo",
+     "population": 1723
+    },
+    {
+     "name": "Reform",
+     "population": 1597
+    },
+    {
+     "name": "Pickensville",
+     "population": 803
+    },
+    {
+     "name": "Carrollton",
+     "population": 781
+    },
+    {
+     "name": "Macedonia",
+     "population": 441
+    },
+    {
+     "name": "Memphis",
+     "population": 56
+    },
+    {
+     "name": "Ethelsville",
+     "population": 51
+    },
+    {
+     "name": "McMullen",
+     "population": 14
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 39,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 38,
+    "muggyNights": 118,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 9,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 59.0,
+    "heavyRainDays": 15.2,
+    "wettestDay": 6.03,
+    "wettestDate": "2019-10-26",
+    "max3DayRain": 7.02,
+    "max3DayEnd": "2019-10-27",
+    "avgFirstFreeze": "Nov 15",
+    "avgLastFreeze": "Mar 11",
+    "monthlyFreeze": [
+     14.2,
+     7.4,
+     2.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     4.9,
+     9.8
+    ],
+    "monthlyHeavyRain": [
+     2.0,
+     2.5,
+     1.5,
+     2.3,
+     0.9,
+     0.7,
+     0.4,
+     0.7,
+     0.7,
+     0.6,
+     1.2,
+     1.7
+    ],
+    "monthlyRain": [
+     5.77,
+     6.73,
+     6.08,
+     7.06,
+     4.14,
+     4.93,
+     4.38,
+     4.76,
+     2.6,
+     3.36,
+     3.63,
+     5.54
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01109",
+   "fips": "01109",
+   "name": "Pike County",
+   "short": "Pike",
+   "slug": "pike",
+   "seat": "Troy",
+   "founded": 1821,
+   "areaSqMi": 672,
+   "lat": 31.8395,
+   "lon": -85.9279,
+   "population": 32987,
+   "medianAge": 31.6,
+   "housingUnits": 16238,
+   "vacancyPct": 23.1,
+   "ownerPct": 61.3,
+   "singleFamilyPct": 59.3,
+   "mobileHomePct": 21.7,
+   "medianYearBuilt": 1986,
+   "builtPre1960Pct": 15.7,
+   "builtPre1980Pct": 41.2,
+   "built2000PlusPct": 29.9,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.2
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 25.5
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 28.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 29.9
+    }
+   ],
+   "heatGasPct": 14.1,
+   "heatElectricPct": 79.3,
+   "heatPropanePct": 4.9,
+   "heatWoodPct": 0.2,
+   "medianHomeValue": 157600,
+   "medianIncome": 48677,
+   "adjacent": [
+    "barbour",
+    "bullock",
+    "coffee",
+    "crenshaw",
+    "dale",
+    "montgomery"
+   ],
+   "places": [
+    {
+     "name": "Troy",
+     "population": 17716
+    },
+    {
+     "name": "Brundidge",
+     "population": 2392
+    },
+    {
+     "name": "Goshen",
+     "population": 355
+    },
+    {
+     "name": "Banks",
+     "population": 320
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 27,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 27,
+    "muggyNights": 123,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2018-01-18",
+    "coldestTemp": 13,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 58.6,
+    "heavyRainDays": 14.1,
+    "wettestDay": 9.09,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 12.32,
+    "max3DayEnd": "2020-09-17",
+    "avgFirstFreeze": "Nov 22",
+    "avgLastFreeze": "Mar 7",
+    "monthlyFreeze": [
+     10.9,
+     4.8,
+     1.6,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.1,
+     7.4
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     1.0,
+     1.5,
+     1.8,
+     1.1,
+     0.8,
+     0.3,
+     0.8,
+     1.1,
+     1.1,
+     0.8,
+     2.0
+    ],
+    "monthlyRain": [
+     5.85,
+     4.1,
+     4.79,
+     5.18,
+     4.89,
+     5.44,
+     4.91,
+     5.29,
+     5.05,
+     3.31,
+     3.42,
+     6.32
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01111",
+   "fips": "01111",
+   "name": "Randolph County",
+   "short": "Randolph",
+   "slug": "randolph",
+   "seat": "Wedowee",
+   "founded": 1832,
+   "areaSqMi": 581,
+   "lat": 33.2663,
+   "lon": -85.4572,
+   "population": 22510,
+   "medianAge": 43.4,
+   "housingUnits": 12505,
+   "vacancyPct": 25.9,
+   "ownerPct": 77.2,
+   "singleFamilyPct": 69.4,
+   "mobileHomePct": 24.2,
+   "medianYearBuilt": 1986,
+   "builtPre1960Pct": 16.1,
+   "builtPre1980Pct": 40.1,
+   "built2000PlusPct": 25.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 8.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.1
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.2
+    },
+    {
+     "label": "2000 or later",
+     "pct": 25.7
+    }
+   ],
+   "heatGasPct": 10.5,
+   "heatElectricPct": 61.5,
+   "heatPropanePct": 22.8,
+   "heatWoodPct": 3.1,
+   "medianHomeValue": 181600,
+   "medianIncome": 52338,
+   "adjacent": [
+    "chambers",
+    "clay",
+    "cleburne",
+    "tallapoosa"
+   ],
+   "places": [
+    {
+     "name": "Roanoke",
+     "population": 5336
+    },
+    {
+     "name": "Wedowee",
+     "population": 899
+    },
+    {
+     "name": "Wadley",
+     "population": 753
+    },
+    {
+     "name": "Woodland",
+     "population": 682
+    },
+    {
+     "name": "Rock Mills",
+     "population": 387
+    },
+    {
+     "name": "Morrison Crossroads",
+     "population": 151
+    },
+    {
+     "name": "Graham",
+     "population": 41
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 52,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 51,
+    "muggyNights": 86,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 8,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 58.4,
+    "heavyRainDays": 14.6,
+    "wettestDay": 3.72,
+    "wettestDate": "2024-09-27",
+    "max3DayRain": 5.96,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 8",
+    "avgLastFreeze": "Mar 23",
+    "monthlyFreeze": [
+     17.6,
+     10.8,
+     4.5,
+     0.4,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.5,
+     5.9,
+     12.2
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     1.9,
+     1.4,
+     1.5,
+     0.8,
+     1.2,
+     0.6,
+     0.8,
+     0.9,
+     1.2,
+     1.2,
+     1.3
+    ],
+    "monthlyRain": [
+     6.28,
+     5.49,
+     5.18,
+     5.52,
+     4.17,
+     5.5,
+     4.85,
+     4.97,
+     3.46,
+     3.37,
+     3.96,
+     5.66
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01113",
+   "fips": "01113",
+   "name": "Russell County",
+   "short": "Russell",
+   "slug": "russell",
+   "seat": "Phenix City",
+   "founded": 1832,
+   "areaSqMi": 641,
+   "lat": 32.2921,
+   "lon": -85.1814,
+   "population": 58811,
+   "medianAge": 37.5,
+   "housingUnits": 27711,
+   "vacancyPct": 13.6,
+   "ownerPct": 61.3,
+   "singleFamilyPct": 66.0,
+   "mobileHomePct": 14.1,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 18.7,
+   "builtPre1980Pct": 43.5,
+   "built2000PlusPct": 30.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 14.9
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 24.8
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 25.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 30.8
+    }
+   ],
+   "heatGasPct": 16.8,
+   "heatElectricPct": 74.7,
+   "heatPropanePct": 5.7,
+   "heatWoodPct": 0.5,
+   "medianHomeValue": 165700,
+   "medianIncome": 51197,
+   "adjacent": [
+    "barbour",
+    "bullock",
+    "lee",
+    "macon"
+   ],
+   "places": [
+    {
+     "name": "Phenix City",
+     "population": 38499
+    },
+    {
+     "name": "Ladonia",
+     "population": 3346
+    },
+    {
+     "name": "Hurtsboro",
+     "population": 421
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 29,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 29,
+    "muggyNights": 114,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 12,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 54.2,
+    "heavyRainDays": 13.3,
+    "wettestDay": 7.49,
+    "wettestDate": "2020-09-17",
+    "max3DayRain": 8.02,
+    "max3DayEnd": "2020-09-18",
+    "avgFirstFreeze": "Nov 21",
+    "avgLastFreeze": "Mar 7",
+    "monthlyFreeze": [
+     13.0,
+     4.7,
+     1.5,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.9,
+     6.8
+    ],
+    "monthlyHeavyRain": [
+     1.9,
+     1.3,
+     0.9,
+     1.6,
+     1.3,
+     0.7,
+     0.1,
+     0.8,
+     0.8,
+     0.9,
+     1.1,
+     1.9
+    ],
+    "monthlyRain": [
+     5.74,
+     4.49,
+     3.97,
+     5.26,
+     4.3,
+     4.63,
+     3.9,
+     5.32,
+     4.21,
+     2.94,
+     3.61,
+     5.8
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01117",
+   "fips": "01117",
+   "name": "Shelby County",
+   "short": "Shelby",
+   "slug": "shelby",
+   "seat": "Columbiana",
+   "founded": 1818,
+   "areaSqMi": 785,
+   "lat": 33.281,
+   "lon": -86.6802,
+   "population": 230211,
+   "medianAge": 40.3,
+   "housingUnits": 91995,
+   "vacancyPct": 5.6,
+   "ownerPct": 81.4,
+   "singleFamilyPct": 81.8,
+   "mobileHomePct": 7.4,
+   "medianYearBuilt": 1997,
+   "builtPre1960Pct": 4.0,
+   "builtPre1980Pct": 16.4,
+   "built2000PlusPct": 44.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 1.3
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 2.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 12.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 39.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 44.0
+    }
+   ],
+   "heatGasPct": 40.2,
+   "heatElectricPct": 55.7,
+   "heatPropanePct": 3.3,
+   "heatWoodPct": 0.2,
+   "medianHomeValue": 326100,
+   "medianIncome": 97961,
+   "adjacent": [
+    "bibb",
+    "chilton",
+    "coosa",
+    "jefferson",
+    "st-clair",
+    "talladega"
+   ],
+   "places": [
+    {
+     "name": "Alabaster",
+     "population": 33917
+    },
+    {
+     "name": "Pelham",
+     "population": 24827
+    },
+    {
+     "name": "Helena",
+     "population": 21769
+    },
+    {
+     "name": "Calera",
+     "population": 17714
+    },
+    {
+     "name": "Chelsea",
+     "population": 16260
+    },
+    {
+     "name": "Meadowbrook",
+     "population": 9117
+    },
+    {
+     "name": "Brook Highland",
+     "population": 8146
+    },
+    {
+     "name": "Montevallo",
+     "population": 7556
+    },
+    {
+     "name": "Highland Lakes",
+     "population": 5866
+    },
+    {
+     "name": "Columbiana",
+     "population": 4725
+    },
+    {
+     "name": "Eagle Point",
+     "population": 3110
+    },
+    {
+     "name": "Indian Springs Village",
+     "population": 2537
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 45,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 44,
+    "muggyNights": 101,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2017-01-08",
+    "coldestTemp": 10,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 58.1,
+    "heavyRainDays": 15.1,
+    "wettestDay": 4.18,
+    "wettestDate": "2021-05-05",
+    "max3DayRain": 5.62,
+    "max3DayEnd": "2017-06-24",
+    "avgFirstFreeze": "Nov 14",
+    "avgLastFreeze": "Mar 15",
+    "monthlyFreeze": [
+     15.9,
+     8.4,
+     3.2,
+     0.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     5.7,
+     11.2
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     2.6,
+     1.6,
+     1.5,
+     1.0,
+     1.2,
+     0.9,
+     0.7,
+     0.7,
+     0.9,
+     0.9,
+     1.3
+    ],
+    "monthlyRain": [
+     5.94,
+     6.5,
+     5.72,
+     5.64,
+     4.33,
+     5.56,
+     5.4,
+     4.32,
+     2.72,
+     3.21,
+     3.68,
+     5.11
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01115",
+   "fips": "01115",
+   "name": "St. Clair County",
+   "short": "St. Clair",
+   "slug": "st-clair",
+   "seat": "Ashville",
+   "founded": 1818,
+   "areaSqMi": 632,
+   "lat": 33.6922,
+   "lon": -86.3639,
+   "population": 94166,
+   "medianAge": 41.2,
+   "housingUnits": 39247,
+   "vacancyPct": 10.5,
+   "ownerPct": 82.6,
+   "singleFamilyPct": 72.8,
+   "mobileHomePct": 22.1,
+   "medianYearBuilt": 1998,
+   "builtPre1960Pct": 5.9,
+   "builtPre1980Pct": 22.7,
+   "built2000PlusPct": 46.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 1.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 4.5
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 16.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.7
+    },
+    {
+     "label": "2000 or later",
+     "pct": 46.7
+    }
+   ],
+   "heatGasPct": 24.0,
+   "heatElectricPct": 68.4,
+   "heatPropanePct": 6.2,
+   "heatWoodPct": 0.8,
+   "medianHomeValue": 226300,
+   "medianIncome": 77463,
+   "adjacent": [
+    "blount",
+    "calhoun",
+    "etowah",
+    "jefferson",
+    "shelby",
+    "talladega"
+   ],
+   "places": [
+    {
+     "name": "Pell City",
+     "population": 13587
+    },
+    {
+     "name": "Moody",
+     "population": 13488
+    },
+    {
+     "name": "Margaret",
+     "population": 5877
+    },
+    {
+     "name": "Odenville",
+     "population": 5197
+    },
+    {
+     "name": "Springville",
+     "population": 5081
+    },
+    {
+     "name": "Argo",
+     "population": 4479
+    },
+    {
+     "name": "Ashville",
+     "population": 2464
+    },
+    {
+     "name": "Riverside",
+     "population": 2097
+    },
+    {
+     "name": "Ragland",
+     "population": 1682
+    },
+    {
+     "name": "Steele",
+     "population": 1149
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 44,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 43,
+    "muggyNights": 102,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 9,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 57.7,
+    "heavyRainDays": 15.5,
+    "wettestDay": 4.09,
+    "wettestDate": "2021-06-20",
+    "max3DayRain": 5.96,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 14",
+    "avgLastFreeze": "Mar 16",
+    "monthlyFreeze": [
+     16.2,
+     8.7,
+     3.2,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     5.0,
+     10.4
+    ],
+    "monthlyHeavyRain": [
+     1.8,
+     2.6,
+     1.8,
+     1.6,
+     1.0,
+     0.9,
+     0.7,
+     0.8,
+     0.7,
+     1.2,
+     0.8,
+     1.6
+    ],
+    "monthlyRain": [
+     5.53,
+     6.84,
+     6.18,
+     5.53,
+     4.3,
+     5.01,
+     4.67,
+     4.53,
+     2.81,
+     3.27,
+     3.24,
+     5.82
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01119",
+   "fips": "01119",
+   "name": "Sumter County",
+   "short": "Sumter",
+   "slug": "sumter",
+   "seat": "Livingston",
+   "founded": 1832,
+   "areaSqMi": 904,
+   "lat": 32.6524,
+   "lon": -88.2175,
+   "population": 11878,
+   "medianAge": 35.7,
+   "housingUnits": 6356,
+   "vacancyPct": 24.1,
+   "ownerPct": 66.8,
+   "singleFamilyPct": 59.3,
+   "mobileHomePct": 30.8,
+   "medianYearBuilt": 1979,
+   "builtPre1960Pct": 16.2,
+   "builtPre1980Pct": 53.4,
+   "built2000PlusPct": 16.0,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.7
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 37.2
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.6
+    },
+    {
+     "label": "2000 or later",
+     "pct": 16.0
+    }
+   ],
+   "heatGasPct": 5.6,
+   "heatElectricPct": 70.7,
+   "heatPropanePct": 20.8,
+   "heatWoodPct": 2.4,
+   "medianHomeValue": 82600,
+   "medianIncome": 33310,
+   "adjacent": [
+    "choctaw",
+    "greene",
+    "marengo",
+    "pickens"
+   ],
+   "places": [
+    {
+     "name": "Livingston",
+     "population": 4672
+    },
+    {
+     "name": "York",
+     "population": 2056
+    },
+    {
+     "name": "Cuba",
+     "population": 368
+    },
+    {
+     "name": "Epes",
+     "population": 354
+    },
+    {
+     "name": "Gainesville",
+     "population": 236
+    },
+    {
+     "name": "Geiger",
+     "population": 174
+    },
+    {
+     "name": "Bellamy",
+     "population": 158
+    },
+    {
+     "name": "Panola",
+     "population": 69
+    },
+    {
+     "name": "Emelle",
+     "population": 48
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 36,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 36,
+    "muggyNights": 123,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 11,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 54.1,
+    "heavyRainDays": 14.6,
+    "wettestDay": 4.34,
+    "wettestDate": "2018-12-28",
+    "max3DayRain": 5.16,
+    "max3DayEnd": "2019-10-27",
+    "avgFirstFreeze": "Nov 17",
+    "avgLastFreeze": "Mar 4",
+    "monthlyFreeze": [
+     13.2,
+     7.2,
+     1.7,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1,
+     4.7,
+     9.4
+    ],
+    "monthlyHeavyRain": [
+     1.9,
+     2.0,
+     1.5,
+     2.3,
+     0.7,
+     1.3,
+     0.4,
+     0.5,
+     0.8,
+     1.0,
+     1.0,
+     1.2
+    ],
+    "monthlyRain": [
+     5.42,
+     5.83,
+     5.79,
+     5.8,
+     3.77,
+     4.88,
+     4.08,
+     4.27,
+     3.03,
+     2.92,
+     3.5,
+     4.85
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01121",
+   "fips": "01121",
+   "name": "Talladega County",
+   "short": "Talladega",
+   "slug": "talladega",
+   "seat": "Talladega",
+   "founded": 1832,
+   "areaSqMi": 737,
+   "lat": 33.4012,
+   "lon": -86.1465,
+   "population": 81021,
+   "medianAge": 42.0,
+   "housingUnits": 38547,
+   "vacancyPct": 12.7,
+   "ownerPct": 72.0,
+   "singleFamilyPct": 66.0,
+   "mobileHomePct": 24.8,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 20.7,
+   "builtPre1980Pct": 44.6,
+   "built2000PlusPct": 22.8,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 15.3
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.5
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.8
+    }
+   ],
+   "heatGasPct": 21.2,
+   "heatElectricPct": 65.4,
+   "heatPropanePct": 11.1,
+   "heatWoodPct": 1.0,
+   "medianHomeValue": 149200,
+   "medianIncome": 57776,
+   "adjacent": [
+    "calhoun",
+    "clay",
+    "cleburne",
+    "coosa",
+    "shelby",
+    "st-clair"
+   ],
+   "places": [
+    {
+     "name": "Talladega",
+     "population": 14760
+    },
+    {
+     "name": "Sylacauga",
+     "population": 12309
+    },
+    {
+     "name": "Lincoln",
+     "population": 7305
+    },
+    {
+     "name": "Childersburg",
+     "population": 4655
+    },
+    {
+     "name": "Munford",
+     "population": 1508
+    },
+    {
+     "name": "Fayetteville",
+     "population": 1154
+    },
+    {
+     "name": "Mignon",
+     "population": 865
+    },
+    {
+     "name": "Oak Grove",
+     "population": 856
+    },
+    {
+     "name": "Waldo",
+     "population": 239
+    },
+    {
+     "name": "Talladega Springs",
+     "population": 166
+    },
+    {
+     "name": "Bon Air",
+     "population": 141
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 48,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 47,
+    "muggyNights": 100,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 10,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 58.9,
+    "heavyRainDays": 16.1,
+    "wettestDay": 3.56,
+    "wettestDate": "2021-05-05",
+    "max3DayRain": 5.5,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 13",
+    "avgLastFreeze": "Mar 18",
+    "monthlyFreeze": [
+     16.6,
+     9.3,
+     3.6,
+     0.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.3,
+     6.0,
+     11.9
+    ],
+    "monthlyHeavyRain": [
+     2.2,
+     2.7,
+     1.7,
+     1.3,
+     1.3,
+     1.2,
+     1.3,
+     0.6,
+     1.0,
+     0.8,
+     0.9,
+     1.1
+    ],
+    "monthlyRain": [
+     6.33,
+     6.53,
+     5.63,
+     5.14,
+     4.97,
+     5.52,
+     5.41,
+     4.43,
+     3.02,
+     3.0,
+     4.01,
+     4.96
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01123",
+   "fips": "01123",
+   "name": "Tallapoosa County",
+   "short": "Tallapoosa",
+   "slug": "tallapoosa",
+   "seat": "Dadeville",
+   "founded": 1832,
+   "areaSqMi": 717,
+   "lat": 32.7987,
+   "lon": -85.7985,
+   "population": 40938,
+   "medianAge": 45.6,
+   "housingUnits": 23161,
+   "vacancyPct": 26.3,
+   "ownerPct": 76.1,
+   "singleFamilyPct": 73.9,
+   "mobileHomePct": 16.2,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 16.4,
+   "builtPre1980Pct": 41.8,
+   "built2000PlusPct": 25.1,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.4
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 11.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 25.4
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 33.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 25.1
+    }
+   ],
+   "heatGasPct": 11.9,
+   "heatElectricPct": 74.3,
+   "heatPropanePct": 11.0,
+   "heatWoodPct": 1.8,
+   "medianHomeValue": 158500,
+   "medianIncome": 59356,
+   "adjacent": [
+    "chambers",
+    "clay",
+    "coosa",
+    "elmore",
+    "lee",
+    "macon",
+    "randolph"
+   ],
+   "places": [
+    {
+     "name": "Alexander City",
+     "population": 14606
+    },
+    {
+     "name": "Dadeville",
+     "population": 2993
+    },
+    {
+     "name": "Camp Hill",
+     "population": 1238
+    },
+    {
+     "name": "Reeltown",
+     "population": 980
+    },
+    {
+     "name": "Jacksons' Gap",
+     "population": 786
+    },
+    {
+     "name": "New Site",
+     "population": 750
+    },
+    {
+     "name": "Hackneyville",
+     "population": 471
+    },
+    {
+     "name": "Our Town",
+     "population": 372
+    },
+    {
+     "name": "Daviston",
+     "population": 193
+    },
+    {
+     "name": "Goldville",
+     "population": 55
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 47,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 47,
+    "muggyNights": 98,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 9,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 58.2,
+    "heavyRainDays": 15.2,
+    "wettestDay": 5.32,
+    "wettestDate": "2020-04-20",
+    "max3DayRain": 6.65,
+    "max3DayEnd": "2015-12-26",
+    "avgFirstFreeze": "Nov 11",
+    "avgLastFreeze": "Mar 18",
+    "monthlyFreeze": [
+     17.5,
+     9.0,
+     3.9,
+     0.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     5.1,
+     11.0
+    ],
+    "monthlyHeavyRain": [
+     1.9,
+     2.1,
+     1.4,
+     1.8,
+     1.0,
+     0.9,
+     0.7,
+     0.5,
+     1.0,
+     1.1,
+     0.9,
+     1.9
+    ],
+    "monthlyRain": [
+     6.23,
+     5.4,
+     5.35,
+     5.68,
+     4.59,
+     5.12,
+     4.53,
+     4.69,
+     3.58,
+     3.14,
+     3.81,
+     6.06
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01125",
+   "fips": "01125",
+   "name": "Tuscaloosa County",
+   "short": "Tuscaloosa",
+   "slug": "tuscaloosa",
+   "seat": "Tuscaloosa",
+   "founded": 1818,
+   "areaSqMi": 1321,
+   "lat": 33.3138,
+   "lon": -87.5002,
+   "population": 237552,
+   "medianAge": 32.8,
+   "housingUnits": 104290,
+   "vacancyPct": 13.7,
+   "ownerPct": 61.4,
+   "singleFamilyPct": 63.3,
+   "mobileHomePct": 8.6,
+   "medianYearBuilt": 1992,
+   "builtPre1960Pct": 11.6,
+   "builtPre1980Pct": 34.6,
+   "built2000PlusPct": 38.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 3.6
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 23.0
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 27.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 38.4
+    }
+   ],
+   "heatGasPct": 26.5,
+   "heatElectricPct": 70.3,
+   "heatPropanePct": 2.3,
+   "heatWoodPct": 0.3,
+   "medianHomeValue": 248700,
+   "medianIncome": 66231,
+   "adjacent": [
+    "bibb",
+    "fayette",
+    "greene",
+    "hale",
+    "jefferson",
+    "pickens",
+    "walker"
+   ],
+   "places": [
+    {
+     "name": "Tuscaloosa",
+     "population": 111038
+    },
+    {
+     "name": "Northport",
+     "population": 31218
+    },
+    {
+     "name": "Lake View",
+     "population": 4063
+    },
+    {
+     "name": "Holt",
+     "population": 3629
+    },
+    {
+     "name": "Brookwood",
+     "population": 2706
+    },
+    {
+     "name": "Cottondale",
+     "population": 2632
+    },
+    {
+     "name": "Coaling",
+     "population": 2573
+    },
+    {
+     "name": "Vance",
+     "population": 2105
+    },
+    {
+     "name": "Coker",
+     "population": 1058
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 40,
+    "pipeRiskNights": 3,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 40,
+    "muggyNights": 112,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 10,
+    "coldestDate": "2022-12-24",
+    "annualPrecip": 56.9,
+    "heavyRainDays": 14.2,
+    "wettestDay": 4.8,
+    "wettestDate": "2019-10-26",
+    "max3DayRain": 6.08,
+    "max3DayEnd": "2017-06-24",
+    "avgFirstFreeze": "Nov 14",
+    "avgLastFreeze": "Mar 11",
+    "monthlyFreeze": [
+     14.8,
+     7.9,
+     2.7,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     4.7,
+     10.0
+    ],
+    "monthlyHeavyRain": [
+     1.6,
+     2.7,
+     1.4,
+     1.9,
+     0.7,
+     1.2,
+     0.7,
+     0.6,
+     0.6,
+     0.5,
+     0.9,
+     1.4
+    ],
+    "monthlyRain": [
+     5.69,
+     6.83,
+     5.38,
+     6.34,
+     3.59,
+     5.49,
+     4.8,
+     4.74,
+     2.41,
+     2.84,
+     3.34,
+     5.43
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01127",
+   "fips": "01127",
+   "name": "Walker County",
+   "short": "Walker",
+   "slug": "walker",
+   "seat": "Jasper",
+   "founded": 1823,
+   "areaSqMi": 791,
+   "lat": 33.7581,
+   "lon": -87.2764,
+   "population": 64841,
+   "medianAge": 40.6,
+   "housingUnits": 30366,
+   "vacancyPct": 16.4,
+   "ownerPct": 76.1,
+   "singleFamilyPct": 64.2,
+   "mobileHomePct": 27.1,
+   "medianYearBuilt": 1983,
+   "builtPre1960Pct": 18.8,
+   "builtPre1980Pct": 46.4,
+   "built2000PlusPct": 22.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 5.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 13.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 27.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 30.9
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.7
+    }
+   ],
+   "heatGasPct": 10.8,
+   "heatElectricPct": 80.6,
+   "heatPropanePct": 5.8,
+   "heatWoodPct": 1.2,
+   "medianHomeValue": 135900,
+   "medianIncome": 56509,
+   "adjacent": [
+    "blount",
+    "cullman",
+    "fayette",
+    "jefferson",
+    "marion",
+    "tuscaloosa",
+    "winston"
+   ],
+   "places": [
+    {
+     "name": "Jasper",
+     "population": 14442
+    },
+    {
+     "name": "Dora",
+     "population": 2668
+    },
+    {
+     "name": "Sumiton",
+     "population": 2459
+    },
+    {
+     "name": "Carbon Hill",
+     "population": 1536
+    },
+    {
+     "name": "Cordova",
+     "population": 1511
+    },
+    {
+     "name": "Parrish",
+     "population": 1222
+    },
+    {
+     "name": "Oakman",
+     "population": 934
+    },
+    {
+     "name": "Sipsey",
+     "population": 288
+    },
+    {
+     "name": "Nauvoo",
+     "population": 189
+    },
+    {
+     "name": "Kansas",
+     "population": 186
+    },
+    {
+     "name": "Eldridge",
+     "population": 133
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 49,
+    "pipeRiskNights": 4,
+    "belowZeroNights": 0.0,
+    "iceDays": 1,
+    "freezeThawDays": 48,
+    "muggyNights": 102,
+    "longestIceStreak": 2,
+    "longestIceStreakEnd": "2022-12-25",
+    "coldestTemp": 8,
+    "coldestDate": "2018-01-18",
+    "annualPrecip": 58.0,
+    "heavyRainDays": 15.2,
+    "wettestDay": 3.96,
+    "wettestDate": "2018-12-28",
+    "max3DayRain": 6.14,
+    "max3DayEnd": "2024-09-15",
+    "avgFirstFreeze": "Nov 11",
+    "avgLastFreeze": "Mar 18",
+    "monthlyFreeze": [
+     16.2,
+     9.8,
+     4.2,
+     0.1,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     6.9,
+     11.3
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     2.8,
+     1.4,
+     1.9,
+     0.7,
+     1.4,
+     0.8,
+     0.3,
+     0.8,
+     0.7,
+     1.2,
+     1.7
+    ],
+    "monthlyRain": [
+     5.18,
+     7.07,
+     6.14,
+     6.22,
+     3.52,
+     5.03,
+     4.82,
+     4.42,
+     2.98,
+     3.07,
+     3.5,
+     6.09
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01129",
+   "fips": "01129",
+   "name": "Washington County",
+   "short": "Washington",
+   "slug": "washington",
+   "seat": "Chatom",
+   "founded": 1800,
+   "areaSqMi": 1080,
+   "lat": 31.4065,
+   "lon": -88.1879,
+   "population": 15143,
+   "medianAge": 44.6,
+   "housingUnits": 7797,
+   "vacancyPct": 23.5,
+   "ownerPct": 85.8,
+   "singleFamilyPct": 70.6,
+   "mobileHomePct": 27.5,
+   "medianYearBuilt": 1984,
+   "builtPre1960Pct": 14.4,
+   "builtPre1980Pct": 45.3,
+   "built2000PlusPct": 22.7,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 4.0
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 10.4
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 30.9
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 32.0
+    },
+    {
+     "label": "2000 or later",
+     "pct": 22.7
+    }
+   ],
+   "heatGasPct": 5.8,
+   "heatElectricPct": 78.4,
+   "heatPropanePct": 11.8,
+   "heatWoodPct": 3.6,
+   "medianHomeValue": 159700,
+   "medianIncome": 61042,
+   "adjacent": [
+    "baldwin",
+    "choctaw",
+    "clarke",
+    "mobile"
+   ],
+   "places": [
+    {
+     "name": "Leroy",
+     "population": 1075
+    },
+    {
+     "name": "Chatom",
+     "population": 834
+    },
+    {
+     "name": "Millry",
+     "population": 520
+    },
+    {
+     "name": "McIntosh",
+     "population": 364
+    },
+    {
+     "name": "St. Stephens",
+     "population": 297
+    },
+    {
+     "name": "Malcolm",
+     "population": 204
+    },
+    {
+     "name": "Hobson",
+     "population": 181
+    },
+    {
+     "name": "Fairford",
+     "population": 150
+    },
+    {
+     "name": "Vinegar Bend",
+     "population": 109
+    },
+    {
+     "name": "Calvert",
+     "population": 83
+    },
+    {
+     "name": "Fruitdale",
+     "population": 66
+    },
+    {
+     "name": "Deer Park",
+     "population": 45
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 24,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 24,
+    "muggyNights": 133,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-24",
+    "coldestTemp": 15,
+    "coldestDate": "2018-01-17",
+    "annualPrecip": 64.5,
+    "heavyRainDays": 19.6,
+    "wettestDay": 4.68,
+    "wettestDate": "2020-06-08",
+    "max3DayRain": 8.43,
+    "max3DayEnd": "2017-01-03",
+    "avgFirstFreeze": "Nov 19",
+    "avgLastFreeze": "Mar 1",
+    "monthlyFreeze": [
+     9.0,
+     4.7,
+     1.2,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     2.8,
+     6.4
+    ],
+    "monthlyHeavyRain": [
+     2.1,
+     1.4,
+     2.3,
+     2.3,
+     1.4,
+     2.2,
+     1.0,
+     1.4,
+     0.7,
+     1.3,
+     1.4,
+     2.1
+    ],
+    "monthlyRain": [
+     6.15,
+     4.56,
+     5.6,
+     5.96,
+     4.97,
+     7.4,
+     6.46,
+     6.28,
+     3.74,
+     3.84,
+     3.52,
+     6.03
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01131",
+   "fips": "01131",
+   "name": "Wilcox County",
+   "short": "Wilcox",
+   "slug": "wilcox",
+   "seat": "Camden",
+   "founded": 1819,
+   "areaSqMi": 888,
+   "lat": 32.0479,
+   "lon": -87.4005,
+   "population": 10172,
+   "medianAge": 42.3,
+   "housingUnits": 5334,
+   "vacancyPct": 27.6,
+   "ownerPct": 77.4,
+   "singleFamilyPct": 59.5,
+   "mobileHomePct": 36.4,
+   "medianYearBuilt": 1985,
+   "builtPre1960Pct": 14.8,
+   "builtPre1980Pct": 41.5,
+   "built2000PlusPct": 17.4,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.8
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 12.0
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 26.7
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 41.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 17.4
+    }
+   ],
+   "heatGasPct": 7.3,
+   "heatElectricPct": 68.2,
+   "heatPropanePct": 18.2,
+   "heatWoodPct": 4.6,
+   "medianHomeValue": 98800,
+   "medianIncome": 40640,
+   "adjacent": [
+    "butler",
+    "clarke",
+    "dallas",
+    "lowndes",
+    "marengo",
+    "monroe"
+   ],
+   "places": [
+    {
+     "name": "Camden",
+     "population": 1803
+    },
+    {
+     "name": "Pine Hill",
+     "population": 626
+    },
+    {
+     "name": "Boykin",
+     "population": 239
+    },
+    {
+     "name": "Yellow Bluff",
+     "population": 170
+    },
+    {
+     "name": "Pine Apple",
+     "population": 125
+    },
+    {
+     "name": "Catherine",
+     "population": 8
+    },
+    {
+     "name": "Oak Hill",
+     "population": 3
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 28,
+    "pipeRiskNights": 2,
+    "belowZeroNights": 0.0,
+    "iceDays": 0,
+    "freezeThawDays": 28,
+    "muggyNights": 127,
+    "longestIceStreak": 1,
+    "longestIceStreakEnd": "2022-12-24",
+    "coldestTemp": 15,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 53.3,
+    "heavyRainDays": 14.0,
+    "wettestDay": 3.57,
+    "wettestDate": "2018-04-15",
+    "max3DayRain": 5.15,
+    "max3DayEnd": "2017-06-23",
+    "avgFirstFreeze": "Nov 18",
+    "avgLastFreeze": "Mar 5",
+    "monthlyFreeze": [
+     10.6,
+     5.5,
+     1.6,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.1,
+     2.7,
+     7.3
+    ],
+    "monthlyHeavyRain": [
+     1.4,
+     1.7,
+     1.6,
+     1.5,
+     1.1,
+     1.2,
+     0.2,
+     0.7,
+     1.0,
+     1.1,
+     0.8,
+     1.7
+    ],
+    "monthlyRain": [
+     5.16,
+     4.67,
+     5.26,
+     5.23,
+     4.57,
+     5.33,
+     4.02,
+     4.63,
+     3.02,
+     2.96,
+     3.17,
+     5.24
+    ]
+   }
+  },
+  {
+   "geoid": "05000US01133",
+   "fips": "01133",
+   "name": "Winston County",
+   "short": "Winston",
+   "slug": "winston",
+   "seat": "Double Springs",
+   "founded": 1850,
+   "areaSqMi": 613,
+   "lat": 34.1682,
+   "lon": -87.3735,
+   "population": 23682,
+   "medianAge": 45.4,
+   "housingUnits": 13160,
+   "vacancyPct": 28.4,
+   "ownerPct": 75.8,
+   "singleFamilyPct": 63.4,
+   "mobileHomePct": 29.8,
+   "medianYearBuilt": 1988,
+   "builtPre1960Pct": 11.3,
+   "builtPre1980Pct": 39.6,
+   "built2000PlusPct": 26.3,
+   "builtBuckets": [
+    {
+     "label": "Before 1940",
+     "pct": 2.5
+    },
+    {
+     "label": "1940\u20131959",
+     "pct": 8.8
+    },
+    {
+     "label": "1960\u20131979",
+     "pct": 28.3
+    },
+    {
+     "label": "1980\u20131999",
+     "pct": 34.1
+    },
+    {
+     "label": "2000 or later",
+     "pct": 26.3
+    }
+   ],
+   "heatGasPct": 14.3,
+   "heatElectricPct": 65.5,
+   "heatPropanePct": 15.1,
+   "heatWoodPct": 4.1,
+   "medianHomeValue": 118900,
+   "medianIncome": 57256,
+   "adjacent": [
+    "cullman",
+    "franklin",
+    "lawrence",
+    "marion",
+    "walker"
+   ],
+   "places": [
+    {
+     "name": "Haleyville",
+     "population": 4271
+    },
+    {
+     "name": "Double Springs",
+     "population": 1068
+    },
+    {
+     "name": "Lynn",
+     "population": 780
+    },
+    {
+     "name": "Addison",
+     "population": 649
+    },
+    {
+     "name": "Arley",
+     "population": 523
+    },
+    {
+     "name": "Natural Bridge",
+     "population": 49
+    }
+   ],
+   "pilot": true,
+   "weather": {
+    "period": "2015\u20132024",
+    "freezeNights": 56,
+    "pipeRiskNights": 6,
+    "belowZeroNights": 0.0,
+    "iceDays": 2,
+    "freezeThawDays": 54,
+    "muggyNights": 90,
+    "longestIceStreak": 3,
+    "longestIceStreakEnd": "2018-01-03",
+    "coldestTemp": 4,
+    "coldestDate": "2015-01-08",
+    "annualPrecip": 62.7,
+    "heavyRainDays": 17.8,
+    "wettestDay": 4.02,
+    "wettestDate": "2019-10-26",
+    "max3DayRain": 6.39,
+    "max3DayEnd": "2024-09-15",
+    "avgFirstFreeze": "Nov 8",
+    "avgLastFreeze": "Mar 23",
+    "monthlyFreeze": [
+     18.3,
+     11.8,
+     5.4,
+     0.3,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     7.9,
+     12.2
+    ],
+    "monthlyHeavyRain": [
+     1.5,
+     2.8,
+     2.2,
+     2.1,
+     0.7,
+     1.2,
+     0.7,
+     1.0,
+     1.3,
+     0.9,
+     1.1,
+     2.3
+    ],
+    "monthlyRain": [
+     5.59,
+     7.57,
+     7.14,
+     6.33,
+     3.89,
+     4.74,
+     4.85,
+     4.74,
+     3.56,
+     3.59,
+     3.71,
+     7.0
+    ]
+   }
+  }
+ ]
+}

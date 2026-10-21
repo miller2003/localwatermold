@@ -1,0 +1,120 @@
+---
+// County choropleth with a metric switcher. Values for every metric are embedded as data
+// attributes; the script re-bins and recolors on switch. The default metric renders server-side.
+import { allCounties, MAP as map } from "../lib/data";
+import { p } from "../lib/paths";
+
+export interface Metric { key: string; label: string; unit: string; values: Record<string, number | undefined>; decimals?: number }
+interface Props { metrics: Metric[]; title: string }
+const { metrics, title } = Astro.props;
+const counties = allCounties();
+const paths = map.paths as Record<string, string>;
+const STEPS = 5;
+
+function bins(values: number[]) {
+  const s = [...values].sort((a, b) => a - b);
+  return Array.from({ length: STEPS - 1 }, (_, i) => s[Math.floor(((i + 1) * s.length) / STEPS)]);
+}
+function binOf(v: number, edges: number[]) {
+  let b = 0;
+  while (b < edges.length && v >= edges[b]) b++;
+  return b;
+}
+const first = metrics[0];
+const firstVals = Object.values(first.values).filter((v): v is number => v !== undefined);
+const firstEdges = bins(firstVals);
+const fmt = (v: number, d = 0) => v.toFixed(d);
+const payload = metrics.map((m) => ({ key: m.key, label: m.label, unit: m.unit, decimals: m.decimals ?? 0, values: m.values }));
+---
+<div class="choro" data-choro>
+  <div class="switch" role="radiogroup" aria-label="Map metric">
+    {metrics.map((m, i) => (
+      <button type="button" role="radio" aria-checked={i === 0 ? "true" : "false"} data-metric={m.key}>{m.label}</button>
+    ))}
+  </div>
+  <div class="frame">
+    <svg viewBox={map.viewBox} role="img" aria-label={title}>
+      {Object.keys(paths).filter((k) => k.startsWith("_other_")).map((k) => <path d={paths[k]} class="nodata" />)}
+      {counties.map((c) => {
+        const v = first.values[c.slug];
+        const b = v === undefined ? -1 : binOf(v, firstEdges);
+        return (
+          <a href={c.pilot ? p(`/counties/${c.slug}/`) : undefined} aria-label={c.name}>
+            <path d={paths[c.slug]} class={b < 0 ? "nodata" : `q${b}`} data-slug={c.slug} data-name={c.short} />
+          </a>
+        );
+      })}
+    </svg>
+    <div class="tip" data-tip hidden></div>
+  </div>
+  <div class="legend" data-legend>
+    {Array.from({ length: STEPS }, (_, i) => (
+      <span class="lg"><span class={`sw q${i}`}></span><span data-lg={i}>{i === 0 ? `< ${fmt(firstEdges[0], first.decimals)}` : i === STEPS - 1 ? `≥ ${fmt(firstEdges[STEPS - 2], first.decimals)}` : `${fmt(firstEdges[i - 1], first.decimals)}–${fmt(firstEdges[i], first.decimals)}`}</span></span>
+    ))}
+    <span class="unit small faint" data-unit>{first.unit}</span>
+  </div>
+  <script type="application/json" data-payload set:html={JSON.stringify(payload)} />
+</div>
+
+<style>
+  .switch { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .switch button { font: 500 0.9rem/1 var(--sans); padding: 9px 12px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--card); color: var(--ink-2); cursor: pointer; }
+  .switch button[aria-checked="true"] { background: var(--water); border-color: var(--water); color: var(--paper); }
+  .frame { position: relative; }
+  svg { width: 100%; height: auto; max-height: 560px; }
+  path { stroke: var(--paper); stroke-width: 0.8; transition: fill 0.2s; }
+  a:hover path, a:focus path { stroke: var(--ink); stroke-width: 1.6; }
+  .q0 { fill: var(--seq-0); } .q1 { fill: var(--seq-1); } .q2 { fill: var(--seq-2); } .q3 { fill: var(--seq-3); } .q4 { fill: var(--seq-4); }
+  .nodata { fill: var(--map-base); }
+  .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 12px; font-size: 0.85rem; color: var(--ink-2); }
+  .lg { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+  .sw.q0 { background: var(--seq-0); } .sw.q1 { background: var(--seq-1); } .sw.q2 { background: var(--seq-2); } .sw.q3 { background: var(--seq-3); } .sw.q4 { background: var(--seq-4); }
+  .tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--paper); font-size: 0.82rem; padding: 6px 9px; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -120%); }
+</style>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>("[data-choro]")) {
+    const data = JSON.parse(root.querySelector("[data-payload]")!.textContent!) as { key: string; label: string; unit: string; decimals: number; values: Record<string, number> }[];
+    const paths = [...root.querySelectorAll<SVGPathElement>("path[data-slug]")];
+    const tip = root.querySelector<HTMLElement>("[data-tip]")!;
+    let current = data[0];
+    const edgesFor = (vals: number[]) => {
+      const s = [...vals].sort((a, b) => a - b);
+      return [1, 2, 3, 4].map((i) => s[Math.floor((i * s.length) / 5)]);
+    };
+    const apply = (m: typeof current) => {
+      current = m;
+      const vals = Object.values(m.values).filter((v) => v !== undefined && v !== null);
+      const e = edgesFor(vals);
+      paths.forEach((p) => {
+        const v = m.values[p.dataset.slug!];
+        let b = -1;
+        if (v !== undefined && v !== null) { b = 0; while (b < e.length && v >= e[b]) b++; }
+        p.setAttribute("class", b < 0 ? "nodata" : `q${b}`);
+      });
+      const f = (v: number) => v.toFixed(m.decimals);
+      root.querySelectorAll<HTMLElement>("[data-lg]").forEach((el) => {
+        const i = Number(el.dataset.lg);
+        el.textContent = i === 0 ? `< ${f(e[0])}` : i === 4 ? `≥ ${f(e[3])}` : `${f(e[i - 1])}–${f(e[i])}`;
+      });
+      root.querySelector("[data-unit]")!.textContent = m.unit;
+      root.querySelectorAll<HTMLButtonElement>("[data-metric]").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.metric === m.key)));
+    };
+    root.querySelectorAll<HTMLButtonElement>("[data-metric]").forEach((b) =>
+      b.addEventListener("click", () => apply(data.find((d) => d.key === b.dataset.metric)!)),
+    );
+    const frame = root.querySelector<HTMLElement>(".frame")!;
+    paths.forEach((p) => {
+      p.addEventListener("mousemove", (ev) => {
+        const r = frame.getBoundingClientRect();
+        const v = current.values[p.dataset.slug!];
+        tip.hidden = false;
+        tip.textContent = `${p.dataset.name} County: ${v === undefined || v === null ? "no data" : v.toFixed(current.decimals)} ${v === undefined || v === null ? "" : current.unit}`;
+        tip.style.left = `${ev.clientX - r.left}px`;
+        tip.style.top = `${ev.clientY - r.top}px`;
+      });
+      p.addEventListener("mouseleave", () => (tip.hidden = true));
+    });
+  }
+</script>

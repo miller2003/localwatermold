@@ -1,0 +1,85 @@
+---
+import { S } from "../../lib/state";
+export function getStaticPaths() {
+  return [{ params: { st: S.slug } }];
+}
+import Article from "../../layouts/Article.astro";
+import { pilotCounties, META } from "../../lib/data";
+import { p } from "../../lib/paths";
+
+const ranked = pilotCounties()
+  .filter((c) => c.weather)
+  .sort((a, b) => b.weather!.pipeRiskNights - a.weather!.pipeRiskNights);
+const top = ranked.slice(0, 10);
+const low = ranked.at(-1)!;
+---
+<Article
+  title={`Frozen pipes in ${S.name}: when they freeze, how to prevent it, what to do`}
+  seoTitle={`Frozen Pipes in ${S.name}: Freeze Risk by County, Prevention and Thawing`}
+  description={`How cold it has to get for pipes to freeze, which ${S.name} counties see the most pipe-freeze nights, how to winterize a house, and how to safely thaw a frozen pipe.`}
+  eyebrow="Guide · Winter"
+  dek="Pipes don't burst while they're frozen. They burst from the pressure that ice builds up, and the water usually shows up when it thaws. Here's how to stay ahead of it."
+  path={`/guides/frozen-pipes-${S.slug}/`}
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Frozen pipes", href: `/guides/frozen-pipes-${S.slug}/` }]}
+  related={[
+    { href: "/guides/water-damage-first-hour/", label: "A pipe burst. What now?" },
+    { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: "Is a frozen pipe covered?" },
+    { href: "/counties/", label: "Freeze data for your county" },
+  ]}
+  sources={[
+    { label: "American Red Cross: Frozen pipes", href: "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/frozen-pipes.html" },
+    { label: "NOAA NCEI: nClimGrid-Daily county averages", href: "https://www.ncei.noaa.gov/products/land-based-station/nclimgrid-daily" },
+  ]}
+>
+  <h2>How cold is too cold?</h2>
+  <p>Research often cited by insurers and the American Red Cross puts the danger zone at outdoor temperatures of about 20°F or lower, especially for pipes in exterior walls, crawl spaces, attics, garages and under mobile homes. Wind makes it worse, because it pulls heat out of wall cavities and through gaps around pipes.</p>
+
+  <h2>Pipe-freeze nights by {S.name} county</h2>
+  <p>We counted the nights at 20°F or colder in each county we cover, using NOAA daily county averages for {ranked[0].weather!.period}. Because these average the whole county, low spots and open fields run colder.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>County</th><th>Nights ≤ 20°F per year</th><th>Nights ≤ 0°F per year</th><th>Longest stretch below freezing</th></tr></thead>
+      <tbody>
+        {top.map((c) => (
+          <tr>
+            <td><a href={p(`/counties/${c.slug}/`)}>{c.name}</a></td>
+            <td>{c.weather!.pipeRiskNights}</td>
+            <td>{c.weather!.belowZeroNights}</td>
+            <td>{c.weather!.longestIceStreak} days</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="small faint">Top 10 of {ranked.length} counties. Lowest: {low.name}, {low.weather!.pipeRiskNights} nights. Source: {META.weatherSource}.</p>
+
+  <h2>Before winter: a 30-minute checklist</h2>
+  <ul>
+    <li>Disconnect and drain garden hoses. Shut off the inside valve to each outdoor spigot and open the spigot to drain it, unless it's a frost-free type.</li>
+    <li>Insulate exposed pipes in the crawl space, garage, attic and unheated basement areas with foam sleeves.</li>
+    <li>Seal gaps where pipes and cables pass through exterior walls and rim joists.</li>
+    <li>For pipes that froze before, add UL-listed heat cable, installed to the manufacturer's instructions.</li>
+    <li>On mobile homes, check that skirting is intact and heat tape on the water line works.</li>
+    <li>Find your main shutoff now and make sure it turns.</li>
+  </ul>
+
+  <h2>During a cold snap</h2>
+  <ul>
+    <li>Keep the thermostat at the same temperature day and night. If you're leaving, don't set it below 55°F.</li>
+    <li>Open kitchen and bathroom cabinet doors on exterior walls so warm air reaches the pipes.</li>
+    <li>Let a cold faucet drip on the coldest nights. Moving water is slower to freeze, and an open faucet relieves pressure.</li>
+    <li>Keep the garage door closed if water lines run through the garage.</li>
+  </ul>
+
+  <h2>If a pipe is frozen</h2>
+  <ol class="steps">
+    <li><strong>Open the faucet it feeds.</strong> As the ice melts, flowing water helps melt the rest.</li>
+    <li><strong>Warm the pipe gently.</strong> Use a hair dryer, an electric heating pad, or towels soaked in hot water, starting closest to the faucet.</li>
+    <li><strong>Never use an open flame,</strong> a propane torch, or a kerosene heater. It can start a fire inside the wall.</li>
+    <li><strong>Check the other faucets.</strong> If one pipe froze, others may have too.</li>
+    <li><strong>If you can't find or reach the frozen section,</strong> or the pipe has already split, shut off the main and call for help.</li>
+  </ol>
+
+  <h2>Away for the winter?</h2>
+  <p>Vacant and seasonal homes are where frozen pipes do the most damage, because a leak can run for days. Shut off the main and drain the lines, or keep the heat on and ask someone to check the house regularly. Many homeowners policies limit coverage for freezing in a vacant or unheated house unless you kept the heat on or drained the system, so check yours before you leave.</p>
+</Article>

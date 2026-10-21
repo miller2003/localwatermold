@@ -1,0 +1,74 @@
+---
+import { S } from "../../lib/state";
+import Base from "../../layouts/Base.astro";
+import StateMap from "../../components/StateMap.astro";
+import { allCounties, pilotCounties, countyBySlug, META, int, pct } from "../../lib/data";
+import { p } from "../../lib/paths";
+
+const all = [...allCounties()].sort((a, b) => a.name.localeCompare(b.name));
+const pilots = [...pilotCounties()].sort((a, b) => a.name.localeCompare(b.name));
+const others = all.filter((c) => !c.pilot);
+const nearest = (slug: string) => countyBySlug(slug)!.adjacent.map((s) => countyBySlug(s)!).find((n) => n.pilot);
+---
+<Base
+  title={`${S.name} Counties: Local Water Damage Risk and Restoration Help`}
+  description={`Local water, mold and fire damage guides for ${pilots.length} ${S.name} counties, with housing age, freeze nights and heavy-rain data for each.`}
+  crumbs={[{ name: "Counties", href: "/counties/" }]}
+>
+  <section class="wrap head">
+    <p class="eyebrow">Counties</p>
+    <h1>Water damage help by {S.name} county</h1>
+    <p class="lede">Each county page combines Census housing data with ten years of daily NOAA weather data, so the advice fits the homes and winters where you live.</p>
+  </section>
+
+  <section class="wrap layout">
+    <div class="map card"><StateMap title={`${S.name} counties with local guides`} /></div>
+    <div class="table-wrap">
+      <table class="ct">
+        <thead>
+          <tr><th>County</th><th>Seat</th><th>Homes</th><th>Built pre-1980</th><th>Freeze nights ≤ 20°F</th><th>1"+ rain days</th></tr>
+        </thead>
+        <tbody>
+          {pilots.map((c) => (
+            <tr>
+              <td><a href={p(`/counties/${c.slug}/`)}>{c.short}</a></td>
+              <td>{c.seat}</td>
+              <td>{int(c.housingUnits)}</td>
+              <td>{pct(c.builtPre1980Pct)}</td>
+              <td>{c.weather!.pipeRiskNights}</td>
+              <td>{c.weather!.heavyRainDays}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="small faint">Housing: ACS {META.acsYears}. Weather: NOAA nClimGrid-Daily, {META.weatherPeriod}, per year.</p>
+    </div>
+  </section>
+
+  <section class="wrap more">
+    <h2>Other {S.name} counties</h2>
+    <p class="muted">We're adding these. Until then, the call line still works anywhere in {S.name}, and the nearest county guide is linked.</p>
+    <ul class="others">
+      {others.map((c) => {
+        const n = nearest(c.slug);
+        return <li><span>{c.name}</span>{n ? <a class="small" href={p(`/counties/${n.slug}/`)}>See {n.short}</a> : <span class="small faint">Coming soon</span>}</li>;
+      })}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .head { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 24px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 32px; align-items: start; padding-bottom: 56px; }
+  .map { padding: 18px; position: sticky; top: 88px; }
+  .ct { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .ct th, .ct td { text-align: left; padding: 10px 10px; border-bottom: 1px solid var(--line); }
+  .ct th { font-size: 0.8rem; color: var(--ink-2); font-weight: 600; vertical-align: bottom; }
+  .ct td:nth-child(n+3), .ct th:nth-child(n+3) { text-align: right; font-variant-numeric: tabular-nums; }
+  .ct a { font-weight: 600; }
+  .more { padding-bottom: 72px; border-top: 1px solid var(--line); padding-top: 48px; }
+  .others { list-style: none; padding: 0; margin: 20px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 0 24px; }
+  .others li { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); margin: 0; }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .map { position: static; } }
+  @media (max-width: 600px) { .ct th:nth-child(2), .ct td:nth-child(2), .ct th:nth-child(3), .ct td:nth-child(3) { display: none; } }
+</style>

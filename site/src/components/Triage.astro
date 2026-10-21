@@ -1,0 +1,128 @@
+---
+// Source-specific first steps. All panels are in the HTML (crawlable, works without JS);
+// the script turns them into a picker.
+import Icon from "./Icon.astro";
+import { p } from "../lib/paths";
+
+interface Props { place?: string; compact?: boolean; local?: Record<string, string> }
+const { place = "your home", compact = false, local = {} } = Astro.props;
+
+const OPTIONS = [
+  {
+    id: "pipe", icon: "snow", label: "Burst or frozen pipe",
+    steps: [
+      ["Shut off the main water valve.", "It's usually where the water line enters the house, often in the basement or crawl space near the meter. Turn it clockwise until it stops."],
+      ["Open the lowest faucet in the house.", "This drains the water still in the lines and takes pressure off the break."],
+      ["Turn off the water heater.", "Set a gas unit to pilot or off, or switch off the breaker for an electric one, so it doesn't run empty."],
+      ["Never thaw a pipe with an open flame.", "A hair dryer or space heater kept away from water is fine. Torches start house fires."],
+      ["Photograph everything before you move it.", "Wide shots of each room, then close-ups of the damage and the failed pipe. Your insurer will ask."],
+    ],
+  },
+  {
+    id: "basement", icon: "basement", label: "Flooded basement",
+    steps: [
+      ["Don't step in if water could reach outlets, cords, or the electrical panel.", "Call your electric utility to cut power at the meter first."],
+      ["Check the sump pump.", "Is it plugged in, is the breaker on, is the float stuck, is the discharge line frozen or blocked?"],
+      ["Note where the water came in.", "Groundwater, a failed sump, a sewer backup, and surface flooding are often covered by different parts of a policy, or not at all."],
+      ["Don't relight a furnace or water heater that sat in water.", "Have it checked by a qualified technician first."],
+      ["Start moving belongings to dry ground and take photos.", "Mold can start in 24 to 48 hours, so drying should begin the same day."],
+    ],
+  },
+  {
+    id: "sewage", icon: "sewage", label: "Sewage or toilet backup",
+    steps: [
+      ["Treat it as contaminated (Category 3) water.", "Keep children and pets out, wear gloves and boots, and wash any skin it touches."],
+      ["Stop using every drain, toilet, and appliance that drains.", "Each flush can push more sewage into the house."],
+      ["Don't try to clean carpet, padding, or upholstery that sewage touched.", "Porous materials that sewage soaks into usually have to be removed by a professional."],
+      ["If you're on city sewer, call the public works or sewer department.", "A blocked main in the street is the city's problem. A blocked line on your property usually isn't."],
+      ["Check whether your policy has a sewer or water backup endorsement.", "Standard homeowners policies often exclude backups unless you added it."],
+    ],
+  },
+  {
+    id: "roof", icon: "storm", label: "Roof leak or storm",
+    steps: [
+      ["Stay off the roof during the storm.", "A tarp can wait. Falls cause more harm than leaks."],
+      ["Catch the water and protect the floor.", "Buckets, towels, and plastic sheeting under the drip. Move electronics and furniture."],
+      ["Watch for a sagging ceiling.", "If drywall is bulging with water, keep people out from under it. It can come down without warning."],
+      ["Shut off power to rooms where water is coming through light fixtures.", "Use the breaker panel only if you can reach it from a dry spot."],
+      ["Photograph the ceiling, the attic if it's safe, and any storm damage outside.", "Insurers usually need proof of when and how the damage happened."],
+    ],
+  },
+  {
+    id: "fire", icon: "flame", label: "Fire or smoke",
+    steps: [
+      ["Don't go back in until the fire department says it's safe.", "Ask them for the incident or report number. Your insurer will want it."],
+      ["Don't run the furnace or central air.", "The system can spread soot through every room in the house."],
+      ["Don't wipe soot off walls or furniture.", "Rubbing smears it deeper into surfaces. Restoration crews use dry sponges and specific cleaners."],
+      ["Throw away food, drinks, and medicine that were exposed to heat, smoke, or water.", "Sealed cans can still be compromised."],
+      ["Call your insurer, and the American Red Cross if you need a place to stay.", "Ask about additional living expenses coverage before you book a hotel."],
+    ],
+  },
+  {
+    id: "mold", icon: "mold", label: "Mold or musty smell",
+    steps: [
+      ["Find and stop the moisture first.", "Mold comes back if the leak, condensation, or humidity behind it isn't fixed."],
+      ["Don't disturb large patches.", "Scraping or sanding releases spores. Keep the door closed and the HVAC off in that area."],
+      ["Small spots can be a DIY job.", "The EPA suggests patches under about 10 square feet can often be cleaned by the homeowner on hard surfaces."],
+      ["Call a professional for larger areas, hidden growth, or anything after sewage or flood water.", "Also if anyone in the home has asthma, allergies, or a weakened immune system."],
+      ["Don't count on bleach.", "The EPA doesn't recommend it as a routine step. On drywall and wood, removing damaged material and drying the area matter more."],
+    ],
+  },
+] as const;
+---
+<div class="triage" data-triage>
+  <div class="picker" role="tablist" aria-label="What's happening" data-boilerplate>
+    {OPTIONS.map((o, i) => (
+      <button type="button" role="tab" id={`tab-${o.id}`} aria-controls={`panel-${o.id}`} aria-selected={i === 0 ? "true" : "false"} data-tab={o.id}>
+        <Icon name={o.icon} size={22} />
+        <span>{o.label}</span>
+      </button>
+    ))}
+  </div>
+  {OPTIONS.map((o, i) => (
+    <section class="panel" role="tabpanel" id={`panel-${o.id}`} aria-labelledby={`tab-${o.id}`} data-panel={o.id} data-first={i === 0 ? "" : undefined}>
+      <h3>{o.label}: what to do in {place} right now</h3>
+      {local[o.id] && <p class="local">{local[o.id]}</p>}
+      <ol class="steps" data-boilerplate>
+        {(compact ? o.steps.slice(0, 3) : o.steps).map(([head, body]) => <li><strong>{head}</strong>{!compact && <span class="muted">{body}</span>}</li>)}
+      </ol>
+      {compact && <p class="small more" data-boilerplate><a href={p(o.id === "fire" ? "/fire-smoke-damage/" : o.id === "mold" ? "/guides/mold-after-water-damage/" : "/guides/water-damage-first-hour/")}>Full step-by-step guide</a></p>}
+    </section>
+  ))}
+</div>
+
+<style>
+  .picker { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 8px; margin-bottom: 20px; }
+  .picker button {
+    display: flex; align-items: center; gap: 10px; text-align: left;
+    padding: 12px 14px; min-height: 56px;
+    background: var(--card); color: var(--ink); border: 1px solid var(--line-2); border-radius: var(--r);
+    font: 500 0.95rem/1.25 var(--sans); cursor: pointer;
+  }
+  .picker button:hover { border-color: var(--water); }
+  .picker button[aria-selected="true"] { border-color: var(--water); background: var(--water-soft); color: var(--water-ink); box-shadow: inset 0 0 0 1px var(--water); }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 24px; }
+  .panel + .panel { margin-top: 16px; }
+  .panel h3 { margin-bottom: 12px; }
+  .local { color: var(--ink-2); margin-bottom: 18px; padding-left: 12px; border-left: 3px solid var(--water); border-radius: 0; }
+  .more { margin: 16px 0 0; }
+  .triage.js .panel { display: none; }
+  .triage.js .panel.on { display: block; margin-top: 0; }
+  @media print { .picker { display: none; } .triage.js .panel { display: block; } }
+</style>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>("[data-triage]")) {
+    root.classList.add("js");
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>("[data-tab]")];
+    const show = (id: string) => {
+      tabs.forEach((t) => t.setAttribute("aria-selected", String(t.dataset.tab === id)));
+      root.querySelectorAll<HTMLElement>("[data-panel]").forEach((p) => p.classList.toggle("on", p.dataset.panel === id));
+    };
+    tabs.forEach((t) => t.addEventListener("click", () => {
+      show(t.dataset.tab!);
+      (window as any).posthog?.capture?.("triage_select", { source: t.dataset.tab, path: location.pathname });
+    }));
+    show(tabs[0].dataset.tab!);
+  }
+</script>

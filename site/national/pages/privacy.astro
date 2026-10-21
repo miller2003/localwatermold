@@ -1,0 +1,28 @@
+---
+import Page from "../../src/layouts/Page.astro";
+import { SITE } from "../../src/config";
+---
+<Page title="Privacy policy" seoTitle={`Privacy Policy | ${SITE.brand}`} description={`How ${SITE.brand} handles information when you visit the site or call.`} eyebrow="Legal" path="/privacy/">
+  <p class="notice notice-amber">Draft template. Have it reviewed by a lawyer and update it to match your actual analytics, call tracking vendors and business entity before launch.</p>
+  <p>Last updated {SITE.lastReviewed}.</p>
+
+  <h2>What we collect on the website</h2>
+  <p>We use privacy-respecting analytics to understand which pages help people and which buttons they use, such as page views, approximate location at the city or region level, device type, and clicks on call buttons. We don't ask you to create an account, and the site has no forms that collect personal information.</p>
+
+  <h2>Phone calls</h2>
+  <p>When you call a number on this site, the call is routed through a call tracking provider to a participating restoration company. The provider receives your phone number and call details such as time, duration and the number you dialed, and calls may be recorded for quality and billing. The restoration company you're connected with receives your number and anything you tell them, and its own privacy practices apply.</p>
+
+  <h2>How information is used</h2>
+  <ul>
+    <li>To route your call to a company that serves your area.</li>
+    <li>To confirm referrals for billing with participating companies or networks.</li>
+    <li>To improve the site.</li>
+  </ul>
+  <p>We don't sell your personal information, and we don't use your phone number for marketing calls or texts.</p>
+
+  <h2>Your choices</h2>
+  <p>You can block cookies in your browser. To ask about information related to a call, email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> with the number you called from and the approximate time.</p>
+
+  <h2>Contact</h2>
+  <p><a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a></p>
+</Page>

@@ -1,0 +1,216 @@
+---
+import { S, NATIONAL, ALL_STATES } from "../lib/state";
+import "../styles/global.css";
+import CallButton from "../components/CallButton.astro";
+import Icon from "../components/Icon.astro";
+import { SITE } from "../config";
+import { p } from "../lib/paths";
+
+interface Crumb { name: string; href: string }
+interface Props {
+  title: string;
+  description: string;
+  county?: string;
+  crumbs?: Crumb[];
+  schema?: Record<string, unknown>[];
+  noindex?: boolean;
+}
+const { title, description, county, crumbs: pageCrumbs = [], schema = [], noindex } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const robots = SITE.launchMode !== "live" || noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large";
+const origin = Astro.site!.origin;
+
+// Page crumbs are state-relative; state pages get the state as the first crumb after Home.
+const crumbs: Crumb[] = NATIONAL
+  ? pageCrumbs
+  : [{ name: S.name, href: p("/") }, ...pageCrumbs.map((c) => ({ name: c.name, href: p(c.href) }))];
+const graph = [
+  {
+    "@type": "Organization",
+    "@id": `${origin}/#org`,
+    name: SITE.brand,
+    url: `${origin}/`,
+    slogan: SITE.tagline,
+    description: "An independent referral service that connects homeowners with local water damage, mold and fire restoration companies. It does not perform restoration work.",
+    areaServed: { "@type": "Country", name: "United States" },
+  },
+  { "@type": "WebSite", "@id": `${origin}/#site`, name: SITE.brand, url: `${origin}/`, publisher: { "@id": `${origin}/#org` } },
+  ...(crumbs.length
+    ? [{
+        "@type": "BreadcrumbList",
+        itemListElement: [{ name: "Home", href: "/" }, ...crumbs].map((c, i) => ({
+          "@type": "ListItem", position: i + 1, name: c.name, item: new URL(c.href, origin).href,
+        })),
+      }]
+    : []),
+  ...schema,
+];
+const nav = NATIONAL
+  ? [
+      { href: "/#states", label: "Find your state" },
+      { href: "/how-it-works/", label: "How it works" },
+      { href: "/data-sources/", label: "Our data" },
+    ]
+  : [
+      { href: p("/counties/"), label: "Counties" },
+      { href: p("/water-damage/"), label: "Water damage" },
+      { href: p("/mold-remediation/"), label: "Mold" },
+      { href: p("/fire-smoke-damage/"), label: "Fire and smoke" },
+      { href: p("/guides/"), label: "Guides" },
+    ];
+const path = Astro.url.pathname;
+const ogImage = new URL(`/og-${NATIONAL ? "us" : S.key}.png`, Astro.site).href;
+---
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content={robots} />
+  <link rel="canonical" href={canonical} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e151c" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={SITE.brand} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@graph": graph })} />
+  <style>
+    header.site { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 0; z-index: 20; }
+    .bar { display: flex; align-items: center; gap: 20px; min-height: 64px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 600 1.08rem/1 var(--serif); }
+    .logo-text { display: grid; gap: 3px; }
+    .logo-sub { font: 500 0.72rem/1 var(--sans); color: var(--ink-3); letter-spacing: 0.02em; }
+    .logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--water); color: var(--paper); display: grid; place-items: center; }
+    nav.main { display: flex; gap: 4px; margin-left: auto; }
+    nav.main a { color: var(--ink-2); text-decoration: none; font-size: 0.95rem; padding: 8px 10px; border-radius: 8px; }
+    nav.main a:hover, nav.main a[aria-current="page"] { color: var(--ink); background: var(--sunk); }
+    .bar :global(.btn) { min-height: 42px; padding: 0 16px; font-size: 0.95rem; }
+    .crumbs { font-size: 0.85rem; color: var(--ink-3); padding-top: 14px; }
+    .crumbs a { color: var(--ink-2); text-decoration: none; }
+    .crumbs a:hover { text-decoration: underline; }
+    .crumbs span[aria-hidden] { margin: 0 6px; }
+    footer.site { border-top: 1px solid var(--line); background: var(--sunk); margin-top: 0; padding: 48px 0 32px; font-size: 0.92rem; color: var(--ink-2); }
+    footer.site a { color: var(--ink-2); }
+    .foot-grid { display: grid; gap: 28px; grid-template-columns: 2fr repeat(3, 1fr); }
+    .foot-grid h2 { font: 600 0.8rem/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 12px; }
+    .foot-grid ul { list-style: none; padding: 0; margin: 0; }
+    .foot-states { columns: 2; column-gap: 20px; }
+    .legal { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--ink-3); }
+    .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: var(--card); border-top: 1px solid var(--line-2); display: flex; gap: 8px; }
+    .callbar :global(.btn) { flex: 1; min-height: 50px; }
+    .callbar :global(.btn-ghost) { flex: 0 0 auto; }
+    .preview-ribbon { background: var(--amber-soft); color: var(--amber-ink); font-size: 0.82rem; text-align: center; padding: 6px 12px; }
+    @media (max-width: 960px) { nav.main { display: none; } .bar :global(.btn) { margin-left: auto; } .foot-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 760px) { .bar :global(.btn) { display: none; } }
+    @media (min-width: 761px) { .callbar { display: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  {SITE.launchMode !== "live" && <div class="preview-ribbon no-print">Preview build. Not indexed, and the call line isn't live yet.</div>}
+  <header class="site">
+    <div class="wrap bar">
+      <a class="logo" href="/" aria-label={`${SITE.brand} home`}>
+        <span class="logo-mark"><Icon name="droplet" size={18} /></span>
+        <span class="logo-text"><span>{SITE.brand}</span><span class="logo-sub">{NATIONAL ? SITE.taglineShort : `${S.name} · ${SITE.taglineShort}`}</span></span>
+      </a>
+      <nav class="main" aria-label="Main">
+        {nav.map((n) => <a href={n.href} aria-current={path.startsWith(n.href) ? "page" : undefined}>{n.label}</a>)}
+      </nav>
+      <CallButton county={county} placement="header" />
+    </div>
+  </header>
+  {crumbs.length > 0 && (
+    <div class="wrap crumbs no-print">
+      <nav aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        {crumbs.map((c, i) => (
+          <><span aria-hidden="true">/</span>{i === crumbs.length - 1 ? <span aria-current="page">{c.name}</span> : <a href={c.href}>{c.name}</a>}</>
+        ))}
+      </nav>
+    </div>
+  )}
+  <main id="main">
+    <slot />
+  </main>
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="logo" href="/"><span class="logo-mark"><Icon name="droplet" size={18} /></span><span>{SITE.brand}</span></a>
+          <p style="margin-top:14px;max-width:44ch"><strong>{SITE.tagline}.</strong> {SITE.brand} is an independent referral service. When you call, you're connected with a participating restoration company that serves your area. We don't do restoration work, and we're not affiliated with any insurer or government agency.</p>
+        </div>
+        {NATIONAL ? (
+          <div style="grid-column: span 2">
+            <h2>States</h2>
+            <ul class="foot-states">
+              {[...ALL_STATES].sort((x, y) => x.name.localeCompare(y.name)).map((st) => <li><a href={`/${st.slug}/`}>{st.name}</a></li>)}
+            </ul>
+          </div>
+        ) : (
+          <>
+            <div>
+              <h2>{S.name} help</h2>
+              <ul>
+                <li><a href={p("/water-damage/")}>Water damage</a></li>
+                <li><a href={p("/mold-remediation/")}>Mold remediation</a></li>
+                <li><a href={p("/fire-smoke-damage/")}>Fire and smoke</a></li>
+                <li><a href={p("/guides/basement-flooding-sump-pump/")}>Basement flooding</a></li>
+                <li><a href={p("/counties/")}>All {S.name} counties</a></li>
+                <li><a href="/#states">Other states</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2>Guides and tools</h2>
+              <ul>
+                <li><a href={p("/guides/water-damage-first-hour/")}>The first hour</a></li>
+                <li><a href={p(`/guides/${S.slug}-water-damage-insurance-claim/`)}>{S.name} insurance claims</a></li>
+                <li><a href={p("/tools/cost-estimator/")}>Cost estimator</a></li>
+                <li><a href={p("/tools/emergency-checklist/")}>Printable checklist</a></li>
+                <li><a href={p(`/${S.slug}-water-damage-risk/`)}>{S.name} risk index</a></li>
+              </ul>
+            </div>
+          </>
+        )}
+        <div>
+          <h2>About</h2>
+          <ul>
+            <li><a href="/how-it-works/">How it works</a></li>
+            <li><a href="/editorial-policy/">Editorial policy</a></li>
+            <li><a href="/data-sources/">Data sources</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <p>If anyone is in danger, there's a gas smell, or water is near live electrical equipment, leave the building and call 911 first.</p>
+        <p style="margin:0">© {new Date().getFullYear()} {SITE.brand}. Information on this site is general guidance, not legal, insurance, or engineering advice.</p>
+      </div>
+    </div>
+  </footer>
+  <div class="callbar no-print">
+    <CallButton county={county} placement="callbar" short />
+    <a class="btn btn-ghost" href={NATIONAL ? "/#states" : p("/tools/emergency-checklist/")}>{NATIONAL ? "States" : "Checklist"}</a>
+  </div>
+  <script is:inline>
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("[data-call]");
+      if (!a) return;
+      var props = { placement: a.getAttribute("data-call"), county: a.getAttribute("data-county"), path: location.pathname };
+      if (window.posthog && window.posthog.capture) window.posthog.capture("call_click", props);
+      if (window.dataLayer) window.dataLayer.push(Object.assign({ event: "call_click" }, props));
+    });
+  </script>
+</body>
+</html>

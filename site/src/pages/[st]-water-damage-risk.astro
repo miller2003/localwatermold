@@ -1,0 +1,182 @@
+---
+import { S } from "../lib/state";
+export function getStaticPaths() {
+  return [{ params: { st: S.slug } }];
+}
+import Base from "../layouts/Base.astro";
+import Choropleth from "../components/Choropleth.astro";
+import { SITE } from "../config";
+import { allCounties, META, STATE, pct } from "../lib/data";
+import { riskIndex, riskLabel, FACTORS } from "../lib/risk";
+import { p } from "../lib/paths";
+
+const counties = allCounties();
+const withW = counties.filter((c) => c.weather);
+const idx = riskIndex();
+const by = (slug: string) => counties.find((c) => c.slug === slug)!;
+const ranked = [...idx.entries()].map(([slug, r]) => ({ c: by(slug), ...r }));
+const top5 = ranked.slice(0, 5);
+const coldest = [...withW].sort((a, b) => b.weather!.pipeRiskNights - a.weather!.pipeRiskNights)[0];
+const oldest = [...counties].sort((a, b) => b.builtPre1960Pct - a.builtPre1960Pct)[0];
+const wettest = [...withW].sort((a, b) => b.weather!.heavyRainDays - a.weather!.heavyRainDays)[0];
+const newest = [...withW].sort((a, b) => b.built2000PlusPct - a.built2000PlusPct)[0];
+const complete = withW.length === counties.length;
+
+const vals = (get: (c: (typeof counties)[number]) => number | undefined) =>
+  Object.fromEntries(counties.map((c) => [c.slug, get(c)]));
+const metrics = [
+  { key: "index", label: "Risk index", unit: "index (0–100)", values: Object.fromEntries(ranked.map((r) => [r.c.slug, r.score])) },
+  { key: "freeze", label: "Pipe-freeze nights", unit: "nights ≤ 20°F per year", values: vals((c) => c.weather?.pipeRiskNights) },
+  { key: "age", label: "Pre-1960 homes", unit: "% of homes", values: vals((c) => c.builtPre1960Pct) },
+  { key: "rain", label: "Heavy-rain days", unit: "days ≥ 1 inch per year", decimals: 1, values: vals((c) => c.weather?.heavyRainDays) },
+  { key: "humid", label: "Muggy nights", unit: "nights ≥ 65°F per year", values: vals((c) => c.weather?.muggyNights) },
+];
+const year = SITE.lastReviewed.slice(0, 4);
+const origin = Astro.site!.origin;
+const schema = [{
+  "@type": "Dataset",
+  name: `${S.name} Water Damage Risk Index ${year}`,
+  description: `County-level index of household water damage risk in ${S.name}, combining pipe-freeze nights, housing age, heavy-rain days and summer humidity.`,
+  url: `${origin}${p(`/${S.slug}-water-damage-risk/`)}`,
+  creator: { "@id": `${origin}/#org` },
+  spatialCoverage: { "@type": "Place", name: `${S.name}, United States` },
+  temporalCoverage: META.weatherPeriod,
+  isAccessibleForFree: true,
+  license: "https://creativecommons.org/licenses/by/4.0/",
+  variableMeasured: FACTORS.map((f) => f.label),
+}];
+---
+<Base
+  title={`${S.name} Water Damage Risk Index ${year}: Every County Ranked`}
+  description={`Which ${S.name} counties are most prone to household water damage? A county-by-county index built from Census housing age and ten years of daily weather: frozen pipes, heavy rain and humidity.`}
+  crumbs={[{ name: `${S.name} risk index`, href: `/${S.slug}-water-damage-risk/` }]}
+  schema={schema}
+>
+  <section class="wrap head">
+    <p class="eyebrow">Data report · {year}</p>
+    <h1>{S.name} Water Damage Risk Index</h1>
+    <p class="lede">Where in {S.name} is a house most likely to take on water? We combined Census housing age with ten years of daily weather for {withW.length} of {S.name}'s {counties.length} counties to rank them.</p>
+    {!complete && <p class="notice notice-amber small">Weather data covers {withW.length} counties so far. Counties without it are shown in gray and left out of the index.</p>}
+  </section>
+
+  <section class="wrap findings">
+    <div class="grid grid-4">
+      <div class="stat"><div class="stat-label">Highest index</div><div class="stat-value">{top5[0].c.short}</div><div class="stat-note">Score {top5[0].score} of 100</div></div>
+      <div class="stat"><div class="stat-label">Most pipe-freeze nights</div><div class="stat-value">{coldest.short}</div><div class="stat-note">{coldest.weather!.pipeRiskNights} nights ≤ 20°F a year</div></div>
+      <div class="stat"><div class="stat-label">Oldest housing</div><div class="stat-value">{oldest.short}</div><div class="stat-note">{pct(oldest.builtPre1960Pct)} built before 1960</div></div>
+      <div class="stat"><div class="stat-label">Most heavy-rain days</div><div class="stat-value">{wettest.short}</div><div class="stat-note">{wettest.weather!.heavyRainDays} days ≥ 1 inch a year</div></div>
+    </div>
+  </section>
+
+  <section class="wrap map-sec">
+    <div class="card map-card">
+      <Choropleth metrics={metrics} title={`Map of ${S.name} counties shaded by water damage risk`} />
+    </div>
+    <div class="prose">
+      <h2>Key findings</h2>
+      <ul>
+        <li>The five highest-scoring counties are {top5.map((r) => r.c.short).join(", ")}. Each combines old housing with harsher-than-average winters or frequent downpours.</li>
+        <li>{oldest.short} County has the oldest housing in the state, with {pct(oldest.builtPre1960Pct)} of homes built before 1960, against a county median of {pct(STATE.builtPre1960Pct)}.</li>
+        <li>{coldest.short} County averaged {coldest.weather!.pipeRiskNights} nights a year at 20°F or colder, the most of any county in the data. The county median is {Math.round(STATE.weather.pipeRiskNights)}.</li>
+        <li>{newest.short} County has the newest housing, with {pct(newest.built2000PlusPct)} of homes built since 2000, which pulls its index down even where winters are cold.</li>
+      </ul>
+      <p class="small faint">Weather: NOAA nClimGrid-Daily county averages, {META.weatherPeriod}. Housing: ACS {META.acsYears}.</p>
+    </div>
+  </section>
+
+  <section class="wrap table-sec">
+    <h2>All counties</h2>
+    <p class="muted">Select a column header to sort.</p>
+    <div class="table-wrap">
+      <table class="rank" data-sortable>
+        <thead>
+          <tr>
+            <th data-k="rank" data-type="n">Rank</th>
+            <th data-k="name">County</th>
+            <th data-k="score" data-type="n">Index</th>
+            <th data-k="freeze" data-type="n">Freeze nights</th>
+            <th data-k="age" data-type="n">Pre-1960 homes</th>
+            <th data-k="rain" data-type="n">Heavy-rain days</th>
+            <th data-k="humid" data-type="n">Muggy nights</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ranked.map((r) => (
+            <tr>
+              <td data-v={r.rank}>{r.rank}</td>
+              <td data-v={r.c.short}>{r.c.pilot ? <a href={p(`/counties/${r.c.slug}/`)}>{r.c.short}</a> : r.c.short}</td>
+              <td data-v={r.score}><span class={`pill ${riskLabel(r.score).toLowerCase()}`}>{r.score}</span></td>
+              <td data-v={r.c.weather!.pipeRiskNights}>{r.c.weather!.pipeRiskNights}</td>
+              <td data-v={r.c.builtPre1960Pct}>{pct(r.c.builtPre1960Pct)}</td>
+              <td data-v={r.c.weather!.heavyRainDays}>{r.c.weather!.heavyRainDays}</td>
+              <td data-v={r.c.weather!.muggyNights}>{r.c.weather!.muggyNights}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap method"><div class="prose read">
+    <h2>Methodology</h2>
+    <p>For each county with weather data, we convert four factors to a percentile rank among those counties (0 = lowest, 100 = highest), then take a weighted average:</p>
+    <ul>
+      {FACTORS.map((f) => <li><strong>{f.label}</strong> ({f.unit}), weight {Math.round(f.weight * 100)}%</li>)}
+    </ul>
+    <p>Freezing weather and old plumbing get the most weight because burst and failing supply lines are among the most common causes of household water damage. Heavy rain drives basement flooding and sewer backups, and warm, muggy nights mark the humid air that lets mold follow. The index is relative: a low score means lower risk than other {S.name} counties, not no risk.</p>
+    <p>Limits: weather values are county-wide averages, so hollows, ridges and lakeshores can differ; ACS housing figures are survey estimates; the index doesn't account for floodplains, soil, or local sewer systems. Full details on our <a href="/data-sources/">data sources</a> page.</p>
+    <h2>Cite this data</h2>
+    <p>You're welcome to use these figures with attribution. Suggested citation:</p>
+    <p class="cite">{SITE.brand}, "{S.name} Water Damage Risk Index {year}," {origin}{p(`/${S.slug}-water-damage-risk/`)}. Data: U.S. Census Bureau ACS {META.acsYears}; NOAA nClimGrid-Daily {META.weatherPeriod}.</p>
+  </div></section>
+</Base>
+
+<style>
+  .head { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 20px; }
+  .head .notice { max-width: 70ch; margin-top: 16px; }
+  .findings { padding-bottom: 28px; }
+  .findings .stat-value { font-size: 1.45rem; }
+  .map-sec { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: start; padding-bottom: 56px; }
+  .map-card { padding: 20px; }
+  .map-sec .prose h2 { margin-top: 0; }
+  .table-sec { padding-bottom: 56px; }
+  .rank { width: 100%; border-collapse: collapse; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+  .rank th, .rank td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: right; }
+  .rank th:nth-child(2), .rank td:nth-child(2) { text-align: left; }
+  .rank th { font-size: 0.8rem; color: var(--ink-2); cursor: pointer; user-select: none; white-space: nowrap; }
+  .rank th[aria-sort="ascending"]::after { content: " ↑"; }
+  .rank th[aria-sort="descending"]::after { content: " ↓"; }
+  .pill { display: inline-block; min-width: 38px; text-align: center; padding: 3px 8px; border-radius: 999px; font-weight: 600; font-size: 0.85rem; }
+  .pill.high { background: var(--signal-soft); color: var(--signal-ink); }
+  .pill.elevated { background: var(--amber-soft); color: var(--amber-ink); }
+  .pill.moderate { background: var(--water-soft); color: var(--water-ink); }
+  .pill.lower { background: var(--sage-soft); color: var(--sage); }
+  .method { padding-bottom: 80px; }
+  .cite { font-family: var(--mono); font-size: 0.85rem; background: var(--sunk); padding: 14px 16px; border-radius: var(--r); }
+  @media (max-width: 960px) { .map-sec { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  const table = document.querySelector<HTMLTableElement>("[data-sortable]");
+  if (table) {
+    const ths = [...table.querySelectorAll<HTMLTableCellElement>("th")];
+    ths.forEach((th, col) => {
+      th.tabIndex = 0;
+      const sort = () => {
+        const asc = th.getAttribute("aria-sort") !== "ascending";
+        ths.forEach((t) => t.removeAttribute("aria-sort"));
+        th.setAttribute("aria-sort", asc ? "ascending" : "descending");
+        const num = th.dataset.type === "n";
+        const rows = [...table.tBodies[0].rows];
+        rows.sort((a, b) => {
+          const x = a.cells[col].dataset.v!, y = b.cells[col].dataset.v!;
+          const d = num ? Number(x) - Number(y) : x.localeCompare(y);
+          return asc ? d : -d;
+        });
+        rows.forEach((r) => table.tBodies[0].appendChild(r));
+      };
+      th.addEventListener("click", sort);
+      th.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sort(); } });
+    });
+  }
+</script>

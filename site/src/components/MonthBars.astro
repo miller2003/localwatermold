@@ -1,0 +1,40 @@
+---
+// Build-time SVG bar chart of 12 monthly values.
+interface Props { values: number[]; title: string; unit: string; tone?: "water" | "cold"; decimals?: number }
+const { values, title, unit, tone = "water", decimals = 1 } = Astro.props;
+const M = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const W = 360, H = 150, top = 22, base = 122;
+const max = Math.max(...values, 0.01);
+const bw = W / 12;
+const peak = values.indexOf(Math.max(...values));
+const fmt = (v: number) => v.toFixed(decimals).replace(/\.0+$/, "");
+---
+<figure class="bars">
+  <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${title}. Highest in ${MONTHS[peak]} at ${fmt(values[peak])} ${unit}.`}>
+    <line x1="0" x2={W} y1={base} y2={base} class="axis" />
+    {values.map((v, i) => {
+      const h = Math.max((v / max) * (base - top), v > 0 ? 2 : 0);
+      return (
+        <g>
+          <rect x={i * bw + 5} y={base - h} width={bw - 10} height={h} rx="3" class={`${tone} ${i === peak ? "peak" : ""}`} />
+          <text x={i * bw + bw / 2} y={base + 16} text-anchor="middle" class="m" aria-hidden="true">{M[i]}</text>
+          {i === peak && <text x={i * bw + bw / 2} y={base - h - 6} text-anchor="middle" class="v">{fmt(v)}</text>}
+        </g>
+      );
+    })}
+  </svg>
+  <figcaption class="small muted">{title}</figcaption>
+</figure>
+
+<style>
+  .bars { margin: 0; }
+  svg { width: 100%; height: auto; overflow: visible; }
+  .axis { stroke: var(--line-2); stroke-width: 1; }
+  rect.water { fill: var(--map-near); }
+  rect.cold { fill: var(--map-near); }
+  rect.peak { fill: var(--water); }
+  .m { font: 500 11px var(--sans); fill: var(--ink-3); }
+  .v { font: 600 12px var(--sans); fill: var(--ink); }
+  figcaption { margin-top: 8px; }
+</style>

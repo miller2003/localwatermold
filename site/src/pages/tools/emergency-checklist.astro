@@ -1,0 +1,56 @@
+---
+import Base from "../../layouts/Base.astro";
+import Icon from "../../components/Icon.astro";
+import { SITE, PHONES, formatPhone } from "../../config";
+
+const sections = [
+  { h: "Safety first", items: ["Water near outlets or the panel? Stay out. Call the electric utility.", "Gas smell? Leave and call 911 from outside.", "Sagging ceiling? Keep everyone out from under it.", "Sewage or floodwater? Gloves, boots, and keep kids and pets away."] },
+  { h: "Stop the water", items: ["Main water shutoff is at: ____________________", "Turn it clockwise until it stops.", "Open the lowest faucet to drain the lines.", "Turn off the water heater (gas to pilot, or electric breaker off).", "Well? Turn off the well pump breaker."] },
+  { h: "Document", items: ["Video walk-through of every wet room.", "Photos of the source and waterlines.", "Keep the failed part (hose, fitting, valve).", "Write down when you found it and what you did."] },
+  { h: "Call", items: ["Insurance company and policy number: ____________________", "Water utility emergency line: ____________________", "Electric utility: ____________________", PHONES.default && SITE.launchMode === "live" ? `Restoration help: ${formatPhone(PHONES.default)}` : "Restoration help: ____________________"] },
+  { h: "Start drying today", items: ["Move electronics, papers and rugs to a dry floor.", "Foil or blocks under furniture legs.", "Fans and open windows where nothing electrical is wet.", "Professional drying should start within 24 to 48 hours."] },
+];
+---
+<Base
+  title="Water Damage Emergency Checklist (Printable)"
+  description="A one-page printable checklist for a burst pipe, flooded basement or sewage backup: safety, shutoff, documentation, who to call and how to start drying."
+  crumbs={[{ name: "Emergency checklist", href: "/tools/emergency-checklist/" }]}
+>
+  <section class="wrap sheet">
+    <div class="top">
+      <div>
+        <p class="eyebrow">Printable</p>
+        <h1>Water damage emergency checklist</h1>
+        <p class="muted">Print it, fill in the blanks, and tape it near your main water shutoff or water heater.</p>
+      </div>
+      <button class="btn btn-ghost no-print" type="button" onclick="window.print()"><Icon name="print" />Print</button>
+    </div>
+    <div class="cols">
+      {sections.map((s) => (
+        <section class="blk">
+          <h2>{s.h}</h2>
+          <ul>{s.items.map((i) => <li><span class="box" aria-hidden="true"></span>{i}</li>)}</ul>
+        </section>
+      ))}
+    </div>
+    <p class="small faint foot">From {SITE.brand}. General guidance only. If anyone is in danger, call 911.</p>
+  </section>
+</Base>
+
+<style>
+  .sheet { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 72px; }
+  .top { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; margin-bottom: 24px; }
+  .cols { columns: 2 320px; column-gap: 28px; }
+  .blk { break-inside: avoid; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 18px 20px; margin-bottom: 16px; }
+  .blk h2 { font-size: 1.15rem; margin-bottom: 10px; }
+  .blk ul { list-style: none; padding: 0; margin: 0; }
+  .blk li { display: flex; gap: 10px; align-items: flex-start; margin: 0; padding: 6px 0; }
+  .box { width: 16px; height: 16px; border: 1.5px solid var(--ink-3); border-radius: 4px; flex: none; margin-top: 5px; }
+  .foot { margin-top: 12px; }
+  @media print {
+    .sheet { padding: 0; }
+    .blk { border-color: #999; }
+    .cols { columns: 2; }
+    h1 { font-size: 22pt; }
+  }
+</style>

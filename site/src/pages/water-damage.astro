@@ -1,0 +1,46 @@
+---
+import { S } from "../lib/state";
+import Service from "../layouts/Service.astro";
+import Triage from "../components/Triage.astro";
+---
+<Service
+  title={`Water damage restoration in ${S.name}`}
+  seoTitle={`Water Damage Restoration in ${S.name} | 24/7 Help for Burst Pipes, Basements and Leaks`}
+  description={`Burst pipe, flooded basement or sewage backup in ${S.name}? Get connected with a local water damage restoration company, plus step-by-step guidance while you wait.`}
+  eyebrow="Water damage"
+  lede="Burst pipes, flooded basements, leaking water heaters and sewage backups. Get connected with a restoration company that serves your county, and use the steps below to limit the damage now."
+  path="/water-damage/"
+  name="Water damage restoration"
+  metric="freeze"
+  process={[
+    ["Inspection", "Find the source, stop it, map how far water traveled with moisture meters and thermal cameras, and assign a category and class."],
+    ["Extraction", "Pump out standing water and pull water out of carpet and pad with truck-mounted or portable extractors."],
+    ["Drying", "Set air movers and dehumidifiers sized to the space, and take moisture readings daily until materials reach dry standard."],
+    ["Cleaning and repair", "Clean and treat affected areas, remove materials that can't be saved, then rebuild drywall, trim and flooring."],
+  ]}
+  guides={[
+    { href: "/guides/water-damage-first-hour/", label: "The first hour", note: "Safety, shutoff, photos and drying" },
+    { href: "/guides/water-damage-categories/", label: "Clean, gray or black water", note: "Why the category changes the job" },
+    { href: `/guides/${S.slug}-water-damage-insurance-claim/`, label: `${S.name} insurance claims`, note: "Coverage and your insurer's deadlines" },
+  ]}
+>
+  <section class="section" slot="before">
+    <div class="wrap">
+      <p class="eyebrow">Start here</p>
+      <h2>What's happening?</h2>
+      <Triage />
+    </div>
+  </section>
+
+  <h2>Mitigation vs. restoration</h2>
+  <p>You'll hear two words. <strong>Mitigation</strong> is the emergency part: stopping the water, extracting it and drying the structure so damage doesn't spread. <strong>Restoration</strong> or reconstruction is putting the house back: new drywall, paint, flooring and cabinets. Some companies do both. Others only mitigate and hand off to a contractor. Ask which you're getting.</p>
+  <h2>How long drying takes</h2>
+  <p>A typical clean-water job takes three to five days of drying equipment running, longer for hardwood, plaster or a finished basement. A good company records moisture readings every day and removes equipment only when readings show the materials are dry, not on a fixed schedule.</p>
+  <h2>Choosing a company</h2>
+  <ul>
+    <li>Ask whether technicians are IICRC certified in water damage restoration.</li>
+    <li>Ask for a written scope and an estimate before non-emergency work starts.</li>
+    <li>Ask whether they bill your insurer directly, and what you'll owe.</li>
+    <li>Read anything you sign. Know whether it's a work authorization or an assignment of benefits.</li>
+  </ul>
+</Service>

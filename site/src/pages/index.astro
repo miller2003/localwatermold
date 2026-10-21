@@ -1,0 +1,165 @@
+---
+import { S } from "../lib/state";
+import Base from "../layouts/Base.astro";
+import CallButton from "../components/CallButton.astro";
+import StateMap from "../components/StateMap.astro";
+import CountyGrid from "../components/CountyGrid.astro";
+import Icon from "../components/Icon.astro";
+import { SITE } from "../config";
+import { allCounties, pilotCounties, STATE, META, int, pct, countyBySlug } from "../lib/data";
+import { p } from "../lib/paths";
+
+const counties = [...allCounties()].sort((a, b) => a.name.localeCompare(b.name));
+const pilots = pilotCounties();
+// For counties without a page yet, point to the closest neighbor that has one.
+const fallback = (slug: string) => countyBySlug(slug)!.adjacent.map((s) => countyBySlug(s)!).find((n) => n.pilot);
+---
+<Base
+  title={`Water Damage & Mold Restoration in ${S.name} | ${SITE.brand}`}
+  description={`Water damage, mold, fire or a flooded basement in an ${S.name} home? Get connected with a local restoration company, and get county-by-county guidance on what to do first.`}
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">{S.name} water damage, mold and fire</p>
+        <h1>Water in the house? Get the right help, fast.</h1>
+        <p class="lede">One call connects you with a restoration company that serves your county. While you wait, our county guides walk you through stopping the damage and protecting your claim.</p>
+        <div class="cta-row">
+          <CallButton placement="home-hero" label="Call" />
+          <a class="btn btn-ghost" href={p("/guides/water-damage-first-hour/")}>What to do first</a>
+        </div>
+        <form class="finder" action={p("/counties/")} method="get" data-finder>
+          <label for="county-select">Find your county</label>
+          <div class="finder-row">
+            <select id="county-select" name="c">
+              <option value="">Choose a county</option>
+              {counties.map((c) => {
+                const target = c.pilot ? c : fallback(c.slug);
+                return <option value={p(target ? `/counties/${target.slug}/` : "/counties/")} data-own={c.pilot ? "1" : "0"}>{c.name}</option>;
+              })}
+            </select>
+            <button class="btn btn-ghost" type="submit">Go</button>
+          </div>
+          <p class="small faint" data-finder-note hidden></p>
+        </form>
+      </div>
+      <div class="hero-map card">
+        <StateMap title={`${S.name} counties with local guides`} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">What we help with</p>
+      <h2>Three kinds of damage, one call</h2>
+      <div class="grid grid-3">
+        <a class="card svc" href={p("/water-damage/")}><Icon name="droplet" size={26} /><h3>Water damage</h3><p class="muted">Burst and frozen pipes, flooded basements, water heaters, appliance leaks and sewage backups.</p><span class="more">Water damage help <Icon name="arrow" size={16} /></span></a>
+        <a class="card svc" href={p("/mold-remediation/")}><Icon name="mold" size={26} /><h3>Mold</h3><p class="muted">Growth after a leak, damp basements, and musty smells from hidden mold inside walls or floors.</p><span class="more">Mold remediation <Icon name="arrow" size={16} /></span></a>
+        <a class="card svc" href={p("/fire-smoke-damage/")}><Icon name="flame" size={26} /><h3>Fire and smoke</h3><p class="muted">Soot, smoke odor, and the water left behind by firefighting, from a kitchen fire to a whole house.</p><span class="more">Fire and smoke cleanup <Icon name="arrow" size={16} /></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section numbers">
+    <div class="wrap">
+      <p class="eyebrow">Why {S.name} homes take on water</p>
+      <h2>Old houses, hard freezes, heavy rain</h2>
+      <div class="grid grid-4">
+        <div class="stat"><div class="stat-label">Homes in {S.name}</div><div class="stat-value">{(STATE.housingUnits / 1e6).toFixed(1)}M</div><div class="stat-note">ACS {META.acsYears}</div></div>
+        <div class="stat"><div class="stat-label">Built before 1980, typical county</div><div class="stat-value">{pct(STATE.builtPre1980Pct)}</div><div class="stat-note">Median of {allCounties().length} counties</div></div>
+        <div class="stat"><div class="stat-label">Nights at 20°F or colder</div><div class="stat-value">{Math.round(STATE.weather.pipeRiskNights)}/yr</div><div class="stat-note">Median of {pilots.length} counties, NOAA {META.weatherPeriod}</div></div>
+        <div class="stat"><div class="stat-label">Days with 1"+ of rain</div><div class="stat-value">{STATE.weather.heavyRainDays}/yr</div><div class="stat-note">Median of {pilots.length} counties, NOAA</div></div>
+      </div>
+      <a class="index-band" href={p(`/${S.slug}-water-damage-risk/`)}><span><strong>{S.name} Water Damage Risk Index</strong><span class="muted">Every county ranked by frozen pipes, housing age, heavy rain and humidity.</span></span><span class="go">See the ranking →</span></a>
+      <p class="muted read" style="margin-top:24px">Most of {S.name}'s housing was built before modern plumbing materials, and its winters reliably drop below the temperature where uninsulated pipes freeze. Our county pages break down exactly how that plays out where you live, using Census housing data and ten years of daily weather.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>No charge for the referral. Here's what happens.</h2>
+      <ol class="how">
+        <li><span class="dot"><Icon name="phone" /></span><h3>You call</h3><p class="muted">Describe what happened and where. There's no charge for the referral.</p></li>
+        <li><span class="dot"><Icon name="map" /></span><h3>We connect you</h3><p class="muted">Your call goes to a participating restoration company that serves your county.</p></li>
+        <li><span class="dot"><Icon name="shield" /></span><h3>They take it from there</h3><p class="muted">The company inspects, quotes and does the work. You deal with them directly.</p></li>
+      </ol>
+      <p class="small faint">Participating companies pay us for referrals. That never changes what we tell you in our guides. <a href="/how-it-works/">More on how we work</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Guides</p>
+      <h2>Know what to do before you need to</h2>
+      <div class="grid grid-3">
+        <a class="card guide" href={p("/guides/water-damage-first-hour/")}><strong>The first hour after water damage</strong><span class="muted small">Safety, shutoff, photos, drying</span></a>
+        <a class="card guide" href={p(`/guides/frozen-pipes-${S.slug}/`)}><strong>Frozen pipes in {S.name}</strong><span class="muted small">Freeze risk by county and how to prevent it</span></a>
+        <a class="card guide" href={p(`/guides/${S.slug}-water-damage-insurance-claim/`)}><strong>{S.name} water damage claims</strong><span class="muted small">What's covered and your insurer's deadlines</span></a>
+        <a class="card guide" href={p("/guides/basement-flooding-sump-pump/")}><strong>Basement flooding</strong><span class="muted small">Sump pumps, backups and seepage</span></a>
+        <a class="card guide" href={p("/guides/mold-after-water-damage/")}><strong>Mold after water damage</strong><span class="muted small">When DIY is fine and when it isn't</span></a>
+        <a class="card guide" href={p("/guides/water-damage-restoration-cost/")}><strong>What restoration costs</strong><span class="muted small">2026 ranges and what drives them</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="counties">
+    <div class="wrap">
+      <p class="eyebrow">Local guides</p>
+      <h2>{pilots.length} {S.name} counties and growing</h2>
+      <CountyGrid />
+      <p class="small faint" style="margin-top:16px">Covering {int(pilots.reduce((s, c) => s + c.population, 0))} residents. <a href={p("/counties/")}>See all counties</a></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: clamp(32px, 6vw, 80px) 0 clamp(36px, 5vw, 64px); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 28px; }
+  .finder { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 16px; max-width: 520px; }
+  .finder label { display: block; font-weight: 600; font-size: 0.92rem; margin-bottom: 8px; }
+  .finder-row { display: flex; gap: 8px; }
+  .finder select { flex: 1; min-height: 48px; border-radius: var(--r); border: 1px solid var(--line-2); background: var(--paper); color: var(--ink); font: inherit; padding: 0 12px; }
+  .finder :global(.btn) { min-height: 48px; }
+  .finder p { margin: 10px 0 0; }
+  .hero-map { padding: 20px; }
+  .hero-map :global(svg) { max-height: 420px; width: auto; margin: 0 auto; }
+  .svc { display: grid; gap: 8px; text-decoration: none; color: var(--ink); align-content: start; }
+  .svc:hover { border-color: var(--water); }
+  .svc h3 { margin: 6px 0 0; }
+  .svc p { margin: 0; }
+  .svc :global(svg) { color: var(--water); }
+  .more { display: inline-flex; gap: 6px; align-items: center; color: var(--water); font-weight: 600; font-size: 0.95rem; margin-top: 6px; }
+  .numbers { background: var(--sunk); }
+  .index-band { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-top: 16px; padding: 18px 22px; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); text-decoration: none; color: var(--ink); }
+  .index-band:hover { border-color: var(--water); text-decoration: none; }
+  .index-band > span:first-child { display: grid; gap: 2px; }
+  .index-band .go { color: var(--water); font-weight: 600; }
+  .how { list-style: none; padding: 0; margin: 24px 0 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; }
+  .how li { margin: 0; }
+  .dot { width: 44px; height: 44px; border-radius: 50%; background: var(--water-soft); color: var(--water-ink); display: grid; place-items: center; margin-bottom: 12px; }
+  .how h3 { margin-bottom: 4px; }
+  .guide { display: grid; gap: 6px; text-decoration: none; color: var(--ink); }
+  .guide:hover { border-color: var(--water); }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .hero-map { order: -1; display: none; } }
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("[data-finder]");
+  if (form) {
+    const select = form.querySelector("select")!;
+    const note = form.querySelector<HTMLElement>("[data-finder-note]")!;
+    select.addEventListener("change", () => {
+      const opt = select.selectedOptions[0];
+      const own = opt?.dataset.own === "1";
+      note.hidden = own || !opt?.value;
+      if (!own && opt?.value) note.textContent = `We don't have a page for ${opt.text} yet, so we'll show you the closest neighboring county. The call line still works for you.`;
+    });
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (select.value) location.href = select.value;
+    });
+  }
+</script>

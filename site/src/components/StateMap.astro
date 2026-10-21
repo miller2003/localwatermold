@@ -1,0 +1,46 @@
+---
+import { allCounties, MAP as map } from "../lib/data";
+import { p } from "../lib/paths";
+
+interface Props { focus?: string; title: string; linkPilot?: boolean }
+const { focus, title, linkPilot = true } = Astro.props;
+const counties = allCounties();
+const focusCounty = counties.find((c) => c.slug === focus);
+const near = new Set(focusCounty?.adjacent ?? []);
+const paths = map.paths as Record<string, string>;
+const centers = map.centers as Record<string, [number, number]>;
+---
+<figure class="state-map">
+  <svg viewBox={map.viewBox} role="img" aria-labelledby="map-title">
+    <title id="map-title">{title}</title>
+    {Object.keys(paths).filter((k) => k.startsWith("_other_")).map((k) => <path d={paths[k]} class="other" />)}
+    {counties.map((c) => {
+      const cls = c.slug === focus ? "focus" : near.has(c.slug) ? "near" : c.pilot && !focus ? "pilot" : "";
+      const shape = <path d={paths[c.slug]} class={cls} />;
+      return linkPilot && c.pilot && c.slug !== focus
+        ? <a href={p(`/counties/${c.slug}/`)} aria-label={c.name}>{shape}</a>
+        : shape;
+    })}
+    {focusCounty && (
+      <text x={centers[focusCounty.slug][0]} y={centers[focusCounty.slug][1] + 4} text-anchor="middle" class="label">{focusCounty.short}</text>
+    )}
+  </svg>
+  <figcaption class="small faint">
+    {focus ? <><span class="key focus"></span>{focusCounty?.short} County <span class="key near"></span>Neighboring counties</> : <><span class="key pilot"></span>Counties with a local guide</>}
+  </figcaption>
+</figure>
+
+<style>
+  .state-map { margin: 0; }
+  svg { width: 100%; height: auto; }
+  path { fill: var(--map-base); stroke: var(--paper); stroke-width: 0.8; transition: fill 0.15s; }
+  path.near { fill: var(--map-near); }
+  path.pilot { fill: var(--map-near); }
+  path.focus { fill: var(--water); }
+  a:hover path, a:focus path { fill: var(--water); }
+  .label { font: 600 11px var(--sans); fill: var(--paper); pointer-events: none; }
+  figcaption { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; margin-top: 10px; }
+  .key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: -8px; vertical-align: -1px; }
+  .key.focus { background: var(--water); }
+  .key.near, .key.pilot { background: var(--map-near); }
+</style>

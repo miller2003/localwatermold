@@ -1,0 +1,29 @@
+---
+import Page from "../../src/layouts/Page.astro";
+import { SITE } from "../../src/config";
+---
+<Page title="Editorial policy" seoTitle={`Editorial Policy | ${SITE.brand}`} description="How we research, write, check and update our water, mold and fire damage guides and county pages." eyebrow="About" path="/editorial-policy/">
+  <p class="lede">Our guides are written for people dealing with damage right now. That means they have to be accurate, specific, and honest about what we don't know.</p>
+
+  <h2>Where our information comes from</h2>
+  <ul>
+    <li><strong>Safety and cleanup:</strong> U.S. EPA mold and moisture guidance, CDC, American Red Cross, and the IICRC S500 water damage and S520 mold remediation standards.</li>
+    <li><strong>Insurance:</strong> each state's insurance code and claim-handling rules, its insurance regulator, and the National Flood Insurance Program. State guides cite the specific law where we've verified it.</li>
+    <li><strong>Costs:</strong> published national cost guides, cited on each page. We label ranges as national, not local quotes.</li>
+    <li><strong>County data:</strong> U.S. Census Bureau American Community Survey estimates and NOAA daily county weather data. See <a href="/data-sources/">data sources and methodology</a>.</li>
+  </ul>
+
+  <h2>How county pages are written</h2>
+  <p>Every county page is generated from that county's own data. Each sentence that describes a county is tied to a number in its record: housing age, heating fuel, vacancy, freeze nights, heavy-rain days, humidity. If two counties read alike, it's because their numbers are alike. We don't add claims about a county that the data doesn't support.</p>
+
+  <h2>Review</h2>
+  {SITE.reviewer
+    ? <p>Guides are reviewed by {SITE.reviewer.name}, {SITE.reviewer.credential}. {SITE.reviewer.bio}</p>
+    : <p>We're bringing on an IICRC-certified restoration professional to review our guides. Until then, every guide is checked against the primary sources listed at the bottom of the page.</p>}
+
+  <h2>Updates and corrections</h2>
+  <p>We review guides at least once a year and when rules or data change. Each page shows its last review date. If you spot an error, email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> and we'll fix it.</p>
+
+  <h2>Independence</h2>
+  <p>We're paid for referrals (see <a href="/how-it-works/">how it works</a>). Companies can't pay to change what our guides say, and we don't publish reviews or rankings of companies.</p>
+</Page>

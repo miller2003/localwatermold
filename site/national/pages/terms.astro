@@ -1,0 +1,29 @@
+---
+import Page from "../../src/layouts/Page.astro";
+import { SITE } from "../../src/config";
+---
+<Page title="Terms of use" seoTitle={`Terms of Use | ${SITE.brand}`} description={`Terms for using the ${SITE.brand} website and referral line.`} eyebrow="Legal" path="/terms/">
+  <p class="notice notice-amber">Draft template. Have it reviewed by a lawyer and fill in your business entity before launch.</p>
+  <p>Last updated {SITE.lastReviewed}. By using this website you agree to these terms.</p>
+
+  <h2>What this site is</h2>
+  <p>{SITE.brand} provides general information about water, mold and fire damage and a referral line that connects callers with independent restoration companies. We don't provide restoration, construction, inspection, legal or insurance services.</p>
+
+  <h2>No professional advice</h2>
+  <p>Content on this site is general guidance. It isn't legal, insurance, medical, engineering or safety advice for your situation. In an emergency, call 911. Read your insurance policy and consult qualified professionals before acting.</p>
+
+  <h2>Independent companies</h2>
+  <p>Companies you're connected with are independent businesses, not our employees or agents. We don't guarantee their availability, response time, pricing, licensing, insurance or workmanship. Any agreement for work is between you and that company.</p>
+
+  <h2>Accuracy</h2>
+  <p>We work to keep information accurate, but data and rules change. County statistics are estimates from public sources, described on our <a href="/data-sources/">data sources</a> page.</p>
+
+  <h2>Limitation of liability</h2>
+  <p>To the extent permitted by law, {SITE.brand} isn't liable for damages arising from your use of the site, the referral line, or services provided by companies you're connected with.</p>
+
+  <h2>Changes</h2>
+  <p>We may update these terms. The date at the top shows the latest version.</p>
+
+  <h2>Contact</h2>
+  <p><a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a></p>
+</Page>

@@ -1,0 +1,38 @@
+---
+import { S } from "../lib/state";
+import Service from "../layouts/Service.astro";
+---
+<Service
+  title={`Mold remediation in ${S.name}`}
+  seoTitle={`Mold Remediation in ${S.name} | Basement, Bathroom and Post-Leak Mold Removal`}
+  description={`Mold after a leak, in a damp basement or behind a wall? Learn when professional mold remediation is needed and get connected with a remediation company in your ${S.name} county.`}
+  eyebrow="Mold"
+  lede="Musty basement, spots after a leak, or growth behind drywall. Small patches can be a weekend job. Larger or hidden growth needs containment and a trained crew."
+  path="/mold-remediation/"
+  name="Mold remediation"
+  metric="humid"
+  process={[
+    ["Assessment", "Find the moisture source and the extent of growth, including inside walls, under floors and in ductwork."],
+    ["Containment", "Seal the work area with plastic and run negative air machines with HEPA filters so spores don't spread."],
+    ["Removal and cleaning", "Remove and bag porous materials that can't be cleaned, HEPA-vacuum, and clean remaining surfaces."],
+    ["Drying and prevention", "Dry the structure, fix the moisture problem, and set humidity control so it doesn't come back."],
+  ]}
+  guides={[
+    { href: "/guides/mold-after-water-damage/", label: "Mold after water damage", note: "The 24 to 48 hour window and DIY limits" },
+    { href: "/guides/basement-flooding-sump-pump/", label: "Basement water", note: "Where it comes from and how to stop it" },
+    { href: "/guides/water-damage-restoration-cost/", label: "What remediation costs", note: "National 2026 ranges" },
+  ]}
+>
+  <h2>Signs you need more than a scrub brush</h2>
+  <ul>
+    <li>Growth over more than about 10 square feet, the EPA's threshold for homeowner cleanup.</li>
+    <li>Mold after sewage, a toilet overflow or floodwater.</li>
+    <li>A musty smell with no visible source, which often means growth inside a wall or under flooring.</li>
+    <li>Mold that returns after cleaning.</li>
+    <li>Anyone in the home with asthma, allergies or a weakened immune system.</li>
+  </ul>
+  <h2>What remediation won't do</h2>
+  <p>No company can make a house mold-free. Mold spores are in all outdoor and indoor air. The goal of remediation is to remove active growth and fix the moisture that fed it. Be wary of anyone who promises permanent results without addressing the water source.</p>
+  <h2>Insurance and mold</h2>
+  <p>Many {S.name} homeowners policies limit or exclude mold, especially from long-term leaks or humidity. Mold that results from a covered, sudden water loss is more likely to be covered, often up to a smaller sublimit. That's another reason to start drying within a day or two of any leak.</p>
+</Service>
