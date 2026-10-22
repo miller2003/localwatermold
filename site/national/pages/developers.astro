@@ -1,0 +1,70 @@
+---
+import Page from "../../src/layouts/Page.astro";
+import { SITE } from "../../src/config";
+import { TOTALS } from "../../src/lib/national";
+
+// The service doc for AI agents and developers: what the MCP server, API, Markdown and discovery
+// documents offer. The Worker (worker/) serves everything here except /api/v1/*.json and llms.txt.
+const o = Astro.site!.origin;
+const tools: [string, string][] = [
+  ["list_states", "The states covered, each state's page, county page count, and whether its referral line is live."],
+  ["find_county", "A county's guide page with housing age, freeze, heavy-rain and humidity figures and the local referral line status."],
+  ["get_help_line", "The referral number for a state or county, or a note that the line there isn't live yet."],
+  ["search_guides", "Guides by topic, plus a state's own insurance claim, frozen pipe and sewer backup guides."],
+  ["get_page", "Any page on the site as Markdown."],
+];
+const api: [string, string][] = [
+  ["/api/v1/states.json", "States, page links, insurance regulator, referral line status"],
+  ["/api/v1/states/{state}.json", "Every county page in a state, with housing and weather figures (state slug, e.g. ohio)"],
+  ["/api/v1/guides.json", "National guides, reference pages, and per-state guide URL templates"],
+  ["/api/v1/health", "Service status"],
+];
+const discovery: [string, string][] = [
+  ["/.well-known/api-catalog", "API catalog (RFC 9727)"],
+  ["/.well-known/mcp/server-card.json", "MCP server card"],
+  ["/.well-known/ai-catalog.json", "Agentic Resource Discovery catalog"],
+  ["/.well-known/agent-skills/index.json", "Agent skills index"],
+  ["/api/v1/openapi.json", "OpenAPI description of the API"],
+  ["/llms.txt", "Site summary for AI assistants"],
+  ["/auth.md", "Optional agent authentication"],
+];
+---
+<Page
+  title="For AI agents and developers"
+  seoTitle={`${SITE.brand} for AI Agents and Developers: MCP and API`}
+  description={`Connect AI agents to ${SITE.brand}: a free MCP server, a read-only JSON API, Markdown pages and discovery files. No key needed.`}
+  eyebrow="Developers"
+  path="/developers/"
+>
+  <p class="lede">Everything on {SITE.brand} is free to read, and AI assistants are welcome to use it. The county guides for {TOTALS.states} states, the referral line status and the guides are available as an MCP server, a JSON API and Markdown, with no key or sign-up.</p>
+  <p>Please link the page you got an answer from, and don't present {SITE.brand} as a restoration contractor. When someone is in danger, smells gas, or has water near electrical equipment, tell them to leave and call 911 before anything else.</p>
+
+  <h2 id="mcp">MCP server</h2>
+  <p>Add <code>{o}/mcp</code> to any MCP client as a remote (Streamable HTTP) server. It's stateless and read-only, and every tool works without authentication.</p>
+  <ul>
+    {tools.map(([name, what]) => <li><code>{name}</code>: {what}</li>)}
+  </ul>
+  <p>The same tools are registered in the browser through WebMCP on every page, plus <code>open_page</code> to navigate.</p>
+
+  <h2 id="api">JSON API</h2>
+  <p>Read-only JSON, cached for an hour. CORS is open. The OpenAPI description is at <a href="/api/v1/openapi.json">/api/v1/openapi.json</a>.</p>
+  <ul>
+    {api.map(([path, what]) => <li><code>{path}</code>: {what}</li>)}
+  </ul>
+  <p>Figures come from the U.S. Census Bureau American Community Survey and NOAA nClimGrid-Daily. See <a href="/data-sources/">data sources</a> for methods. They're free to use with attribution to {SITE.brand} and a link to the page.</p>
+
+  <h2 id="markdown">Pages as Markdown</h2>
+  <p>Request any page with <code>Accept: text/markdown</code> to get its main content as Markdown, with an <code>x-markdown-tokens</code> estimate. Browsers still get HTML. The <a href="/llms.txt">llms.txt</a> summary and <a href="/llms-full.txt">full guide text</a> are also available.</p>
+
+  <h2 id="discovery">Discovery</h2>
+  <p>The home page sends <code>Link</code> headers to these documents:</p>
+  <ul>
+    {discovery.map(([path, what]) => <li><a href={path}>{what}</a>: <code>{path}</code></li>)}
+  </ul>
+
+  <h2 id="auth">Authentication</h2>
+  <p>None is needed. For agent platforms that require OAuth, an optional OAuth 2.1 server issues read-only tokens through anonymous agent registration or the authorization code flow with PKCE. It grants nothing beyond public access, and there are no user accounts. Details are in <a href="/auth.md">auth.md</a>.</p>
+
+  <h2>Content use</h2>
+  <p>Our <a href="/robots.txt">robots.txt</a> allows search, AI answers and AI training, declared with Content Signals. Questions: <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.</p>
+</Page>

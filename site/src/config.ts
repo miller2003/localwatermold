@@ -52,6 +52,10 @@ export const SITE = {
 export const PHONES = L.phones;
 export const CALL_HOURS = L.hours;
 
+// Any state's line, for site-wide output that covers every state (the agent API in the national build).
+export const lineFor = (stateKey: string): Line => LINES[stateKey] || NO_LINE;
+export const callLineLive = (line: Line) => MODE === "live" && !!line.phones.default;
+
 export function phoneFor(countySlug?: string): string | null {
   return (countySlug && PHONES.byCounty[countySlug]) || PHONES.default;
 }

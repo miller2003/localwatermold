@@ -9,8 +9,11 @@ function walk(dir) {
     return statSync(p).isDirectory() ? walk(p) : p.endsWith(".html") ? [p] : [];
   });
 }
+// Answered by the Worker (worker/), not built files.
+const WORKER_PATHS = ["/.well-known", "/mcp", "/auth.md", "/oauth", "/agent", "/api/v1/health"];
 function resolves(href) {
   const path = href.split("#")[0].split("?")[0];
+  if (WORKER_PATHS.some((w) => path === w || path.startsWith(`${w}/`))) return true;
   if (!path || path === "/") return existsSync(join(DIST, "index.html"));
   const p = join(DIST, path);
   if (existsSync(p) && statSync(p).isFile()) return true;

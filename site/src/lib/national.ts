@@ -23,6 +23,9 @@ export const STATE_SUMMARIES: StateSummary[] = ALL_STATES.filter((s) => DATA[`..
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
+// One state's county records, for the agent API (national/pages/api/).
+export const countiesOf = (key: string) => DATA[`../data/${key}/counties.json`]?.counties ?? [];
+
 export const TOTALS = {
   states: STATE_SUMMARIES.length,
   countyPages: STATE_SUMMARIES.reduce((n, s) => n + s.countyPages, 0),

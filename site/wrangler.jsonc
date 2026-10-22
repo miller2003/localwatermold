@@ -1,7 +1,10 @@
-// One static-assets Worker for the whole site. Build first: node scripts/build.mjs all
+// One Worker for the whole site: static assets from ./dist/site, plus worker/index.ts in front of them
+// for Markdown negotiation, Link headers, the MCP server, the agent discovery documents and OAuth.
+// Build first: node scripts/build.mjs all. OAuth needs the OAUTH_SIGNING_KEY secret (scripts/oauth-key.mjs).
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "localwatermold",
+  "main": "worker/index.ts",
   "compatibility_date": "2026-10-01",
   "routes": [
     { "pattern": "localwatermold.com", "custom_domain": true },
@@ -9,7 +12,11 @@
   ],
   "assets": {
     "directory": "./dist/site",
+    "binding": "ASSETS",
     "not_found_handling": "404-page",
-    "html_handling": "force-trailing-slash"
-  }
+    "html_handling": "force-trailing-slash",
+    // Hashed build assets skip the Worker; everything else goes through it.
+    "run_worker_first": ["/*", "!/_astro/*"]
+  },
+  "observability": { "enabled": true }
 }

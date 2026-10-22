@@ -32,6 +32,17 @@ Only counties named "... County" are included (independent cities are skipped).
   section in llms.txt, and a national guide /guides/water-damage-mold-emergency/ that answers the same
   "what to do before help arrives" question (safety, shutoff, photos, no bleach, what to tell the company).
 
+- 2026-10-22: agent-readiness pass (isitagentready.com scored 20). Added a Worker in front of the static site:
+  Markdown for agents, Link headers, a read-only MCP server at /mcp with WebMCP tools in the browser, a JSON API
+  at /api/v1/ with OpenAPI, the API catalog, MCP server card, ARD ai-catalog, agent skills index, optional OAuth
+  (anonymous agent registration, auth code + PKCE) with auth.md, Content Signals in robots.txt, and /developers/.
+
+## Agent-readiness checklist (Cloudflare dashboard, for the DNS-AID check)
+- [ ] DNS -> Settings -> enable DNSSEC. If the domain isn't registered with Cloudflare, add the DS record it
+      shows at the registrar.
+- [ ] DNS -> Records: SVCB `_index._agents` priority 1, target `localwatermold.com.`, value `alpn="h2,h3" port=443`;
+      the same for `_mcp._agents`; TXT `_catalog._agents` = `url=https://localwatermold.com/.well-known/ai-catalog.json`.
+
 ## Brand-entity checklist (off-site, to own the "localwatermold" query)
 - [ ] Google Search Console: verify the domain, submit sitemap.xml, URL Inspection -> Request indexing for
       /, /about/ and /guides/water-damage-mold-emergency/.

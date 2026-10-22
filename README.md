@@ -24,6 +24,25 @@ States live in `pipeline/states.py` and `site/src/lib/state.ts` (regulators and 
 OH, PA and MI have verified state-specific law; the other 22 use nationwide-accurate generic text
 (FTC Cooling-Off Rule, unfair claims practices) until verified.
 
+## AI agents (isitagentready.com)
+The static site runs behind a small Worker, `site/worker/` (`run_worker_first` for everything except
+`/_astro/*`). Static files still come from the assets binding with `_headers` and `_redirects` applied. The Worker adds:
+- Markdown for agents: `Accept: text/markdown` gets the page's `index.md`, which `scripts/markdown.mjs` writes
+  next to every built page, with `x-markdown-tokens`. HTML stays the default.
+- `Link` headers on HTML pages (api-catalog, service-desc, service-doc, describedby, ai-catalog, the page's Markdown).
+- A read-only MCP server at `/mcp` (`worker/mcp.ts`): list_states, find_county, get_help_line, search_guides,
+  get_page. The same tools are registered in the browser through WebMCP (`/webmcp.js`, loaded by `Base.astro`).
+- Discovery documents (`worker/discovery.ts`): `/.well-known/api-catalog`, `mcp/server-card.json`, `ai-catalog.json`,
+  `agent-skills/index.json` and its SKILL.md, OAuth metadata, `jwks.json`, and `/auth.md`.
+- An optional, stateless OAuth server (`worker/oauth.ts`): anonymous agent registration and auth code + PKCE.
+  Everything is public, so tokens grant nothing extra. Tokens are signed with the `OAUTH_SIGNING_KEY` secret:
+  `node scripts/oauth-key.mjs | npx wrangler secret put OAUTH_SIGNING_KEY` (run it only after a full deploy:
+  `secret put` redeploys the latest uploaded version). For `npm run preview`, put it in `site/.dev.vars`.
+
+The JSON API (`/api/v1/*.json` and `openapi.json`) is built with the root section from
+`national/pages/api/v1/` and `src/lib/agent-api.ts`; the MCP tools read those files. `/developers/` documents it all.
+robots.txt carries Content Signals. DNS-AID records and DNSSEC live in Cloudflare DNS (see PROGRESS.md).
+
 ## Layout
 - `pipeline/`: Python data pipeline. Every script takes `--state xx`. State list: `pipeline/states.py`.
   1. `fetch_census.py`: ACS 2020–2024 + TIGER boundaries via Census Reporter

@@ -141,7 +141,12 @@ const path = Astro.url.pathname;
   <meta name="format-detection" content="telephone=no" />
   <link rel="alternate" type="text/plain" href="/llms.txt" title={`${SITE.brand} summary for AI assistants`} />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
+  <link rel="api-catalog" href="/.well-known/api-catalog" />
+  <link rel="service-doc" href="/developers/" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <!-- WebMCP: the site's MCP tools for in-browser agents (worker/discovery.ts). -->
+  <script src="/webmcp.js" defer></script>
   <script type="application/ld+json" set:html={JSON.stringify({ "@context": "https://schema.org", "@graph": graph })} />
   <style>
     header.site { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 0; z-index: 20; }
@@ -251,6 +256,7 @@ const path = Astro.url.pathname;
             <li><a href="/guides/">All guides</a></li>
             <li><a href="/glossary/">Glossary</a></li>
             <li><a href="/water-damage-statistics/">Risk by state</a></li>
+            <li><a href="/developers/">For AI agents</a></li>
           </ul>
           <h2 style="margin-top:24px">About</h2>
           <ul>

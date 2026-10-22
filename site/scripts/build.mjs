@@ -1,8 +1,8 @@
 // Usage: node scripts/build.mjs <state|all> [--deploy]
 // Builds the root section (home, about, legal) and one state section, or every state that has
 // site data, then merges them into dist/site: root pages at /, each state under /<state-slug>/.
-// Runs the similarity check per state, then the link and SEO checks on the merged site, and writes
-// llms-full.txt. --deploy pushes the Worker (only after a full, passing "all" build).
+// Runs the similarity check per state, writes index.md beside every page and llms-full.txt, then runs
+// the link and SEO checks on the merged site. --deploy pushes the Worker (only after a full, passing "all" build).
 // States build in parallel, BUILD_JOBS at a time (default: half the CPU cores, at most 6).
 import { spawn, spawnSync } from "node:child_process";
 import { cpSync, existsSync, readdirSync, rmSync, writeFileSync } from "node:fs";
@@ -61,9 +61,10 @@ await Promise.all(Array.from({ length: Math.min(jobs, states.length) }, async ()
 }));
 
 console.log(`\nBuilt ${states.length - failed.length} of ${states.length} states in ${secs(started)}.${failed.length ? ` Failed: ${failed.join(", ")}` : ""}`);
+run("node", ["scripts/markdown.mjs", "dist/site"]);
+run("node", ["scripts/llms-full.mjs", "dist/site"]);
 const linksOk = run("node", ["scripts/check-links.mjs", "dist/site"]);
 const seoOk = run("node", ["scripts/check-seo.mjs", "dist/site"]);
-run("node", ["scripts/llms-full.mjs", "dist/site"]);
 if (failed.length || !linksOk || !seoOk) process.exit(1);
 // Marks dist/site as a complete, checked build. scripts/deploy.mjs refuses to upload without it, so a
 // one-state build can't replace the live site and take the other states down. Kept outside dist/site

@@ -46,6 +46,12 @@ ${STATE_SUMMARIES.map((s) => `- [${s.name}](${u(`/${s.slug}/`)}): ${s.countyPage
 - [Data sources and methodology](${u("/data-sources/")})
 - Contact: ${SITE.contactEmail}
 
+## For AI agents
+- [MCP server](${u("/mcp")}): remote Streamable HTTP server, no auth. Tools: list_states, find_county, get_help_line, search_guides, get_page
+- [JSON API](${u("/api/v1/openapi.json")}): states, every county page with housing and weather figures, and guides
+- Any page as Markdown: send \`Accept: text/markdown\`
+- [Developer guide](${u("/developers/")})
+
 ## Optional
 - [Full text of the national guides](${u("/llms-full.txt")})
 - [Sitemap](${u("/sitemap.xml")})
