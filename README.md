@@ -70,10 +70,21 @@ Preview the built site locally (same routing as production):
 cd site && npm run preview
 ```
 
-Deploy (first time: `npx wrangler login`):
+Deploy (first time: `npx wrangler login`). This builds everything, runs the checks, then uploads:
 ```bash
 cd site && npm run deploy
 ```
+
+Upload the last full build again without rebuilding (it refuses unless `dist/` holds a complete, passing
+`build:all`, so a one-state build can never replace the live site):
+```bash
+cd site && npm run deploy:only
+```
+
+States build in parallel, half the CPU cores at a time (at most 6); set `BUILD_JOBS` to change that.
+Wrangler only uploads files whose content changed, so an edit to the shared layout (header, footer,
+JSON-LD in `Base.astro`) re-uploads all ~2,800 pages and takes several minutes, while a new guide uploads
+a handful.
 
 Go live once a call network has given you numbers: in `site/src/config.ts`, add the state's numbers
 to `LINES`, set `MODE` to `"live"`, and have `privacy` and `terms` reviewed.

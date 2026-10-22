@@ -21,6 +21,9 @@ export default defineConfig({
   // Shared static files (favicon, share images, _headers) ship once, with the root section.
   publicDir: national ? "./public" : "./public-none",
   outDir: `./dist/sections/${state}`,
+  // Own caches per section, so scripts/build.mjs can build states in parallel without them racing.
+  cacheDir: `./node_modules/.astro/${state}`,
+  vite: { cacheDir: `./node_modules/.vite/${state}` },
   trailingSlash: "always",
   build: { format: "directory", inlineStylesheets: "always" },
   compressHTML: true,
