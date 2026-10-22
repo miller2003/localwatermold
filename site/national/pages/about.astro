@@ -1,0 +1,81 @@
+---
+import Base from "../../src/layouts/Base.astro";
+import { SITE } from "../../src/config";
+import { TOTALS } from "../../src/lib/national";
+
+// The brand's entity page: one place that states the name, its spellings, what the site is and
+// isn't, so search engines and answer engines resolve "localwatermold" to this site.
+const origin = Astro.site!.origin;
+const int = (n: number) => Math.round(n).toLocaleString("en-US");
+const facts: [string, string][] = [
+  ["Name", SITE.brand],
+  ["Also written", SITE.alternateNames.join(", ")],
+  ["Website", `https://${SITE.domain}/`],
+  ["What it is", "A homeowner information website and referral line for water damage, mold, fire and smoke damage, and flooded basements"],
+  ["What it isn't", "A restoration contractor or franchise. It doesn't inspect, quote or do restoration work"],
+  ["Coverage", `${TOTALS.states} U.S. states, ${int(TOTALS.countyPages)} county guides`],
+  ["Launched", SITE.founded],
+  ["Contact", SITE.contactEmail],
+];
+const schema = [{
+  "@type": "ItemList",
+  "@id": `${origin}/about/#facts`,
+  name: `${SITE.brand} at a glance`,
+  itemListElement: facts.map(([k, v], i) => ({ "@type": "ListItem", position: i + 1, name: `${k}: ${v}` })),
+}];
+---
+<Base
+  title={`About ${SITE.brand} (${SITE.brandJoined}.com)`}
+  description={`${SITE.brand}, also written ${SITE.brandJoined}, is an independent U.S. guide and referral line for water damage, mold and fire. Who we are and what we do.`}
+  crumbs={[{ name: "About", href: "/about/" }]}
+  schema={schema}
+  pageType="AboutPage"
+>
+  <section class="wrap page">
+    <p class="eyebrow">About</p>
+    <h1>About {SITE.brand}</h1>
+    <div class="prose read">
+      <p class="lede">{SITE.brand}, also written <strong>{SITE.brandJoined}</strong> after our web address, {SITE.domain}, is an independent website for U.S. homeowners dealing with water damage, mold, fire and smoke damage, or a flooded basement. We publish free county-by-county guidance and run a referral line that connects callers with participating local restoration companies.</p>
+
+      <h2>At a glance</h2>
+      <table class="facts">
+        <tbody>
+          {facts.map(([k, v]) => <tr><th scope="row">{k}</th><td>{k === "Website" ? <a href={v}>{v}</a> : k === "Contact" ? <a href={`mailto:${v}`}>{v}</a> : v}</td></tr>)}
+        </tbody>
+      </table>
+
+      <h2>The name</h2>
+      <p>The name says where and what: <em>local</em> help for <em>water</em> damage and <em>mold</em>. We write it "{SITE.brand}" with an ampersand, so it reads as water damage and mold rather than the plant disease called water mold. In a web address or a search box it runs together as {SITE.brandJoined} or localwatermold.</p>
+      <p><strong>{SITE.brand} is not a restoration contractor or franchise,</strong> and it isn't affiliated with any restoration company whose name contains the words water, mold or fire. If a company tells you it is {SITE.brand}, or that it works for us, you can check by writing to <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.</p>
+
+      <h2>What we do</h2>
+      <ul>
+        <li><strong>Guides that start with the answer.</strong> What to do in the <a href="/guides/water-damage-mold-emergency/">first hour of a water or mold emergency</a>, how insurance treats water damage, what restoration costs, and how long drying takes, checked against the EPA, CDC, FEMA and the IICRC S500 and S520 standards.</li>
+        <li><strong>County pages built from public data.</strong> Each of our {int(TOTALS.countyPages)} county guides uses that county's U.S. Census housing data and ten years of NOAA daily weather. See <a href="/data-sources/">our data and methods</a>.</li>
+        <li><strong>A referral line.</strong> Calls are routed to a participating restoration company that serves the caller's county. There's no charge for the referral. See <a href="/how-it-works/">how it works</a>.</li>
+      </ul>
+
+      <h2>What we don't do</h2>
+      <ul>
+        <li>We don't inspect, quote or perform restoration work, and we don't guarantee any company's prices, response times or workmanship.</li>
+        <li>We don't rank or review individual companies, and we don't publish testimonials.</li>
+        <li>We're not affiliated with any insurer or government agency.</li>
+      </ul>
+
+      <h2>How we keep it accurate</h2>
+      <p>Every guide lists its sources and the date it was last reviewed. Our <a href="/editorial-policy/">editorial policy</a> explains how we choose sources, how payment from restoration companies is kept separate from what we write, and how to report a mistake.</p>
+
+      <h2>Contact</h2>
+      <p>Corrections, questions or partnership enquiries: <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. If water is coming in now, start with <a href="/guides/water-damage-mold-emergency/">what to do before help arrives</a>, then <a href="/#states">find your state</a>.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 72px; }
+  h1 { max-width: 22ch; }
+  .facts { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .facts th, .facts td { text-align: left; vertical-align: top; padding: 10px 12px; border-top: 1px solid var(--line); }
+  .facts th { width: 32%; font-weight: 600; color: var(--ink-2); }
+  .facts a { overflow-wrap: anywhere; }
+</style>

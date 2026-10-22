@@ -4,7 +4,7 @@ import { NATIONAL_GUIDES, REFERENCE_PAGES, guidePath } from "../../src/lib/guide
 
 const PATHS = [
   "/", ...REFERENCE_PAGES.map((r) => r.path), ...NATIONAL_GUIDES.map((g) => guidePath(g.slug)),
-  "/how-it-works/", "/editorial-policy/", "/data-sources/",
+  "/about/", "/how-it-works/", "/editorial-policy/", "/data-sources/",
 ];
 
 export const GET: APIRoute = ({ site }) => {

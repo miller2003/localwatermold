@@ -6,7 +6,7 @@ import { NATIONAL_GUIDES, guidePath } from "./guides";
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 export const ROOT_PAGES = new Set([
-  "/how-it-works/", "/editorial-policy/", "/data-sources/", "/privacy/", "/terms/",
+  "/about/", "/how-it-works/", "/editorial-policy/", "/data-sources/", "/privacy/", "/terms/",
   "/glossary/", "/water-damage-statistics/",
   ...NATIONAL_GUIDES.map((g) => guidePath(g.slug)),
 ]);

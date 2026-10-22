@@ -1,0 +1,110 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="Water damage or mold emergency: what to do before help arrives"
+  seoTitle="Water Damage or Mold Emergency: What to Do Before Help Arrives"
+  description="Burst pipe, flood or mold just found? The steps to take in the hour before a restoration company arrives, what to tell them when you call, and why to skip bleach."
+  eyebrow="Guide · Emergency"
+  dek="The hour between finding the water or the mold and the restoration crew pulling up decides how much has to be torn out, and how clean your insurance claim is. Here's what to do with it."
+  path="/guides/water-damage-mold-emergency/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Water or mold emergency", href: "/guides/water-damage-mold-emergency/" }]}
+  about={["Water damage", "Mold", "Emergency response", "Water damage restoration", "Mold remediation", "Homeowners insurance claims"]}
+  summary={[
+    "<strong>1. Make it safe.</strong> Stay out of water that could reach outlets, cords or the electrical panel. Turn off power to the wet area only if you can reach the breaker panel without standing in water; otherwise call your electric utility. Leave if you smell gas or a ceiling is sagging.",
+    "<strong>2. Stop the water.</strong> Close the fixture's own valve, or the main shutoff where the water line enters the house, turning it clockwise.",
+    "<strong>3. Photograph everything before cleanup.</strong> Take a walk-through video and photos of the source, waterlines and damaged belongings, and keep the failed part for your insurer.",
+    "<strong>4. Don't reach for bleach.</strong> The EPA doesn't recommend bleach as a routine part of mold cleanup: dead mold can still cause allergic reactions and has to be removed, and bleach can't fix mold inside drywall or wood. Don't disturb large patches or run the HVAC if it may be contaminated.",
+    "<strong>5. Call for help with the facts ready:</strong> what caused the water, whether it's clean or sewage, how many rooms or square feet are wet, how long it's been wet, and your insurer and claim number. The EPA advises drying wet materials within 24 to 48 hours to prevent mold.",
+  ]}
+  faq={[
+    { q: "What should I do first when my house floods or a pipe bursts?", a: "Make it safe first: stay out of water near outlets or the electrical panel and leave if you smell gas. Then shut off the water at the fixture valve or the main shutoff, photograph the damage before cleanup, and call a restoration company and your insurer. Drying should start within 24 to 48 hours." },
+    { q: "Should I use bleach on mold after water damage?", a: "Usually not. The EPA says biocides such as chlorine bleach aren't recommended as a routine practice in mold cleanup, because dead mold can still cause allergic reactions and must be removed anyway. Scrub hard surfaces with detergent and water, and remove moldy drywall, carpet and insulation. If you do use bleach, never mix it with ammonia or other cleaners." },
+    { q: "Should I turn off the electricity if there's water in the house?", a: "Only if you can reach the breaker panel while standing on dry ground. If water is near outlets, cords or the panel, stay out of the room and call your electric utility to disconnect power at the meter." },
+    { q: "What will a restoration company ask when I call?", a: "Expect questions about the source (pipe, appliance, roof, storm, sewer), whether the water is clean or contaminated, how many rooms or roughly how many square feet are wet, how long it has been wet, whether ceilings are sagging, and whether you've opened an insurance claim. Having those answers ready speeds up dispatch." },
+    { q: "Can I clean up mold myself?", a: "The EPA's rule of thumb is that a homeowner can usually handle an area under about 10 square feet if the water was clean and no one in the house has asthma or a weakened immune system. Larger areas, mold in walls or ductwork, and mold after sewage or floodwater call for a professional remediation company." },
+    { q: "Do I have to wait for the insurance adjuster before starting cleanup?", a: "No. Most policies expect you to take reasonable steps to prevent further damage. Document the damage first, tell your insurer you're starting mitigation, and keep receipts. Don't tear out materials before photographing them." },
+  ]}
+  related={[
+    { href: "/guides/water-damage-categories/", label: "Clean, gray or black water?" },
+    { href: "/guides/black-mold/", label: "Black mold: what to do" },
+    { href: "/guides/how-long-does-water-damage-take-to-dry/", label: "How long drying takes" },
+    { href: "/guides/does-homeowners-insurance-cover-water-damage/", label: "Is it covered by insurance?" },
+    { href: "/guides/water-damage-restoration-cost/", label: "What restoration costs" },
+  ]}
+  sources={[
+    { label: "U.S. EPA: A Brief Guide to Mold, Moisture and Your Home", href: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
+    { label: "U.S. EPA: Should I use bleach to clean up mold?", href: "https://www.epa.gov/mold/should-i-use-bleach-clean-mold" },
+    { label: "U.S. EPA: Mold cleanup in your home", href: "https://www.epa.gov/mold/mold-cleanup-your-home" },
+    { label: "CDC: Mold", href: "https://www.cdc.gov/mold-health/about/index.html" },
+    { label: "IICRC: ANSI/IICRC S500 Standard for Professional Water Damage Restoration", href: "https://iicrc.org/s500/" },
+    { label: "IICRC: ANSI/IICRC S520 Standard for Professional Mold Remediation", href: "https://iicrc.org/s520/" },
+  ]}
+>
+  <h2>Step 1: make it safe</h2>
+  <p>Electricity, gas and falling ceilings are the real emergencies. The water damage can wait five minutes.</p>
+  <ul>
+    <li><strong>Water near outlets, cords, a space heater or the electrical panel:</strong> don't step in it. Shut off the breaker for that area only if you can reach the panel standing on dry ground. Otherwise call your electric utility to cut power at the meter.</li>
+    <li><strong>A gas smell:</strong> leave without switching anything on or off, and call your gas utility or 911 from outside.</li>
+    <li><strong>A sagging or bulging ceiling:</strong> keep everyone out of the room. Wet drywall can drop without warning.</li>
+    <li><strong>Sewage or floodwater:</strong> keep children and pets away, and wear rubber boots and gloves if you have to go in.</li>
+  </ul>
+
+  <h2>Step 2: stop the water</h2>
+  <ol class="steps">
+    <li><strong>For an appliance or toilet,</strong> close the small supply valve behind it.</li>
+    <li><strong>For a burst pipe or a leak you can't isolate,</strong> close the main shutoff. It's usually where the water line comes through the foundation wall or slab, often near the meter or water heater. Turn it clockwise. On a well, switch off the well pump breaker.</li>
+    <li><strong>Open a low faucet</strong> to drain the pipes, and turn off the water heater so it doesn't run empty.</li>
+    <li><strong>For a roof leak or storm water,</strong> catch the drips, and don't go on the roof in the rain. See <a href="/guides/roof-leak/">roof leaking into the house</a>.</li>
+  </ol>
+
+  <h2>Step 3: document before you move anything</h2>
+  <p>Insurers decide claims on evidence. A minute of video now saves arguments later.</p>
+  <ul>
+    <li>Walk every affected room on video, then photograph the source, waterlines on walls, and the bottoms of furniture and cabinets.</li>
+    <li>Photograph visible mold with something for scale, such as a tape measure.</li>
+    <li>Keep the failed part: the split supply line, the cracked fitting, the burst hose.</li>
+    <li>Write down when you found it, and every call you make.</li>
+  </ul>
+
+  <h2>Found mold? What not to do</h2>
+  <p>Mold found behind a baseboard or under a sink is rarely an emergency on its own, but the wrong first move can spread it.</p>
+  <ul>
+    <li><strong>Don't spray bleach on it.</strong> The EPA says killing mold with a biocide like chlorine bleach isn't recommended as a routine practice, because dead mold can still cause allergic reactions and has to be removed anyway. On drywall, wood and carpet, bleach can't reach growth inside the material. Never mix bleach with ammonia or other cleaners.</li>
+    <li><strong>Don't scrape, sand or dry-brush large patches.</strong> That puts spores into the air. Leave anything bigger than about 10 square feet (3 feet by 3 feet) for a professional.</li>
+    <li><strong>Don't run the heating or cooling</strong> if you know or suspect mold is in the ducts or air handler. It can spread spores through the house.</li>
+    <li><strong>Don't paint or caulk over it.</strong> It keeps growing underneath.</li>
+    <li><strong>Do find the water.</strong> Mold always has a moisture source: a slow leak, condensation, a damp crawl space or high humidity. Cleaning without fixing it means it comes back. <a href="/guides/signs-of-hidden-water-damage/">How to find hidden water damage</a>.</li>
+  </ul>
+
+  <h2>While you wait for the restoration company</h2>
+  <ul>
+    <li>Move electronics, documents, photos and rugs to a dry floor.</li>
+    <li>Put foil or wood blocks under furniture legs so stain doesn't wick into carpet.</li>
+    <li>Mop and blot clean water. Don't use a household vacuum on water, and don't touch sewage.</li>
+    <li>Open windows if the weather is dry, and run fans only where nothing electrical sits in water.</li>
+    <li>Call your insurer to open a claim, and ask whether they need to approve the mitigation company before work starts.</li>
+  </ul>
+  <p>Professional water damage restoration under the IICRC S500 standard uses moisture meters, thermal cameras, air movers and dehumidifiers to dry the inside of walls and floors, not just what you can see. Mold remediation under IICRC S520 seals the work area with plastic sheeting and negative air pressure so spores don't spread.</p>
+
+  <h2>What to tell the company when you call</h2>
+  <p>A restoration company will triage your call with the same few questions. Having the answers ready gets the right crew and equipment sent the first time.</p>
+  <ol class="steps">
+    <li><strong>What caused it:</strong> supply line, appliance, water heater, roof, storm, groundwater, sewer backup, or a fire put out with water.</li>
+    <li><strong>What kind of water:</strong> clean (from a supply line), gray (washer, dishwasher, toilet overflow without feces) or black (sewage, floodwater). See <a href="/guides/water-damage-categories/">the three water categories</a>.</li>
+    <li><strong>How big:</strong> which rooms and floors, roughly how many square feet, and whether it reached ceilings below or the basement.</li>
+    <li><strong>How long:</strong> when it started, or your best guess. Water that has sat more than 48 hours usually means mold and more tear-out.</li>
+    <li><strong>Insurance:</strong> your insurer, whether you've opened a claim, and the claim number if you have one.</li>
+    <li><strong>Who's in the house:</strong> anyone with asthma, a weakened immune system, a baby or an elderly person, which changes how the work is set up.</li>
+  </ol>
+  <p>Ask for an arrival estimate, what they'll do on the first visit, and whether they bill your insurer directly. Read anything you sign, especially an assignment of benefits.</p>
+
+  <h2>After a fire</h2>
+  <p>Fire damage is almost always water damage too, from the hoses or sprinklers that put it out. Don't go back in until the fire department says the building is safe, and don't turn utilities back on yourself. Don't wipe soot off walls or upholstery, which smears it deeper, and photograph everything before anything is thrown out. The same drying clock applies: wet materials need to start drying within 24 to 48 hours.</p>
+
+  <h2>Steps for your state</h2>
+  <p>Each state section has a first-hour guide with that state's insurance regulator and claim rules, plus county pages with local housing and weather data:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/guides/water-damage-first-hour/`}>{s.name}</a></>)}.
+  </p>
+</Article>

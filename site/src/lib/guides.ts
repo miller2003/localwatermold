@@ -6,6 +6,7 @@ export type GuideGroup = "emergency" | "damage" | "money";
 export interface NationalGuide { slug: string; title: string; note: string; group: GuideGroup }
 
 export const NATIONAL_GUIDES: NationalGuide[] = [
+  { slug: "water-damage-mold-emergency", group: "emergency", title: "Water damage or mold emergency: what to do now", note: "The steps to take while you wait for help, and the ones to skip, like bleach." },
   { slug: "roof-leak", group: "emergency", title: "Roof leaking into the house", note: "Catch the water, protect the ceiling, tarp safely and file the claim." },
   { slug: "appliance-leaks", group: "emergency", title: "Washer, dishwasher, fridge and toilet leaks", note: "Which valve to close, and the hoses that fail most." },
   { slug: "water-heater-leaking", group: "emergency", title: "Water heater leaking", note: "Shut it down, find the leak, repair or replace." },

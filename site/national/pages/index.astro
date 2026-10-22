@@ -8,6 +8,7 @@ import { NATIONAL_GUIDES, guidePath } from "../../src/lib/guides";
 
 const int = (n: number) => Math.round(n).toLocaleString("en-US");
 const faq = [
+  { q: `What is ${SITE.brandJoined}?`, a: `${SITE.brandJoined} (${SITE.domain}) is ${SITE.brand}, an independent U.S. website for homeowners dealing with water damage, mold, fire and smoke damage or a flooded basement. It publishes free county guides for ${TOTALS.states} states and connects callers with local restoration companies. It isn't a restoration contractor or franchise.` },
   { q: `What does ${SITE.brand} do?`, a: `${SITE.brand} publishes free county-by-county guidance on water damage, mold, fire and smoke damage and flooded basements for homeowners in ${TOTALS.states} states, and connects callers with participating local restoration companies. We don't do restoration work ourselves.` },
   { q: "Is there a charge to be connected with a restoration company?", a: "No. There's no charge to you for the referral. Participating companies pay us for referrals, and the company you hire bills you or your insurer for its work, the same as if you'd found it yourself." },
   { q: "What should I do first if water is coming into my house?", a: "Make it safe first: stay out of water near outlets or the electrical panel and leave if you smell gas. Then stop the water at the fixture's valve or the main shutoff, photograph the damage before cleanup, and start drying within 24 to 48 hours to prevent mold." },
@@ -24,7 +25,7 @@ const schema = [
 ];
 ---
 <Base
-  title={`${SITE.brand}: Water Damage, Mold & Fire Help Near You`}
+  title={`${SITE.brand} (${SITE.brandJoined}): Water, Mold & Fire Help`}
   description={`Water damage, mold, fire or a flooded basement? Free county guides for ${TOTALS.states} states, and one call to a local restoration company.`}
   schema={schema}
 >
@@ -44,6 +45,7 @@ const schema = [
             <button class="btn btn-call" type="submit">Go</button>
           </div>
         </form>
+        <p class="urgent"><a href="/guides/water-damage-mold-emergency/"><strong>Water coming in, or just found mold?</strong> What to do before help arrives <span aria-hidden="true">→</span></a></p>
         <p class="small faint" style="margin-top:12px">If anyone is in danger, you smell gas, or water is near live wiring, leave and call 911 first.</p>
       </div>
       <div class="hero-card card">
@@ -134,6 +136,9 @@ const schema = [
   .finder select { flex: 1; min-width: 0; min-height: 48px; border-radius: var(--r); border: 1px solid var(--line-2); background: var(--paper); color: var(--ink); font: inherit; padding: 0 12px; }
   .finder :global(.btn) { min-height: 48px; }
   .hero-card { padding: 24px; }
+  .urgent { margin: 16px 0 0; max-width: 520px; }
+  .urgent a { display: block; padding: 12px 16px; border-radius: var(--r); background: var(--water-soft); color: var(--water-ink); text-decoration: none; }
+  .urgent a:hover { text-decoration: underline; }
   .svc { display: grid; gap: 8px; align-content: start; }
   .svc h3 { margin: 6px 0 0; }
   .svc p { margin: 0; }

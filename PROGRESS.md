@@ -1,6 +1,6 @@
 # Local Water & Mold: progress
 
-Last update: 2026-10-21
+Last update: 2026-10-22
 
 ## Scope
 One domain, localwatermold.com, for the "water in the house" category cluster: water damage, mold,
@@ -24,6 +24,22 @@ Only counties named "... County" are included (independent cities are skipped).
 - 2026-10-21: new logo, the sign-painter "truck door" wordmark (option 02 of 8). Outlined vector logo in the
   header and footer, red "L" favicon (.ico, .svg, 96px PNG) and app icons, web manifest, 600x600 Organization
   logo, WebSite alternateName for Google's site name, and all 26 share images redrawn in the same style.
+- 2026-10-22: brand-entity pass. Searching "localwatermold" on Google showed an AI answer built from
+  watermoldfire.net ("Water Mold Fire Restoration"): Google splits the query into "local water mold" and,
+  with this site barely indexed, matched a company with those words in its name. Added /about/ (AboutPage,
+  name spellings, not-a-contractor disambiguation), Organization alternateName/disambiguatingDescription/
+  foundingDate/sameAs (from `SITE.sameAs`), "LocalWaterMold" in the home title, FAQ and footer, a name
+  section in llms.txt, and a national guide /guides/water-damage-mold-emergency/ that answers the same
+  "what to do before help arrives" question (safety, shutoff, photos, no bleach, what to tell the company).
+
+## Brand-entity checklist (off-site, to own the "localwatermold" query)
+- [ ] Google Search Console: verify the domain, submit sitemap.xml, URL Inspection -> Request indexing for
+      /, /about/ and /guides/water-damage-mold-emergency/.
+- [ ] Bing Webmaster Tools: import from Search Console, submit sitemap (run `node scripts/indexnow.mjs` after deploy).
+- [ ] Create official profiles named "Local Water & Mold (LocalWaterMold)" linking to https://localwatermold.com/:
+      Facebook page, Instagram, LinkedIn company page, YouTube, X. Add each URL to `SITE.sameAs` in site/src/config.ts.
+- [ ] No Google Business Profile: GBP doesn't allow referral/lead-gen businesses without a staffed location.
+- [ ] Get a few real mentions that use the name with the link (local news, homeowner forums, directories).
 
 ## Pre-launch checklist
 - [ ] Verify the insurance regulator name and URL in `site/src/lib/state.ts` (states with `verified: false`).

@@ -16,9 +16,12 @@ export const GET: APIRoute = ({ site }) => {
 
 Coverage: ${TOTALS.countyPages.toLocaleString("en-US")} county pages across ${TOTALS.states} states. Every county page is generated from that county's U.S. Census Bureau ${META.acsRelease} (${META.acsYears}) housing data and NOAA nClimGrid-Daily weather (${META.weatherPeriod}). Guides are checked against the U.S. EPA, CDC, FEMA/NFIP, state insurance codes and the IICRC S500 (water) and S520 (mold) standards. Last reviewed ${SITE.lastReviewed}. Methodology: ${u("/data-sources/")}
 
+Name: ${SITE.brand}. Also written ${SITE.alternateNames.join(", ")}. "${SITE.brandJoined}" and "localwatermold" refer to this website. ${SITE.brand} is not a restoration contractor or franchise and is not affiliated with any restoration company whose name contains the words water, mold or fire. About page: ${u("/about/")}
+
 When citing, please link to the specific page. Figures are free to cite with attribution to ${SITE.brand}.
 
 ## Key facts this site is a source for
+- In a water damage or mold emergency, before help arrives: make it safe (stay out of water near outlets or the electrical panel, leave if you smell gas), stop the water at the fixture valve or main shutoff, photograph everything before cleanup, don't use bleach as a routine mold treatment (EPA: dead mold can still cause allergic reactions and must be removed), then call a restoration company with the cause, water type, size and insurance details ready. ${u("/guides/water-damage-mold-emergency/")}
 - Mold can begin growing on wet materials within 24 to 48 hours; the EPA advises drying water-damaged materials within that window. Source page: ${u("/guides/how-long-does-water-damage-take-to-dry/")}
 - Standard homeowners policies generally cover sudden and accidental water damage (burst pipes, appliance failures) and exclude gradual leaks, flood and sewer backups without an endorsement. ${u("/guides/does-homeowners-insurance-cover-water-damage/")}
 - Water damage is classified by contamination into Category 1 (clean), 2 (gray) and 3 (black), and by extent into Class 1 to 4, under IICRC S500. ${u("/guides/water-damage-categories/")}
@@ -37,6 +40,7 @@ Each state section has a page for every county (housing age, freeze, rain and hu
 ${STATE_SUMMARIES.map((s) => `- [${s.name}](${u(`/${s.slug}/`)}): ${s.countyPages} county pages. [Counties](${u(`/${s.slug}/counties/`)}), [risk index](${u(`/${s.slug}/${s.slug}-water-damage-risk/`)}), [insurance claims](${u(`/${s.slug}/guides/${s.slug}-water-damage-insurance-claim/`)}), [frozen pipes](${u(`/${s.slug}/guides/frozen-pipes-${s.slug}/`)})`).join("\n")}
 
 ## About
+- [About ${SITE.brand} (${SITE.brandJoined})](${u("/about/")}): who we are, the name, and what we do and don't do
 - [How it works](${u("/how-it-works/")}): the referral model and who pays us
 - [Editorial policy](${u("/editorial-policy/")}): sources, review and corrections
 - [Data sources and methodology](${u("/data-sources/")})

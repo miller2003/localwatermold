@@ -35,9 +35,15 @@ const graph = [
     "@type": "Organization",
     "@id": `${origin}/#org`,
     name: SITE.brand,
+    alternateName: SITE.alternateNames,
     url: `${origin}/`,
     slogan: SITE.tagline,
     description: "An independent referral service that connects homeowners with local water damage, mold and fire restoration companies, and publishes county-level guidance built from Census and NOAA data. It does not perform restoration work.",
+    // Keeps answer engines from merging us with restoration contractors that have similar names.
+    disambiguatingDescription: `${SITE.brand} (${SITE.brandJoined}, ${SITE.domain}) is a U.S. homeowner information and referral website, not a restoration contractor or franchise. It is not affiliated with any restoration company whose name contains the words water, mold or fire.`,
+    foundingDate: SITE.founded,
+    ...(SITE.sameAs.length ? { sameAs: SITE.sameAs } : {}),
+    mainEntityOfPage: `${origin}/about/`,
     logo: { "@type": "ImageObject", "@id": `${origin}/#logo`, url: `${origin}/logo.png`, contentUrl: `${origin}/logo.png`, width: 600, height: 600, caption: SITE.brand },
     image: { "@id": `${origin}/#logo` },
     email: SITE.contactEmail,
@@ -51,7 +57,7 @@ const graph = [
     "@id": `${origin}/#site`,
     name: SITE.brand,
     // Google picks the site name shown above each result from here.
-    alternateName: ["LocalWaterMold", SITE.domain],
+    alternateName: SITE.alternateNames,
     url: `${origin}/`,
     description: SITE.tagline,
     inLanguage: "en-US",
@@ -203,7 +209,7 @@ const path = Astro.url.pathname;
       <div class="foot-grid">
         <div>
           <a class="logo foot-logo" href="/" aria-label={`${SITE.brand} home`}><Logo variant="stacked" height={72} /></a>
-          <p style="margin-top:14px;max-width:44ch"><strong>{SITE.tagline}.</strong> {SITE.brand} is an independent referral service. When you call, you're connected with a participating restoration company that serves your area. We don't do restoration work, and we're not affiliated with any insurer or government agency.</p>
+          <p style="margin-top:14px;max-width:44ch"><strong>{SITE.tagline}.</strong> {SITE.brand} ({SITE.brandJoined}.com) is an independent referral service. When you call, you're connected with a participating restoration company that serves your area. We don't do restoration work, and we're not affiliated with any insurer or government agency.</p>
         </div>
         {NATIONAL ? (
           <div style="grid-column: span 2">
@@ -248,6 +254,7 @@ const path = Astro.url.pathname;
           </ul>
           <h2 style="margin-top:24px">About</h2>
           <ul>
+            <li><a href="/about/">About {SITE.brandJoined}</a></li>
             <li><a href="/how-it-works/">How it works</a></li>
             <li><a href="/editorial-policy/">Editorial policy</a></li>
             <li><a href="/data-sources/">Data sources</a></li>
@@ -258,7 +265,7 @@ const path = Astro.url.pathname;
       </div>
       <div class="legal">
         <p>If anyone is in danger, there's a gas smell, or water is near live electrical equipment, leave the building and call 911 first.</p>
-        <p style="margin:0">© {new Date().getFullYear()} {SITE.brand}. Information on this site is general guidance, not legal, insurance, or engineering advice.</p>
+        <p style="margin:0">© {new Date().getFullYear()} {SITE.brand} · {SITE.brandJoined}.com. Information on this site is general guidance, not legal, insurance, or engineering advice.</p>
       </div>
     </div>
   </footer>

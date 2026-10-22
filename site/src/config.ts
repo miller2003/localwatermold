@@ -25,6 +25,15 @@ const L = (S && LINES[S.key]) || NO_LINE;
 export const SITE = {
   brand: "Local Water & Mold",
   domain: "localwatermold.com",
+  // How people type the name into a search box. Search engines split "localwatermold" into
+  // "local water mold" and can match it to restoration companies with those words in their name,
+  // so the joined spelling appears in visible text, JSON-LD alternateName and llms.txt.
+  brandJoined: "LocalWaterMold",
+  alternateNames: ["LocalWaterMold", "Local Water Mold", "localwatermold.com"],
+  founded: "2026",
+  // Official profiles (Facebook, Instagram, LinkedIn, YouTube, Bing Places, …) as full URLs once they
+  // exist. They become Organization sameAs, which ties the name to this site in knowledge graphs.
+  sameAs: [] as string[],
   // The name covers water and mold; the tagline adds fire and basements, and says we connect
   // people with local companies rather than doing the work.
   tagline: "Water damage, mold, fire and flooded basement help from local restoration pros",
