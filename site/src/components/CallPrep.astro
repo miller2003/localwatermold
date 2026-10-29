@@ -1,0 +1,55 @@
+---
+// What to have ready and what to ask before agreeing to anything on the call. Every question is
+// one the homeowner genuinely needs answered before a crew shows up or paperwork gets signed.
+import Icon from "./Icon.astro";
+import { p } from "../lib/paths";
+import { S } from "../lib/state";
+
+interface Props { place?: string }
+const { place = "your area" } = Astro.props;
+
+const READY = [
+  "Your address and ZIP code, so the call goes to a company that serves your area.",
+  "Where the water came from, roughly when it started, and whether it's stopped or still running.",
+  "Which rooms and materials are wet: carpet, hardwood, drywall, ceilings, the basement.",
+  "Whether the water is clean (a supply line), gray (a washer or dishwasher) or sewage.",
+  "Your insurance company, and whether you've opened a claim yet.",
+];
+
+const ASK: [string, string][] = [
+  ["How soon can someone get here?", "Ask for a real arrival window and whether they'll call ahead. \"Someone will be out today\" isn't an answer."],
+  ["Are your technicians IICRC certified for water damage?", "Water Damage Restoration Technician (WRT) is the certification to listen for."],
+  [`Are you licensed and insured in ${S?.name ?? "my state"}?`, "Ask them to email proof of insurance before work starts. You're the one responsible for checking."],
+  ["Do you work with my insurer, and do you bill them directly?", "Then ask what you'll owe yourself: the deductible, a deposit, anything upfront."],
+  ["How do you price the job, and will I get it in writing?", "Many companies use Xactimate, the same software insurers use. Ask for a written scope before anything beyond emergency drying."],
+  ["Will you take moisture readings and photos, and send them to me?", "Daily drying logs and photos are what your adjuster will want to see."],
+  ["Do you do the rebuild too, or only the drying?", "Mitigation (water removal and drying) and repairs are often separate contracts. Know which one you're signing."],
+  ["What happens if you find mold?", "Ask whether they'd test, or bring in an independent assessor, before quoting removal."],
+];
+---
+<div class="prep">
+  <div class="prep-col">
+    <h3><Icon name="file" />Have this ready when you call</h3>
+    <ul class="ticks">
+      {READY.map((t) => <li>{t}</li>)}
+    </ul>
+    <p class="small muted tip"><strong>Tip:</strong> Don't let anyone rush you off the phone with "we'll just send someone." Get the answers on the right first. A good company in {place} will take the few minutes to give them, and the ones that won't are the ones you'd regret.</p>
+  </div>
+  <div class="prep-col">
+    <h3><Icon name="shield" />Ask these before you agree to anything</h3>
+    <ol class="asks">
+      {ASK.map(([q, why]) => <li><strong>{q}</strong> <span class="muted">{why}</span></li>)}
+    </ol>
+    <p class="small"><a href={p("/guides/choosing-restoration-company/")}>More on choosing a restoration company</a></p>
+  </div>
+</div>
+
+<style>
+  .prep { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px; margin-top: 24px; }
+  .prep-col { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 24px; }
+  .prep-col h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; font-size: 1.1rem; }
+  .ticks, .asks { margin: 0; padding-left: 1.2em; }
+  .ticks li, .asks li { margin: 0 0 10px; }
+  .asks li strong { display: block; }
+  .tip { margin: 16px 0 0; padding: 12px 14px; background: var(--water-soft); border-radius: var(--r); color: var(--ink-2); }
+</style>

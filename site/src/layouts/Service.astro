@@ -3,6 +3,7 @@ import { S } from "../lib/state";
 import Base from "./Base.astro";
 import CallButton from "../components/CallButton.astro";
 import CountyGrid from "../components/CountyGrid.astro";
+import CallPrep from "../components/CallPrep.astro";
 import StateMap from "../components/StateMap.astro";
 import Icon from "../components/Icon.astro";
 import { SITE } from "../config";
@@ -59,6 +60,15 @@ if (faq.length) {
   </section>
 
   <slot name="before" />
+
+  <section class="section" id="before-you-call">
+    <div class="wrap">
+      <p class="eyebrow">Before you call</p>
+      <h2>What to ask a {props.name.toLowerCase()} company</h2>
+      <p class="muted read">A few minutes on the phone now saves surprises on the bill later. Have these details handy, and get answers to these questions before anyone starts work.</p>
+      <CallPrep place={S.name} />
+    </div>
+  </section>
 
   <section class="section">
     <div class="wrap">

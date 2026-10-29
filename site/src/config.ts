@@ -7,7 +7,9 @@ interface Line {
   // Numbers from the pay-per-call network, format "+13305550100". Leave null until a buyer answers calls.
   phones: { default: string | null; byCounty: Record<string, string> };
   // "24-7" shows the call button around the clock; "business" adds an after-hours note.
-  hours: { default: Hours; byCounty: Record<string, Hours> };
+  // Only use "24-7" when the buyer really answers around the clock: some offers then require an
+  // availability disclaimer. `window` is the plain-English answering window shown for "business".
+  hours: { default: Hours; byCounty: Record<string, Hours>; window?: string };
 }
 
 // Site-wide switch. "preview": noindex everywhere, robots.txt blocks crawlers, phone shows as not live.
@@ -16,9 +18,9 @@ const MODE: Mode = "live";
 const CONTACT_EMAIL = "hello@localwatermold.com";
 
 // Call lines per state. States not listed here show the call line as not live yet.
-const NO_LINE: Line = { phones: { default: null, byCounty: {} }, hours: { default: "24-7", byCounty: {} } };
+const NO_LINE: Line = { phones: { default: null, byCounty: {} }, hours: { default: "business", byCounty: {} } };
 const LINES: Record<string, Line> = {
-  // Example: oh: { phones: { default: "+16145550100", byCounty: {} }, hours: { default: "24-7", byCounty: {} } },
+  // Example: oh: { phones: { default: "+16145550100", byCounty: {} }, hours: { default: "business", byCounty: {}, window: "10am to 2am Eastern, 7 days a week" } },
 };
 const L = (S && LINES[S.key]) || NO_LINE;
 
