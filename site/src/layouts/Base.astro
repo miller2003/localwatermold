@@ -105,6 +105,7 @@ const nav = NATIONAL
       { href: p("/guides/"), label: "Guides" },
     ];
 const path = Astro.url.pathname;
+import Analytics from '../components/Analytics.astro';
 ---
 <!doctype html>
 <html lang="en-US">
@@ -180,6 +181,7 @@ const path = Astro.url.pathname;
     @media (max-width: 420px) { .bar .logo svg { height: 34px; } }
     @media (min-width: 761px) { .callbar { display: none; } }
   </style>
+  <Analytics />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>

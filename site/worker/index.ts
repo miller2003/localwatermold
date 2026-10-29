@@ -3,7 +3,10 @@
 //   - Markdown for agents: "Accept: text/markdown" gets the page's index.md (scripts/markdown.mjs)
 //   - Link headers (RFC 8288) on HTML pages pointing agents at the discovery documents
 //   - the MCP server, OAuth endpoints and discovery documents (mcp.ts, oauth.ts, discovery.ts)
+//   - /api/postback: network conversion / call callbacks to PostHog (postback.js, needs POSTBACK_SECRET)
 import { type Env, cors, json } from "./util";
+// @ts-ignore plain JS module shared with the other sites
+import { handlePostback } from "./postback.js";
 import { handleMcp } from "./mcp";
 import { handleOAuth, checkBearer } from "./oauth";
 import { handleDiscovery, LINK_HEADER } from "./discovery";
@@ -70,6 +73,9 @@ export default {
     const path = url.pathname;
     const agentPath = path === "/mcp" || path === "/auth.md" || /^\/(\.well-known|api|oauth|agent)\//.test(path);
     if (request.method === "OPTIONS" && agentPath) return new Response(null, { status: 204, headers: cors });
+
+    // Network S2S callbacks (pay-per-call / affiliate): own shared secret, so before the API bearer check.
+    if (path === "/api/postback" || path === "/api/postback/") return handlePostback(request, env, "localwatermold.com");
 
     if (path === "/mcp") {
       return (await checkBearer(request, env, `${url.origin}/.well-known/oauth-protected-resource/mcp`)) ?? handleMcp(request, env);
