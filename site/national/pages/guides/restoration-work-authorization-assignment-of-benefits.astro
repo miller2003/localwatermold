@@ -1,0 +1,82 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="The restoration company wants a signature: work authorization, direction to pay or assignment of benefits?"
+  seoTitle="Restoration Work Authorization vs Assignment of Benefits"
+  description="Before a water damage crew starts, you'll be asked to sign. What each document does, the clauses to read, your cancellation rights under the FTC Cooling-Off Rule, and when to slow down."
+  eyebrow="Guide · Insurance"
+  dek="The crew is in your driveway, the floor is wet, and a tablet appears with 'just sign here'. Most of these documents are routine. One kind hands your insurance claim to the contractor. Two minutes of reading tells you which you're holding."
+  path="/guides/restoration-work-authorization-assignment-of-benefits/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Before you sign", href: "/guides/restoration-work-authorization-assignment-of-benefits/" }]}
+  about={["Assignment of benefits", "Work authorization", "Water damage restoration", "Homeowners insurance claims", "FTC Cooling-Off Rule"]}
+  summary={[
+    "<strong>A work authorization</strong> is permission to start work and an agreement to pay. It's normal and usually required.",
+    "<strong>A direction to pay</strong> lets your insurer pay the company directly, while you keep control of your claim.",
+    "<strong>An assignment of benefits (AOB)</strong> transfers some of your rights under the policy to the contractor, which may let them deal with, or sue, your insurer over the claim. It's a much bigger decision. Florida banned AOBs for policies issued from January 1, 2023.",
+    "<strong>Read five things before signing:</strong> how the price is set, what you owe if insurance doesn't pay, cancellation terms, liens, and anything that assigns benefits.",
+    "<strong>The FTC Cooling-Off Rule</strong> generally gives you 3 business days to cancel sales made at your home, but there's an emergency exception you can waive in writing. Know whether you're waiving it.",
+  ]}
+  faq={[
+    { q: "Do I have to sign a work authorization for water mitigation?", a: "Usually yes. A restoration company needs written permission to enter, remove materials and set up equipment, and an agreement about payment. That's normal. What matters is what else the document contains." },
+    { q: "What is an assignment of benefits in water damage?", a: "An assignment of benefits transfers some of your rights under your insurance policy for that loss to the contractor. The contractor can then seek payment from your insurer directly and, depending on state law and the document, pursue disputes over the claim. You may lose some control over how that part of your claim is handled." },
+    { q: "Are assignments of benefits legal?", a: "It depends on the state. Florida prohibited assignment of post-loss benefits under residential and commercial property insurance policies issued on or after January 1, 2023. Other states allow them, sometimes with consumer protections. Your state insurance department can tell you the current rules." },
+    { q: "Can I cancel a restoration contract after signing?", a: "Often, within limits. The FTC Cooling-Off Rule generally gives you three business days to cancel sales made at your home, but it has an exception for bona fide emergencies where you request the work and sign a separate, dated statement waiving the right. Some states add their own rules. Check what you signed and ask the company in writing." },
+    { q: "What's the difference between a direction to pay and an assignment of benefits?", a: "A direction to pay only tells your insurer to pay the contractor directly for the work. You keep your rights and control of the claim. An assignment of benefits transfers rights to the contractor." },
+  ]}
+  related={[
+    { href: "/guides/call-insurance-or-restoration-company-first/", label: "Insurance or restoration company first?" },
+    { href: "/guides/insurance-preferred-vendor-or-own-contractor/", label: "Insurer's vendor or your own contractor?" },
+    { href: "/guides/water-mitigation-bill-too-high/", label: "Mitigation bill too high?" },
+    { href: "/guides/does-homeowners-insurance-cover-water-damage/", label: "Is it covered by insurance?" },
+  ]}
+  sources={[
+    { label: "FTC: Buyer's remorse, the FTC's Cooling-Off Rule", href: "https://consumer.ftc.gov/articles/buyers-remorse-ftcs-cooling-rule-may-help" },
+    { label: "eCFR: 16 CFR Part 429, Cooling-Off Rule (including the emergency exception)", href: "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-D/part-429" },
+    { label: "Florida Senate: SB 2-A (2022), property insurance reforms including assignment of benefits", href: "https://www.flsenate.gov/Session/Bill/2022A/2A" },
+    { label: "NAIC: Find your state insurance department", href: "https://content.naic.org/state-insurance-departments" },
+  ]}
+>
+  <h2>Three documents that look alike</h2>
+  <table>
+    <thead><tr><th>Document</th><th>What it does</th><th>Who controls the claim</th><th>How careful to be</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Work authorization</strong></td><td>Permission to start and an agreement to pay for the work</td><td>You</td><td>Normal; read the payment terms</td></tr>
+      <tr><td><strong>Direction to pay</strong></td><td>Tells your insurer to pay the company directly</td><td>You</td><td>Usually fine; confirm it doesn't also assign rights</td></tr>
+      <tr><td><strong>Assignment of benefits (AOB)</strong></td><td>Transfers some of your policy rights for this loss to the company</td><td>Partly the company</td><td>Slow down; you can usually say no and still get the work</td></tr>
+    </tbody>
+  </table>
+  <p>The title on the page isn't always reliable. A document called "Work Authorization" can contain assignment language in the small print. Look for words like <em>assign</em>, <em>assignment</em>, <em>transfer</em> or <em>all rights and benefits</em>.</p>
+
+  <h2>Five things to read before you sign anything</h2>
+  <ol class="steps">
+    <li><strong>How the price is set.</strong> Is there an estimate, an hourly rate, or "pricing per the current industry estimating software"? Ask for an itemized estimate as soon as the scope is clear.</li>
+    <li><strong>What you owe if insurance doesn't pay.</strong> Most contracts make you responsible for anything the insurer doesn't cover, plus your deductible. That's common; just know it.</li>
+    <li><strong>Cancellation.</strong> How do you stop the work, and what do you pay for work already done and equipment already placed?</li>
+    <li><strong>Liens.</strong> Contractors can often file a lien on your property if they aren't paid. Check what the contract says about disputes before it gets there.</li>
+    <li><strong>Assignment language.</strong> If you see it, you can ask for a version without it, strike it before signing, or ask whether a direction to pay will do instead.</li>
+  </ol>
+
+  <h2>Your right to cancel</h2>
+  <p>The FTC's <strong>Cooling-Off Rule</strong> generally gives you <strong>three business days to cancel</strong> a sale of $25 or more made at your home, and requires the seller to tell you about that right. But it has an <strong>emergency exception</strong>: if you need goods or services to meet a genuine emergency, you request them, and you sign a <strong>separate, dated statement in your own words</strong> describing the emergency and waiving the right to cancel, the three-day right doesn't apply.</p>
+  <p>That's exactly the situation after a burst pipe. If a company asks you to sign an emergency waiver, it may be legitimate, but read it and keep a copy. Some states add their own home-solicitation or contractor rules; your state section on this site lists them.</p>
+
+  <h2>About assignments of benefits</h2>
+  <p>An AOB can be convenient: the company deals with the insurer, and you're not chasing payments. The trade-off is control. Depending on your state and the document, the contractor may negotiate, dispute, or even sue over that part of your claim, and you may have less say.</p>
+  <p>Rules vary a lot by state. <strong>Florida</strong> prohibited assignment of post-loss benefits under residential and commercial property policies issued on or after <strong>January 1, 2023</strong>, after years of disputes and litigation. Other states allow AOBs, sometimes with required disclosures or cancellation rights. If you're unsure, call your state insurance department's consumer line before signing.</p>
+
+  <h2>A calm way to handle the tablet in the driveway</h2>
+  <ol class="steps">
+    <li>Say: "I'm happy to authorize emergency drying. Can I read this first?" Reputable companies expect that.</li>
+    <li>Ask: "Is there anything in here that assigns my insurance benefits to you?"</li>
+    <li>If yes, ask whether a <strong>direction to pay</strong> will do instead.</li>
+    <li>Photograph or download a copy of everything you sign.</li>
+    <li>If you feel pressured, it's fine to let them start <strong>emergency extraction only</strong> under a simple authorization and decide on the rest once you've talked to your insurer.</li>
+  </ol>
+
+  <h2>Find a restoration company near you</h2>
+  <p>Each state section covers that state's contractor and cancellation rules, with county pages for local help:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/`}>{s.name}</a></>)}.
+  </p>
+</Article>

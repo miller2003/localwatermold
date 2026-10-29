@@ -1,0 +1,88 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="Found mold after a leak: is it safe to sleep in that room tonight?"
+  seoTitle="Found Mold After a Leak: Is It Safe to Sleep in the Room?"
+  description="A calm, practical answer based on EPA and CDC guidance: who is most at risk, when sleeping elsewhere makes sense, whether you need a mold test, and what to do in the next 48 hours."
+  eyebrow="Guide · Damage"
+  dek="You moved the bed and found black spots on the wall, or a leak left a musty patch in a child's room. It's late, everyone's worried, and the internet is full of 'toxic mold' scare stories. Here's what the health agencies actually say, and a sensible plan for tonight."
+  path="/guides/mold-after-leak-safe-to-sleep/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Mold: safe to sleep there?", href: "/guides/mold-after-leak-safe-to-sleep/" }]}
+  about={["Mold", "Indoor air quality", "Mold remediation", "Water damage"]}
+  summary={[
+    "<strong>For most healthy adults, one more night near a small patch of mold is unlikely to cause lasting harm.</strong> Mold mainly causes allergy-type and breathing symptoms, which are worse with more exposure.",
+    "<strong>Sleep somewhere else if</strong> anyone in that room has asthma, allergies, a weakened immune system or chronic lung disease, if the patch is large, if it followed sewage or floodwater, or if the room smells strongly musty.",
+    "<strong>Color doesn't decide danger.</strong> The CDC says you don't need to identify the type of mold; all mold should be removed and the moisture fixed.",
+    "<strong>Testing is usually unnecessary.</strong> The EPA says if you can see or smell mold, sampling usually isn't needed, and there are no federal limits to compare results against.",
+    "<strong>Size decides who cleans it:</strong> under about 10 square feet, usually you; larger, in walls or ducts, or after dirty water, a professional.",
+  ]}
+  faq={[
+    { q: "Is it safe to sleep in a room with mold?", a: "For a healthy adult and a small, recent patch, usually yes for a night or two while you arrange cleanup, especially with the patch covered and the room ventilated. Anyone with asthma, allergies, a weakened immune system or chronic lung disease should sleep elsewhere until it's cleaned up, and so should everyone if the area is large or followed sewage or floodwater." },
+    { q: "Is black mold more dangerous than other mold?", a: "Color isn't a reliable guide to risk. The CDC says it's not necessary to determine what type of mold you have; all mold should be treated the same way, by removing it and fixing the moisture problem." },
+    { q: "Should I get a mold test?", a: "Usually not. The EPA says that if visible mold is present, sampling is usually unnecessary, and there are no EPA or federal limits for mold to compare results against. Testing can help in specific cases, such as tracking down a hidden source or checking cleanup, done by a qualified professional." },
+    { q: "What are symptoms of mold exposure?", a: "According to the CDC, mold can cause a stuffy nose, wheezing, and red or itchy eyes or skin. People with asthma or mold allergies can have stronger reactions, and people with weakened immune systems or chronic lung disease are at higher risk of infections. See a doctor if symptoms are significant or persistent." },
+    { q: "Can I clean the mold myself?", a: "The EPA's rule of thumb is that a homeowner can usually handle an area under about 10 square feet if it's from clean water and no one in the home is especially vulnerable. Use detergent and water on hard surfaces, wear gloves, goggles and an N95, and don't use bleach as a routine fix. Larger areas, mold inside walls or ducts, or mold after sewage call for a professional." },
+  ]}
+  related={[
+    { href: "/guides/black-mold/", label: "Black mold: what to do" },
+    { href: "/guides/water-damage-mold-emergency/", label: "What to do before help arrives" },
+    { href: "/guides/signs-of-hidden-water-damage/", label: "Signs of hidden water damage" },
+    { href: "/guides/small-leak-dry-it-yourself-or-call-a-pro/", label: "Dry it yourself or call a pro?" },
+  ]}
+  sources={[
+    { label: "CDC: Mold, about mold and health", href: "https://www.cdc.gov/mold-health/about/index.html" },
+    { label: "U.S. EPA: A Brief Guide to Mold, Moisture and Your Home", href: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
+    { label: "U.S. EPA: Mold testing or sampling", href: "https://www.epa.gov/mold/mold-testing-or-sampling" },
+    { label: "U.S. EPA: Should I use bleach to clean up mold?", href: "https://www.epa.gov/mold/should-i-use-bleach-clean-mold" },
+    { label: "IICRC: ANSI/IICRC S520 Standard for Professional Mold Remediation", href: "https://iicrc.org/s520/" },
+  ]}
+>
+  <h2>What mold actually does to health</h2>
+  <p>The CDC describes mold's main effects as <strong>allergy and breathing symptoms</strong>: a stuffy nose, wheezing, and red or itchy eyes or skin. People with <strong>asthma</strong> or <strong>mold allergies</strong> can react more strongly, and people with <strong>weakened immune systems</strong> or <strong>chronic lung disease</strong> are at higher risk of infections. Exposure matters: more mold and longer time in the room means more chance of symptoms.</p>
+  <p>That's why the answer to "is it safe tonight?" depends on <strong>who</strong> is sleeping there and <strong>how much</strong> mold there is, not on its color.</p>
+
+  <h2>Tonight: a quick decision</h2>
+  <table>
+    <thead><tr><th>Sleep elsewhere tonight if…</th><th>Staying one more night is usually reasonable if…</th></tr></thead>
+    <tbody>
+      <tr><td>Anyone in the room has asthma, allergies, a weakened immune system or chronic lung disease</td><td>Healthy adults only</td></tr>
+      <tr><td>The visible mold is larger than about 10 square feet</td><td>A small patch you can see the edges of</td></tr>
+      <tr><td>It followed sewage or floodwater</td><td>It followed a clean-water leak</td></tr>
+      <tr><td>A strong musty smell fills the room, or the wall or ceiling is still wet or sagging</td><td>Faint or no smell, surfaces dry</td></tr>
+      <tr><td>Someone is already having symptoms</td><td>No one has symptoms</td></tr>
+    </tbody>
+  </table>
+  <p>Many families also choose to move babies and older relatives out until cleanup is done. That's a reasonable, low-cost precaution.</p>
+
+  <h2>If you stay in the room tonight</h2>
+  <ul>
+    <li><strong>Don't disturb it.</strong> Scrubbing, scraping or dry-brushing releases spores. Leave it for tomorrow's proper cleanup.</li>
+    <li><strong>Cover a small patch</strong> loosely with plastic sheeting and painter's tape if you can do it without rubbing the surface.</li>
+    <li><strong>Move the bed</strong> away from the affected wall.</li>
+    <li><strong>Ventilate</strong> if the outdoor air is dry, and keep the door to the rest of the house closed.</li>
+    <li><strong>Don't run the central heating or air conditioning</strong> if you suspect mold in the ducts or air handler.</li>
+  </ul>
+
+  <h2>Do you need a mold test?</h2>
+  <p>Usually not. The EPA says that if you can <strong>see or smell mold</strong>, sampling is usually unnecessary, and there are <strong>no EPA or federal limits</strong> for mold to compare results against. The CDC agrees you don't need to know the species: <strong>remove it and fix the moisture</strong>. Testing is useful in specific situations, like finding a hidden source when you smell mold but can't see it, or checking a remediation, and should be done by a qualified professional.</p>
+  <p>Be wary of anyone who offers to test <em>and</em> remediate and uses scary results to sell the job. The size of the visible damage and the moisture source matter more than a lab report.</p>
+
+  <h2>The next 48 hours</h2>
+  <ol class="steps">
+    <li><strong>Find and stop the water.</strong> Mold always has a moisture source: the leak you found, condensation, or a damp wall. Cleaning without fixing it means it comes back. See <a href="/guides/signs-of-hidden-water-damage/">hidden water damage</a>.</li>
+    <li><strong>Photograph it</strong> with something for scale, for your records and any insurance claim. Mold coverage is often limited; see <a href="/guides/does-homeowners-insurance-cover-water-damage/">what insurance covers</a>.</li>
+    <li><strong>Small, from clean water, no vulnerable people?</strong> Clean it yourself: detergent and water on hard surfaces, gloves, goggles and an N95. Porous materials like drywall, ceiling tiles and carpet with mold usually have to be removed. The EPA doesn't recommend bleach as a routine fix.</li>
+    <li><strong>Larger, inside walls, in ducts, or after dirty water?</strong> Call a professional. Remediation under the IICRC S520 standard seals off the area so spores don't spread during removal.</li>
+    <li><strong>Dry everything</strong> within 24 to 48 hours of any new wetting, and keep indoor humidity low.</li>
+  </ol>
+
+  <h2>When to see a doctor</h2>
+  <p>If anyone has wheezing, trouble breathing, worsening asthma or symptoms that don't settle after leaving the room, contact a doctor. Tell them about the mold. For a medical emergency, call 911.</p>
+
+  <h2>Get it cleaned up properly</h2>
+  <p>Local restoration and mold remediation help is listed in each state section, along with that state's insurance and contractor rules:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/`}>{s.name}</a></>)}.
+  </p>
+</Article>

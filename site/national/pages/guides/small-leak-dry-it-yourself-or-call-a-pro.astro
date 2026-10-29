@@ -1,0 +1,114 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="Small leak: can you dry it yourself, or do you need a restoration company? Five checks"
+  seoTitle="Small Leak: Dry It Yourself or Call a Pro? 5 Checks"
+  description="A leak under the sink or a wet patch of floor doesn't always need professionals. Five checks (water type, time wet, materials, size and hidden spread) that tell you which way to go, and how to dry it right."
+  eyebrow="Guide · Damage"
+  dek="Most small leaks are a towel-and-fan job. Some look small and aren't: the water is under the floor, inside the cabinet base, or behind the wall. These five checks take ten minutes and tell you which kind you have."
+  path="/guides/small-leak-dry-it-yourself-or-call-a-pro/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Dry it yourself or call a pro?", href: "/guides/small-leak-dry-it-yourself-or-call-a-pro/" }]}
+  about={["Water damage", "DIY drying", "Water damage restoration", "Mold prevention"]}
+  summary={[
+    "<strong>Usually DIY:</strong> clean water, caught within a few hours, on hard surfaces you can see and reach, a small area, and everything feels dry within a day or two.",
+    "<strong>Call a professional:</strong> gray or black water, anything wet for more than 48 hours, water under flooring or inside walls, swollen cabinet bases or subfloor, a musty smell, or ceilings below that got wet.",
+    "<strong>The clock matters:</strong> the EPA advises drying wet materials within 24 to 48 hours to prevent mold.",
+    "<strong>The EPA's mold rule of thumb:</strong> areas under about 10 square feet can usually be cleaned by a homeowner; larger areas need a professional.",
+    "<strong>A cheap moisture meter</strong> from a hardware store removes most of the guesswork about whether something is really dry.",
+  ]}
+  faq={[
+    { q: "Can I dry water damage myself?", a: "Often, yes, if it's clean water, caught quickly, in a small area you can reach, on materials that dry well. Remove standing water, take out anything soaked that can be moved, open up the space, and run fans and a dehumidifier. If materials aren't dry within about 48 hours, call a professional." },
+    { q: "How do I know if water got under the floor?", a: "Signs include flooring that feels soft, cupped or lifting at the edges, a musty smell days later, and staining at baseboards. A pin-type moisture meter pressed into the floor or the bottom of the drywall near the leak gives a clearer answer." },
+    { q: "Is particleboard under the sink ruined if it got wet?", a: "If it has swollen or crumbles, it usually doesn't recover and should be replaced once the leak is fixed. Plywood often dries well. Either way, dry the cabinet fully before closing it up, and check behind it for wet drywall." },
+    { q: "Should I file an insurance claim for a small leak?", a: "Often not. If it's small, clean and dried quickly, the cost may be below your deductible, and claims can affect future premiums. If you see signs it's bigger than it looks, get a professional assessment first." },
+    { q: "Do fans make mold worse?", a: "Fans help drying, but don't blow air across visible mold, which spreads spores. If you can already see mold, clean small areas carefully or call a professional for larger ones." },
+  ]}
+  related={[
+    { href: "/guides/signs-of-hidden-water-damage/", label: "Signs of hidden water damage" },
+    { href: "/guides/how-long-does-water-damage-take-to-dry/", label: "How long drying takes" },
+    { href: "/guides/water-damage-categories/", label: "Clean, gray or black water?" },
+    { href: "/guides/appliance-leaks/", label: "Appliance and toilet leaks" },
+    { href: "/guides/call-insurance-or-restoration-company-first/", label: "Insurance or restoration company first?" },
+  ]}
+  sources={[
+    { label: "U.S. EPA: A Brief Guide to Mold, Moisture and Your Home", href: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
+    { label: "U.S. EPA: Mold cleanup in your home", href: "https://www.epa.gov/mold/mold-cleanup-your-home" },
+    { label: "CDC: Mold", href: "https://www.cdc.gov/mold-health/about/index.html" },
+    { label: "IICRC: ANSI/IICRC S500 Standard for Professional Water Damage Restoration", href: "https://iicrc.org/s500/" },
+  ]}
+>
+  <h2>Fix the leak first</h2>
+  <p>Close the fixture's valve or the main shutoff, and fix or replace the failed part before you start drying. Drying around a slow drip is drying forever. See <a href="/guides/appliance-leaks/">appliance and toilet leaks</a> for the valves and the hoses that fail most.</p>
+
+  <h2>The five checks</h2>
+
+  <h3>1. What kind of water was it?</h3>
+  <ul>
+    <li><strong>Clean</strong> (a supply line, the sink's cold or hot line, rain through a window): DIY is possible.</li>
+    <li><strong>Gray</strong> (dishwasher or washing machine water, a toilet overflow without feces): be more careful; porous materials it soaked often need to go.</li>
+    <li><strong>Black</strong> (sewage, toilet with feces, floodwater): <strong>call a professional.</strong> Don't clean it yourself.</li>
+  </ul>
+  <p>More detail in <a href="/guides/water-damage-categories/">clean, gray or black water</a>.</p>
+
+  <h3>2. How long was it wet?</h3>
+  <p>The EPA advises drying wet materials within <strong>24 to 48 hours</strong> to prevent mold. A leak you caught within hours is a very different job from one you found under the sink after a week. <strong>Wet for more than 48 hours, or an unknown time? Lean toward a professional assessment.</strong></p>
+
+  <h3>3. What got wet?</h3>
+  <table>
+    <thead><tr><th>Material</th><th>Usually</th></tr></thead>
+    <tbody>
+      <tr><td>Tile, sealed concrete, metal, plastic</td><td>Dries well; wipe and ventilate</td></tr>
+      <tr><td>Plywood</td><td>Often dries well with airflow</td></tr>
+      <tr><td>Particleboard or MDF (cabinet bases, some subfloors)</td><td>Swells and crumbles; often needs replacing</td></tr>
+      <tr><td>Drywall</td><td>Wicks water upward; can dry if caught quickly, otherwise the bottom section is cut out</td></tr>
+      <tr><td>Carpet and pad</td><td>Pad usually needs replacing after soaking; carpet can sometimes be saved if clean water and quick</td></tr>
+      <tr><td>Hardwood flooring</td><td>Can cup; needs slow, controlled drying, often professional</td></tr>
+      <tr><td>Insulation</td><td>Wet insulation in walls or ceilings usually has to come out</td></tr>
+    </tbody>
+  </table>
+
+  <h3>4. How big is it?</h3>
+  <p>The EPA's mold guidance uses about <strong>10 square feet</strong> (roughly 3 feet by 3 feet) as the line below which a homeowner can usually handle cleanup. The same rough size works as a gut check for water: a wet patch you could cover with a couple of bath towels is a DIY candidate; a wet room isn't.</p>
+
+  <h3>5. Has it spread where you can't see?</h3>
+  <p>This is what turns "small" into "big". Look and feel for:</p>
+  <ul>
+    <li>Flooring that's <strong>soft, cupped or lifting</strong> at the edges.</li>
+    <li><strong>Swelling</strong> at the bottom of cabinets or baseboards.</li>
+    <li><strong>Stains on the ceiling below</strong> if the leak was upstairs.</li>
+    <li>A <strong>musty smell</strong> that appears a day or two later.</li>
+    <li>Readings from a <strong>moisture meter</strong> at the bottom of the nearest walls and in the floor. An inexpensive pin meter from a hardware store is worth having in any house.</li>
+  </ul>
+  <p>More signs in <a href="/guides/signs-of-hidden-water-damage/">how to find hidden water damage</a>.</p>
+
+  <h2>The decision</h2>
+  <table>
+    <thead><tr><th>DIY is reasonable if…</th><th>Call a professional if…</th></tr></thead>
+    <tbody>
+      <tr><td>Clean water</td><td>Gray or black water</td></tr>
+      <tr><td>Caught within hours</td><td>Wet more than 48 hours, or unknown</td></tr>
+      <tr><td>Hard surfaces you can see and reach</td><td>Under flooring, inside walls, in insulation or the ceiling below</td></tr>
+      <tr><td>Small patch</td><td>A room or more</td></tr>
+      <tr><td>Dry within a day or two, confirmed with a meter</td><td>Still damp after 48 hours, or a musty smell</td></tr>
+      <tr><td>No one in the house with asthma or a weakened immune system</td><td>Vulnerable people at home</td></tr>
+    </tbody>
+  </table>
+
+  <h2>How to dry it properly yourself</h2>
+  <ol class="steps">
+    <li><strong>Remove standing water</strong> with towels or a wet/dry vacuum (never a household vacuum).</li>
+    <li><strong>Empty and open up</strong> the space: take everything out of the cabinet, remove the toe-kick if you can, pull back a loose baseboard.</li>
+    <li><strong>Take out what can't be saved:</strong> soaked cardboard, swollen particleboard shelves, sodden pad.</li>
+    <li><strong>Move air and remove moisture:</strong> a fan pointed into the space and a dehumidifier in the room, doors closed. Open windows only if the air outside is dry.</li>
+    <li><strong>Check it twice a day</strong> by touch and with a moisture meter, comparing with a dry spot elsewhere.</li>
+    <li><strong>Close up only when it's really dry,</strong> not when it looks dry.</li>
+  </ol>
+  <p>If it isn't dry within about 48 hours, stop and get a professional assessment. That's how long drying should take with professional equipment; see <a href="/guides/how-long-does-water-damage-take-to-dry/">typical drying times</a>.</p>
+
+  <h2>If it's bigger than it looked</h2>
+  <p>Make it safe, photograph everything and call for help the same day; read <a href="/guides/call-insurance-or-restoration-company-first/">insurance or restoration company first?</a> Local restoration help is listed in each state section:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/`}>{s.name}</a></>)}.
+  </p>
+</Article>

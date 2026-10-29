@@ -1,0 +1,86 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="Your insurer's preferred restoration company or your own? How to choose after water damage"
+  seoTitle="Insurance Preferred Vendor vs Your Own Restoration Company"
+  description="Insurers often offer a restoration company from their network. What that company is, the real pros and cons, whether you have to use it, and seven questions that make either choice safer."
+  eyebrow="Guide · Insurance"
+  dek="The adjuster says, 'We can send someone today.' It sounds like help, and often it is. But the company works within a program set up by your insurer, and it helps to know what that means before you say yes."
+  path="/guides/insurance-preferred-vendor-or-own-contractor/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Insurer's vendor or your own?", href: "/guides/insurance-preferred-vendor-or-own-contractor/" }]}
+  about={["Homeowners insurance claims", "Water damage restoration", "Preferred vendor programs", "Contractor selection"]}
+  summary={[
+    "<strong>A preferred vendor</strong> is a restoration company in your insurer's network that has agreed to the insurer's pricing and documentation rules. It can mean faster approval and less paperwork for you.",
+    "<strong>In most cases you can choose your own company.</strong> Ask your insurer directly what changes if you do, and check your policy and your state insurance department's guidance.",
+    "<strong>Either way, the work should be documented:</strong> daily moisture readings, photos and an itemized estimate you can read.",
+    "<strong>Your contract is with whoever you hire.</strong> If something goes wrong, ask who stands behind the work: the company, the insurer's program, or both.",
+  ]}
+  faq={[
+    { q: "Do I have to use my insurance company's restoration contractor?", a: "Usually not. Insurers often recommend a company from their preferred network, and some make the process smoother if you do, but in most cases you can hire the qualified company you choose. Ask your insurer what changes if you use your own, and check your state insurance department's guidance." },
+    { q: "Is the insurance company's preferred vendor cheaper?", a: "It usually works to prices agreed with the insurer, which can mean fewer disputes over the bill. That doesn't automatically mean a better or worse job; compare the scope, documentation and warranty." },
+    { q: "Who guarantees the work if I use the insurer's vendor?", a: "Ask before work starts. Some insurer programs offer a workmanship guarantee in addition to the contractor's own warranty; others don't. Get the answer in writing." },
+    { q: "Can my own contractor get paid by insurance?", a: "Yes. Insurers pay for covered, reasonable work regardless of which qualified company does it, though disagreements about price or scope are more common with out-of-network companies. Detailed documentation is what settles them." },
+  ]}
+  related={[
+    { href: "/guides/call-insurance-or-restoration-company-first/", label: "Insurance or restoration company first?" },
+    { href: "/guides/restoration-work-authorization-assignment-of-benefits/", label: "Before you sign a work authorization" },
+    { href: "/guides/water-mitigation-bill-too-high/", label: "Mitigation bill too high?" },
+    { href: "/guides/does-homeowners-insurance-cover-water-damage/", label: "Is it covered by insurance?" },
+  ]}
+  sources={[
+    { label: "NAIC: Consumer guide to homeowners insurance", href: "https://content.naic.org/consumer/home-insurance.htm" },
+    { label: "NAIC: Find your state insurance department", href: "https://content.naic.org/state-insurance-departments" },
+    { label: "Insurance Information Institute: How to file a homeowners insurance claim", href: "https://www.iii.org/article/how-do-i-file-a-claim" },
+    { label: "IICRC: Find a certified firm", href: "https://iicrc.org/globallocator/" },
+    { label: "IICRC: ANSI/IICRC S500 Standard for Professional Water Damage Restoration", href: "https://iicrc.org/s500/" },
+  ]}
+>
+  <h2>What "preferred vendor" means</h2>
+  <p>Many insurers run programs with restoration companies that agree to their rules: response times, pricing methods, photo and moisture documentation, and how estimates are submitted. When the adjuster offers to "send someone", that's usually a company from this network.</p>
+  <p>It isn't a scam, and it isn't a favor. It's a business arrangement that can genuinely make your claim easier, with one built-in tension: the company is part of a program set up by the party paying the bill.</p>
+
+  <h2>The honest pros and cons</h2>
+  <table>
+    <thead><tr><th></th><th>Insurer's preferred vendor</th><th>Your own company</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Speed of approval</strong></td><td>Often faster: pricing and paperwork are pre-agreed</td><td>Can be slower if the insurer questions prices or scope</td></tr>
+      <tr><td><strong>Getting someone out today</strong></td><td>Often good: the insurer can dispatch</td><td>Depends on local demand; a local company may be quicker</td></tr>
+      <tr><td><strong>Who they answer to</strong></td><td>You, and the insurer's program rules</td><td>You</td></tr>
+      <tr><td><strong>Price disputes</strong></td><td>Fewer, because prices are agreed</td><td>More likely; good documentation settles most</td></tr>
+      <tr><td><strong>Choice</strong></td><td>Whoever is assigned</td><td>You can check reviews, certifications and references first</td></tr>
+      <tr><td><strong>Guarantee</strong></td><td>Ask whether the program adds one</td><td>The company's own warranty</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Do you have to use the insurer's company?</h2>
+  <p>In most cases, no. Your policy is a promise to pay for covered, reasonable work, not to pick your contractor. But rules and policy wording vary, so do two things before you decide:</p>
+  <ol class="steps">
+    <li><strong>Ask the insurer directly:</strong> "If I use my own restoration company, does anything change about approval, payment or guarantees?" Write down the answer and who gave it.</li>
+    <li><strong>Check your state insurance department</strong> if anyone tells you that you <em>must</em> use a particular company. Each state's department has a consumer line; the NAIC lists them all.</li>
+  </ol>
+
+  <h2>Seven questions for whichever company you choose</h2>
+  <ol class="steps">
+    <li><strong>Are your technicians IICRC certified</strong> for water damage restoration? (The IICRC S500 standard is the industry's drying standard.)</li>
+    <li><strong>Will you take and share daily moisture readings and photos?</strong></li>
+    <li><strong>What will you remove, and why?</strong> Ask them to explain any tear-out before they do it, unless it's an emergency.</li>
+    <li><strong>How do you price the job?</strong> Many companies estimate with the same software insurers use; ask for an itemized estimate.</li>
+    <li><strong>Do you bill my insurer directly, and what do I owe if part isn't covered?</strong></li>
+    <li><strong>What am I signing?</strong> A work authorization is normal. An assignment of benefits is a bigger decision; see <a href="/guides/restoration-work-authorization-assignment-of-benefits/">before you sign</a>.</li>
+    <li><strong>Who guarantees the work, and for how long?</strong></li>
+  </ol>
+
+  <h2>A simple way to decide</h2>
+  <ul>
+    <li><strong>Choose the insurer's vendor</strong> if speed matters most, you don't have a company you trust, and the insurer confirms the work is guaranteed.</li>
+    <li><strong>Choose your own company</strong> if you have one you trust, the vendor can't come quickly, or you want to vet certifications and reviews yourself. Expect to keep documentation tidy so the bill is easy to approve.</li>
+    <li><strong>Either way,</strong> photograph the damage before work starts, keep copies of all moisture logs, and don't sign anything you haven't read.</li>
+  </ul>
+
+  <h2>If you choose your own company</h2>
+  <p>Find a local restoration company through your state section, where county pages list local help and the state's claim rules:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/`}>{s.name}</a></>)}.
+  </p>
+</Article>

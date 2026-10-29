@@ -1,0 +1,107 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="The water mitigation bill is higher than expected, or insurance won't pay all of it: what to do"
+  seoTitle="Water Mitigation Bill Too High? How to Review and Dispute It"
+  description="How to read a water mitigation invoice line by line, the documentation that should support it, the charges most often disputed, and the steps that resolve a gap between the bill and the insurer."
+  eyebrow="Guide · Money"
+  dek="Drying a house for four days can cost thousands of dollars, and it often surprises people twice: once when the invoice arrives, and again when the insurer pays less. Most of these disputes come down to documentation. Here's how to read the bill and settle the gap."
+  path="/guides/water-mitigation-bill-too-high/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Mitigation bill too high?", href: "/guides/water-mitigation-bill-too-high/" }]}
+  about={["Water mitigation", "Water damage restoration cost", "Homeowners insurance claims", "Invoice disputes"]}
+  summary={[
+    "<strong>Ask for the full file:</strong> the itemized invoice, daily moisture readings (drying logs), photos, and the equipment placed each day. Professional drying under the IICRC S500 standard is documented.",
+    "<strong>Check the usual pressure points:</strong> equipment left after readings showed dry, more machines than the area needed, tear-out not shown in photos, and charges that don't match what you saw.",
+    "<strong>Compare it with the insurer's estimate</strong> line by line. Many gaps are about a handful of items, not the whole bill.",
+    "<strong>Escalate in order:</strong> the company, the adjuster, a written dispute, your state insurance department's consumer line, then mediation, appraisal or small claims where available.",
+    "<strong>Don't ignore the bill.</strong> Unpaid contractors can often file a lien. Keep talking, in writing.",
+  ]}
+  faq={[
+    { q: "Why is water mitigation so expensive?", a: "It's equipment and labor intensive. Air movers, dehumidifiers and sometimes air scrubbers run for several days, technicians visit daily to take moisture readings and adjust equipment, and wet materials may be removed and disposed of. Each of those is usually billed per item, per day." },
+    { q: "My insurance paid less than the mitigation bill. Do I owe the difference?", a: "Usually you're responsible under the contract you signed, unless you assigned your benefits to the company. But many gaps are negotiable: ask the company and the adjuster to reconcile the invoice against the insurer's estimate, line by line, using the drying logs and photos." },
+    { q: "What are drying logs?", a: "Daily records of moisture readings at marked points in each affected area, plus the equipment in place. They show when materials reached their drying goal, which is the main evidence for how many equipment-days were justified." },
+    { q: "Can a restoration company put a lien on my house?", a: "In many states contractors can file a mechanic's lien for unpaid work, subject to notice rules and deadlines. That's why it's better to dispute in writing and keep negotiating than to stop responding." },
+    { q: "Who can help me with a mitigation billing dispute?", a: "Start with the company and your adjuster. If you're stuck, call your state insurance department's consumer line about the insurer's handling of the claim. Some policies have an appraisal clause for disputes over the amount of loss, and some states offer mediation programs. For larger amounts, a lawyer or public adjuster can advise." },
+  ]}
+  related={[
+    { href: "/guides/water-damage-restoration-cost/", label: "What restoration costs" },
+    { href: "/guides/how-long-does-water-damage-take-to-dry/", label: "How long drying takes" },
+    { href: "/guides/restoration-work-authorization-assignment-of-benefits/", label: "Before you sign a work authorization" },
+    { href: "/guides/insurance-preferred-vendor-or-own-contractor/", label: "Insurer's vendor or your own contractor?" },
+  ]}
+  sources={[
+    { label: "IICRC: ANSI/IICRC S500 Standard for Professional Water Damage Restoration", href: "https://iicrc.org/s500/" },
+    { label: "NAIC: Find your state insurance department", href: "https://content.naic.org/state-insurance-departments" },
+    { label: "Insurance Information Institute: How to file a homeowners insurance claim", href: "https://www.iii.org/article/how-do-i-file-a-claim" },
+    { label: "U.S. EPA: A Brief Guide to Mold, Moisture and Your Home", href: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
+  ]}
+>
+  <h2>First, why these bills are big</h2>
+  <p>Mitigation is mostly equipment and visits. A typical water job bills for:</p>
+  <ul>
+    <li><strong>Emergency service and water extraction.</strong></li>
+    <li><strong>Equipment per day:</strong> air movers, dehumidifiers, sometimes air scrubbers. Several machines for several days adds up fast.</li>
+    <li><strong>Daily monitoring:</strong> a technician's visit to take moisture readings and adjust equipment.</li>
+    <li><strong>Removal and disposal</strong> of materials that can't be dried: soaked carpet pad, wet drywall, baseboards.</li>
+    <li><strong>Antimicrobial application</strong> and <strong>containment</strong> where needed, especially with gray or black water.</li>
+  </ul>
+  <p>None of that is suspicious on its own. What you want to check is whether the <strong>quantities</strong> match what the drying actually needed.</p>
+
+  <h2>Ask for the full file</h2>
+  <p>Before arguing about the number, ask the company in writing for:</p>
+  <ol class="steps">
+    <li>The <strong>itemized invoice</strong>, with quantities and unit prices.</li>
+    <li>The <strong>drying logs:</strong> daily moisture readings at each monitored point, with the drying goal.</li>
+    <li>The <strong>equipment log:</strong> which machines were in which room on which days.</li>
+    <li><strong>Photos</strong> before, during and after, especially of anything removed.</li>
+    <li>The <strong>signed work authorization</strong> and any change orders.</li>
+  </ol>
+  <p>Professional water damage restoration under the <strong>IICRC S500</strong> standard is measured and recorded. A company that did the work properly should be able to produce these quickly.</p>
+
+  <h2>The charges most often questioned</h2>
+  <table>
+    <thead><tr><th>Line item</th><th>What to check</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Equipment days</strong></td><td>Did equipment stay after the logs show materials reached the drying goal?</td></tr>
+      <tr><td><strong>Number of machines</strong></td><td>Does the count make sense for the affected area? Ask how it was calculated.</td></tr>
+      <tr><td><strong>Demolition and tear-out</strong></td><td>Do photos show the material was wet or contaminated? Was it actually removed?</td></tr>
+      <tr><td><strong>Water category</strong></td><td>Was clean water billed as gray or black? Category drives protective equipment, antimicrobials and what has to go. See <a href="/guides/water-damage-categories/">the three categories</a>.</td></tr>
+      <tr><td><strong>Monitoring visits</strong></td><td>Do the dates match the visits you remember?</td></tr>
+      <tr><td><strong>After-hours or emergency charges</strong></td><td>Were they disclosed when you called?</td></tr>
+    </tbody>
+  </table>
+
+  <h2>When insurance pays less than the bill</h2>
+  <p>This is the most common version of the problem. The insurer writes its own estimate, often with the same estimating software, and it comes out lower. Usually the difference sits in a few lines.</p>
+  <ol class="steps">
+    <li><strong>Get both documents side by side:</strong> the company's invoice and the insurer's estimate.</li>
+    <li><strong>Mark each line</strong> as matching, different quantity, or missing.</li>
+    <li><strong>Send the company's documentation to the adjuster</strong> for the differences, especially drying logs and photos, and ask for a written explanation of anything still denied.</li>
+    <li><strong>Ask the company to talk to the adjuster directly.</strong> Many disputes resolve once both sides look at the same logs.</li>
+    <li><strong>Check whether some items simply aren't covered</strong>, such as a gradual leak, or mold above a policy limit. See <a href="/guides/does-homeowners-insurance-cover-water-damage/">what insurance covers</a>.</li>
+  </ol>
+
+  <h2>If you're still stuck</h2>
+  <ul>
+    <li><strong>Write a dispute letter</strong> to the company listing each line you question and why. Offer to pay the undisputed amount.</li>
+    <li><strong>Call your state insurance department's consumer line</strong> if the problem is how the insurer handled the claim.</li>
+    <li><strong>Check your policy for an appraisal clause</strong>, used for disagreements about the amount of loss, and ask whether your state runs a mediation program.</li>
+    <li><strong>For large amounts,</strong> a lawyer or a licensed public adjuster can advise on your options.</li>
+    <li><strong>Small claims court</strong> is an option for modest amounts in many states.</li>
+  </ul>
+  <p>Throughout, <strong>stay in writing and keep responding</strong>. Unpaid contractors can often file a lien on the property; a documented, good-faith dispute puts you in a far better position than silence.</p>
+
+  <h2>Preventing it next time</h2>
+  <ul>
+    <li>Read the <a href="/guides/restoration-work-authorization-assignment-of-benefits/">work authorization</a> before signing, especially how the price is set.</li>
+    <li>Ask on day one for daily moisture readings to be shared with you.</li>
+    <li>Ask on day three, "What's left before we reach the drying goal?"</li>
+  </ul>
+
+  <h2>Find a restoration company near you</h2>
+  <p>Each state section lists county pages with local help and that state's insurance regulator:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/`}>{s.name}</a></>)}.
+  </p>
+</Article>
