@@ -87,7 +87,7 @@ export function intro(c: County) {
     ? pick(c, "intro2", [
         `${c.seat} is the county seat${others.length ? `; ${list(others)} ${others.length === 1 ? "is the next largest community" : "are the next largest communities"}` : ""}.`,
         `The county seat is ${c.seat}${others.length ? `, and ${list(others)} ${others.length === 1 ? "is the other large town" : "round out the largest towns"}` : ""}.`,
-        `${others.length ? `Besides ${c.seat}, the county seat, the biggest ${others.length === 1 ? "community is" : "communities are"} ${list(others)}.` : `${c.seat} is the county seat.`}`,
+        `${others.length ? `Besides ${c.seat}, the county seat, the other main ${others.length === 1 ? "community is" : "communities are"} ${list(others)}.` : `${c.seat} is the county seat.`}`,
       ])
     : "";
   const era = c.medianYearBuilt < 1960 ? "old" : c.medianYearBuilt < 1985 ? "mid" : "new";
@@ -293,7 +293,7 @@ export function fire(c: County) {
   const fuel = woodHigh && lpHigh ? "Wood and propane heat are" : woodHigh ? "Wood heat is" : "Propane heat is";
   const second = woodHigh || lpHigh
     ? pick(c, "fire2r", [
-        `${fuel} more common here than in most ${S.name} counties. Heating equipment is one of the leading causes of home fires nationally, and the NFPA recommends having chimneys and vents inspected every year.`,
+        `${fuel} more common here than in most ${S.name} counties. Heating equipment is a common cause of home fires nationally, and the NFPA recommends having chimneys and vents inspected every year.`,
         `${fuel} above the ${S.name} norm. Annual chimney and vent inspection, which the NFPA recommends, is one of the most effective fire-prevention habits for these homes.`,
         `${fuel} more common here than the state median. Have chimneys swept and fuel-burning appliances serviced each fall, and keep three feet clear around stoves and space heaters.`,
       ])
@@ -358,7 +358,7 @@ export function faqs(c: County) {
     },
     {
       q: `What causes the most water damage in ${c.short} County?`,
-      a: `Based on the county's housing and weather data, the biggest local factors are ${list(risks.map((r) => r.title.toLowerCase()))}. Appliance supply lines and water heaters cause leaks everywhere.`,
+      a: `Based on the county's housing and weather data, the main local factors are ${list(risks.map((r) => r.title.toLowerCase()))}. Appliance supply lines and water heaters cause leaks everywhere.`,
     },
     {
       q: `Will my insurance cover water damage in ${c.short} County?`,
@@ -382,7 +382,7 @@ export function triageLocal(c: County): Record<string, string> {
   return {
     pipe: pick(c, "tp", [
       `${c.short} County averages ${pl(w.pipeRiskNights, "night")} a year at 20°F or colder, mostly ${cal.freeze}, and ${pct(c.builtPre1960Pct)} of its homes predate 1960.`,
-      `With ${pct(c.builtPre1960Pct)} of homes built before 1960 and about ${w.pipeRiskNights} hard-freeze ${w.pipeRiskNights === 1 ? "night" : "nights"} a year, frozen and split pipes are a leading winter risk in the county.`,
+      `With ${pct(c.builtPre1960Pct)} of homes built before 1960 and about ${w.pipeRiskNights} hard-freeze ${w.pipeRiskNights === 1 ? "night" : "nights"} a year, frozen and split pipes are a major winter risk in the county.`,
       `Pipes freeze in ${c.short} County on about ${pl(w.pipeRiskNights, "night")} a year, mostly ${cal.freeze}. Older homes, ${pct(c.builtPre1960Pct)} of the stock here, are most at risk.`,
     ]),
     basement: pick(c, "tb", [
@@ -391,9 +391,9 @@ export function triageLocal(c: County): Record<string, string> {
       `Basements flood here mostly in ${cal.rainPeak}. ${c.short} County averages ${w.heavyRainDays} days a year with an inch of rain or more.`,
     ]),
     sewage: pick(c, "ts", [
-      `Backups often follow heavy rain, which ${c.short} County gets about ${w.heavyRainDays} days a year, when storm water overloads sewer mains and pushes up through the lowest drain in the house.`,
+      `Backups often follow heavy rain, which ${c.short} County gets about ${w.heavyRainDays} days a year, when storm water overloads sewer mains and pushes up through basement floor drains.`,
       `${pct(c.builtPre1960Pct)} of homes here predate 1960, when clay and cast iron sewer laterals were standard. Roots and cracks in those lines are a common cause of backups.`,
-      `Sewage backups in ${c.short} County spike on heavy-rain days, about ${w.heavyRainDays} a year, when sewer mains fill up and water finds the lowest drain.`,
+      `Sewage backups in ${c.short} County spike on heavy-rain days, about ${w.heavyRainDays} a year, when sewer mains fill up and water backs up through floor drains.`,
     ]),
     roof: pick(c, "tr", [
       `${c.short} County's wettest day in the ${w.period} record brought ${w.wettestDay} inches${w.freezeThawDays >= 20 ? `, and about ${pl(w.freezeThawDays, "freeze-thaw day")} a year mean ice dams in some winters` : ""}.`,
@@ -403,7 +403,7 @@ export function triageLocal(c: County): Record<string, string> {
     fire: `${pct(c.heatWoodPct + c.heatPropanePct)} of occupied homes in ${c.short} County heat mainly with wood or propane, ${compare(c.heatWoodPct + c.heatPropanePct, round1(STATE.heatWoodPct + STATE.heatPropanePct), "%", 0.1)}.`,
     mold: pick(c, "tm", [
       `About ${pl(w.muggyNights, "night")} a year here stay at 65°F or warmer, so basements and crawl spaces can grow mold even without a leak.`,
-      `Muggy summer nights, lows of 65°F or more, come about ${w.muggyNights === 1 ? "once" : `${w.muggyNights} times`} a year in ${c.short} County. Mold after a leak spreads fastest from June through August.`,
+      `Muggy summer nights, lows of 65°F or more, come about ${w.muggyNights === 1 ? "once" : `${w.muggyNights} times`} a year in ${c.short} County. Mold after a leak spreads especially quickly from June through August.`,
       `With ${w.muggyNights} muggy ${w.muggyNights === 1 ? "night" : "nights"} a year, mold in ${c.short} County can appear within days of a leak. Dry first, then clean.`,
     ]),
   };

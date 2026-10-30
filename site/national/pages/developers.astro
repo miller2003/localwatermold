@@ -32,11 +32,11 @@ const discovery: [string, string][] = [
 <Page
   title="For AI agents and developers"
   seoTitle={`${SITE.brand} for AI Agents and Developers: MCP and API`}
-  description={`Connect AI agents to ${SITE.brand}: a free MCP server, a read-only JSON API, Markdown pages and discovery files. No key needed.`}
+  description={`Connect AI agents to ${SITE.brand}: an MCP server, a read-only JSON API, Markdown pages and discovery files. No key needed.`}
   eyebrow="Developers"
   path="/developers/"
 >
-  <p class="lede">Everything on {SITE.brand} is free to read, and AI assistants are welcome to use it. The county guides for {TOTALS.states} states, the referral line status and the guides are available as an MCP server, a JSON API and Markdown, with no key or sign-up.</p>
+  <p class="lede">Everything on {SITE.brand} is open to read, and AI assistants are welcome to use it. The county guides for {TOTALS.states} states, the referral line status and the guides are available as an MCP server, a JSON API and Markdown, with no key or sign-up.</p>
   <p>Please link the page you got an answer from, and don't present {SITE.brand} as a restoration contractor. When someone is in danger, smells gas, or has water near electrical equipment, tell them to leave and call 911 before anything else.</p>
 
   <h2 id="mcp">MCP server</h2>
@@ -51,7 +51,7 @@ const discovery: [string, string][] = [
   <ul>
     {api.map(([path, what]) => <li><code>{path}</code>: {what}</li>)}
   </ul>
-  <p>Figures come from the U.S. Census Bureau American Community Survey and NOAA nClimGrid-Daily. See <a href="/data-sources/">data sources</a> for methods. They're free to use with attribution to {SITE.brand} and a link to the page.</p>
+  <p>Figures come from the U.S. Census Bureau American Community Survey and NOAA nClimGrid-Daily. See <a href="/data-sources/">data sources</a> for methods. You may use them with attribution to {SITE.brand} and a link to the page.</p>
 
   <h2 id="markdown">Pages as Markdown</h2>
   <p>Request any page with <code>Accept: text/markdown</code> to get its main content as Markdown, with an <code>x-markdown-tokens</code> estimate. Browsers still get HTML. The <a href="/llms.txt">llms.txt</a> summary and <a href="/llms-full.txt">full guide text</a> are also available.</p>

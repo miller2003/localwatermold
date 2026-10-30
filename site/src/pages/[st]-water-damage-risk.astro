@@ -119,7 +119,7 @@ const schema = [{
 
   <section class="wrap method"><div class="prose read">
     <h2>Methodology</h2>
-    <p>For each county with weather data, we convert four factors to a percentile rank among those counties (0 = lowest, 100 = highest), then take a weighted average:</p>
+    <p>For each county with weather data, we convert four factors to a percentile rank among those counties (0 at the bottom of the range, 100 at the top), then take a weighted average:</p>
     <ul>
       {FACTORS.map((f) => <li><strong>{f.label}</strong> ({f.unit}), weight {Math.round(f.weight * 100)}%</li>)}
     </ul>

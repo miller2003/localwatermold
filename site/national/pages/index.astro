@@ -8,8 +8,8 @@ import { NATIONAL_GUIDES, guidePath } from "../../src/lib/guides";
 
 const int = (n: number) => Math.round(n).toLocaleString("en-US");
 const faq = [
-  { q: `What is ${SITE.brandJoined}?`, a: `${SITE.brandJoined} (${SITE.domain}) is ${SITE.brand}, an independent U.S. website for homeowners dealing with water damage, mold, fire and smoke damage or a flooded basement. It publishes free county guides for ${TOTALS.states} states and connects callers with local restoration companies. It isn't a restoration contractor or franchise.` },
-  { q: `What does ${SITE.brand} do?`, a: `${SITE.brand} publishes free county-by-county guidance on water damage, mold, fire and smoke damage and flooded basements for homeowners in ${TOTALS.states} states, and connects callers with participating local restoration companies. We don't do restoration work ourselves.` },
+  { q: `What is ${SITE.brandJoined}?`, a: `${SITE.brandJoined} (${SITE.domain}) is ${SITE.brand}, an independent U.S. website for homeowners dealing with water damage, mold, fire and smoke damage or a flooded basement. It publishes county guides for ${TOTALS.states} states and connects callers with local restoration companies. It isn't a restoration contractor or franchise.` },
+  { q: `What does ${SITE.brand} do?`, a: `${SITE.brand} publishes county-by-county guidance on water damage, mold, fire and smoke damage and flooded basements for homeowners in ${TOTALS.states} states, and connects callers with participating local restoration companies. We don't do restoration work ourselves.` },
   { q: "Is there a charge to be connected with a restoration company?", a: "No. There's no charge to you for the referral. Participating companies pay us for referrals, and the company you hire bills you or your insurer for its work, the same as if you'd found it yourself." },
   { q: "What should I do first if water is coming into my house?", a: "Make it safe first: stay out of water near outlets or the electrical panel and leave if you smell gas. Then stop the water at the fixture's valve or the main shutoff, photograph the damage before cleanup, and start drying within 24 to 48 hours to prevent mold." },
   { q: "Does homeowners insurance cover water damage?", a: "Usually, if the water was sudden and accidental, such as a burst pipe or a failed appliance hose. Standard policies usually exclude gradual leaks, flooding from outside and sewer backups without a water backup endorsement." },
@@ -26,7 +26,7 @@ const schema = [
 ---
 <Base
   title={`${SITE.brand} (${SITE.brandJoined}): Water, Mold & Fire Help`}
-  description={`Water damage, mold, fire or a flooded basement? Free county guides for ${TOTALS.states} states, and one call to a local restoration company.`}
+  description={`Water damage, mold, fire or a flooded basement? County guides for ${TOTALS.states} states, and one call to a local restoration company.`}
   schema={schema}
 >
   <section class="hero">

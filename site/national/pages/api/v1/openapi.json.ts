@@ -24,7 +24,7 @@ export const GET: APIRoute = ({ site }) => {
       title: `${SITE.brand} agent API`,
       version: API_VERSION,
       summary: "Read-only county water damage, mold and fire guidance data for U.S. homeowners.",
-      description: `Free, read-only JSON for AI agents and developers: the ${STATE_SUMMARIES.length} states ${SITE.brand} covers, every county page with its housing-age and weather-risk figures, the guides, and whether the local referral line is live. No key is needed. Please cite the page URL in each record. The same data is available as MCP tools at ${origin}/mcp.`,
+      description: `Read-only JSON for AI agents and developers: the ${STATE_SUMMARIES.length} states ${SITE.brand} covers, every county page with its housing-age and weather-risk figures, the guides, and whether the local referral line is live. No key is needed. Please cite the page URL in each record. The same data is available as MCP tools at ${origin}/mcp.`,
       contact: { name: SITE.brand, email: SITE.contactEmail, url: `${origin}/developers/` },
       termsOfService: `${origin}/terms/`,
     },

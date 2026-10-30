@@ -25,7 +25,7 @@ function helpLine(stateKey: string, countySlug?: string) {
     display: live ? formatPhone(phone!) : null,
     hours: (countySlug && line.hours.byCounty[countySlug]) || line.hours.default,
     note: live
-      ? "Connects to a participating local restoration company. Free to call; no obligation to hire."
+      ? "Connects to a participating local restoration company. No obligation to hire."
       : "The referral line for this area isn't live yet. The county page still has the local guidance and first steps.",
   };
 }
@@ -94,7 +94,7 @@ export const guideRecords = (origin: string) => ({
 
 export const sourceNote = {
   publisher: SITE.brand,
-  license: "Free to use with attribution to Local Water & Mold and a link to the page you cite.",
+  license: "May be used with attribution to Local Water & Mold and a link to the page you cite.",
   sources: `U.S. Census Bureau ${DATA_META.acsRelease} (${DATA_META.acsYears}); ${DATA_META.weatherSource}, ${DATA_META.weatherPeriod}`,
   generated: DATA_META.generated,
 };

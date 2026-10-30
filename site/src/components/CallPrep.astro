@@ -37,8 +37,9 @@ const ask = compact ? [ASK[0], ASK[1], ASK[3], ASK[4]] : ASK;
     <ul class="ticks">
       {ready.map((t) => <li>{t}</li>)}
     </ul>
+    <p class="small muted">{compact ? "For homeowners. Renters: call your landlord first." : "The line is for homeowners. If you rent, call your landlord or property manager first: repairs to the building are usually theirs to arrange."}</p>
     {compact
-      ? <p class="small muted tip"><strong>Tip:</strong> Don't let anyone rush you off the phone with "we'll just send someone." Get these answers first.</p>
+      ? <p class="small muted tip"><strong>Tip:</strong> Don't let anyone rush you off the phone. Get these answers first.</p>
       : <p class="small muted tip"><strong>Tip:</strong> Don't let anyone rush you off the phone with "we'll just send someone." Get the answers on the right first. A good company in {place} will take the few minutes to give them, and the ones that won't are the ones you'd regret.</p>}
   </div>
   <div class="prep-col">

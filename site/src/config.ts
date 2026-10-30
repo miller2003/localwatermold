@@ -19,10 +19,10 @@ const CONTACT_EMAIL = "hello@localwatermold.com";
 
 // Call lines per state. States not listed here show the call line as not live yet.
 const NO_LINE: Line = { phones: { default: null, byCounty: {} }, hours: { default: "business", byCounty: {} } };
-// Marketcall offer #12330 (water damage). Its buyers answer 10am to 2am Eastern, every day.
+// Marketcall water damage and mold line. Buyers and their hours vary by area, so no fixed window is shown.
 const MARKETCALL_WATER: Line = {
   phones: { default: "+18448330490", byCounty: {} },
-  hours: { default: "business", byCounty: {}, window: "10am to 2am Eastern, 7 days a week" },
+  hours: { default: "business", byCounty: {} },
 };
 // Give a state its own entry (or byCounty numbers) when a different offer covers it.
 const LINES: Record<string, Line> = Object.fromEntries(Object.keys(STATES).map((k) => [k, MARKETCALL_WATER]));

@@ -35,7 +35,7 @@ const schema: Record<string, unknown>[] = [{
   url,
   provider: { "@id": `${origin}/#org` },
   areaServed: { "@type": "State", name: SITE.state, containedInPlace: { "@type": "Country", name: "United States" } },
-  audience: { "@type": "Audience", audienceType: "Homeowners and renters" },
+  audience: { "@type": "Audience", audienceType: "Homeowners" },
 }];
 if (faq.length) {
   schema.push({

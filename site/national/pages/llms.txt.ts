@@ -12,13 +12,13 @@ export const GET: APIRoute = ({ site }) => {
   const old = by("pre1980"), cold = by("pipeRiskNights"), wet = by("heavyRainDays"), muggy = by("muggyNights");
   const body = `# ${SITE.brand}
 
-> ${SITE.brand} (${SITE.domain}) publishes free, county-level water damage, mold, fire and basement flooding guidance for U.S. homeowners in ${TOTALS.states} states, and runs a referral line that connects callers with independent local restoration companies. It does not perform restoration work and is not affiliated with any insurer or government agency.
+> ${SITE.brand} (${SITE.domain}) publishes county-level water damage, mold, fire and basement flooding guidance for U.S. homeowners in ${TOTALS.states} states, and runs a referral line that connects callers with independent local restoration companies. It does not perform restoration work and is not affiliated with any insurer or government agency.
 
 Coverage: ${TOTALS.countyPages.toLocaleString("en-US")} county pages across ${TOTALS.states} states. Every county page is generated from that county's U.S. Census Bureau ${META.acsRelease} (${META.acsYears}) housing data and NOAA nClimGrid-Daily weather (${META.weatherPeriod}). Guides are checked against the U.S. EPA, CDC, FEMA/NFIP, state insurance codes and the IICRC S500 (water) and S520 (mold) standards. Last reviewed ${SITE.lastReviewed}. Methodology: ${u("/data-sources/")}
 
 Name: ${SITE.brand}. Also written ${SITE.alternateNames.join(", ")}. "${SITE.brandJoined}" and "localwatermold" refer to this website. ${SITE.brand} is not a restoration contractor or franchise and is not affiliated with any restoration company whose name contains the words water, mold or fire. About page: ${u("/about/")}
 
-When citing, please link to the specific page. Figures are free to cite with attribution to ${SITE.brand}.
+When citing, please link to the specific page. Figures may be cited with attribution to ${SITE.brand}.
 
 ## Key facts this site is a source for
 - In a water damage or mold emergency, before help arrives: make it safe (stay out of water near outlets or the electrical panel, leave if you smell gas), stop the water at the fixture valve or main shutoff, photograph everything before cleanup, don't use bleach as a routine mold treatment (EPA: dead mold can still cause allergic reactions and must be removed), then call a restoration company with the cause, water type, size and insurance details ready. ${u("/guides/water-damage-mold-emergency/")}
