@@ -71,7 +71,7 @@ const schema = [
         <h1>Water damage restoration in {c.short} County, {S.name}</h1>
         <p class="lede">Water spreading, a burst pipe, sewage, mold or smoke? Call to be connected with a restoration company that serves {placeList(c, 3)}. Start the steps below while you wait.</p>
         <div class="cta-row">
-          <CallButton county={c.slug} placement="hero" label="Call" />
+          <CallButton county={c.slug} placement="hero" />
           <a class="btn btn-ghost" href="#start"><Icon name="arrow" />First steps</a>
         </div>
         <p class="small faint disclose" data-boilerplate>
@@ -241,7 +241,7 @@ const schema = [
         <h2 data-boilerplate>Water won't wait. Neither should you.</h2>
         <p class="muted">Peak risk months in {c.short} County: freezing from {cal.freeze}, heavy rain in {cal.rain}.</p>
       </div>
-      <CallButton county={c.slug} placement="closing" label="Call" />
+      <CallButton county={c.slug} placement="closing" />
     </div>
     <div class="wrap">
       <p class="small faint sources">

@@ -2,15 +2,16 @@
 import Icon from "./Icon.astro";
 import { SITE, phoneFor, formatPhone } from "../config";
 
-interface Props { county?: string; label?: string; placement: string; block?: boolean; short?: boolean }
-const { county, label, placement, block, short } = Astro.props;
+// When the line is live the button text is the number itself; the phone icon and aria-label say "call".
+interface Props { county?: string; placement: string; block?: boolean; short?: boolean }
+const { county, placement, block, short } = Astro.props;
 const number = phoneFor(county);
 const live = SITE.launchMode === "live" && number;
 ---
 {live ? (
-  <a class="btn btn-call" style={block ? "width:100%" : undefined} href={`tel:${number}`} data-call={placement} data-county={county ?? "state"}>
+  <a class="btn btn-call" style={block ? "width:100%" : undefined} href={`tel:${number}`} aria-label={`Call ${formatPhone(number!)}`} data-call={placement} data-county={county ?? "state"}>
     <Icon name="phone" />
-    <span>{label ?? "Call"} {formatPhone(number!)}</span>
+    <span>{formatPhone(number!)}</span>
   </a>
 ) : (
   <a class="btn btn-call" style={block ? "width:100%" : undefined} href="/how-it-works/" data-call-preview={placement}>

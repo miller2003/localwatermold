@@ -19,9 +19,9 @@ const CONTACT_EMAIL = "hello@localwatermold.com";
 
 // Call lines per state. States not listed here show the call line as not live yet.
 const NO_LINE: Line = { phones: { default: null, byCounty: {} }, hours: { default: "business", byCounty: {} } };
-// Marketcall water damage and mold line. Buyers and their hours vary by area, so no fixed window is shown.
+// Marketcall offer 8915 (Water Damage and Mold Remediation Bundle), tracking number 359566. Buyers and their hours vary by area, so no fixed window is shown.
 const MARKETCALL_WATER: Line = {
-  phones: { default: "+18448330490", byCounty: {} },
+  phones: { default: "+18444342192", byCounty: {} },
   hours: { default: "business", byCounty: {} },
 };
 // Give a state its own entry (or byCounty numbers) when a different offer covers it.

@@ -124,8 +124,9 @@ const reviewed = new Date(SITE.lastReviewed + "T12:00:00Z").toLocaleDateString("
           <p class="eyebrow">Need help now?</p>
           {NATIONAL ? (
             <>
-              <p class="muted small">Choose your state to find county guidance and a call line to a restoration company near you.</p>
-              <a class="btn btn-call" style="width:100%" href="/#states"><Icon name="map" /><span>Find your state</span></a>
+              <p class="muted small">Call to get connected with a restoration company near you, or pick your state for county guidance.</p>
+              <CallButton placement="article-side" block />
+              <a class="small" href="/#states">Find your state</a>
             </>
           ) : (
             <>

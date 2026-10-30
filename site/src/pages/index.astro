@@ -25,7 +25,7 @@ const fallback = (slug: string) => countyBySlug(slug)!.adjacent.map((s) => count
         <h1>Water in the house? Get the right help, fast.</h1>
         <p class="lede">One call connects you with a restoration company that serves your county. While you wait, our county guides walk you through stopping the damage and protecting your claim.</p>
         <div class="cta-row">
-          <CallButton placement="home-hero" label="Call" />
+          <CallButton placement="home-hero" />
           <a class="btn btn-ghost" href={p("/guides/water-damage-first-hour/")}>What to do first</a>
         </div>
         <form class="finder" action={p("/counties/")} method="get" data-finder>
