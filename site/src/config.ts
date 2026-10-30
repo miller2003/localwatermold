@@ -1,4 +1,4 @@
-import { S } from "./lib/state";
+import { S, STATES } from "./lib/state";
 // Everything that changes between preview and launch lives here.
 
 type Mode = "preview" | "live";
@@ -19,10 +19,15 @@ const CONTACT_EMAIL = "hello@localwatermold.com";
 
 // Call lines per state. States not listed here show the call line as not live yet.
 const NO_LINE: Line = { phones: { default: null, byCounty: {} }, hours: { default: "business", byCounty: {} } };
-const LINES: Record<string, Line> = {
-  // Example: oh: { phones: { default: "+16145550100", byCounty: {} }, hours: { default: "business", byCounty: {}, window: "10am to 2am Eastern, 7 days a week" } },
+// Marketcall offer #12330 (water damage). Its buyers answer 10am to 2am Eastern, every day.
+const MARKETCALL_WATER: Line = {
+  phones: { default: "+18448330490", byCounty: {} },
+  hours: { default: "business", byCounty: {}, window: "10am to 2am Eastern, 7 days a week" },
 };
-const L = (S && LINES[S.key]) || NO_LINE;
+// Give a state its own entry (or byCounty numbers) when a different offer covers it.
+const LINES: Record<string, Line> = Object.fromEntries(Object.keys(STATES).map((k) => [k, MARKETCALL_WATER]));
+// The national pages (home, guides, 404) use the same line as the states.
+const L = S ? LINES[S.key] || NO_LINE : MARKETCALL_WATER;
 
 export const SITE = {
   brand: "Local Water & Mold",
