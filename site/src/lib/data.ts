@@ -1,4 +1,5 @@
 import { STATE_KEY } from "./state";
+import { applyCountyPageRule } from "./pages";
 
 const DATA = import.meta.glob("../data/*/counties.json", { eager: true, import: "default" });
 const MAPS = import.meta.glob("../data/*/map.json", { eager: true, import: "default" });
@@ -74,6 +75,7 @@ const data = raw as unknown as {
   pilot: string[];
   counties: County[];
 };
+applyCountyPageRule(STATE_KEY, data.counties);
 
 export const META = data.meta;
 export const STATE = data.state;

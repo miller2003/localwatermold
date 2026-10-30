@@ -1,5 +1,6 @@
 // Site-wide summaries for the root pages (national build). Reads every state's built data.
 import { ALL_STATES, type StateConfig } from "./state";
+import { applyCountyPageRule } from "./pages";
 
 interface Row {
   pilot: boolean; population: number; housingUnits: number; name: string; slug: string;
@@ -8,6 +9,7 @@ interface Row {
 }
 interface StateData { meta: Record<string, string | number>; counties: Row[] }
 const DATA = import.meta.glob("../data/*/counties.json", { eager: true, import: "default" }) as Record<string, StateData>;
+for (const [path, d] of Object.entries(DATA)) applyCountyPageRule(path.split("/")[2], d.counties);
 
 export interface StateSummary extends StateConfig {
   countyPages: number;

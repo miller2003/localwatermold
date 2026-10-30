@@ -1,0 +1,16 @@
+{
+ "about": "County pages are built for counties with weather data and at least minPopulation residents. Smaller counties listed under keep (recent buyer bids) still get a page; counties under drop lose theirs regardless (near-duplicates of a neighbor). Dropped pages 301 to a neighboring county via scripts/county-redirects.mjs.",
+ "minPopulation": 10000,
+ "keep": {
+  "ga": [
+   "glascock",
+   "lincoln",
+   "warren"
+  ]
+ },
+ "drop": {
+  "ga": [
+   "berrien"
+  ]
+ }
+}

@@ -33,6 +33,7 @@ const runQuiet = (cmd, args, env = {}) => new Promise((resolve) => {
 });
 
 rmSync("dist", { recursive: true, force: true });
+run("node", ["scripts/county-redirects.mjs"]);
 console.log("\n=== root ===");
 if (!run("npx", ["astro", "build", "--silent"], { SITE_STATE: "us" })) {
   console.error("Root section failed to build.");
