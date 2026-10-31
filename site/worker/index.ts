@@ -77,6 +77,12 @@ export default {
     // Network S2S callbacks (pay-per-call / affiliate): own shared secret, so before the API bearer check.
     if (path === "/api/postback" || path === "/api/postback/") return handlePostback(request, env, "localwatermold.com");
 
+    // One host for search: www served 200s with an apex canonical, so Google indexed both.
+    if (url.hostname.startsWith("www.") && (request.method === "GET" || request.method === "HEAD")) {
+      url.hostname = url.hostname.slice(4);
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (path === "/mcp") {
       return (await checkBearer(request, env, `${url.origin}/.well-known/oauth-protected-resource/mcp`)) ?? handleMcp(request, env);
     }
