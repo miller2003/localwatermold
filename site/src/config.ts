@@ -24,6 +24,11 @@ const MARKETCALL_WATER: Line = {
   phones: { default: "+18444342192", byCounty: {} },
   hours: { default: "business", byCounty: {} },
 };
+// Marketcall has no fire offer for us. CallScaler "Water Damage Pay Per Call Listing" takes fire calls
+// (its fire listing was declined with "send fire calls through your Water Damage number"), so every call
+// button on the fire and smoke page uses this number instead of the state line.
+const CALLSCALER_FIRE = "+14155821324";
+const FIRE_PATH = "/fire-smoke-damage/";
 // Give a state its own entry (or byCounty numbers) when a different offer covers it.
 const LINES: Record<string, Line> = Object.fromEntries(Object.keys(STATES).map((k) => [k, MARKETCALL_WATER]));
 // The national pages (home, guides, 404) use the same line as the states.
@@ -63,7 +68,9 @@ export const CALL_HOURS = L.hours;
 export const lineFor = (stateKey: string): Line => LINES[stateKey] || NO_LINE;
 export const callLineLive = (line: Line) => MODE === "live" && !!line.phones.default;
 
-export function phoneFor(countySlug?: string): string | null {
+// `path` is the page's URL path; the fire and smoke page gets the fire number wherever the state has a line.
+export function phoneFor(countySlug?: string, path?: string): string | null {
+  if (path?.endsWith(FIRE_PATH) && PHONES.default) return CALLSCALER_FIRE;
   return (countySlug && PHONES.byCounty[countySlug]) || PHONES.default;
 }
 

@@ -5,7 +5,7 @@ import { SITE, phoneFor, formatPhone } from "../config";
 // When the line is live the button text is the number itself; the phone icon and aria-label say "call".
 interface Props { county?: string; placement: string; block?: boolean; short?: boolean }
 const { county, placement, block, short } = Astro.props;
-const number = phoneFor(county);
+const number = phoneFor(county, Astro.url.pathname);
 const live = SITE.launchMode === "live" && number;
 ---
 {live ? (
