@@ -1,0 +1,127 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="How water damage estimates are really priced: estimating software, price lists and the line items that move the total"
+  seoTitle="How Water Damage Estimates Are Priced (Xactimate Explained)"
+  description="Most water damage estimates are built in the same software insurers use. How its price lists work, what O&P means, and the line items that move the total."
+  eyebrow="Guide · Inside the industry"
+  dek="Your restoration company and your insurer probably wrote their estimates in the same program, using the same regional price list. So why are the totals thousands apart? Because the fight is almost never about the price of a line. It's about which lines are there, and how many of each."
+  path="/guides/how-restoration-estimates-are-priced/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "How estimates are priced", href: "/guides/how-restoration-estimates-are-priced/" }]}
+  about={["Xactimate", "Water damage restoration estimates", "Overhead and profit", "Homeowners insurance claims"]}
+  summary={[
+    "<strong>Most insurance restoration work is estimated in Xactimate</strong>, software from Verisk that carries a price list for each region, updated monthly. Contractors and insurers usually price from the same list.",
+    "<strong>Because unit prices are shared, the money moves through quantities:</strong> how many air movers, how many days, how many square feet of drywall, which water category, and whether a line appears at all.",
+    "<strong>The lines worth questioning</strong> are equipment days, equipment counts, flood-cut height, water category, content manipulation, containment, and overhead and profit (O&amp;P).",
+    "<strong>O&amp;P is commonly 10% overhead plus 10% profit</strong>, added when a general contractor coordinates several trades. Whether your insurer owes it depends on your policy and your state, so ask rather than assume.",
+    "<strong>Read any estimate in this order:</strong> the summary page, the room-by-room quantities, the equipment and labor lines, then the notes. Twenty minutes with the photos and moisture logs beside it catches most problems.",
+  ]}
+  faq={[
+    { q: "What is Xactimate?", a: "Xactimate is estimating software from Verisk used by most U.S. property insurers and many restoration contractors. It builds an estimate from coded line items, each priced from a regional price list that is updated monthly. Because both sides often use it, disputes are usually about quantities and which items belong, not unit prices." },
+    { q: "If both estimates use the same software, why are they so different?", a: "Each estimator decides which line items to include and how many of each. One might count five air movers for four days and include containment; another might count three for three days and leave containment out. The same price list multiplied by different quantities gives very different totals." },
+    { q: "What does O&P mean on a restoration estimate?", a: "Overhead and profit. It's usually written as 10% plus 10%, applied to the estimate when a general contractor manages several trades. Some insurers include it only when the job is complex enough to need a general contractor. Rules on when it's owed vary by policy and state." },
+    { q: "Can I get a copy of the estimate file itself?", a: "You can ask both your contractor and your adjuster for a copy of their estimates. Most will send a PDF. Contractors and adjusters can also exchange the native estimate file (an ESX file), which lets them compare line by line instead of arguing over totals." },
+    { q: "Is the price list the real market price?", a: "It's a researched estimate of local prices, not a quote. In a normal month it's often close to what work costs. After a large storm or flood, when labor is scarce, real costs can run ahead of the list for a while. That's one reason bills and estimates drift apart after disasters." },
+  ]}
+  related={[
+    { href: "/guides/water-mitigation-bill-too-high/", label: "Mitigation bill too high?" },
+    { href: "/guides/moisture-meters-thermal-cameras-is-it-dry/", label: "Is your house actually dry?" },
+    { href: "/guides/mitigation-vs-rebuild-same-company/", label: "Mitigation vs. rebuild" },
+    { href: "/guides/water-damage-restoration-cost/", label: "What restoration costs" },
+  ]}
+  sources={[
+    { label: "Verisk: Xactimate property estimating software", href: "https://www.verisk.com/products/xactimate/" },
+    { label: "IICRC: ANSI/IICRC S500 Standard for Professional Water Damage Restoration", href: "https://iicrc.org/s500/" },
+    { label: "NAIC: Consumer guide to homeowners insurance", href: "https://content.naic.org/consumer/home-insurance.htm" },
+    { label: "Insurance Information Institute: Understanding the insurance claims payment process", href: "https://www.iii.org/article/understanding-the-insurance-claims-payment-process" },
+  ]}
+>
+  <h2>One program prices most of this industry</h2>
+  <p>When an adjuster writes an estimate for a burst pipe, they almost always build it in <strong>Xactimate</strong>, estimating software made by Verisk. Most restoration companies that do insurance work use it too, because insurers expect to see estimates in that format.</p>
+  <p>Xactimate doesn't let anyone type a price for "fix the basement." It works in coded <strong>line items</strong>: remove wet drywall, per square foot; air mover, per 24-hour period; apply antimicrobial, per square foot. Each line is priced from a <strong>price list for your region</strong>, researched and updated every month. The estimator's job is to pick the right lines and enter the right quantities. The software does the multiplication.</p>
+  <p>That has a consequence most homeowners never hear about: <strong>when your contractor and your insurer disagree, they usually aren't disagreeing about prices.</strong> They're often using the same price list for the same month. The difference is in what each one included and how much of it.</p>
+
+  <h2>Anatomy of a line item</h2>
+  <p>Every line on an Xactimate-style estimate has the same parts. Once you can read one, you can read all of them.</p>
+  <table>
+    <thead><tr><th>Part</th><th>What it means</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Description</strong></td><td>What's being done or used</td><td>Air mover (per 24-hour period), no monitoring</td></tr>
+      <tr><td><strong>Quantity and unit</strong></td><td>How much, in what unit: EA (each), SF (square feet), LF (linear feet), HR, DA (day)</td><td>12.00 EA, meaning 3 machines for 4 days</td></tr>
+      <tr><td><strong>Unit price</strong></td><td>From the regional price list, sometimes split into material, labor and equipment</td><td>Whatever your area's list says this month</td></tr>
+      <tr><td><strong>Tax</strong></td><td>Sales tax on materials, where it applies</td><td>Varies by state</td></tr>
+      <tr><td><strong>O&amp;P</strong></td><td>Overhead and profit, if applied</td><td>Often a separate column or a line at the end</td></tr>
+      <tr><td><strong>Total</strong></td><td>Quantity times unit price, plus tax and O&amp;P</td><td>&nbsp;</td></tr>
+    </tbody>
+  </table>
+  <p>Look at the quantity column first. That's where almost every difference between two estimates lives.</p>
+
+  <h2>Where the money actually moves</h2>
+  <p>These are the lines that move a water damage estimate up or down. None of them is wrong in itself. Each one should be supported by something you can see: a photo, a moisture reading, a measurement.</p>
+  <table>
+    <thead><tr><th>Line</th><th>Why it moves the total</th><th>What supports it</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Equipment days</strong></td><td>Every machine bills every day it runs. One extra day across eight machines adds up quickly.</td><td>Daily moisture logs showing materials still above the drying goal</td></tr>
+      <tr><td><strong>Equipment count</strong></td><td>The IICRC S500 standard gives placement guidelines based on the room and how wet it is, so counts should be explainable.</td><td>A room-by-room list and the reasoning for the count</td></tr>
+      <tr><td><strong>Flood-cut height</strong></td><td>Cutting drywall at 4 feet instead of 2 feet roughly doubles the drywall removed now and the drywall rebuilt later.</td><td>Readings or photos showing how high the water wicked</td></tr>
+      <tr><td><strong>Water category</strong></td><td>Category 2 or 3 water brings protective gear, antimicrobials, containment and more removal. Calling clean water "gray" changes the whole job.</td><td>Where the water came from and how long it sat. See <a href="/guides/water-damage-categories/">the three categories</a>.</td></tr>
+      <tr><td><strong>Content manipulation</strong></td><td>Moving furniture out of the way and back, billed by the hour or by the room</td><td>Photos of the furnished rooms before work started</td></tr>
+      <tr><td><strong>Containment and air scrubbers</strong></td><td>Plastic walls and HEPA air filtration are expected for contaminated water or mold, but less often for a clean-water leak.</td><td>The water category, or visible growth</td></tr>
+      <tr><td><strong>Monitoring visits</strong></td><td>Each daily check is a labor line.</td><td>Dated readings for each visit</td></tr>
+      <tr><td><strong>After-hours and minimum charges</strong></td><td>Emergency service premiums and job minimums</td><td>When you called, and what you were told</td></tr>
+      <tr><td><strong>Debris and haul-off</strong></td><td>Dumpsters, hauling and disposal fees</td><td>The amount of material actually removed</td></tr>
+      <tr><td><strong>Supervision and project management</strong></td><td>Hours for coordinating the job</td><td>Usually more defensible on larger, multi-trade jobs</td></tr>
+    </tbody>
+  </table>
+  <p class="notice notice-water"><strong>The quiet multiplier:</strong> decisions made in the first hour, like how high to cut and whether the cabinets come out, set the size of both the drying bill and the rebuild bill. They're the least visible decisions on the estimate and often the most expensive. More on that in <a href="/guides/mitigation-vs-rebuild-same-company/">mitigation vs. rebuild</a>.</p>
+
+  <h2>Overhead and profit, explained</h2>
+  <p>You'll often see <strong>O&amp;P</strong> at the bottom of a contractor's estimate and missing from the insurer's. It's usually calculated as <strong>10% overhead plus 10% profit</strong>, the long-standing convention for a general contractor who schedules and supervises other trades.</p>
+  <ul>
+    <li><strong>When it's usually included:</strong> jobs that need a general contractor to coordinate several trades, such as drywall, painting, flooring, cabinets and electrical. People in the industry often cite "three or more trades" as a rule of thumb, but that's a habit, not policy language.</li>
+    <li><strong>When it's often left off:</strong> simple jobs a single trade could handle, and mitigation-only work.</li>
+    <li><strong>What decides it for your claim:</strong> your policy wording and your state's rules and court decisions. If it's missing and your job clearly needs a general contractor, ask the adjuster in writing why.</li>
+  </ul>
+
+  <h2>Price lists aren't quotes</h2>
+  <p>The regional price list is a researched estimate of what work costs in your area. Most months it's close enough that both sides accept it. It falls behind in a few situations:</p>
+  <ul>
+    <li><strong>After a large storm or freeze,</strong> when every crew in the region is booked and labor costs jump faster than the list updates.</li>
+    <li><strong>In rural areas,</strong> where travel time and the small number of companies push real costs above a list built from wider data.</li>
+    <li><strong>For specialty work,</strong> like drying hardwood with floor mats, cleaning electronics or freeze-drying documents, where few companies set the market.</li>
+  </ul>
+  <p>In those cases, a contractor may bill above the list and the insurer may pay at the list. That gap is real and is sometimes negotiable with evidence, such as invoices from subcontractors or quotes from other companies.</p>
+
+  <h2>Time and materials: the other pricing method</h2>
+  <p>Some mitigation companies bill <strong>time and materials (T&amp;M)</strong> instead of unit prices: hours worked plus a rate for each machine. It isn't wrong, but it's harder to check against an insurer's estimate, which will almost always be written in unit prices. If your <a href="/guides/restoration-work-authorization-assignment-of-benefits/">work authorization</a> says T&amp;M, ask for daily time sheets alongside the moisture logs.</p>
+
+  <h2>Why your insurer's estimate comes in lower</h2>
+  <p>The insurer's estimate isn't written to be generous or stingy. It's written to what the adjuster can support from the file. Lines usually go missing for one of these reasons:</p>
+  <ol class="steps">
+    <li><strong>The adjuster didn't see it.</strong> A desk adjuster working from photos can't count equipment that wasn't photographed or tear-out that happened after the inspection.</li>
+    <li><strong>The documentation doesn't support it.</strong> No moisture reading for day five means no day five.</li>
+    <li><strong>A guideline says otherwise.</strong> Insurers and their vendor programs often have review rules, for example on when containment is allowed or how many days drying should take.</li>
+    <li><strong>It isn't covered.</strong> Some items fall under an exclusion or a sublimit, like mold or the failed part itself.</li>
+  </ol>
+  <p>The first two are fixable with paperwork. The third is negotiable when the facts of your job differ from the guideline. The fourth is a coverage question, covered in <a href="/guides/does-homeowners-insurance-cover-water-damage/">what insurance covers</a>.</p>
+
+  <h2>How to read your estimate in 20 minutes</h2>
+  <ol class="steps">
+    <li><strong>Start with the summary page.</strong> Note the totals for mitigation, rebuild, contents, tax and O&amp;P, and any deductible or depreciation subtracted.</li>
+    <li><strong>Check each room's measurements.</strong> Wrong room dimensions throw off every square-foot line in that room.</li>
+    <li><strong>Compare the equipment lines against the moisture log.</strong> Machines times days should match the days the log shows materials still wet.</li>
+    <li><strong>Check removal against photos.</strong> Every square foot of drywall, carpet or pad billed as removed should appear in a photo.</li>
+    <li><strong>Find the water category.</strong> It's usually stated in the notes, and it explains most of the protective and antimicrobial lines.</li>
+    <li><strong>Mark each line on the two estimates</strong> as the same, a different quantity, or missing. Send that list, not a complaint about the total, to whoever you're negotiating with.</li>
+  </ol>
+
+  <h2>What this means for you</h2>
+  <p>You don't need to become an estimator. You need to know that the number at the bottom is a stack of small, checkable decisions, and that each decision should have evidence behind it. Ask for the photos, the moisture logs and the native estimate files early, while the job is still going. A file with good records rarely ends in a fight over the total.</p>
+
+  <h2>State claim rules and regulators</h2>
+  <p>If a disagreement with your insurer stalls, your state insurance department is the place to call. Each state section lists its regulator and claim rules:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/`}>{s.name}</a></>)}.
+  </p>
+</Article>

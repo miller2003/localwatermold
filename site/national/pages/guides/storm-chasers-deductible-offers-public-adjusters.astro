@@ -1,0 +1,132 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="After a storm or flood: storm chasers, 'we'll cover your deductible' and when a public adjuster is worth the fee"
+  seoTitle="Storm Chasers, Deductible Offers and Public Adjusters"
+  description="Out-of-town crews, deductible offers, door-to-door contracts and public adjusters after a storm: what each means and how to protect your claim."
+  eyebrow="Guide · Inside the industry"
+  dek="Within a day of a major storm, the trucks arrive: crews from three states away, salespeople with clipboards, and people offering to handle your insurance for a percentage. Some of them will genuinely help. Others will be gone before your warranty matters. Here's how to tell, and what each offer really means."
+  path="/guides/storm-chasers-deductible-offers-public-adjusters/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Storm chasers and public adjusters", href: "/guides/storm-chasers-deductible-offers-public-adjusters/" }]}
+  about={["Storm chasers", "Insurance deductibles", "Public adjusters", "Door-to-door sales", "Disaster recovery"]}
+  summary={[
+    "<strong>After big storms, out-of-town crews fill the gap</strong> that local companies can't. Some are reputable; the risk is a company that won't be reachable when a warranty or dispute comes up.",
+    "<strong>An offer to 'cover' or waive your deductible</strong> means someone else absorbs your share of the loss, usually by inflating the claim or cutting the work. Texas prohibits it by law, and in any state it can amount to insurance fraud.",
+    "<strong>Under the FTC's Cooling-Off Rule, most sales of $25 or more made at your home</strong> can be cancelled within three business days. Some states add protections for storm repairs.",
+    "<strong>FEMA doesn't send contractors to homeowners,</strong> and its staff never charge for help or inspections. Anyone claiming to be 'FEMA approved' is a warning sign.",
+    "<strong>A public adjuster works for you</strong> for a percentage of the claim. It can pay off on large, complex or stalled claims. On small, simple ones, the fee often costs more than it adds.",
+  ]}
+  faq={[
+    { q: "Is it legal for a contractor to pay my insurance deductible?", a: "In some states it's specifically illegal: Texas, for example, prohibits contractors paid from an insurance claim from waiving, absorbing or rebating the deductible. Everywhere, inflating an estimate to cover a deductible can amount to insurance fraud, which puts the homeowner at risk too. Your deductible is your share of the loss." },
+    { q: "Can I cancel a contract I signed with a door-to-door contractor?", a: "Usually. The FTC's Cooling-Off Rule gives you three business days to cancel most sales of $25 or more made at your home, and the seller must tell you about that right. There's an exception for genuine emergencies when you waive the right in your own handwriting. Many states add their own cancellation rights for home repair and storm work." },
+    { q: "How much do public adjusters charge?", a: "Most charge a percentage of the insurance payment, commonly somewhere around 10% to 20%. Many states cap public adjuster fees, especially after declared disasters. Negotiate whether the fee applies to the whole claim or only to money above what your insurer had already offered." },
+    { q: "Is a public adjuster worth it?", a: "Often for large, complicated or stalled claims, like a major fire, a large contents loss or a claim the insurer is underpaying. Often not for small, straightforward claims, or when the insurer has already offered a fair amount, since the fee comes out of your payment." },
+    { q: "Does FEMA recommend contractors?", a: "No. FEMA doesn't hire or endorse contractors for private home repairs, and FEMA staff and inspectors never charge homeowners for applying or for inspections. Be cautious of anyone claiming to be FEMA approved or certified." },
+  ]}
+  related={[
+    { href: "/guides/water-damage-claim-words-adjusters-listen-for/", label: "What adjusters listen for" },
+    { href: "/guides/restoration-work-authorization-assignment-of-benefits/", label: "Before you sign" },
+    { href: "/guides/who-answers-water-damage-restoration-calls/", label: "Who answers the call" },
+    { href: "/guides/does-homeowners-insurance-cover-water-damage/", label: "Flood vs. water damage coverage" },
+  ]}
+  sources={[
+    { label: "FTC: Buyer's remorse: the FTC's Cooling-Off Rule", href: "https://consumer.ftc.gov/articles/buyers-remorse-ftcs-cooling-rule-may-help" },
+    { label: "FTC: How to avoid a home improvement scam", href: "https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam" },
+    { label: "FEMA: Disaster fraud", href: "https://www.fema.gov/assistance/individual/disaster-fraud" },
+    { label: "NAIC: Find your state insurance department", href: "https://content.naic.org/state-insurance-departments" },
+    { label: "FloodSmart (National Flood Insurance Program)", href: "https://www.floodsmart.gov/" },
+    { label: "Texas Department of Insurance: How to avoid contracting scams", href: "https://www.tdi.texas.gov/tips/contractor-scams.html" },
+  ]}
+>
+  <h2>What happens after a big storm</h2>
+  <p>A hailstorm, derecho, ice storm or flood can damage thousands of homes in a day. Local restoration and roofing companies are booked for weeks. Into that gap come <strong>traveling crews</strong>, companies that follow storms from region to region, along with salespeople, adjusters and people who simply see an opportunity.</p>
+  <p>"Storm chaser" is used as an insult, but traveling crews do much of the real recovery work after large disasters. The problem isn't that they're from out of town. It's that some of them won't be reachable in six months, when a roof leaks, a wall develops mold or a payment dispute needs resolving. Your job is to separate the ones who'll stand behind the work from the ones who won't.</p>
+
+  <h2>The pitches, and what's behind them</h2>
+  <table>
+    <thead><tr><th>What you hear</th><th>What it usually means</th></tr></thead>
+    <tbody>
+      <tr><td><strong>"We'll cover your deductible."</strong></td><td>Someone absorbs your share of the loss, usually by inflating the claim or cutting the work. Illegal in some states, and potentially insurance fraud everywhere.</td></tr>
+      <tr><td><strong>"Just sign so we can talk to your insurance."</strong></td><td>Often a contingency agreement, a binding contract, or an assignment of benefits. See <a href="/guides/restoration-work-authorization-assignment-of-benefits/">before you sign</a>.</td></tr>
+      <tr><td><strong>"Your insurance will pay for everything."</strong></td><td>Nobody knows that before your adjuster has inspected and your policy has been read.</td></tr>
+      <tr><td><strong>"We're approved by your insurance company" or "FEMA certified."</strong></td><td>Insurers have vendor networks, but you can verify that by calling your insurer. FEMA doesn't certify contractors for homeowners.</td></tr>
+      <tr><td><strong>"This price is only good today."</strong></td><td>Pressure to sign before you check them out or talk to your insurer</td></tr>
+      <tr><td><strong>"We need a deposit to order materials."</strong></td><td>Sometimes legitimate for rebuilding, rarely for emergency drying. Large cash deposits to an unverified company are the classic loss.</td></tr>
+      <tr><td><strong>"We noticed damage on your roof."</strong></td><td>Ask to see photos with your house in them, and get a second opinion before signing.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Why "we'll cover your deductible" is a problem for you</h2>
+  <p>Your deductible is your share of the loss under the insurance contract. When a contractor offers to waive or absorb it, the money has to come from somewhere. Usually it's one of two places:</p>
+  <ul>
+    <li><strong>A padded claim:</strong> the estimate is raised by roughly the deductible amount, so the insurer pays it. That's insurance fraud, and it's your claim.</li>
+    <li><strong>Cheaper work:</strong> the contractor keeps the price the insurer approved and cuts materials or labor to recover the cost.</li>
+  </ul>
+  <p>Some states have made it explicitly illegal. <strong>Texas</strong>, for example, prohibits contractors paid from a property insurance claim from waiving, absorbing or rebating the insured's deductible. Other states treat it under general fraud laws. Either way, an offer to make your deductible disappear is a reason to walk away, not a perk.</p>
+
+  <h2>Your right to cancel a door-to-door contract</h2>
+  <p>The FTC's <strong>Cooling-Off Rule</strong> gives you three business days to cancel most sales of $25 or more made at your home, and the seller must give you a cancellation form and explain the right. Two details matter after a disaster:</p>
+  <ul>
+    <li><strong>Genuine emergencies are an exception</strong> if you waive the right in a handwritten, signed statement describing the emergency. Read anything a salesperson asks you to write out yourself.</li>
+    <li><strong>Many states add their own rules</strong> for home repair and storm work, including longer cancellation periods or cancellation if your insurer denies the claim.</li>
+  </ul>
+  <p>If a contract was signed at your door in the confusion after a storm and you're unsure about it, act on the cancellation right in writing before the deadline.</p>
+
+  <h2>Checking a company that isn't from here</h2>
+  <ol class="steps">
+    <li><strong>A local license or registration,</strong> if your state, county or city requires one. Many require it for roofing and rebuilding.</li>
+    <li><strong>An insurance certificate</strong> sent to you directly by the company's insurance agent, not a photo.</li>
+    <li><strong>A local address and phone number</strong> that will still answer after the trucks leave. Ask who handles warranty calls in a year.</li>
+    <li><strong>Permits pulled in the company's name</strong> where your city requires them.</li>
+    <li><strong>References from jobs in your area,</strong> not only from the last storm three states away.</li>
+    <li><strong>No full payment until the work is done</strong> and you've inspected it.</li>
+  </ol>
+
+  <h2>FEMA, flood insurance and disaster fraud</h2>
+  <ul>
+    <li><strong>FEMA doesn't send contractors</strong> to repair private homes, and it doesn't certify them.</li>
+    <li><strong>FEMA staff and inspectors never charge</strong> homeowners for applying or for an inspection, and carry official identification.</li>
+    <li><strong>Standard homeowners policies exclude flood.</strong> Flood damage is covered only by a separate flood policy, such as one through the National Flood Insurance Program. If you have one, it's a separate claim with its own adjuster and deadlines.</li>
+    <li><strong>Report suspected disaster fraud</strong> to FEMA and to your state attorney general or insurance department.</li>
+  </ul>
+
+  <h2>Public adjusters: working for you, for a fee</h2>
+  <p>Every adjuster the insurer sends works for the insurer. A <strong>public adjuster</strong> works for you. Most states license them, and they're paid a percentage of what the insurer pays on your claim, commonly around 10% to 20%. Many states cap that percentage, especially after a declared disaster.</p>
+  <table>
+    <thead><tr><th>Often worth it</th><th>Often not worth it</th></tr></thead>
+    <tbody>
+      <tr><td>Large losses: a major fire, a whole floor, an extensive contents claim</td><td>Small, straightforward claims, like a single room of clean-water damage</td></tr>
+      <tr><td>A claim that has stalled or been underpaid, with clear evidence</td><td>A claim where the insurer has already offered a fair amount</td></tr>
+      <tr><td>You don't have the time to manage inventories and estimates</td><td>Disputes about coverage, which may need a lawyer instead</td></tr>
+    </tbody>
+  </table>
+
+  <h2>How to hire a public adjuster carefully</h2>
+  <ul>
+    <li><strong>Check the license</strong> with your state insurance department. Hire only someone licensed in your state.</li>
+    <li><strong>Negotiate what the fee applies to.</strong> If the insurer had already offered an amount before you hired them, ask for the fee to apply only to money recovered above that offer.</li>
+    <li><strong>Read the contract's cancellation terms.</strong> Many states give you a period to cancel a public adjuster contract.</li>
+    <li><strong>Be wary of door-knocking within hours of a disaster.</strong> Some states restrict when public adjusters may solicit after a catastrophe.</li>
+    <li><strong>Ask who handles the work:</strong> the licensed adjuster you met, or someone else in their firm.</li>
+  </ul>
+
+  <h2>When to call a lawyer instead</h2>
+  <p>If the insurer says something isn't covered at all, or accuses you of misrepresentation, the question is legal, not one of measurement. A lawyer who handles insurance disputes for policyholders, often on contingency, is usually the right call. Your state bar association can refer you.</p>
+
+  <h2>The week after a storm: a short checklist</h2>
+  <ol class="steps">
+    <li><strong>Make the house safe</strong> and stop more water from getting in: tarp, board up, shut off water.</li>
+    <li><strong>Photograph everything</strong> before anyone starts work.</li>
+    <li><strong>Call your insurer</strong> and open the claim. Write down the claim number and your adjuster's name.</li>
+    <li><strong>Don't sign at the door.</strong> Take the paperwork, check the company, read it, then decide.</li>
+    <li><strong>Keep receipts</strong> for emergency repairs and temporary housing.</li>
+    <li><strong>Start drying</strong> wet areas within a day or two to limit mold. See <a href="/guides/water-damage-mold-emergency/">what to do now</a>.</li>
+  </ol>
+
+  <h2>State rules and regulators</h2>
+  <p>Contractor, cancellation and public adjuster rules vary by state. Each state section covers its own:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/`}>{s.name}</a></>)}.
+  </p>
+</Article>

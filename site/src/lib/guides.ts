@@ -2,7 +2,7 @@
 // section links to that one copy. That keeps 25 near-identical pages out of the index.
 // The national /guides/ index, state guide indexes, sitemaps and llms.txt all read this list.
 
-export type GuideGroup = "emergency" | "damage" | "money";
+export type GuideGroup = "emergency" | "damage" | "money" | "insider";
 export interface NationalGuide { slug: string; title: string; note: string; group: GuideGroup }
 
 export const NATIONAL_GUIDES: NationalGuide[] = [
@@ -23,6 +23,14 @@ export const NATIONAL_GUIDES: NationalGuide[] = [
   { slug: "insurance-preferred-vendor-or-own-contractor", group: "money", title: "Insurer's preferred vendor or your own company?", note: "What preferred vendors are, the real trade-offs, and seven questions for either." },
   { slug: "restoration-work-authorization-assignment-of-benefits", group: "money", title: "Before you sign: work authorization or assignment of benefits?", note: "What each document does, the clauses to read, and your right to cancel." },
   { slug: "water-mitigation-bill-too-high", group: "money", title: "Mitigation bill too high, or insurance paid less?", note: "How to read the invoice, the drying logs to ask for, and how disputes get settled." },
+  { slug: "how-restoration-estimates-are-priced", group: "insider", title: "How water damage estimates are really priced", note: "The shared software and price lists, O&P, and the line items that move the total." },
+  { slug: "who-answers-water-damage-restoration-calls", group: "insider", title: "Who answers when you call a water damage number?", note: "Referral fees, call centers, lead networks and fake map listings, including our part." },
+  { slug: "moisture-meters-thermal-cameras-is-it-dry", group: "insider", title: "Is your house actually dry?", note: "Meters, thermal cameras, the drying goal, and drying that's stretched or cut short." },
+  { slug: "mold-testing-and-remediation-conflicts-of-interest", group: "insider", title: "Mold testing and remediation: conflicts of interest", note: "Why the tester shouldn't be the remover, scare tactics, and upsells that don't remove mold." },
+  { slug: "water-damage-claim-words-adjusters-listen-for", group: "insider", title: "What your adjuster is listening for", note: "Cause and timing, the hidden-leak exception, recorded statements and the evidence that counts." },
+  { slug: "storm-chasers-deductible-offers-public-adjusters", group: "insider", title: "Storm chasers, deductible offers and public adjusters", note: "What each post-storm pitch means, your right to cancel, and when a public adjuster pays off." },
+  { slug: "contents-pack-out-and-cleaning", group: "insider", title: "Your belongings: pack-outs, cleaning and the inventory", note: "When a pack-out makes sense, how it's billed, and why nothing leaves undocumented." },
+  { slug: "mitigation-vs-rebuild-same-company", group: "insider", title: "Mitigation and rebuild: same company or not?", note: "How day-one tear-out sets the rebuild bill, matching, and following the money." },
 ];
 
 export const guidePath = (slug: string) => `/guides/${slug}/`;

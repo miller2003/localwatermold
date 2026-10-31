@@ -1,0 +1,128 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="Your belongings after water or fire damage: pack-outs, cleaning, storage and the inventory that gets you paid"
+  seoTitle="Contents Pack-Out After Water or Fire Damage, Explained"
+  description="When a pack-out makes sense, how contents cleaning and storage are billed, what can be saved, and why the inventory decides your contents claim."
+  eyebrow="Guide · Inside the industry"
+  dek="The structure of your house is one job. Everything inside it is another, often run by a different department or company, billed in a different way and paid under a different part of your policy. It's also where homeowners lose the most money without noticing, usually in a dumpster."
+  path="/guides/contents-pack-out-and-cleaning/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Contents and pack-outs", href: "/guides/contents-pack-out-and-cleaning/" }]}
+  about={["Contents restoration", "Pack-out", "Personal property insurance claims", "Water damage", "Fire and smoke damage"]}
+  summary={[
+    "<strong>Contents is a separate job and a separate claim.</strong> Belongings fall under personal property coverage (often Coverage C), with its own limits, depreciation and inventory requirements.",
+    "<strong>A pack-out moves belongings off site</strong> for cleaning and storage. It makes sense after fires and large water losses, or when rooms must be emptied for rebuilding. For a single wet room, moving items within the house is often enough.",
+    "<strong>Pack-out, cleaning and storage are billed item by item, box by box and month by month.</strong> Storage keeps billing as long as the rebuild takes, so ask what your policy will pay and for how long.",
+    "<strong>Never let anything be thrown away undocumented.</strong> Every discarded item needs a photo, a description and your sign-off. Without that, it can't be claimed.",
+    "<strong>Many policies pay actual cash value first</strong> and release the depreciation once you replace an item. Keep receipts and watch the deadline.",
+  ]}
+  faq={[
+    { q: "What is a pack-out in water damage restoration?", a: "A pack-out is when a restoration company inventories, photographs, packs and moves your belongings to its facility for cleaning and storage while your house is dried and repaired. They're returned in a pack-back when the work is done." },
+    { q: "Do I have to let the restoration company pack out my belongings?", a: "No. It's a service you can accept, decline or limit. It's often worthwhile after a fire or a large water loss, or when rooms must be emptied for rebuilding. For smaller jobs, moving items to a dry part of the house may be enough. Ask your adjuster what they'll approve before agreeing." },
+    { q: "Who pays for contents cleaning and storage?", a: "Usually your homeowners insurance, under personal property coverage, if the loss is covered. Storage is billed monthly, so ask your adjuster how long it will be paid and whether there's a limit, especially if the rebuild may take months." },
+    { q: "Can water-damaged items be saved?", a: "Many can. Hard items like dishes, glass and metal usually clean well. Clothing and many fabrics can be laundered. Documents and books can often be saved by freeze-drying. Porous items soaked in contaminated water, like mattresses and upholstered furniture, are usually discarded under the IICRC S500 standard." },
+    { q: "What should I do before the restoration company throws something away?", a: "Make sure every item is photographed and listed with a description, age and approximate value, and ask for a copy of that list before it's disposed of. Keep a sample of materials like carpet and pad if possible. Your insurer may want to see items before they're thrown out." },
+  ]}
+  related={[
+    { href: "/guides/mitigation-vs-rebuild-same-company/", label: "Mitigation vs. rebuild" },
+    { href: "/guides/water-damage-claim-words-adjusters-listen-for/", label: "What adjusters listen for" },
+    { href: "/guides/water-damage-categories/", label: "Clean, gray or black water" },
+    { href: "/guides/how-restoration-estimates-are-priced/", label: "How estimates are priced" },
+  ]}
+  sources={[
+    { label: "NAIC: Consumer guide to homeowners insurance", href: "https://content.naic.org/consumer/home-insurance.htm" },
+    { label: "IICRC: ANSI/IICRC S500 Standard for Professional Water Damage Restoration", href: "https://iicrc.org/s500/" },
+    { label: "National Archives: Saving family papers and photographs after water damage", href: "https://www.archives.gov/preservation/family-archives/emergency" },
+  ]}
+>
+  <h2>Two jobs, two claims</h2>
+  <p>When water or smoke damages a house, there are really two losses: the <strong>building</strong>, including walls, floors, cabinets and built-ins, and the <strong>contents</strong>, meaning everything you could pick up and take with you. Insurance treats them separately. The building is usually dwelling coverage; your belongings usually fall under personal property coverage, often labeled Coverage C, with its own limit and its own rules.</p>
+  <p>Restoration companies often split them too. Many have a separate contents department, and some send contents work to a specialist company. That means a separate estimate, separate invoices and a separate set of decisions, often made fast, in the first day or two, while you're still dealing with the water.</p>
+
+  <h2>Pack-out or move it within the house?</h2>
+  <table>
+    <thead><tr><th></th><th>Content manipulation</th><th>Pack-out</th></tr></thead>
+    <tbody>
+      <tr><td><strong>What happens</strong></td><td>Furniture and items are moved to a dry room or raised on blocks so drying can happen</td><td>Items are inventoried, packed and taken to the company's facility for cleaning and storage</td></tr>
+      <tr><td><strong>When it fits</strong></td><td>One or two rooms of clean water, with dry space elsewhere in the house</td><td>Fire and smoke, large water losses, contaminated water, or rooms that must be empty for rebuilding</td></tr>
+      <tr><td><strong>How it's billed</strong></td><td>Usually by the hour or by the room</td><td>Inventory, packing materials, labor, transport, cleaning by item and storage by the month</td></tr>
+      <tr><td><strong>Cost</strong></td><td>Modest</td><td>Often thousands of dollars, and storage keeps adding up</td></tr>
+    </tbody>
+  </table>
+  <p>A pack-out is a real service and often the right call. It's also one of the more profitable parts of a restoration job, so it's sometimes suggested when moving things across the hall would do. You can accept, decline or limit it. Ask your adjuster what they'll approve before you agree.</p>
+
+  <h2>How contents work is billed</h2>
+  <ul>
+    <li><strong>Inventory:</strong> listing and photographing each item or box, often in specialized software.</li>
+    <li><strong>Packing:</strong> labor plus boxes, wrap and crates, often per box.</li>
+    <li><strong>Transport</strong> to and from the facility.</li>
+    <li><strong>Cleaning,</strong> priced by item and method: wiping hard goods, ultrasonic cleaning for small hard items, laundering or dry cleaning textiles, ozone or other odor treatment after smoke.</li>
+    <li><strong>Storage,</strong> usually by vault or by space, <strong>per month</strong>.</li>
+    <li><strong>Pack-back:</strong> unpacking and placing items when you move back in.</li>
+  </ul>
+  <p class="notice notice-amber"><strong>The meter that keeps running:</strong> storage bills every month until the rebuild finishes. If the rebuild drags on for permits, insurance disputes or contractor delays, storage can grow into one of the larger lines in the claim. Ask your adjuster early how long storage will be paid, and ask the company for monthly statements.</p>
+
+  <h2>The inventory is your claim</h2>
+  <p>For contents, insurers pay for what's documented. The inventory made during a pack-out, with photos, is often the backbone of your personal property claim. Two items on that list deserve the most attention:</p>
+  <ul>
+    <li><strong>Salvageable items</strong> are cleaned and returned. The claim covers the cleaning, not the item.</li>
+    <li><strong>Non-salvageable items</strong> are discarded and claimed for their value. Each needs a description, an approximate age and what it would cost to replace.</li>
+  </ul>
+  <p>Ask for a copy of the inventory as it's built, not just at the end. Add anything that's missing, such as items in closets, drawers or the garage, and correct descriptions that undersell what you owned. "Sofa" and "three-seat leather sofa, purchased 2021" lead to very different payments.</p>
+
+  <h2>Nothing gets thrown away undocumented</h2>
+  <p>This is where homeowners lose the most money. In the rush of the first day, wet carpet, soaked furniture and boxes of damaged belongings go to the dumpster. Without photos and a list, they're very hard to claim later.</p>
+  <ol class="steps">
+    <li><strong>Photograph every item before it leaves,</strong> with any brand label or model number visible.</li>
+    <li><strong>List it</strong> with a description, rough age and replacement cost.</li>
+    <li><strong>Keep samples</strong> where you can: a piece of the carpet and pad, a corner of a damaged rug, fabric from upholstery.</li>
+    <li><strong>Ask your adjuster</strong> whether they want to see anything before it's discarded, especially high-value items.</li>
+    <li><strong>Sign off only on items you've seen listed.</strong> Ask for the disposal list in writing.</li>
+  </ol>
+
+  <h2>What can usually be saved</h2>
+  <p>Whether something can be saved depends on the material, the <a href="/guides/water-damage-categories/">category of water</a>, and how long it was wet.</p>
+  <table>
+    <thead><tr><th>Item</th><th>Clean water, caught quickly</th><th>Contaminated water</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dishes, glass, metal, hard plastic</strong></td><td>Clean and keep</td><td>Usually cleanable with disinfection</td></tr>
+      <tr><td><strong>Clothing and linens</strong></td><td>Launder or dry clean</td><td>Often cleanable by specialist laundering</td></tr>
+      <tr><td><strong>Solid wood furniture</strong></td><td>Often restorable</td><td>Sometimes, depending on finish and exposure</td></tr>
+      <tr><td><strong>Upholstered furniture</strong></td><td>Sometimes, if dried quickly</td><td>Usually discarded</td></tr>
+      <tr><td><strong>Mattresses and box springs</strong></td><td>Sometimes, if only surface wet</td><td>Discarded</td></tr>
+      <tr><td><strong>Books, documents, photos</strong></td><td>Often saved by freezing, then freeze-drying</td><td>Specialist recovery for irreplaceable items</td></tr>
+      <tr><td><strong>Electronics</strong></td><td>Don't power on; specialists can test and clean</td><td>Specialist assessment</td></tr>
+      <tr><td><strong>Food, medicine, cosmetics</strong> that got wet</td><td>Discard</td><td>Discard</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Papers and photos:</strong> if you can't deal with them right away, put them in sealed bags in the freezer. Freezing stops mold and gives you time to find a document recovery service. The National Archives publishes guidance on saving family papers and photographs.</p>
+
+  <h2>Irreplaceable and high-value items</h2>
+  <p>Restoration contents departments are good at volume. Fine art, antiques, heirlooms, musical instruments and quilts may need a <strong>specialist conservator</strong>. You can ask for those items to be handled separately and ask your adjuster whether specialist restoration will be covered. It often costs less than replacement, which makes it easier to approve.</p>
+
+  <h2>How contents are paid</h2>
+  <ul>
+    <li><strong>Actual cash value (ACV) first:</strong> many policies pay replacement cost minus depreciation for age and wear.</li>
+    <li><strong>Recoverable depreciation:</strong> with replacement cost coverage, the depreciation is usually paid once you replace the item, within a deadline set by the policy. Keep every receipt.</li>
+    <li><strong>"Like kind and quality":</strong> insurers price replacements with comparable items. If the comparison item is lower quality than what you owned, show them listings for genuinely equivalent items.</li>
+    <li><strong>Special limits:</strong> jewelry, firearms, collectibles, cash and some electronics often have lower limits unless separately scheduled.</li>
+  </ul>
+
+  <h2>The pack-back</h2>
+  <ol class="steps">
+    <li><strong>Check items against the inventory</strong> as they come back, before signing a delivery receipt.</li>
+    <li><strong>Open boxes of fragile items</strong> while the crew is still there.</li>
+    <li><strong>Note any odor</strong> on textiles or furniture that went out for smoke cleaning.</li>
+    <li><strong>Report damage or missing items in writing</strong> right away, to the company and your adjuster.</li>
+  </ol>
+
+  <h2>Before the next time: a home inventory</h2>
+  <p>A ten-minute video walk-through of each room, opening closets and drawers, saved somewhere other than your house, makes any future contents claim far easier. Narrate as you go: what each item is, roughly when you bought it and what it cost.</p>
+
+  <h2>State claim rules</h2>
+  <p>Each state section covers its claim rules and insurance regulator:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/`}>{s.name}</a></>)}.
+  </p>
+</Article>

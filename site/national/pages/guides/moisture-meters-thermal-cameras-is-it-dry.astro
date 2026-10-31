@@ -1,0 +1,132 @@
+---
+import Article from "../../../src/layouts/Article.astro";
+import { STATE_SUMMARIES } from "../../../src/lib/national";
+---
+<Article
+  title="Is your house actually dry? Moisture meters, thermal cameras and the drying goal, explained from the inside"
+  seoTitle="Is It Really Dry? Moisture Meters and Thermal Cameras Explained"
+  description="What moisture meters and thermal cameras really show, how the drying goal works, and how to spot drying that's stretched or cut short."
+  eyebrow="Guide · Inside the industry"
+  dek="Walls feel dry long before they are. The decision to pull the fans out, or keep them running another two days, is the most consequential call on a water job, and it rests on a few numbers most homeowners never see. Here's how to read them."
+  path="/guides/moisture-meters-thermal-cameras-is-it-dry/"
+  crumbs={[{ name: "Guides", href: "/guides/" }, { name: "Is it actually dry?", href: "/guides/moisture-meters-thermal-cameras-is-it-dry/" }]}
+  about={["Structural drying", "Moisture meters", "Thermal imaging", "IICRC S500", "Water damage restoration"]}
+  summary={[
+    "<strong>Under the IICRC S500 standard, a material is dry when it reaches its drying goal:</strong> a reading close to the same material in an unaffected part of the house, called the dry standard.",
+    "<strong>Thermal cameras don't detect water.</strong> They show surface temperature. Wet areas often look cooler because of evaporation, but every cool spot needs a moisture meter to confirm it.",
+    "<strong>Meter numbers aren't universal percentages.</strong> On drywall and many other materials, readings are on a relative scale specific to the meter. Compare readings from the same meter at the same marked spots over time.",
+    "<strong>Two opposite problems happen:</strong> drying stretched past the goal to bill more equipment days, and drying cut short to keep job costs down. Both show up in the moisture log.",
+    "<strong>Before the equipment leaves,</strong> ask for final readings at every monitoring point next to the dry standard, in writing. It protects your claim and your house.",
+  ]}
+  faq={[
+    { q: "How do restoration companies know when walls are dry?", a: "They take reference readings from the same kind of material in an unaffected room (the dry standard), then take readings at marked points in the wet area every day. When the wet area's readings reach the drying goal, close to the dry standard, the material is considered dry under the IICRC S500 standard." },
+    { q: "Can a thermal camera see water behind a wall?", a: "Not directly. A thermal camera shows surface temperature. Wet materials often look cooler because water is evaporating, but drafts, missing insulation and ductwork can look the same. A moisture meter is needed to confirm whether a cool area is actually wet." },
+    { q: "What moisture reading is considered dry for drywall?", a: "There isn't one universal number, because many meters read drywall on a relative scale. The meaningful comparison is between the wet area and the same material in a dry area, measured with the same meter. Wood is different: wood moisture content is a true percentage, and indoor framing is commonly around 15% or lower when dry." },
+    { q: "Should I buy my own moisture meter?", a: "An inexpensive pin meter can be useful for watching trends at the same spots day to day and for checking hidden areas after the equipment leaves. Don't compare its numbers directly with a contractor's meter. Different meters, settings and scales give different readings." },
+    { q: "Why did mold show up after the restoration company said it was dry?", a: "Usually because something wasn't measured: a wall cavity, the subfloor under hardwood or tile, the back of a cabinet, or insulation. Surfaces can read dry while materials behind them stay wet. Final readings should include those hidden spots." },
+  ]}
+  related={[
+    { href: "/guides/how-long-does-water-damage-take-to-dry/", label: "How long drying takes" },
+    { href: "/guides/water-mitigation-bill-too-high/", label: "Mitigation bill too high?" },
+    { href: "/guides/how-restoration-estimates-are-priced/", label: "How estimates are priced" },
+    { href: "/guides/mitigation-vs-rebuild-same-company/", label: "Mitigation vs. rebuild" },
+  ]}
+  sources={[
+    { label: "IICRC: ANSI/IICRC S500 Standard for Professional Water Damage Restoration", href: "https://iicrc.org/s500/" },
+    { label: "U.S. EPA: A Brief Guide to Mold, Moisture and Your Home", href: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
+    { label: "USDA Forest Products Laboratory: Wood Handbook, moisture relations", href: "https://www.fpl.fs.usda.gov/documnts/fplgtr/fpl_gtr282/fpl_gtr282.pdf" },
+    { label: "U.S. EPA: Mold Remediation in Schools and Commercial Buildings", href: "https://www.epa.gov/mold/mold-remediation-schools-and-commercial-buildings-guide" },
+  ]}
+>
+  <h2>Dry is a number, not a feeling</h2>
+  <p>The paint on a soaked wall can feel dry the next afternoon. The drywall core behind it, the bottom plate of the wall, the subfloor under the vinyl and the insulation in the cavity can stay wet for days. That's where mold starts, usually out of sight, often weeks after everyone has forgotten the leak.</p>
+  <p>So professionals don't decide by touch. Under the <strong>IICRC S500</strong> standard, the industry's reference for water damage restoration, drying is measured, recorded and compared against a target. Understanding that target is the most useful thing a homeowner can learn about a water job.</p>
+
+  <h2>The dry standard and the drying goal</h2>
+  <p>On the first visit, a technician should do two things:</p>
+  <ol class="steps">
+    <li><strong>Take reference readings</strong> from the same kinds of material in a part of the house the water didn't reach: drywall in a dry room, the same flooring elsewhere, framing on the other side of the house. That's the <strong>dry standard</strong>.</li>
+    <li><strong>Mark monitoring points</strong> in the wet area, often with a small numbered sticker or a sketch, and record a reading at each one, every visit, at the same spot.</li>
+  </ol>
+  <p>The <strong>drying goal</strong> is a reading at or close to the dry standard. When every monitoring point reaches it, the materials are dry and the equipment can come out. Everything else in this guide depends on those two steps having been done properly.</p>
+
+  <h2>The tools, and what each one really tells you</h2>
+  <table>
+    <thead><tr><th>Tool</th><th>What it measures</th><th>What it can't tell you</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Thermal (infrared) camera</strong></td><td>Surface temperature. Wet areas often appear cooler because water is evaporating.</td><td>Whether a cool spot is water. Drafts, missing insulation, ducts and outside walls look similar. It can't see through materials.</td></tr>
+      <tr><td><strong>Pin meter</strong></td><td>Electrical resistance between two pins pushed into the material, at the depth of the pins</td><td>Anything deeper than the pins. Readings outside wood are relative, not true moisture percentages.</td></tr>
+      <tr><td><strong>Pinless meter</strong></td><td>Changes in an electrical field through the surface, a short distance into the material</td><td>A true percentage. Readings shift with material density, and nearby metal such as nails, foil backing or wiring can throw them off.</td></tr>
+      <tr><td><strong>Thermo-hygrometer</strong></td><td>Air temperature and relative humidity, used to calculate grains per pound (GPP), the actual amount of water in the air</td><td>Anything about materials directly. It tells you whether the drying conditions are working.</td></tr>
+      <tr><td><strong>Concrete testing</strong></td><td>Moisture in slabs, using probes or specialized meters</td><td>A quick answer. Concrete dries slowly, and flooring manufacturers set their own limits.</td></tr>
+    </tbody>
+  </table>
+  <p class="notice notice-amber"><strong>The thermal camera as a sales prop:</strong> a colorful thermal image of "water inside your walls" is persuasive, and sometimes it's right. But a camera alone proves nothing. If someone shows you a thermal image as the reason to open a wall, ask to see a moisture meter reading at that same spot first.</p>
+
+  <h2>Why the numbers don't travel</h2>
+  <p>Most homeowners assume a reading of "18" means 18% moisture. On wood, with a meter set for wood, it roughly does: wood moisture content is a real percentage, and indoor framing typically settles somewhere below about 15% when dry. On drywall, plaster, concrete and most other materials, many meters show a <strong>relative scale</strong> that only means something compared with other readings from the same meter.</p>
+  <p>Three practical consequences:</p>
+  <ul>
+    <li><strong>You can't compare two companies' readings</strong> if they used different meters or settings.</li>
+    <li><strong>A single number without a dry standard beside it means very little.</strong> Always ask, "And what does the dry wall read?"</li>
+    <li><strong>Trends matter more than values.</strong> Readings at the same point should fall day by day and then level off near the dry standard.</li>
+  </ul>
+
+  <h2>Reading the air: is the equipment working?</h2>
+  <p>A good drying log records the air too: inside the affected area, in an unaffected room, outside, and at the dehumidifier's exhaust. The key figure is <strong>GPP</strong>, grains of water per pound of dry air.</p>
+  <ul>
+    <li><strong>The dehumidifier's exhaust should read well below the room's GPP.</strong> If it doesn't, the machine isn't pulling water out of the air.</li>
+    <li><strong>The room's GPP should drop</strong> over the first day or two.</li>
+    <li><strong>Cold matters.</strong> Common refrigerant dehumidifiers lose capacity in cold rooms, which is why a basement in winter may need heat or a desiccant dehumidifier instead.</li>
+  </ul>
+
+  <h2>Problem one: drying that's stretched</h2>
+  <p>Every machine bills every day. That creates a temptation to leave equipment running after the materials are dry. Signs in the log:</p>
+  <ul>
+    <li>Readings reached the dry standard, but the equipment stayed another day or two "to be safe."</li>
+    <li>Identical numbers copied from day to day. Real readings wander a little.</li>
+    <li>Monitoring visits billed on days with no readings recorded.</li>
+    <li>Equipment counts that stayed the same while the wet area shrank.</li>
+  </ul>
+  <p>A reasonable margin is normal. Several days past the goal isn't, and it's one of the most common disputes in <a href="/guides/water-mitigation-bill-too-high/">mitigation billing</a>.</p>
+
+  <h2>Problem two: drying that's cut short</h2>
+  <p>The opposite problem gets less attention and causes more damage. Insurers and the administrators who run their vendor programs often track measures like average drying days and average job cost, and companies that work in those programs feel pressure to keep both down. Busy companies after a storm also want their equipment back for the next job.</p>
+  <p>Drying cut short tends to look like this:</p>
+  <ul>
+    <li>Final readings only on surfaces you can see, none inside wall cavities, under flooring or behind cabinets.</li>
+    <li>No final reading at some monitoring points at all.</li>
+    <li>Equipment pulled on a fixed day, such as day three, regardless of readings.</li>
+    <li>Baseboards and drywall reinstalled before the wall's bottom plate was checked.</li>
+  </ul>
+  <p>The result shows up weeks later as a musty smell, swollen baseboard or <a href="/guides/black-mold/">mold</a> at the bottom of a wall. By then, the claim is closed.</p>
+
+  <h2>Hidden places that need a reading</h2>
+  <ul>
+    <li><strong>The bottom 2 feet of walls,</strong> including the wood plate the wall sits on</li>
+    <li><strong>Under cabinets,</strong> reached through the toe-kick at the bottom</li>
+    <li><strong>The subfloor</strong> under hardwood, tile, laminate or vinyl, from below if there's a basement or crawl space</li>
+    <li><strong>Insulation</strong> inside exterior walls and ceilings, which holds water and is usually replaced if soaked</li>
+    <li><strong>The ceiling below</strong> a second-floor leak</li>
+  </ul>
+
+  <h2>What you can do yourself</h2>
+  <ol class="steps">
+    <li><strong>Ask for the moisture map on day one:</strong> where the monitoring points are and what the dry standard is for each material.</li>
+    <li><strong>Photograph the meter display</strong> at a few points when the technician takes readings. It takes seconds.</li>
+    <li><strong>Ask on day two or three,</strong> "Which points are still above the goal, and what's the plan for them?"</li>
+    <li><strong>Consider an inexpensive pin meter</strong> to watch trends at the same spots and to check hidden areas later. Use it for direction, not for arguing numbers.</li>
+    <li><strong>Get the final readings in writing</strong> before the equipment leaves: every point, beside its dry standard, with the date.</li>
+  </ol>
+
+  <h2>Before you reinstall flooring</h2>
+  <p>Flooring manufacturers set their own moisture limits for subfloors and slabs, and many warranties depend on them. Hardwood that has cupped may flatten as it dries, so replacing it too early can be a costly mistake. Before new flooring goes down, ask the installer to test the subfloor or slab against the manufacturer's limit and record the result.</p>
+
+  <h2>Why the final log matters later</h2>
+  <p>Keep the final drying report with your claim file and your house records. It's the evidence that the house was properly dried if mold appears months later, if an insurer questions a later claim, or if a buyer's inspector finds old water staining when you sell.</p>
+
+  <h2>State claim rules</h2>
+  <p>Each state section covers its claim rules and insurance regulator:
+    {STATE_SUMMARIES.map((s, i) => <>{i > 0 && ", "}<a href={`/${s.slug}/`}>{s.name}</a></>)}.
+  </p>
+</Article>
