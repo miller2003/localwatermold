@@ -30,7 +30,7 @@ jobs:
       - name: Fetch every state
         run: |
           bash pipeline/run_all.sh fema 2>&1 | tee pipeline/out/fema_run.txt
-          summary=$(grep -E '^(!!|[A-Z][A-Za-z ]+: [0-9])|Error|error' pipeline/out/fema_run.txt | head -60 | sed ':a;N;$!ba;s/\n/%0A/g')
+          summary=$(grep -E '^(!!|[A-Z][A-Za-z ]+: )' pipeline/out/fema_run.txt | head -120 | sed ':a;N;$!ba;s/\n/%0A/g')
           echo "::notice title=FEMA fetch::${summary}"
       - name: Commit data
         if: always()

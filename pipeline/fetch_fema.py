@@ -32,35 +32,51 @@ WATER = {
 SKIP = {"Biological"}  # COVID-19 declarations name every county and say nothing about homes
 
 
-def get(dataset, params, tries=4):
-    q = urllib.parse.urlencode({**params, "$allrecords": "true", "$metadata": "off"}, safe="$,'", quote_via=urllib.parse.quote)
+def get(dataset, params, tries=4, allrecords=True):
+    extra = {"$allrecords": "true", "$metadata": "off"} if allrecords else {"$metadata": "off"}
+    q = urllib.parse.urlencode({**params, **extra}, safe="$,'", quote_via=urllib.parse.quote)
     url = f"{API}/{dataset}?{q}"
     for i in range(tries):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "localwatermold-pipeline"}), timeout=600) as r:
                 return json.load(r)[dataset]
         except urllib.error.HTTPError as e:
-            if e.code == 400:
-                raise
-            err = e
+            err = f"HTTP {e.code} {e.read()[:300].decode(errors='replace')}"
+            if e.code in (400, 404):
+                break
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
             err = e
         time.sleep(5 * (i + 1))
-    raise SystemExit(f"{dataset}: {err}")
+    raise SystemExit(f"{dataset}: {err} <- {url}")
+
+
+def fields(dataset, flt):
+    """Field names the API actually returns, from one record."""
+    rows = get(dataset, {"$filter": flt, "$top": "1"}, allrecords=False)
+    return set(rows[0]) if rows else set()
+
+
+# Net payments are the v2 names; the older amountPaidOn* fields are the fallback.
+PAY = [("netBuildingPaymentAmount", "amountPaidOnBuildingClaim"),
+       ("netContentsPaymentAmount", "amountPaidOnContentsClaim"),
+       ("netIccPaymentAmount", "amountPaidOnIncreasedCostOfComplianceClaim")]
+PAY_FIELDS = []
 
 
 def claims():
-    base = ["countyCode", "yearOfLoss", "dateOfLoss", "netBuildingPaymentAmount", "netContentsPaymentAmount", "netIccPaymentAmount"]
-    try:
-        rows = get("FimaNfipClaims", {"$filter": f"state eq '{ABBR}'", "$select": ",".join(base + ["floodEvent"])})
-    except urllib.error.HTTPError:
-        rows = get("FimaNfipClaims", {"$filter": f"state eq '{ABBR}'", "$select": ",".join(base)})
+    flt = f"state eq '{ABBR}'"
+    have = fields("FimaNfipClaims", flt)
+    PAY_FIELDS[:] = [a if a in have else b for a, b in PAY if a in have or b in have]
+    want = ["countyCode", "yearOfLoss", "dateOfLoss", "floodEvent"] + PAY_FIELDS
+    select = [f for f in want if f in have]
+    print(f"{ABBR}: claim fields {select}")
+    rows = get("FimaNfipClaims", {"$filter": flt, "$select": ",".join(select)})
     print(f"{ABBR}: {len(rows)} NFIP claims")
     return rows
 
 
 def paid(r):
-    return sum(float(r.get(k) or 0) for k in ("netBuildingPaymentAmount", "netContentsPaymentAmount", "netIccPaymentAmount"))
+    return sum(float(r.get(k) or 0) for k in PAY_FIELDS)
 
 
 def summarize_claims(rows, fips):
