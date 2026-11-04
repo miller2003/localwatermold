@@ -1,0 +1,40 @@
+# Refresh FEMA flood claims and disaster declarations per county.
+# fema.gov refuses many non-U.S. connections, so the fetch runs here and commits the JSON back.
+name: FEMA data
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - pipeline/fetch_fema.py
+      - .github/workflows/fema.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fema-data
+  cancel-in-progress: true
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch every state
+        run: bash pipeline/run_all.sh fema 2>&1 | tee pipeline/out/fema_run.txt
+      - name: Commit data
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/src/data/*/fema.json pipeline/out/fema_run.txt
+          git diff --cached --quiet && exit 0
+          git commit -m "Refresh FEMA flood claims and disaster declarations"
+          git pull --rebase origin main
+          git push origin HEAD:main
