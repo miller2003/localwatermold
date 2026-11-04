@@ -1,5 +1,6 @@
 # Refresh FEMA flood claims and disaster declarations per county.
 # fema.gov refuses many non-U.S. connections, so the fetch runs here and commits the JSON back.
+# Results and errors are echoed as annotations, which the public API shows without a login.
 name: FEMA data
 
 on:
@@ -27,14 +28,18 @@ jobs:
         with:
           python-version: "3.12"
       - name: Fetch every state
-        run: bash pipeline/run_all.sh fema 2>&1 | tee pipeline/out/fema_run.txt
+        run: |
+          bash pipeline/run_all.sh fema 2>&1 | tee pipeline/out/fema_run.txt
+          summary=$(grep -E '^(!!|[A-Z][A-Za-z ]+: [0-9])|Error|error' pipeline/out/fema_run.txt | head -60 | sed ':a;N;$!ba;s/\n/%0A/g')
+          echo "::notice title=FEMA fetch::${summary}"
       - name: Commit data
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/src/data/*/fema.json pipeline/out/fema_run.txt
-          git diff --cached --quiet && exit 0
-          git commit -m "Refresh FEMA flood claims and disaster declarations"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          git add -A site/src/data pipeline/out/fema_run.txt
+          git diff --cached --quiet && { echo "::warning::No data changed"; exit 0; }
+          git commit -q -m "Refresh FEMA flood claims and disaster declarations"
+          for step in "pull --rebase -q origin main" "push -q origin HEAD:main"; do
+            if ! out=$(git $step 2>&1); then echo "::error title=git $step::$(echo "$out" | tail -5 | sed ':a;N;$!ba;s/\n/%0A/g')"; exit 1; fi
+          done
