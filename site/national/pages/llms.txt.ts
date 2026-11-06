@@ -14,7 +14,7 @@ export const GET: APIRoute = ({ site }) => {
 
 > ${SITE.brand} (${SITE.domain}) publishes county-level water damage, mold, fire and basement flooding guidance for U.S. homeowners in ${TOTALS.states} states, and runs a referral line that connects callers with independent local restoration companies. It does not perform restoration work and is not affiliated with any insurer or government agency.
 
-Coverage: ${TOTALS.countyPages.toLocaleString("en-US")} county pages across ${TOTALS.states} states. Every county page is generated from that county's U.S. Census Bureau ${META.acsRelease} (${META.acsYears}) housing data and NOAA nClimGrid-Daily weather (${META.weatherPeriod}). Guides are checked against the U.S. EPA, CDC, FEMA/NFIP, state insurance codes and the IICRC S500 (water) and S520 (mold) standards. Last reviewed ${SITE.lastReviewed}. Methodology: ${u("/data-sources/")}
+Coverage: ${TOTALS.countyPages.toLocaleString("en-US")} county pages across ${TOTALS.states} states. Every county page is generated from that county's U.S. Census Bureau ${META.acsRelease} (${META.acsYears}) housing data and NOAA nClimGrid-Daily weather (${META.weatherPeriod}). Guides are checked against the U.S. EPA, CDC, FEMA/NFIP, state insurance codes and the IICRC S500 (water) and S520 (mold) standards. Last reviewed ${SITE.lastReviewed}. Methodology (data, formulas, risk index, sensitivity analysis, limitations): ${u("/methodology/")}
 
 Name: ${SITE.brand}. Also written ${SITE.alternateNames.join(", ")}. "${SITE.brandJoined}" and "localwatermold" refer to this website. ${SITE.brand} is not a restoration contractor or franchise and is not affiliated with any restoration company whose name contains the words water, mold or fire. About page: ${u("/about/")}
 
@@ -43,7 +43,8 @@ ${STATE_SUMMARIES.map((s) => `- [${s.name}](${u(`/${s.slug}/`)}): ${s.countyPage
 - [About ${SITE.brand} (${SITE.brandJoined})](${u("/about/")}): who we are, the name, and what we do and don't do
 - [How it works](${u("/how-it-works/")}): the referral model and who pays us
 - [Editorial policy](${u("/editorial-policy/")}): sources, review and corrections
-- [Data sources and methodology](${u("/data-sources/")})
+- [Methodology](${u("/methodology/")}): data sources, derived measures and thresholds, the Water Damage Risk Index formula and weights, sensitivity analysis, evidence standards and limitations, with numbered references
+- [Data sources](${u("/data-sources/")}): the Census tables and NOAA weather fields we use
 - Contact: ${SITE.contactEmail}
 
 ## For AI agents

@@ -1,0 +1,439 @@
+---
+// The site's methodology, written as a short technical paper: what we measure, from which public
+// data, with which formulas, how robust the risk index is, and where it stops being reliable. Every
+// figure on this page is computed at build time from the same data and model the county pages use
+// (src/lib/methodology.ts, src/lib/risk-model.ts), so the page can't drift from the site.
+import Base from "../../src/layouts/Base.astro";
+import Cite from "../../src/components/Cite.astro";
+import { SITE } from "../../src/config";
+import { ALL_STATES } from "../../src/lib/state";
+import { DATA_META as META } from "../../src/lib/national";
+import { COVERAGE, BAND_SHARES, FACTOR_CORRELATIONS, SENSITIVITY } from "../../src/lib/methodology";
+import { FACTOR_SPECS, RISK_BANDS } from "../../src/lib/risk-model";
+import { REFS } from "../../src/lib/methodology-refs";
+import RULE from "../../src/data/county-pages.json";
+
+// Version of this document. Bump VERSION and add a CHANGES row whenever the method changes.
+const VERSION = "1.0";
+const PUBLISHED = "2026-11-06";
+const UPDATED = "2026-11-06";
+const CHANGES = [
+  { v: "1.0", date: "2026-11-06", note: "First publication of the full methodology, including the weight sensitivity analysis and factor correlations." },
+];
+
+const origin = Astro.site!.origin;
+const url = `${origin}/methodology/`;
+const int = (n: number) => Math.round(n).toLocaleString("en-US");
+const pct = (x: number) => `${Math.round(x * 100)}%`;
+const r2 = (x: number) => x.toFixed(2).replace("-", "−");
+const longDate = (d: string) => new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+
+const verified = ALL_STATES.filter((s) => s.verified).map((s) => s.name);
+const equal = SENSITIVITY[0];
+const drops = SENSITIVITY.slice(1);
+const mostInfluential = [...drops].sort((a, b) => a.medianRho - b.medianRho)[0];
+const leastInfluential = [...drops].sort((a, b) => b.medianRho - a.medianRho)[0];
+const strongestPair = [...FACTOR_CORRELATIONS].sort((a, b) => Math.abs(b.rho) - Math.abs(a.rho))[0];
+const offsetPair = [strongestPair.a, strongestPair.b].sort().join("|") === "Muggy nights|Pipe-freeze nights" && strongestPair.rho < -0.5;
+const ageMaxRho = Math.max(...FACTOR_CORRELATIONS.filter((c) => c.a.includes("1960") || c.b.includes("1960")).map((c) => Math.abs(c.rho)));
+const ageWeak = ageMaxRho < 0.3;
+const DAYS = 3653;
+const MIN_DAYS = 3000;
+
+const toc = [
+  ["abstract", "Abstract"],
+  ["scope", "1. Scope and design principles"],
+  ["data", "2. Data sources"],
+  ["measures", "3. Derived measures"],
+  ["index", "4. The Water Damage Risk Index"],
+  ["robustness", "5. Robustness and sensitivity"],
+  ["county-pages", "6. How county pages are written"],
+  ["evidence", "7. Evidence standards for guides"],
+  ["quality", "8. Quality control"],
+  ["limitations", "9. Limitations"],
+  ["independence", "10. Funding and independence"],
+  ["reproducibility", "11. Reproducibility and data access"],
+  ["versions", "12. Version history"],
+  ["cite", "How to cite"],
+  ["references", "References"],
+  ["faq", "Questions"],
+];
+
+const abstract = `${SITE.brand} publishes county-level water damage guidance for ${COVERAGE.states} U.S. states. This document describes how that guidance is produced. County housing characteristics come from the U.S. Census Bureau's American Community Survey (${META.acsRelease}, ${META.acsYears}); county weather comes from ten years (${META.weatherPeriod}) of NOAA nClimGrid-Daily temperature and precipitation. From roughly ${(COVERAGE.withWeather * DAYS / 1e6).toFixed(1)} million county-days of weather we derive threshold counts aligned with internationally standardized climate indices, and combine four of them with housing age into a Water Damage Risk Index: a weighted mean of within-state percentile ranks. A one-at-a-time sensitivity analysis shows the county ranking is stable under equal weighting (median Spearman ρ = ${r2(equal.medianRho)}) and most dependent on ${mostInfluential.name.replace("Without ", "")}. We document thresholds, formulas, evidence standards, quality checks, funding, and ten limitations, and publish all inputs for reuse.`;
+
+const faq = [
+  { q: "What is the Water Damage Risk Index?", a: `A 0 to 100 score for each county that combines pipe-freeze nights (30%), the share of homes built before 1960 (30%), heavy-rain days (25%) and muggy nights (15%). Each factor is converted to a percentile rank among the counties of the same state, then weighted. Scores of ${RISK_BANDS[0].min} and above are labeled High, ${RISK_BANDS[1].min} to ${RISK_BANDS[0].min - 1} Elevated, ${RISK_BANDS[2].min} to ${RISK_BANDS[1].min - 1} Moderate and below ${RISK_BANDS[2].min} Lower.` },
+  { q: "Can I compare risk index scores between states?", a: "No. Percentile ranks are computed within each state, so a score says how a county compares with the other counties in its own state. To compare states, use the raw, population-weighted figures on the risk by state page." },
+  { q: "Does a High score mean my home will have water damage?", a: "No. The index describes the climate and the age of the housing stock across a whole county. It says nothing about the condition of any one home's plumbing, roof, grading or sump pump, and it is not validated against insurance claims." },
+  { q: "Why is a pipe-freeze night 20°F and not 32°F?", a: "Field tests by the University of Illinois Building Research Council, cited by the Insurance Institute for Business & Home Safety and the International Code Council, found that uninsulated pipes in unheated spaces begin to freeze when the outdoor temperature falls to about 20°F. Water freezes at 32°F, but a house buffers its pipes, so 32°F nights alone overstate the risk. We publish both counts." },
+  { q: "How often is the data updated?", a: `The housing figures follow the Census Bureau's annual ACS 5-year release, and the weather window is a fixed ten-year period (${META.weatherPeriod}). The data on the site was last generated on ${META.generated}. Each refresh is recorded in this page's version history when it changes the method.` },
+  { q: "Does the referral business affect the data or the index?", a: "No. Restoration companies and call networks pay us for referrals, but no company can pay to change a county's data, its index score, or what our guides say, and we don't rank or review companies." },
+  { q: "Can I reuse these figures?", a: `Yes. Figures may be cited with attribution to ${SITE.brand} and a link to the page they came from. The county data is available as JSON through our public API and the state table as CSV.` },
+];
+
+const schema: Record<string, unknown>[] = [
+  {
+    "@type": ["ScholarlyArticle", "TechArticle"],
+    "@id": `${url}#article`,
+    headline: "Methodology: how we measure county water damage risk",
+    alternativeHeadline: "Data, derived measures and the Water Damage Risk Index",
+    description: "How Local Water & Mold turns Census housing data and NOAA daily weather into county water damage guidance and a Water Damage Risk Index.",
+    abstract,
+    url,
+    mainEntityOfPage: { "@id": `${url}#webpage` },
+    isPartOf: { "@id": `${origin}/#site` },
+    inLanguage: "en-US",
+    version: VERSION,
+    datePublished: PUBLISHED,
+    dateModified: UPDATED,
+    author: { "@id": `${origin}/#org` },
+    publisher: { "@id": `${origin}/#org` },
+    keywords: ["water damage risk", "composite indicator", "percentile rank", "American Community Survey", "nClimGrid-Daily", "freeze-thaw", "heavy precipitation", "housing age", "sensitivity analysis"],
+    about: [{ "@type": "Thing", name: "Water damage" }, { "@type": "Thing", name: "Composite indicator methodology" }, { "@type": "Thing", name: "Residential water damage risk" }],
+    spatialCoverage: ALL_STATES.map((s) => ({ "@type": "State", name: s.name })),
+    temporalCoverage: META.weatherPeriod.replace("–", "/"),
+    isBasedOn: [
+      { "@type": "Dataset", name: `American Community Survey ${META.acsRelease}`, creator: { "@type": "Organization", name: "U.S. Census Bureau" }, url: "https://www.census.gov/programs-surveys/acs/" },
+      { "@type": "Dataset", name: "NOAA nClimGrid-Daily Version 1 (county averages)", creator: { "@type": "Organization", name: "NOAA National Centers for Environmental Information" }, identifier: "https://doi.org/10.25921/c4gt-r169", url: "https://www.ncei.noaa.gov/products/land-based-station/nclimgrid-daily" },
+      { "@type": "Dataset", name: "TIGER/Line Shapefiles", creator: { "@type": "Organization", name: "U.S. Census Bureau" }, url: "https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" },
+    ],
+    citation: REFS.map((r) => ({ "@type": "CreativeWork", name: r.text, url: r.url })),
+    hasPart: toc.map(([id, name]) => ({ "@type": "WebPageElement", name, url: `${url}#${id}` })),
+  },
+  {
+    "@type": "DefinedTermSet",
+    "@id": `${url}#measures`,
+    name: `${SITE.brand} derived county measures`,
+    hasDefinedTerm: [
+      ["Freezing night", "A day with a minimum temperature at or below 32°F, averaged per year."],
+      ["Pipe-freeze night", "A day with a minimum temperature at or below 20°F, averaged per year."],
+      ["Freeze-thaw day", "A day with a minimum at or below 32°F and a maximum above 32°F."],
+      ["Ice day", "A day with a maximum temperature at or below 32°F."],
+      ["Heavy-rain day", "A day with 1 inch (25.4 mm) or more of precipitation, averaged per year."],
+      ["Muggy night", "A day with a minimum temperature of 65°F or more, a proxy for a high dew point."],
+      ["Water Damage Risk Index", "A 0 to 100 weighted mean of within-state percentile ranks of pipe-freeze nights, homes built before 1960, heavy-rain days and muggy nights."],
+    ].map(([name, description]) => ({ "@type": "DefinedTerm", name, description, inDefinedTermSet: `${url}#measures` })),
+  },
+  {
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
+];
+
+const bibtex = `@techreport{localwatermold_methodology_${UPDATED.slice(0, 4)},
+  author      = {{${SITE.brand}}},
+  title       = {Methodology: How We Measure County Water Damage Risk},
+  institution = {${SITE.brand}},
+  type        = {Methodology documentation},
+  number      = {Version ${VERSION}},
+  year        = {${UPDATED.slice(0, 4)}},
+  month       = {${new Date(UPDATED).toLocaleString("en-US", { month: "short", timeZone: "UTC" }).toLowerCase()}},
+  url         = {${url}},
+  note        = {Accessed: YYYY-MM-DD}
+}`;
+---
+<Base
+  title={`Methodology: County Water Damage Risk Data | ${SITE.brand}`}
+  description="How we turn Census housing data and ten years of NOAA daily weather into county water damage guidance and a Water Damage Risk Index, with formulas and limits."
+  crumbs={[{ name: "Methodology", href: "/methodology/" }]}
+  schema={schema}
+  ogType="article"
+  modified={UPDATED}
+>
+  <article class="paper">
+    <header class="wrap paper-head">
+      <p class="eyebrow">Methodology · Version {VERSION}</p>
+      <h1>How we measure county water damage risk</h1>
+      <p class="lede">The data, formulas, thresholds and evidence standards behind every county page and risk score on {SITE.brand}, and the places where they stop being reliable.</p>
+      <dl class="meta small">
+        <div><dt>Author</dt><dd>{SITE.brand} research desk</dd></div>
+        <div><dt>Published</dt><dd><time datetime={PUBLISHED}>{longDate(PUBLISHED)}</time></dd></div>
+        <div><dt>Updated</dt><dd><time datetime={UPDATED}>{longDate(UPDATED)}</time></dd></div>
+        <div><dt>Data generated</dt><dd><time datetime={META.generated}>{longDate(META.generated)}</time></dd></div>
+        <div><dt>Coverage</dt><dd>{COVERAGE.states} states, {int(COVERAGE.withWeather)} counties scored</dd></div>
+      </dl>
+    </header>
+
+    <div class="wrap paper-grid">
+      <nav class="toc no-print" aria-label="Contents">
+        <p class="eyebrow">Contents</p>
+        <ol>{toc.map(([id, name]) => <li><a href={`#${id}`}>{name}</a></li>)}</ol>
+      </nav>
+
+      <div class="body prose">
+        <section id="abstract" class="abstract tldr" aria-label="Abstract">
+          <h2>Abstract</h2>
+          <p>{abstract}</p>
+          <p class="kw"><strong>Keywords:</strong> residential water damage; composite indicator; percentile rank; American Community Survey; nClimGrid-Daily; freeze and precipitation indices; sensitivity analysis.</p>
+        </section>
+
+        <div class="figures" role="list" aria-label="Key figures">
+          <div class="stat" role="listitem"><p class="stat-label">Counties scored</p><p class="stat-value">{int(COVERAGE.withWeather)}</p><p class="stat-note">of {int(COVERAGE.counties)} in {COVERAGE.states} states</p></div>
+          <div class="stat" role="listitem"><p class="stat-label">County-days of weather</p><p class="stat-value">≈{(COVERAGE.withWeather * DAYS / 1e6).toFixed(1)}M</p><p class="stat-note">daily NOAA values, {META.weatherPeriod}</p></div>
+          <div class="stat" role="listitem"><p class="stat-label">Residents on county pages</p><p class="stat-value">{(COVERAGE.pagePopulation / 1e6).toFixed(0)}M</p><p class="stat-note">{pct(COVERAGE.pagePopulation / COVERAGE.population)} of the states' population</p></div>
+          <div class="stat" role="listitem"><p class="stat-label">Rank stability, equal weights</p><p class="stat-value">ρ {r2(equal.medianRho)}</p><p class="stat-note">median across states</p></div>
+        </div>
+
+        <h2 id="scope">1. Scope and design principles</h2>
+        <p>Water damage in a home has a small number of physical pathways: water that escapes the plumbing (supply lines, fittings, water heaters, appliances, and pipes that freeze and split), water that enters from outside (roofs, windows, foundations, groundwater and sewer backups during heavy rain), and moisture that lingers long enough for mold to grow. The U.S. Census Bureau's American Housing Survey asks households about the first two directly, and in its 2019 round counted roughly 9.4 million homes with water leaking in from inside the home in the prior twelve months<Cite k="ahs" />.</p>
+        <p>We can't observe the plumbing or the roof of a particular house. What public data does let us observe, for every county, is the climate those homes sit in and the age of the housing stock. This methodology answers three questions with that data:</p>
+        <ol>
+          <li><strong>Exposure.</strong> How often does a county's weather produce the conditions behind each pathway: hard freezes, heavy rain, and warm, humid nights?</li>
+          <li><strong>Vulnerability.</strong> How old is the housing, and how is it heated and occupied, as a proxy for the condition of its plumbing and envelope?</li>
+          <li><strong>Relative priority.</strong> Within a state, which counties combine the most of both?</li>
+        </ol>
+        <p>Five principles govern everything that follows.</p>
+        <ul>
+          <li><strong>Primary public data only.</strong> Every county figure comes from a federal statistical or scientific agency and can be checked against the original.</li>
+          <li><strong>Traceability.</strong> Every sentence that describes a county is generated from a value in that county's record (section 6).</li>
+          <li><strong>Relative, not absolute.</strong> The index ranks counties against their neighbors in the same state; it does not estimate the probability of a loss.</li>
+          <li><strong>Disclosed judgment.</strong> Where we choose a threshold or a weight, we say so, give the reason, and test how much the choice matters (section 5).</li>
+          <li><strong>Reproducibility.</strong> Inputs, derived values and code paths are published for reuse (section 11).</li>
+        </ul>
+
+        <h2 id="data">2. Data sources</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Table 1. Input datasets</caption>
+            <thead><tr><th scope="col">Dataset</th><th scope="col">Publisher</th><th scope="col">Vintage</th><th scope="col">Used for</th></tr></thead>
+            <tbody>
+              <tr><td>American Community Survey, 5-year<Cite k="acs" /></td><td>U.S. Census Bureau</td><td>{META.acsRelease} ({META.acsYears})</td><td>Population, housing units, occupancy, tenure, structure type, year built, heating fuel, home value, income</td></tr>
+              <tr><td>nClimGrid-Daily v1, county averages<Cite k="nclimgrid" /></td><td>NOAA NCEI</td><td>{META.weatherPeriod}, daily</td><td>Daily maximum and minimum temperature, daily precipitation</td></tr>
+              <tr><td>TIGER/Line boundaries<Cite k="tiger" /></td><td>U.S. Census Bureau</td><td>2020 geography</td><td>County outlines, adjacency, places within each county</td></tr>
+              <tr><td>Wikidata</td><td>Wikimedia Foundation (CC0)</td><td>Current</td><td>County seats only</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>2.1 Housing and population</h3>
+        <p>We use the ACS 5-year estimates because they are the only ACS product published for every county; 1-year estimates cover only areas with 65,000 or more residents. ACS values are survey estimates with published margins of error at the 90% confidence level, and those margins widen as county population falls<Cite k="acsHandbook" />. Tables are retrieved through Census Reporter<Cite k="censusReporter" />, which republishes the Bureau's tables unchanged. Housing shares are computed from the published counts, for example:</p>
+        <div class="eq" role="math" aria-label="Share of homes built before 1960 equals homes built before 1940, 1940 to 1949 and 1950 to 1959, divided by all housing units, times 100">
+          <span><var>Pre1960</var><sub>c</sub> = 100 × (<var>H</var><sub>&lt;1940</sub> + <var>H</var><sub>1940–49</sub> + <var>H</var><sub>1950–59</sub>) ⁄ <var>H</var><sub>total</sub></span><span class="eq-n">(1)</span>
+        </div>
+        <p>where <var>H</var> are housing-unit counts from table B25034 for county <var>c</var>.</p>
+
+        <h3>2.2 Weather</h3>
+        <p>nClimGrid-Daily interpolates daily observations from the Global Historical Climatology Network-Daily station network<Cite k="ghcnd" /> onto a grid of about 5 km (1/24°) across the contiguous United States, and NOAA publishes area averages of that grid for every county<Cite k="durre2022" />. We read the county series (EpiNOAA v1.0.0, "scaled" status) from NOAA's Open Data Dissemination program<Cite k="epinoaa" />. Its authors recommend the product for applications that aggregate in space or time, which is exactly how we use it: annual counts over ten years for whole counties<Cite k="durre2022" />.</p>
+        <p>Processing is deliberately minimal. Temperatures are converted from °C to °F (<var>F</var> = 9<var>C</var>⁄5 + 32) and precipitation from millimeters to inches (÷ 25.4). Padding values of −999.99 are treated as missing, duplicate county-dates keep the latest record, and a county is scored only if it has more than {int(MIN_DAYS)} valid days out of {int(DAYS)} possible. {int(COVERAGE.withWeather)} of {int(COVERAGE.counties)} counties pass.</p>
+        <p>We use a ten-year window rather than NOAA's 30-year climate normals<Cite k="normals" /> on purpose. A recent decade describes the conditions today's housing stock actually faced, lines up with the five-year ACS window, and captures recent extremes such as the freezes of February 2021 and December 2022. The trade-off is more year-to-year noise, which we accept because the index uses ranks rather than levels (section 4).</p>
+
+        <h2 id="measures">3. Derived measures</h2>
+        <p>For county <var>c</var> with daily minimum temperature <var>T</var><sub>min</sub>, maximum <var>T</var><sub>max</sub> and precipitation <var>P</var> over <var>n</var> = 10 years, each count is an annual mean of an indicator function:</p>
+        <div class="eq" role="math" aria-label="Annual count equals one over n times the sum over all days of the indicator that the condition holds">
+          <span><var>N</var><sub>c</sub> = (1 ⁄ <var>n</var>) · Σ<sub><var>d</var></sub> 𝟙[ condition on day <var>d</var> ]</span><span class="eq-n">(2)</span>
+        </div>
+        <p>The thresholds follow the international climate indices maintained by the WMO/WCRP Expert Team on Climate Change Detection and Indices (ETCCDI)<Cite k="etccdi zhang2011" />, adjusted to the damage mechanism where the building science calls for it.</p>
+        <div class="table-wrap">
+          <table>
+            <caption>Table 2. Derived county measures and their standard counterparts</caption>
+            <thead><tr><th scope="col">Measure</th><th scope="col">Condition per day</th><th scope="col">Nearest standard index</th><th scope="col">Why it matters for water damage</th></tr></thead>
+            <tbody>
+              <tr><td>Freezing nights</td><td><var>T</var><sub>min</sub> ≤ 32°F</td><td>FD, frost days (<var>T</var><sub>min</sub> &lt; 0°C)</td><td>Outdoor hose bibs, exposed lines, ice on roofs and gutters</td></tr>
+              <tr><td><strong>Pipe-freeze nights</strong></td><td><var>T</var><sub>min</sub> ≤ 20°F</td><td>None; building-science threshold<Cite k="icc" /></td><td>Uninsulated pipes in unheated spaces begin to freeze near 20°F outdoors</td></tr>
+              <tr><td>Below-zero nights</td><td><var>T</var><sub>min</sub> ≤ 0°F</td><td>None (fixed threshold)</td><td>Pipes inside insulated walls and crawl spaces become exposed</td></tr>
+              <tr><td>Ice days</td><td><var>T</var><sub>max</sub> ≤ 32°F</td><td>ID, icing days (<var>T</var><sub>max</sub> &lt; 0°C)</td><td>Sustained cold; ice dams; the longest run is reported as the longest cold spell</td></tr>
+              <tr><td>Freeze-thaw days</td><td><var>T</var><sub>min</sub> ≤ 32°F and <var>T</var><sub>max</sub> &gt; 32°F</td><td>None in the ETCCDI core set</td><td>Repeated expansion of water in masonry, foundations and roof edges</td></tr>
+              <tr><td><strong>Heavy-rain days</strong></td><td><var>P</var> ≥ 1.00 in</td><td>R<var>nn</var>mm with <var>nn</var> = 25.4 (user-defined threshold)</td><td>Basement seepage, overwhelmed gutters and storm sewers, sewer backups</td></tr>
+              <tr><td>Wettest day, 3-day total</td><td>max <var>P</var>; max 3-day running sum</td><td>Rx1day; Rx5day uses 5 days</td><td>The single events that set flood and backup risk</td></tr>
+              <tr><td><strong>Muggy nights</strong></td><td><var>T</var><sub>min</sub> ≥ 65°F</td><td>TR, tropical nights (<var>T</var><sub>min</sub> &gt; 20°C ≈ 68°F)</td><td>Proxy for a high dew point: humid air that keeps materials wet</td></tr>
+              <tr><td>First and last freeze</td><td>Mean day-of-year of the first fall and last spring <var>T</var><sub>min</sub> ≤ 32°F</td><td>Frost-free season length</td><td>When to winterize and when to de-winterize</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>3.1 Why 20°F for pipe freezing</h3>
+        <p>Water freezes at 32°F, but a heated house protects its pipes, so a 32°F night is a poor predictor of burst pipes. Field tests by the University of Illinois Building Research Council, cited by the Insurance Institute for Business &amp; Home Safety and the International Code Council, found that uninsulated pipes in unconditioned space began to freeze when the outdoor temperature fell to about 20°F<Cite k="icc" />. The same sources note that the threshold matters most in the South, where homes are built with less insulation and with plumbing in unheated spaces. Freezes can still happen above 20°F, so we publish both counts.</p>
+        <h3>3.2 Why minimum temperature for humidity</h3>
+        <p>nClimGrid has no humidity variable. On most nights air cools until it nears its dew point and then cools much more slowly, so the daily minimum temperature is a long-established stand-in for dew point when humidity isn't measured. The FAO's reference evapotranspiration method uses it explicitly<Cite k="fao56" />, and it performs best in humid climates and worst in arid ones<Cite k="kimball1997" />, which suits the humid eastern and central states we cover. A night that stays at or above 65°F therefore marks air with a dew point in the mid-60s or higher. That's the humid air in which the U.S. EPA's guidance on keeping indoor relative humidity below 60% becomes hard to meet without air conditioning or dehumidification<Cite k="epaMold" />. We use 65°F rather than the 68°F tropical-night threshold because it captures the long muggy shoulder seasons of the Ohio and Mississippi valleys, not only the Gulf Coast.</p>
+        <h3>3.3 Housing measures</h3>
+        <p>Building age is the standard proxy for the age of plumbing, roofing and drainage in housing research, because none of those are surveyed by county. Homes built before 1960 were commonly plumbed with galvanized steel supply lines and cast-iron drains, both of which corrode from the inside, and many still have them; we also publish the share built before 1980 and from 2000 on. Heating fuel (table B25040) identifies homes heated by propane or wood, where a lapse in fuel delivery during a cold snap can freeze pipes, and the vacancy rate identifies housing more likely to sit unheated.</p>
+
+        <h2 id="index">4. The Water Damage Risk Index</h2>
+        <p>The index combines the four measures with the clearest causal link to the three pathways into one score per county. Its construction follows the steps of the OECD/JRC handbook on composite indicators: select indicators, normalize, weight, aggregate, then test robustness<Cite k="oecd2008" />.</p>
+        <div class="table-wrap">
+          <table>
+            <caption>Table 3. Index components and weights</caption>
+            <thead><tr><th scope="col">Factor</th><th scope="col">Unit</th><th scope="col">Weight</th><th scope="col">Pathway</th></tr></thead>
+            <tbody>
+              {FACTOR_SPECS.map((f) => (
+                <tr><td>{f.label}</td><td>{f.unit}</td><td>{Math.round(f.weight * 100)}%</td><td>{{ freeze: "Plumbing failure (freezing)", age: "Plumbing and envelope failure (age)", rain: "Water entry from outside", humid: "Lingering moisture and mold" }[f.key]}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <h3>4.1 Normalization</h3>
+        <p>The four factors are in different units with skewed distributions (a few mountain or lakeshore counties have extreme freeze counts), so each is converted to a mid-rank percentile among the <var>N</var> counties of the same state that have weather data:</p>
+        <div class="eq" role="math" aria-label="p equals the number of counties below plus half of the other tied counties, divided by N minus 1">
+          <span><var>p</var><sub>c,k</sub> = ( <var>b</var><sub>c,k</sub> + (<var>e</var><sub>c,k</sub> − 1) ⁄ 2 ) ⁄ (<var>N</var> − 1)</span><span class="eq-n">(3)</span>
+        </div>
+        <p>where <var>b</var> is the number of counties with a lower value of factor <var>k</var> and <var>e</var> the number with an equal value, including county <var>c</var> itself. Ranking is robust to outliers and needs no assumption about distributions; the cost is that it discards the size of the gaps between counties<Cite k="oecd2008" />. Ranking within each state follows the same choice the CDC/ATSDR Social Vulnerability Index makes for its state-level release<Cite k="svi" />: it compares a county with places that share its building codes, insurance market and regulators. State pools range from {COVERAGE.smallestPool} to {COVERAGE.largestPool} counties.</p>
+        <h3>4.2 Weighting and aggregation</h3>
+        <div class="eq" role="math" aria-label="R equals 100 times the sum over factors of weight times percentile">
+          <span><var>R</var><sub>c</sub> = 100 · Σ<sub><var>k</var></sub> <var>w</var><sub>k</sub> · <var>p</var><sub>c,k</sub>,&nbsp;&nbsp; Σ<sub><var>k</var></sub> <var>w</var><sub>k</sub> = 1</span><span class="eq-n">(4)</span>
+        </div>
+        <p>The weights are a documented judgment, not a statistical fit. No public dataset reports household water damage losses by county and cause, so there is nothing to regress against. Freezing and housing age get the most weight because failures of supply plumbing, including frozen pipes, are among the most frequent causes of household water damage. Heavy rain drives basement flooding and sewer backups. Humidity gets the least because it governs how fast damage turns into mold rather than whether water gets in. Section 5 tests how much these choices matter.</p>
+        <h3>4.3 Bands</h3>
+        <p>Scores are rounded to whole numbers and labeled. Because scores are weighted means of percentiles, the bands describe relative position within a state, not absolute conditions.</p>
+        <div class="table-wrap">
+          <table>
+            <caption>Table 4. Score bands and the share of all scored counties in each</caption>
+            <thead><tr><th scope="col">Label</th><th scope="col">Score</th><th scope="col">Share of counties</th></tr></thead>
+            <tbody>
+              {BAND_SHARES.map((b, i) => <tr><td>{b.label}</td><td>{i === 0 ? `${b.min}–100` : `${b.min}–${BAND_SHARES[i - 1].min - 1}`}</td><td>{pct(b.share)}</td></tr>)}
+            </tbody>
+          </table>
+        </div>
+        <p>The bands are uneven because of the arithmetic, not by design. An average of four percentile ranks regresses toward 50, and two of the four factors tend to move in opposite directions within a state (section 5), so few counties rank high on everything at once. {pct(BAND_SHARES[1].share)} of counties fall in the {BAND_SHARES[1].label} band, and a {BAND_SHARES[0].label} score ({pct(BAND_SHARES[0].share)} of counties) marks a county that ranks near the top of its state on most factors together.</p>
+        <p class="notice notice-water"><strong>How to read a score.</strong> A score of 80 means a county ranks high within its own state on the weighted factors. It is not an 80% chance of anything, and it can't be compared with a score in another state. For cross-state comparison, use the raw population-weighted values on <a href="/water-damage-statistics/">water damage risk by state</a>.</p>
+
+        <h2 id="robustness">5. Robustness and sensitivity</h2>
+        <p>A composite index is only as credible as its stability under reasonable alternative choices<Cite k="oecd2008" />. We recompute every state's index under five alternative weightings and compare the county ranking with the published one using Spearman's rank correlation, ρ<Cite k="spearman1904" />, with ties given average ranks. We also report how many of the published top 10% of counties remain in the top 10%.</p>
+        <div class="table-wrap">
+          <table>
+            <caption>Table 5. Sensitivity of the county ranking to the weights ({COVERAGE.states} states)</caption>
+            <thead><tr><th scope="col">Alternative</th><th scope="col">Median ρ</th><th scope="col">Lowest ρ (state)</th><th scope="col">Top 10% retained, median</th></tr></thead>
+            <tbody>
+              {SENSITIVITY.map((s) => <tr><td>{s.name}</td><td>{r2(s.medianRho)}</td><td>{r2(s.minRho)} ({s.minState})</td><td>{pct(s.medianOverlap)}</td></tr>)}
+            </tbody>
+          </table>
+        </div>
+        <p>Three conclusions follow. First, the ranking does not hinge on the exact weights: replacing them with equal weights leaves the order largely intact (median ρ = {r2(equal.medianRho)}). Second, the index is not equally sensitive to every factor. Leaving out {mostInfluential.name.replace("Without ", "")} changes the ranking most (median ρ = {r2(mostInfluential.medianRho)}), so that factor carries information the others don't. Leaving out {leastInfluential.name.replace("Without ", "")} changes it least (median ρ = {r2(leastInfluential.medianRho)}). Third, the effect isn't uniform: the "Lowest ρ" column names the state where each change matters most, and scores there deserve the most caution.</p>
+        <div class="table-wrap">
+          <table>
+            <caption>Table 6. Rank correlation between factors (median across states)</caption>
+            <thead><tr><th scope="col">Factor pair</th><th scope="col">Median ρ</th></tr></thead>
+            <tbody>{FACTOR_CORRELATIONS.map((c) => <tr><td>{c.a} × {c.b}</td><td>{r2(c.rho)}</td></tr>)}</tbody>
+          </table>
+        </div>
+        <p>The strongest relationship is between {strongestPair.a.toLowerCase()} and {strongestPair.b.toLowerCase()} (median ρ = {r2(strongestPair.rho)}).{offsetPair && " Within a state, the colder counties are the less humid ones, so these two factors partly offset each other. We keep both because they describe different damage pathways that peak in different places: burst pipes in the colder part of a state and mold in the more humid part."}{ageWeak && ` Housing age is only weakly related to any weather factor (|ρ| ≤ ${ageMaxRho.toFixed(2)}), which is why it adds the most independent information to the index.`}</p>
+
+        <h2 id="county-pages">6. How county pages are written</h2>
+        <p>County text is generated, but under rules that keep every statement tied to data:</p>
+        <ul>
+          <li><strong>One value per claim.</strong> Each sentence that describes a county is built from a field in that county's record. If the record lacks a value, the sentence is left out rather than filled with a generic one.</li>
+          <li><strong>Comparisons are to the state median of counties.</strong> A county value within ±8% of its state's county median is described as "close to" it; otherwise "above" or "below". Rank language ("among the coldest") uses tertiles of the state's counties.</li>
+          <li><strong>Deterministic wording.</strong> Phrasing varies between counties by a stable hash of the county's name, so the same data always produces the same page and two neighbors with similar numbers still read differently.</li>
+          <li><strong>Which counties get pages.</strong> Counties with weather data and at least {int(RULE.minPopulation)} residents get a page. Smaller counties whose pages would be near-duplicates of a neighbor are redirected to that neighbor. New York City's boroughs are excluded.</li>
+        </ul>
+        <p>Every build measures how alike the pages are, using 5-word shingles and Jaccard resemblance<Cite k="broder1997" />. The build fails if any two county pages in a state share more than 40% of their text outside shared template blocks, or more than 50% of their full text. That guards against the thin, interchangeable pages that generated sites are prone to.</p>
+
+        <h2 id="evidence">7. Evidence standards for guides</h2>
+        <p>The guides apply a fixed hierarchy of sources. A claim is stated as fact only when a source in the first three tiers supports it.</p>
+        <div class="table-wrap">
+          <table>
+            <caption>Table 7. Source hierarchy</caption>
+            <thead><tr><th scope="col">Tier</th><th scope="col">Source type</th><th scope="col">Examples</th><th scope="col">Used for</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Consensus standards and law</td><td>ANSI/IICRC S500 (water)<Cite k="s500" /> and S520 (mold)<Cite k="s520" />; state insurance codes; federal rules<Cite k="ftc429" /></td><td>Categories and classes of water, remediation practice, consumer rights</td></tr>
+              <tr><td>2</td><td>Federal agency guidance</td><td>U.S. EPA<Cite k="epaMold" />, CDC<Cite k="cdcMold" />, NOAA, Census Bureau</td><td>Health, drying windows, data definitions</td></tr>
+              <tr><td>3</td><td>Regulators and model law</td><td>State insurance departments, NAIC model acts<Cite k="naic" /></td><td>How claims must be handled</td></tr>
+              <tr><td>4</td><td>Published industry pricing</td><td>National cost guides, cited on each page</td><td>Cost ranges, always labeled national, never a quote</td></tr>
+              <tr><td>5</td><td>Practitioner experience</td><td>Restoration and claims professionals</td><td>Framing and questions to ask, never a factual claim on its own</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>State law is handled conservatively. {verified.join(", ").replace(/, ([^,]*)$/, " and $1")} have state-specific claim and contractor rules verified against the statute or regulation and cited by section on their state pages. For the other {ALL_STATES.length - verified.length} states we publish only text that is accurate nationwide, such as the FTC's three-day cooling-off rule for door-to-door sales<Cite k="ftc429" /> and the unfair claims practices standards that nearly every state adopted from the NAIC model<Cite k="naic" />, until the state's own law has been checked.</p>
+
+        <h2 id="quality">8. Quality control</h2>
+        <p>Every build of the site runs automated checks, and a failure stops the deploy:</p>
+        <ul>
+          <li><strong>Data completeness:</strong> a county is scored only with more than {int(MIN_DAYS)} valid daily records; the pipeline stops if a state has no weather data or if any month of source files is missing.</li>
+          <li><strong>Similarity:</strong> the shingle test in section 6.</li>
+          <li><strong>Links:</strong> every internal link must resolve to a built page.</li>
+          <li><strong>Page integrity:</strong> each page must have one title, one description, one top-level heading, a self-referencing canonical URL, valid structured data and alt text on every image.</li>
+        </ul>
+        <p>Guides are reviewed at least once a year and whenever a cited rule or dataset changes. Errors can be reported to <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>; corrections that change a figure or a method are recorded in section 12. See also our <a href="/editorial-policy/">editorial policy</a>.</p>
+
+        <h2 id="limitations">9. Limitations</h2>
+        <ol class="limits">
+          <li><strong>County figures don't describe individual homes.</strong> Inferring an individual's risk from an area average is the ecological fallacy<Cite k="robinson1950" />. A new house in an old county, or a well-maintained old house, can differ greatly from the county figure.</li>
+          <li><strong>Survey error.</strong> ACS values carry sampling error that grows in small counties<Cite k="acsHandbook" />. We show point estimates, so small differences between small counties should not be over-read.</li>
+          <li><strong>Spatial smoothing.</strong> County averages of a 5 km grid understate local extremes: frost hollows, ridgetops and lakeshores can be colder or wetter than their county. Stations are sparser in rural and mountainous areas, which the interpolation can't fully correct<Cite k="durre2022" />.</li>
+          <li><strong>Missing variables.</strong> nClimGrid has no humidity, snowfall, snow depth or wind, so we don't publish snow-load or wind-driven-rain measures, and muggy nights are a proxy (section 3.2).</li>
+          <li><strong>A short window.</strong> Ten years is enough to rank counties but includes chance: one extreme winter or storm can move a county's counts. We don't present these figures as climate normals or trends.</li>
+          <li><strong>Unvalidated weights.</strong> Without public loss data by county and cause, the weights can't be fitted or validated against outcomes. Section 5 bounds how much they matter; it doesn't prove they're right.</li>
+          <li><strong>Omitted factors.</strong> The index leaves out floodplain location, soil and groundwater, sewer system age, plumbing materials, building codes, maintenance and insurance take-up. It describes climate and housing age only.</li>
+          <li><strong>Within-state scale.</strong> Percentiles are relative to each state, so the same score means different absolute conditions in Minnesota and in Mississippi.</li>
+          <li><strong>Compressed scores.</strong> Averaging ranks pulls scores toward the middle, so most counties share the {BAND_SHARES[1].label} label (section 4.3). Within that band, the score and the county's rank in its state carry more information than the label.</li>
+          <li><strong>Proxies for plumbing.</strong> Year built stands in for plumbing age, but many older homes have been re-plumbed and some newer ones use materials with their own failure modes.</li>
+        </ol>
+
+        <h2 id="independence">10. Funding and independence</h2>
+        <p>{SITE.brand} is funded by referral fees. Restoration companies, or the call networks that work with them, pay us when a caller is connected with a company that serves their area (see <a href="/how-it-works/">how it works</a>). We disclose this relationship in the spirit of the FTC's guides on material connections<Cite k="ftc255" />. The method is insulated from it in four ways: the data comes only from public agencies; the index uses the same formula in every county regardless of call coverage; no company can pay to change a county's data, score or text; and we don't rank, review or endorse companies. Our guides routinely recommend steps that reduce or avoid the need for professional work.</p>
+
+        <h2 id="reproducibility">11. Reproducibility and data access</h2>
+        <p>The pipeline runs in six steps per state: fetch ACS tables and boundaries; fetch county seats; build one record per county; fetch the nClimGrid-Daily county series; derive the measures in Table 2; and render the pages, including the index in equations (3) and (4). The index model is a single module shared by every page that shows a score, and this document's tables are computed from it at build time.</p>
+        <ul>
+          <li><strong>JSON API:</strong> every state and county page with its housing and weather values, described by an <a href="/api/v1/openapi.json">OpenAPI document</a>. See the <a href="/developers/">developer guide</a>.</li>
+          <li><strong>CSV:</strong> the state comparison table at <a href="/water-damage-statistics.csv">/water-damage-statistics.csv</a>.</li>
+          <li><strong>For AI assistants:</strong> a read-only MCP server at <code>/mcp</code>, a site summary at <a href="/llms.txt">/llms.txt</a>, and any page as Markdown on request (<code>Accept: text/markdown</code>).</li>
+          <li><strong>Upstream data:</strong> all inputs are public and free to download from the publishers in Table 1.</li>
+        </ul>
+
+        <h2 id="versions">12. Version history</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Table 8. Changes to this methodology</caption>
+            <thead><tr><th scope="col">Version</th><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
+            <tbody>{CHANGES.map((c) => <tr><td>{c.v}</td><td><time datetime={c.date}>{longDate(c.date)}</time></td><td>{c.note}</td></tr>)}</tbody>
+          </table>
+        </div>
+
+        <h2 id="cite">How to cite</h2>
+        <p class="citeas">{SITE.brand}. ({UPDATED.slice(0, 4)}). <em>Methodology: How we measure county water damage risk</em> (Version {VERSION}). {url}</p>
+        <pre class="bib"><code>{bibtex}</code></pre>
+        <p class="small muted">To cite a specific county figure, link to that county's page; each one lists its own sources and data vintage.</p>
+
+        <h2 id="references">References</h2>
+        <ol class="refs small">
+          {REFS.map((r) => <li id={`ref-${r.key}`}>{r.text} <a href={r.url} rel="noopener">{r.url.replace(/^https:\/\//, "")}</a></li>)}
+        </ol>
+
+        <h2 id="faq">Frequently asked questions</h2>
+        {faq.map((f) => <details class="faq"><summary>{f.q}</summary><div>{f.a}</div></details>)}
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .paper-head { padding-top: clamp(28px, 5vw, 56px); padding-bottom: 28px; }
+  .paper-head h1 { max-width: 22ch; }
+  .paper-head .lede { max-width: 62ch; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+  .meta div { display: grid; gap: 2px; }
+  .meta dt { font: 600 0.72rem/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .meta dd { margin: 0; color: var(--ink-2); }
+  .paper-grid { display: grid; grid-template-columns: 240px minmax(0, var(--read)); gap: 56px; padding-bottom: 72px; }
+  .toc { position: sticky; top: 88px; align-self: start; max-height: calc(100vh - 110px); overflow: auto; }
+  .toc ol { list-style: none; padding: 0; margin: 0; }
+  .toc li { border-top: 1px solid var(--line); padding: 6px 0; margin: 0; font-size: 0.88rem; }
+  .toc a { color: var(--ink-2); text-decoration: none; }
+  .toc a:hover { color: var(--water); text-decoration: underline; }
+  .body :global(h2[id]), .body section[id] { scroll-margin-top: 84px; }
+  .abstract { background: var(--water-soft); color: var(--water-ink); border-radius: var(--r-lg); padding: 20px 24px 8px; margin: 0 0 24px; }
+  .abstract h2 { font: 600 0.8rem/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 12px; }
+  .abstract .kw { font-size: 0.9rem; }
+  .figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0 0 8px; }
+  .figures .stat { margin: 0; }
+  .figures .stat p { margin: 0; }
+  .eq { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 18px 0; padding: 14px 18px; background: var(--sunk); border-radius: var(--r); font-family: var(--serif); font-size: 1.08rem; overflow-x: auto; }
+  .eq > span:first-child { white-space: nowrap; }
+  .eq var { font-style: italic; }
+  .eq-n { color: var(--ink-3); font-family: var(--sans); font-size: 0.9rem; }
+  .prose var { font-family: var(--serif); }
+  table caption { caption-side: top; text-align: left; font: 600 0.85rem/1.4 var(--sans); color: var(--ink-2); padding-bottom: 8px; }
+  .body :global(.cite) { font-size: 0.72em; line-height: 0; margin-left: 1px; white-space: nowrap; }
+  .body :global(.cite a) { text-decoration: none; }
+  .limits > li { margin-bottom: 10px; }
+  .citeas { padding: 14px 18px; border-left: 3px solid var(--water); background: var(--sunk); border-radius: 0 var(--r) var(--r) 0; }
+  .bib { background: var(--sunk); border-radius: var(--r); padding: 14px 18px; overflow-x: auto; font: 0.8rem/1.5 var(--mono); }
+  .refs li { margin-bottom: 8px; scroll-margin-top: 84px; overflow-wrap: anywhere; }
+  .refs li:target { background: var(--amber-soft); }
+  .faq { margin-bottom: 8px; }
+  @media (max-width: 1000px) {
+    .paper-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .toc { position: static; max-height: none; }
+    .toc ol { columns: 2; column-gap: 24px; }
+  }
+  @media (max-width: 720px) { .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); } .toc ol { columns: 1; } }
+</style>

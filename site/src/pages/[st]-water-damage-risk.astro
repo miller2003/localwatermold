@@ -124,7 +124,7 @@ const schema = [{
       {FACTORS.map((f) => <li><strong>{f.label}</strong> ({f.unit}), weight {Math.round(f.weight * 100)}%</li>)}
     </ul>
     <p>Freezing weather and old plumbing get the most weight because burst and failing supply lines are among the most common causes of household water damage. Heavy rain drives basement flooding and sewer backups, and warm, muggy nights mark the humid air that lets mold follow. The index is relative: a low score means lower risk than other {S.name} counties, not no risk.</p>
-    <p>Limits: weather values are county-wide averages, so hollows, ridges and lakeshores can differ; ACS housing figures are survey estimates; the index doesn't account for floodplains, soil, or local sewer systems. Full details on our <a href="/data-sources/">data sources</a> page.</p>
+    <p>Limits: weather values are county-wide averages, so hollows, ridges and lakeshores can differ; ACS housing figures are survey estimates; the index doesn't account for floodplains, soil, or local sewer systems. The weights, a sensitivity analysis and the full list of limitations are in our <a href="/methodology/#index">methodology</a>.</p>
     <h2>Cite this data</h2>
     <p>You're welcome to use these figures with attribution. Suggested citation:</p>
     <p class="cite">{SITE.brand}, "{S.name} Water Damage Risk Index {year}," {origin}{p(`/${S.slug}-water-damage-risk/`)}. Data: U.S. Census Bureau ACS {META.acsYears}; NOAA nClimGrid-Daily {META.weatherPeriod}.</p>

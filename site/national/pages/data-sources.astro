@@ -3,8 +3,8 @@ import Page from "../../src/layouts/Page.astro";
 import { SITE } from "../../src/config";
 import { DATA_META as META, TOTALS } from "../../src/lib/national";
 ---
-<Page title="Data sources and methodology" seoTitle={`Data Sources and Methodology | ${SITE.brand}`} description="Where the county housing and weather numbers on this site come from, how they're calculated, and their limits." eyebrow="About" path="/data-sources/">
-  <p class="lede">The numbers on our county pages come from public data. Here's exactly what we use and how to read it.</p>
+<Page title="Data sources" seoTitle={`Data Sources: Census and NOAA Weather | ${SITE.brand}`} description="Where the county housing and weather numbers on this site come from, how they're calculated, and their limits." eyebrow="About" path="/data-sources/">
+  <p class="lede">The numbers on our county pages come from public data. Here's exactly what we use and how to read it. For the formulas, the risk index, its sensitivity analysis and the full list of limitations, see our <a href="/methodology/">methodology</a>.</p>
 
   <h2>Housing and population</h2>
   <p>U.S. Census Bureau, American Community Survey (ACS) {META.acsRelease} estimates covering {META.acsYears}, accessed through Census Reporter. Tables used:</p>

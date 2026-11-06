@@ -1,0 +1,10 @@
+---
+// Numbered citation marker linking to the reference list on /methodology/. k is one key or several,
+// space-separated: <Cite k="durre2022 ghcnd" /> renders [5, 6].
+import { REFS, refNumber } from "../lib/methodology-refs";
+
+interface Props { k: string }
+const keys = Astro.props.k.split(/\s+/).filter(Boolean);
+const items = keys.map((key) => ({ n: refNumber(key), key, title: REFS[refNumber(key) - 1].text }));
+---
+<sup class="cite">[{items.map((it, i) => <>{i > 0 && ", "}<a href={`#ref-${it.key}`} title={it.title}>{it.n}</a></>)}]</sup>
